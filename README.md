@@ -1,2 +1,0 @@
-# CDN
-rtlcss.com cdn
