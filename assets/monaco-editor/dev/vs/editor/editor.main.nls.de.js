@@ -1,6 +1,6 @@
 /*!-----------------------------------------------------------
  * Copyright (c) Microsoft Corporation. All rights reserved.
- * Version: 0.4.2(1ebfb1b687c4345ac9c6da39051431a46c120a65)
+ * Version: 0.5.3(793ede49d53dba79d39e52205f16321278f5183c)
  * Released under the MIT license
  * https://github.com/Microsoft/vscode/blob/master/LICENSE.txt
  *-----------------------------------------------------------*/
@@ -46,7 +46,7 @@ define("vs/editor/editor.main.nls.de", {
 		"Fehler beim Laden einer erforderlichen Datei. Bitte starten Sie die Anwendung neu, und versuchen Sie es dann erneut. Details: {0}",
 	],
 	"vs/base/common/json": [
-		"Invalid symbol",
+		"Ungültiges Symbol",
 		"Ungültiges Zahlenformat.",
 		"Ein Eigenschaftenname wurde erwartet.",
 		"Ein Wert wurde erwartet.",
@@ -54,7 +54,7 @@ define("vs/editor/editor.main.nls.de", {
 		"Ein Komma wurde erwartet.",
 		"Eine schließende geschweifte Klammer wurde erwartet.",
 		"Eine schließende Klammer wurde erwartet.",
-		"End of file expected",
+		"Das Dateiende wurde erwartet.",
 	],
 	"vs/base/common/keyCodes": [
 		"Windows",
@@ -304,6 +304,10 @@ define("vs/editor/editor.main.nls.de", {
 		"Durch Drücken der TAB-TASTE in diesem Editor wird der Fokus in das nächste Element verschoben, das den Fokus erhalten kann. Der Befehl {0} kann zurzeit nicht durch eine Tastenbindung ausgelöst werden.",
 		"Sie können diese QuickInfo schließen und durch Drücken von ESC zum Editor zurückkehren.",
 	],
+	"vs/editor/contrib/carretOperations/common/carretOperations": [
+		"Move Carret Left",
+		"Move Carret Right",
+	],
 	"vs/editor/contrib/clipboard/browser/clipboard": [
 		"Ausschneiden",
 		"Kopieren",
@@ -490,19 +494,19 @@ define("vs/editor/editor.main.nls.de", {
 		"Verweise anzeigen",
 	],
 	"vs/editor/contrib/referenceSearch/browser/referencesController": [
-		"Loading...",
+		"Wird geladen...",
 	],
 	"vs/editor/contrib/referenceSearch/browser/referencesWidget": [
 		"Failed to resolve file.",
-		"{0} references",
-		"{0} reference",
+		"{0} Verweise",
+		"{0} Verweis",
 		"Keine Vorschau verfügbar.",
-		"References",
-		"No results",
-		"References",
+		"Verweise",
+		"Keine Ergebnisse",
+		"Verweise",
 	],
 	"vs/editor/contrib/rename/browser/rename": [
-		"Rename Symbol",
+		"Symbol umbenennen",
 	],
 	"vs/editor/contrib/rename/browser/renameInputField": [
 		"Benennen Sie die Eingabe um. Geben Sie einen neuen Namen ein, und drücken Sie die EINGABETASTE, um den Commit auszuführen.",
@@ -540,31 +544,6 @@ define("vs/editor/editor.main.nls.de", {
 	"vs/editor/contrib/zoneWidget/browser/peekViewWidget": [
 		"Schließen",
 	],
-	"vs/languages/css/common/css.contribution": [
-		"CSS-Konfiguration",
-		"Steuert die CSS-Validierung und Problemschweregrade.",
-	],
-	"vs/languages/css/common/services/lintRules": [
-		"Stellen Sie beim Verwenden vom anbieterspezifischen Präfix sicher, dass alle anderen anbieterspezifischen Eigenschaften miteinbezogen werden",
-		"Beim Verwenden von anbieterspezifischen Präfix auch die Standardeigenschaft miteinbeziehen",
-		"Keine doppelten Formatdefinitionen verwenden",
-		"Keine leeren Regelsätze verwenden",
-		"Import-Anweisungen können nicht parallel laden",
-		"Verwenden Sie width oder height nicht beim Festlegen von padding oder border",
-		"Es ist bekannt, dass der Universal-Selektor (*) langsam ist",
-		"Keine Einheit für Null erforderlich",
-		"@font-face-Regel muss Eigenschaften src und font-family definieren",
-		"Hexfarben müssen aus drei oder sechs Hexzahlen bestehen",
-		"Ungültige Parameteranzahl",
-		"Unbekannte Eigenschaft.",
-		"IE-Hacks sind nur für die Unterstützung von IE7 und älter erforderlich",
-		"Unbekannte anbieterspezifische Eigenschaft.",
-		"Die Eigenschaft wird aufgrund der Anzeige ignoriert. Mit \"display: inline\" besitzen die width-, height-, margin-top-, margin-bottom- und float-Eigenschaften z. B. keine Auswirkung.",
-		"Verwendung von „!important“ vermeiden. Damit wird angegeben, dass die Spezifität vom gesamten CSS außer Kontrolle geraten ist und umgestaltet werden muss.",
-		"Die Verwendung von \"float\" vermeiden. float-Eigenschaften führen zu anfälligem CSS, das schnell nicht mehr funktioniert, wenn sich ein Aspekt des Layouts ändert.",
-		"Selektoren sollten keine IDs enthalten, da diese Regeln zu eng mit HTML verknüpft sind.",
-		"Aktiviert oder deaktiviert alle Überprüfungen.",
-	],
 	"vs/languages/html/common/html.contribution": [
 		"HTML-Konfiguration",
 		"Die maximale Anzahl von Zeichen pro Zeile (0 = deaktiviert).",
@@ -576,21 +555,8 @@ define("vs/editor/editor.main.nls.de", {
 		"Endet mit einer neuen Zeile.",
 		"Die Liste der Tags (durch Kommas getrennt), vor denen eine zusätzliche neue Zeile eingefügt werden soll. \"null\" verwendet standardmäßig \"head, body, /HTML\".",
 	],
-	"vs/languages/json/common/json.contribution": [
-		"JSON-Konfiguration",
-		"Schemas mit JSON-Dateien im aktuellen Projekt verknüpfen",
-		"Eine URL zu einem Schema oder einem relativen Pfad in einem Schema im aktuellen Verzeichnis.",
-		"Ein Dateimuster mit \'*\', mit dem beim Auflösen von JSON-Dateien zu Schemas abgeglichen wird.",
-		"Ein Array von Dateimustern, mit denen beim Auflösen von JSON-Dateien zu Schemas abgeglichen wird.",
-		"Die Schemadefinition für die angegebene URL. Das Schema muss nur bereitgestellt werden, um den Zugriff auf die Schema-URL zu vermeiden.",
-	],
-	"vs/languages/less/common/less.contribution": [
-		"LESS-Konfiguration",
-		"Steuert die LESS-Validierung und Problemschweregrade.",
-	],
-	"vs/languages/sass/common/sass.contribution": [
-		"SASS-Konfiguration",
-		"Steuert die SASS-Validierung und Problemschweregrade.",
+	"vs/platform/actions/browser/menuItemActionItem": [
+		"{0} ({1})",
 	],
 	"vs/platform/configuration/common/configurationRegistry": [
 		"Trägt Konfigurationseigenschaften bei.",

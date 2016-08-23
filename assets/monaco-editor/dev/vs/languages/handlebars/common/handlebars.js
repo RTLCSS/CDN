@@ -1,12 +1,12 @@
 /*!-----------------------------------------------------------
  * Copyright (c) Microsoft Corporation. All rights reserved.
- * Version: 0.4.2(1ebfb1b687c4345ac9c6da39051431a46c120a65)
+ * Version: 0.5.3(793ede49d53dba79d39e52205f16321278f5183c)
  * Released under the MIT license
  * https://github.com/Microsoft/vscode/blob/master/LICENSE.txt
  *-----------------------------------------------------------*/
 
 (function() {
-var __m = ["vs/languages/handlebars/common/handlebarsTokenTypes","exports","require","vs/languages/handlebars/common/handlebars","vs/editor/common/modes","vs/languages/html/common/html","vs/base/common/async","vs/editor/common/services/modeService","vs/editor/common/modes/languageConfigurationRegistry","vs/editor/common/modes/abstractMode","vs/platform/thread/common/thread","vs/platform/instantiation/common/instantiation"];
+var __m = ["vs/languages/handlebars/common/handlebarsTokenTypes","exports","require","vs/languages/handlebars/common/handlebars","vs/editor/common/modes","vs/languages/html/common/html","vs/editor/common/services/compatWorkerService","vs/editor/common/services/modeService","vs/editor/common/modes/languageConfigurationRegistry","vs/editor/common/modes/abstractMode","vs/base/common/async","vs/platform/instantiation/common/instantiation"];
 var __M = function(deps) {
   var result = [];
   for (var i = 0, len = deps.length; i < len; i++) {
@@ -40,7 +40,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
-define(__m[3], __M([2,1,4,5,0,11,7,8,9,10,6]), function (require, exports, modes, htmlMode, handlebarsTokenTypes, instantiation_1, modeService_1, languageConfigurationRegistry_1, abstractMode_1, thread_1, async_1) {
+define(__m[3], __M([2,1,4,5,0,11,7,8,9,10,6]), function (require, exports, modes, htmlMode, handlebarsTokenTypes, instantiation_1, modeService_1, languageConfigurationRegistry_1, abstractMode_1, async_1, compatWorkerService_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -127,21 +127,11 @@ define(__m[3], __M([2,1,4,5,0,11,7,8,9,10,6]), function (require, exports, modes
     exports.HandlebarsState = HandlebarsState;
     var HandlebarsMode = (function (_super) {
         __extends(HandlebarsMode, _super);
-        function HandlebarsMode(descriptor, instantiationService, modeService, threadService) {
-            _super.call(this, descriptor, instantiationService, modeService, threadService);
+        function HandlebarsMode(descriptor, instantiationService, modeService, compatWorkerService) {
+            _super.call(this, descriptor, instantiationService, modeService, compatWorkerService);
         }
         HandlebarsMode.prototype._registerSupports = function () {
             var _this = this;
-            modes.HoverProviderRegistry.register(this.getId(), {
-                provideHover: function (model, position, token) {
-                    return async_1.wireCancellationToken(token, _this._provideHover(model.uri, position));
-                }
-            }, true);
-            modes.ReferenceProviderRegistry.register(this.getId(), {
-                provideReferences: function (model, position, context, token) {
-                    return async_1.wireCancellationToken(token, _this._provideReferences(model.uri, position, context));
-                }
-            }, true);
             modes.SuggestRegistry.register(this.getId(), {
                 triggerCharacters: ['.', ':', '<', '"', '=', '/'],
                 shouldAutotriggerSuggest: true,
@@ -210,7 +200,7 @@ define(__m[3], __M([2,1,4,5,0,11,7,8,9,10,6]), function (require, exports, modes
         HandlebarsMode = __decorate([
             __param(1, instantiation_1.IInstantiationService),
             __param(2, modeService_1.IModeService),
-            __param(3, thread_1.IThreadService)
+            __param(3, compatWorkerService_1.ICompatWorkerService)
         ], HandlebarsMode);
         return HandlebarsMode;
     }(htmlMode.HTMLMode));

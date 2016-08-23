@@ -1,6 +1,6 @@
 /*!-----------------------------------------------------------------------------
  * Copyright (c) Microsoft Corporation. All rights reserved.
- * monaco-languages version: 0.2.0(14f3eddc6bfff195297dc8365d967c38d13d2761)
+ * monaco-languages version: 0.3.1(584d8ebb961d96d42dd7ae89ff3803c825b8862d)
  * Released under the MIT license
  * https://github.com/Microsoft/monaco-languages/blob/master/LICENSE.md
  *-----------------------------------------------------------------------------*/

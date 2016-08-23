@@ -1,12 +1,12 @@
 /*!-----------------------------------------------------------
  * Copyright (c) Microsoft Corporation. All rights reserved.
- * Version: 0.4.2(1ebfb1b687c4345ac9c6da39051431a46c120a65)
+ * Version: 0.5.3(793ede49d53dba79d39e52205f16321278f5183c)
  * Released under the MIT license
  * https://github.com/Microsoft/vscode/blob/master/LICENSE.txt
  *-----------------------------------------------------------*/
 
 (function() {
-var __m = ["exports","require","vs/languages/html/common/htmlEmptyTagsShared","vs/languages/html/common/htmlTokenTypes","vs/base/common/async","vs/base/common/strings","vs/languages/html/common/html","vs/base/common/winjs.base","vs/editor/common/modes","vs/base/common/arrays","vs/editor/common/modes/abstractState","vs/platform/thread/common/threadService","vs/editor/common/services/modeService","vs/platform/instantiation/common/instantiation","vs/editor/common/modes/languageConfigurationRegistry","vs/editor/common/modes/supports/tokenizationSupport","vs/platform/thread/common/thread","vs/editor/common/modes/abstractMode"];
+var __m = ["exports","require","vs/languages/html/common/htmlEmptyTagsShared","vs/languages/html/common/htmlTokenTypes","vs/editor/common/services/compatWorkerService","vs/base/common/strings","vs/languages/html/common/html","vs/editor/common/modes","vs/base/common/arrays","vs/editor/common/modes/abstractState","vs/editor/common/services/modeService","vs/platform/instantiation/common/instantiation","vs/editor/common/modes/languageConfigurationRegistry","vs/editor/common/modes/supports/tokenizationSupport","vs/base/common/async","vs/editor/common/modes/abstractMode"];
 var __M = function(deps) {
   var result = [];
   for (var i = 0, len = deps.length; i < len; i++) {
@@ -18,7 +18,7 @@ var __M = function(deps) {
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
-define(__m[2], __M([1,0,9]), function (require, exports, arrays) {
+define(__m[2], __M([1,0,8]), function (require, exports, arrays) {
     "use strict";
     exports.EMPTY_ELEMENTS = ['area', 'base', 'br', 'col', 'embed', 'hr', 'img', 'input', 'keygen', 'link', 'menuitem', 'meta', 'param', 'source', 'track', 'wbr'];
     function isEmptyElement(e) {
@@ -67,7 +67,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
-define(__m[6], __M([1,0,7,8,17,10,11,12,13,3,2,14,15,16,4]), function (require, exports, winjs, modes, abstractMode_1, abstractState_1, threadService_1, modeService_1, instantiation_1, htmlTokenTypes, htmlEmptyTagsShared_1, languageConfigurationRegistry_1, tokenizationSupport_1, thread_1, async_1) {
+define(__m[6], __M([1,0,7,15,9,10,11,3,2,12,13,14,4]), function (require, exports, modes, abstractMode_1, abstractState_1, modeService_1, instantiation_1, htmlTokenTypes, htmlEmptyTagsShared_1, languageConfigurationRegistry_1, tokenizationSupport_1, async_1, compatWorkerService_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -319,36 +319,19 @@ define(__m[6], __M([1,0,7,8,17,10,11,12,13,3,2,14,15,16,4]), function (require, 
     exports.State = State;
     var HTMLMode = (function (_super) {
         __extends(HTMLMode, _super);
-        function HTMLMode(descriptor, instantiationService, modeService, threadService) {
-            _super.call(this, descriptor.id);
+        function HTMLMode(descriptor, instantiationService, modeService, compatWorkerService) {
+            _super.call(this, descriptor.id, compatWorkerService);
             this._modeWorkerManager = this._createModeWorkerManager(descriptor, instantiationService);
             this.modeService = modeService;
-            this.threadService = threadService;
-            this.tokenizationSupport = new tokenizationSupport_1.TokenizationSupport(this, this, true, true);
+            this.tokenizationSupport = new tokenizationSupport_1.TokenizationSupport(this, this, true);
             this.configSupport = this;
             this._registerSupports();
         }
-        HTMLMode.prototype.asyncCtor = function () {
-            return winjs.Promise.join([
-                this.modeService.getOrCreateMode('text/css'),
-                this.modeService.getOrCreateMode('text/javascript'),
-            ]);
-        };
         HTMLMode.prototype._registerSupports = function () {
             var _this = this;
             if (this.getId() !== 'html') {
                 throw new Error('This method must be overwritten!');
             }
-            modes.HoverProviderRegistry.register(this.getId(), {
-                provideHover: function (model, position, token) {
-                    return async_1.wireCancellationToken(token, _this._provideHover(model.uri, position));
-                }
-            }, true);
-            modes.ReferenceProviderRegistry.register(this.getId(), {
-                provideReferences: function (model, position, context, token) {
-                    return async_1.wireCancellationToken(token, _this._provideReferences(model.uri, position, context));
-                }
-            }, true);
             modes.SuggestRegistry.register(this.getId(), {
                 triggerCharacters: ['.', ':', '<', '"', '=', '/'],
                 shouldAutotriggerSuggest: true,
@@ -433,14 +416,17 @@ define(__m[6], __M([1,0,7,8,17,10,11,12,13,3,2,14,15,16,4]), function (require, 
             return null;
         };
         HTMLMode.prototype.configure = function (options) {
-            if (this.threadService.isInMainThread) {
-                return this._configureWorkers(options);
+            if (!this.compatWorkerService) {
+                return;
+            }
+            if (this.compatWorkerService.isInMainThread) {
+                return this._configureWorker(options);
             }
             else {
                 return this._worker(function (w) { return w._doConfigure(options); });
             }
         };
-        HTMLMode.prototype._configureWorkers = function (options) {
+        HTMLMode.prototype._configureWorker = function (options) {
             return this._worker(function (w) { return w._doConfigure(options); });
         };
         HTMLMode.prototype._provideLinks = function (resource) {
@@ -449,21 +435,12 @@ define(__m[6], __M([1,0,7,8,17,10,11,12,13,3,2,14,15,16,4]), function (require, 
         HTMLMode.prototype._provideDocumentRangeFormattingEdits = function (resource, range, options) {
             return this._worker(function (w) { return w.provideDocumentRangeFormattingEdits(resource, range, options); });
         };
-        HTMLMode.prototype._provideHover = function (resource, position) {
-            return this._worker(function (w) { return w.provideHover(resource, position); });
-        };
-        HTMLMode.prototype._provideReferences = function (resource, position, context) {
-            return this._worker(function (w) { return w.provideReferences(resource, position); });
-        };
         HTMLMode.prototype._provideDocumentHighlights = function (resource, position, strict) {
             if (strict === void 0) { strict = false; }
             return this._worker(function (w) { return w.provideDocumentHighlights(resource, position, strict); });
         };
         HTMLMode.prototype._provideCompletionItems = function (resource, position) {
             return this._worker(function (w) { return w.provideCompletionItems(resource, position); });
-        };
-        HTMLMode.prototype.findColorDeclarations = function (resource) {
-            return this._worker(function (w) { return w.findColorDeclarations(resource); });
         };
         HTMLMode.LANG_CONFIG = {
             wordPattern: abstractMode_1.createWordRegExp('#-?%'),
@@ -500,21 +477,18 @@ define(__m[6], __M([1,0,7,8,17,10,11,12,13,3,2,14,15,16,4]), function (require, 
                 }
             ],
         };
-        HTMLMode.$_configureWorkers = threadService_1.AllWorkersAttr(HTMLMode, HTMLMode.prototype._configureWorkers);
-        HTMLMode.$_provideLinks = threadService_1.OneWorkerAttr(HTMLMode, HTMLMode.prototype._provideLinks);
-        HTMLMode.$_provideDocumentRangeFormattingEdits = threadService_1.OneWorkerAttr(HTMLMode, HTMLMode.prototype._provideDocumentRangeFormattingEdits);
-        HTMLMode.$_provideHover = threadService_1.OneWorkerAttr(HTMLMode, HTMLMode.prototype._provideHover);
-        HTMLMode.$_provideReferences = threadService_1.OneWorkerAttr(HTMLMode, HTMLMode.prototype._provideReferences);
-        HTMLMode.$_provideDocumentHighlights = threadService_1.OneWorkerAttr(HTMLMode, HTMLMode.prototype._provideDocumentHighlights);
-        HTMLMode.$_provideCompletionItems = threadService_1.OneWorkerAttr(HTMLMode, HTMLMode.prototype._provideCompletionItems);
-        HTMLMode.$findColorDeclarations = threadService_1.OneWorkerAttr(HTMLMode, HTMLMode.prototype.findColorDeclarations);
+        HTMLMode.$_configureWorker = compatWorkerService_1.CompatWorkerAttr(HTMLMode, HTMLMode.prototype._configureWorker);
+        HTMLMode.$_provideLinks = compatWorkerService_1.CompatWorkerAttr(HTMLMode, HTMLMode.prototype._provideLinks);
+        HTMLMode.$_provideDocumentRangeFormattingEdits = compatWorkerService_1.CompatWorkerAttr(HTMLMode, HTMLMode.prototype._provideDocumentRangeFormattingEdits);
+        HTMLMode.$_provideDocumentHighlights = compatWorkerService_1.CompatWorkerAttr(HTMLMode, HTMLMode.prototype._provideDocumentHighlights);
+        HTMLMode.$_provideCompletionItems = compatWorkerService_1.CompatWorkerAttr(HTMLMode, HTMLMode.prototype._provideCompletionItems);
         HTMLMode = __decorate([
             __param(1, instantiation_1.IInstantiationService),
             __param(2, modeService_1.IModeService),
-            __param(3, thread_1.IThreadService)
+            __param(3, compatWorkerService_1.ICompatWorkerService)
         ], HTMLMode);
         return HTMLMode;
-    }(abstractMode_1.AbstractMode));
+    }(abstractMode_1.CompatMode));
     exports.HTMLMode = HTMLMode;
 });
 

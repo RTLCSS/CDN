@@ -1,6 +1,6 @@
 /*!-----------------------------------------------------------
  * Copyright (c) Microsoft Corporation. All rights reserved.
- * Version: 0.4.2(1ebfb1b687c4345ac9c6da39051431a46c120a65)
+ * Version: 0.5.3(793ede49d53dba79d39e52205f16321278f5183c)
  * Released under the MIT license
  * https://github.com/Microsoft/vscode/blob/master/LICENSE.txt
  *-----------------------------------------------------------*/
@@ -9,19 +9,6 @@
  * Copyright (c) Microsoft Corporation. All rights reserved.
  *--------------------------------------------------------*/
 define("vs/languages/html/common/htmlWorker.nls", {
-	"vs/base/common/keyCodes": [
-		"Windows",
-		"Control",
-		"Shift",
-		"Alt",
-		"Command",
-		"Windows",
-		"Ctrl",
-		"Shift",
-		"Alt",
-		"Command",
-		"Windows"
-	],
 	"vs/languages/html/common/htmlTags": [
 		"The html element represents the root of an HTML document.",
 		"The head element represents a collection of metadata for the Document.",

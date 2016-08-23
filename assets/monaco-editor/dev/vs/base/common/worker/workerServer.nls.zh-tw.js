@@ -1,6 +1,6 @@
 /*!-----------------------------------------------------------
  * Copyright (c) Microsoft Corporation. All rights reserved.
- * Version: 0.4.2(1ebfb1b687c4345ac9c6da39051431a46c120a65)
+ * Version: 0.5.3(793ede49d53dba79d39e52205f16321278f5183c)
  * Released under the MIT license
  * https://github.com/Microsoft/vscode/blob/master/LICENSE.txt
  *-----------------------------------------------------------*/
@@ -64,9 +64,6 @@ define("vs/base/common/worker/workerServer.nls.zh-tw", {
 		"屬性 \'{0}\' 可以省略且必須屬於 `string[]` 類型",
 		"屬性 \'{0}\' 可以省略且必須屬於 `string[]` 類型",
 		"`contributes.{0}` 無效。必須是陣列。",
-	],
-	"vs/editor/common/services/modelServiceImpl": [
-		"請更新您的設定: `editor.detect Indentation` 會取代 `editor.tabSize`: \"auto\" 或  `editor.insertSpaces`: \"auto\"",
 	],
 	"vs/platform/configuration/common/configurationRegistry": [
 		"提供組態設定。",
@@ -141,9 +138,5 @@ define("vs/base/common/worker/workerServer.nls.zh-tw", {
 		"結構描述的陣列，其中至少一個必須符合。",
 		"結構描述的陣列，其中剛好一個必須符合。",
 		"不能相符的結構描述。",
-	],
-	"vs/platform/message/common/message": [
-		"關閉",
-		"取消",
 	]
 });

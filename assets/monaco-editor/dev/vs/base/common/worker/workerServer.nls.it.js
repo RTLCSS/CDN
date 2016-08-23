@@ -1,6 +1,6 @@
 /*!-----------------------------------------------------------
  * Copyright (c) Microsoft Corporation. All rights reserved.
- * Version: 0.4.2(1ebfb1b687c4345ac9c6da39051431a46c120a65)
+ * Version: 0.5.3(793ede49d53dba79d39e52205f16321278f5183c)
  * Released under the MIT license
  * https://github.com/Microsoft/vscode/blob/master/LICENSE.txt
  *-----------------------------------------------------------*/
@@ -64,9 +64,6 @@ define("vs/base/common/worker/workerServer.nls.it", {
 		"la proprietà `{0}` può essere omessa e deve essere di tipo `string[]`",
 		"la proprietà `{0}` può essere omessa e deve essere di tipo `string[]`",
 		"Il valore di `contributes.{0}` non è valido. È prevista una matrice.",
-	],
-	"vs/editor/common/services/modelServiceImpl": [
-		"Aggiornare le impostazioni: `editor.detectIndentation` sostituisce `editor.tabSize`: \"auto\" o `editor.insertSpaces`: \"auto\"",
 	],
 	"vs/platform/configuration/common/configurationRegistry": [
 		"Impostazioni di configurazione di contributes.",
@@ -141,9 +138,5 @@ define("vs/base/common/worker/workerServer.nls.it", {
 		"Matrice di schemi, in cui almeno uno deve avere una corrispondenza.",
 		"Matrice di schemi, uno dei quali deve avere una corrispondenza.",
 		"Schema che non deve avere corrispondenze.",
-	],
-	"vs/platform/message/common/message": [
-		"Chiudi",
-		"Annulla",
 	]
 });

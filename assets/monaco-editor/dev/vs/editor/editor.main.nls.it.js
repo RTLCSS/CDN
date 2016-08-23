@@ -1,6 +1,6 @@
 /*!-----------------------------------------------------------
  * Copyright (c) Microsoft Corporation. All rights reserved.
- * Version: 0.4.2(1ebfb1b687c4345ac9c6da39051431a46c120a65)
+ * Version: 0.5.3(793ede49d53dba79d39e52205f16321278f5183c)
  * Released under the MIT license
  * https://github.com/Microsoft/vscode/blob/master/LICENSE.txt
  *-----------------------------------------------------------*/
@@ -46,7 +46,7 @@ define("vs/editor/editor.main.nls.it", {
 		"Non è stato possibile caricare un file obbligatorio. Riavviare l\'applicazione e riprovare. Dettagli: {0}",
 	],
 	"vs/base/common/json": [
-		"Invalid symbol",
+		"Simbolo non valido",
 		"Invalid number format",
 		"Property name expected",
 		"Value expected",
@@ -54,7 +54,7 @@ define("vs/editor/editor.main.nls.it", {
 		"Comma expected",
 		"Closing brace expected",
 		"Closing bracket expected",
-		"End of file expected",
+		"È prevista la fine del file",
 	],
 	"vs/base/common/keyCodes": [
 		"Windows",
@@ -304,6 +304,10 @@ define("vs/editor/editor.main.nls.it", {
 		"Premere TAB in questo editor per spostare lo stato attivo sull\'elemento con stato attivabile successivo. Il comando {0} non può essere attualmente attivato con un tasto di scelta rapida.",
 		"Per chiudere questa descrizione comando e tornare all\'editor, premere ESC.",
 	],
+	"vs/editor/contrib/carretOperations/common/carretOperations": [
+		"Move Carret Left",
+		"Move Carret Right",
+	],
 	"vs/editor/contrib/clipboard/browser/clipboard": [
 		"Taglia",
 		"Copia",
@@ -490,19 +494,19 @@ define("vs/editor/editor.main.nls.it", {
 		"Mostra i riferimenti",
 	],
 	"vs/editor/contrib/referenceSearch/browser/referencesController": [
-		"Loading...",
+		"Caricamento...",
 	],
 	"vs/editor/contrib/referenceSearch/browser/referencesWidget": [
 		"Failed to resolve file.",
-		"{0} references",
-		"{0} reference",
+		"{0} riferimenti",
+		"{0} riferimento",
 		"no preview available",
-		"References",
-		"No results",
-		"References",
+		"Riferimenti",
+		"Nessun risultato",
+		"Riferimenti",
 	],
 	"vs/editor/contrib/rename/browser/rename": [
-		"Rename Symbol",
+		"Rinomina simbolo",
 	],
 	"vs/editor/contrib/rename/browser/renameInputField": [
 		"Consente di rinominare l\'input. Digitare il nuovo nome e premere INVIO per eseguire il commit.",
@@ -540,31 +544,6 @@ define("vs/editor/editor.main.nls.it", {
 	"vs/editor/contrib/zoneWidget/browser/peekViewWidget": [
 		"Chiudi",
 	],
-	"vs/languages/css/common/css.contribution": [
-		"Configurazione di CSS",
-		"Controlla le gravità dei problemi e la convalida CSS.",
-	],
-	"vs/languages/css/common/services/lintRules": [
-		"Quando si usa un prefisso specifico del fornitore, assicurarsi di includere anche tutte le altre proprietà specifiche del fornitore",
-		"Quando si usa un prefisso specifico del fornitore, includere anche la proprietà standard",
-		"Non usare definizioni di stile duplicate",
-		"Non usare set di regole vuoti",
-		"Le istruzioni Import non vengono caricate in parallelo",
-		"Non usare width o height con padding o border",
-		"Il selettore universale (*) è notoriamente lento",
-		"Non è necessaria alcuna unità per lo zero",
-		"La regola @font-face deve definire le proprietà \'src\' e \'font-family\'",
-		"I colori esadecimali devono essere composti da tre o sei numeri esadecimali",
-		"Numero di parametri non valido",
-		"Proprietà sconosciuta.",
-		"Gli hack IE sono necessari solo per il supporto di IE7 e versioni precedenti",
-		"Proprietà specifica del fornitore sconosciuta.",
-		"La proprietà viene ignorata a causa della visualizzazione. Ad esempio, con \'display: inline\', le proprietà width, height, margin-top, margin-bottom e float non hanno effetto",
-		"Evitare di usare !important perché indica che la specificità dell\'intero codice CSS non è più controllabile ed è necessario effettuarne il refactoring.",
-		"Evitare di usare \'float\'. Con gli elementi float si ottiene codice CSS che causa facilmente interruzioni in caso di modifica di un aspetto del layout.",
-		"I selettori non devono contenere ID perché queste regole sono strettamente accoppiate al codice HTML.",
-		"Abilita o disabilita tutte le convalide",
-	],
 	"vs/languages/html/common/html.contribution": [
 		"Configurazione HTML",
 		"Numero massimo di caratteri per riga (0 = disabilita).",
@@ -576,21 +555,8 @@ define("vs/editor/editor.main.nls.it", {
 		"Termina con un carattere di nuova riga.",
 		"Elenco di tag, separati da virgole, che devono essere preceduti da un carattere di nuova riga. Con \'null\' viene usata l\'impostazione predefinita \"head, body, /html\".",
 	],
-	"vs/languages/json/common/json.contribution": [
-		"Configurazione di JSON",
-		"Associa schemi a file JSON nel progetto corrente",
-		"URL di uno schema o percorso relativo di uno schema nella directory corrente",
-		"Criteri dei file che possono contenere \'*\' da usare per la ricerca durante la risoluzione di file JSON in schemi.",
-		"Matrice di criteri dei file da usare per la ricerca durante la risoluzione di file JSON in schemi.",
-		"Definizione dello schema per l\'URL specificato. È necessario specificare lo schema per evitare accessi all\'URL dello schema.",
-	],
-	"vs/languages/less/common/less.contribution": [
-		"Configurazione LESS",
-		"Controlla le gravità dei problemi e la convalida LESS.",
-	],
-	"vs/languages/sass/common/sass.contribution": [
-		"Configurazione SASS",
-		"Controlla le gravità dei problemi e la convalida SASS.",
+	"vs/platform/actions/browser/menuItemActionItem": [
+		"{0} ({1})",
 	],
 	"vs/platform/configuration/common/configurationRegistry": [
 		"Impostazioni di configurazione di contributes.",

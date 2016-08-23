@@ -1,6 +1,6 @@
 /*!-----------------------------------------------------------
  * Copyright (c) Microsoft Corporation. All rights reserved.
- * Version: 0.4.2(1ebfb1b687c4345ac9c6da39051431a46c120a65)
+ * Version: 0.5.3(793ede49d53dba79d39e52205f16321278f5183c)
  * Released under the MIT license
  * https://github.com/Microsoft/vscode/blob/master/LICENSE.txt
  *-----------------------------------------------------------*/
@@ -64,9 +64,6 @@ define("vs/base/common/worker/workerServer.nls.es", {
 		"la propiedad `{0}` se puede omitir y debe ser de tipo \"string[]\"",
 		"la propiedad `{0}` se puede omitir y debe ser de tipo \"string[]\"",
 		"Elemento \"contributes.{0}\" no válido. Se esperaba una matriz.",
-	],
-	"vs/editor/common/services/modelServiceImpl": [
-		"Actualice la configuración: `editor.detectIndentation` reemplaza a `editor.tabSize`: \"auto\" o `editor.insertSpaces`: \"auto\"",
 	],
 	"vs/platform/configuration/common/configurationRegistry": [
 		"Aporta opciones de configuración.",
@@ -141,9 +138,5 @@ define("vs/base/common/worker/workerServer.nls.es", {
 		"Una matriz de esquemas, donde al menos uno debe coincidir.",
 		"Una matriz de esquemas, de los cuales uno debe coincidir.",
 		"Un esquema que no debe tener coincidencias.",
-	],
-	"vs/platform/message/common/message": [
-		"Cerrar",
-		"Cancelar",
 	]
 });

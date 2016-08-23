@@ -1,24 +1,11 @@
 /*!-----------------------------------------------------------
  * Copyright (c) Microsoft Corporation. All rights reserved.
- * Version: 0.4.2(1ebfb1b687c4345ac9c6da39051431a46c120a65)
+ * Version: 0.5.3(793ede49d53dba79d39e52205f16321278f5183c)
  * Released under the MIT license
  * https://github.com/Microsoft/vscode/blob/master/LICENSE.txt
  *-----------------------------------------------------------*/
 
 define("vs/languages/html/common/htmlWorker.nls.ja", {
-	"vs/base/common/keyCodes": [
-		"Windows",
-		"コントロール",
-		"Shift",
-		"Alt",
-		"コマンド",
-		"Windows",
-		"Ctrl",
-		"Shift",
-		"Alt",
-		"コマンド",
-		"Windows",
-	],
 	"vs/languages/html/common/htmlTags": [
 		"html 要素は HTML ドキュメントのルートを表します。",
 		"head 要素はドキュメントのメタデータのコレクションを表します。",

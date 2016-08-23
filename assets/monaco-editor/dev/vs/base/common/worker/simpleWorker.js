@@ -1,6 +1,6 @@
 /*!-----------------------------------------------------------
  * Copyright (c) Microsoft Corporation. All rights reserved.
- * Version: 0.4.2(1ebfb1b687c4345ac9c6da39051431a46c120a65)
+ * Version: 0.5.3(793ede49d53dba79d39e52205f16321278f5183c)
  * Released under the MIT license
  * https://github.com/Microsoft/vscode/blob/master/LICENSE.txt
  *-----------------------------------------------------------*/
@@ -223,6 +223,15 @@ define(__m[27], __M([1,0]), function (require, exports) {
         return arr.reduce(function (r, v) { return r.concat(v); }, []);
     }
     exports.flatten = flatten;
+    function range(to, from) {
+        if (from === void 0) { from = 0; }
+        var result = [];
+        for (var i = from; i < to; i++) {
+            result.push(i);
+        }
+        return result;
+    }
+    exports.range = range;
     function fill(num, valueFn, arr) {
         if (arr === void 0) { arr = []; }
         for (var i = 0; i < num; i++) {
@@ -231,6 +240,12 @@ define(__m[27], __M([1,0]), function (require, exports) {
         return arr;
     }
     exports.fill = fill;
+    function index(array, indexer) {
+        var result = Object.create(null);
+        array.forEach(function (t) { return result[indexer(t)] = t; });
+        return result;
+    }
+    exports.index = index;
 });
 
 define(__m[19], __M([1,0]), function (require, exports) {
@@ -2997,8 +3012,8 @@ define(__m[13], __M([1,0,3]), function (require, exports, platform) {
                 path: this.path,
                 fsPath: this.fsPath,
                 query: this.query,
-                fragment: this.fragment.replace(/URL_MARSHAL_REMOVE.*$/, ''),
-                external: this.toString().replace(/#?URL_MARSHAL_REMOVE.*$/, ''),
+                fragment: this.fragment,
+                external: this.toString(),
                 $mid: 1
             };
         };
@@ -7048,10 +7063,41 @@ define(__m[14], __M([1,0,26]), function (require, exports, callbackList_1) {
     exports.fromEventEmitter = fromEventEmitter;
     function mapEvent(event, map) {
         return function (listener, thisArgs, disposables) {
-            return event(function (i) { return listener(map(i)); }, thisArgs, disposables);
+            if (thisArgs === void 0) { thisArgs = null; }
+            return event(function (i) { return listener.call(thisArgs, map(i)); }, null, disposables);
         };
     }
     exports.mapEvent = mapEvent;
+    function filterEvent(event, filter) {
+        return function (listener, thisArgs, disposables) {
+            if (thisArgs === void 0) { thisArgs = null; }
+            return event(function (e) { return filter(e) && listener.call(thisArgs, e); }, null, disposables);
+        };
+    }
+    exports.filterEvent = filterEvent;
+    function debounceEvent(event, merger, delay) {
+        if (delay === void 0) { delay = 100; }
+        var subscription;
+        var output;
+        var handle;
+        var emitter = new Emitter({
+            onFirstListenerAdd: function () {
+                subscription = event(function (cur) {
+                    output = merger(output, cur);
+                    clearTimeout(handle);
+                    handle = setTimeout(function () {
+                        emitter.fire(output);
+                        output = undefined;
+                    }, delay);
+                });
+            },
+            onLastListenerRemove: function () {
+                subscription.dispose();
+            }
+        });
+        return emitter.event;
+    }
+    exports.debounceEvent = debounceEvent;
     var EventDelayerState;
     (function (EventDelayerState) {
         EventDelayerState[EventDelayerState["Idle"] = 0] = "Idle";
@@ -7912,8 +7958,14 @@ define(__m[36], __M([1,0,5,10,2,31]), function (require, exports, errors_1, life
             var _this = this;
             _super.call(this);
             this._lastRequestTimestamp = -1;
+            var lazyProxyFulfill = null;
+            var lazyProxyReject = null;
             this._worker = this._register(workerFactory.create('vs/base/common/worker/simpleWorker', function (msg) {
                 _this._protocol.handleMessage(msg);
+            }, function (err) {
+                // in Firefox, web workers fail lazily :(
+                // we will reject the proxy
+                lazyProxyReject(err);
             }));
             this._protocol = new SimpleWorkerProtocol({
                 sendMessage: function (msg) {
@@ -7936,8 +7988,6 @@ define(__m[36], __M([1,0,5,10,2,31]), function (require, exports, errors_1, life
                 // Get the configuration from requirejs
                 loaderConfiguration = window.requirejs.s.contexts._.config;
             }
-            var lazyProxyFulfill = null;
-            var lazyProxyReject = null;
             this._lazyProxy = new winjs_base_1.TPromise(function (c, e, p) {
                 lazyProxyFulfill = c;
                 lazyProxyReject = e;
@@ -9037,7 +9087,6 @@ define(__m[30], __M([1,0,14,34,9,7,28,2,15,32,13]), function (require, exports, 
     function createMonacoBaseAPI() {
         return {
             editor: undefined,
-            worker: undefined,
             languages: undefined,
             CancellationTokenSource: cancellation_1.CancellationTokenSource,
             Emitter: event_1.Emitter,
@@ -9088,6 +9137,9 @@ define(__m[38], __M([1,0,13,2,7,25,29,21,18,16,17,30]), function (require, expor
             enumerable: true,
             configurable: true
         });
+        MirrorModel.prototype.getValue = function () {
+            return this.getText();
+        };
         MirrorModel.prototype.getLinesContent = function () {
             return this._lines.slice(0);
         };
@@ -9177,12 +9229,156 @@ define(__m[38], __M([1,0,13,2,7,25,29,21,18,16,17,30]), function (require, expor
     /**
      * @internal
      */
-    var EditorSimpleWorkerImpl = (function () {
-        function EditorSimpleWorkerImpl() {
-            this._models = Object.create(null);
+    var BaseEditorSimpleWorker = (function () {
+        function BaseEditorSimpleWorker() {
             this._foreignModule = null;
         }
-        EditorSimpleWorkerImpl.prototype.getModels = function () {
+        // ---- BEGIN diff --------------------------------------------------------------------------
+        BaseEditorSimpleWorker.prototype.computeDiff = function (originalUrl, modifiedUrl, ignoreTrimWhitespace) {
+            var original = this._getModel(originalUrl);
+            var modified = this._getModel(modifiedUrl);
+            if (!original || !modified) {
+                return null;
+            }
+            var originalLines = original.getLinesContent();
+            var modifiedLines = modified.getLinesContent();
+            var diffComputer = new diffComputer_1.DiffComputer(originalLines, modifiedLines, {
+                shouldPostProcessCharChanges: true,
+                shouldIgnoreTrimWhitespace: ignoreTrimWhitespace,
+                shouldConsiderTrimWhitespaceInEmptyCase: true
+            });
+            return winjs_base_1.TPromise.as(diffComputer.computeDiff());
+        };
+        BaseEditorSimpleWorker.prototype.computeDirtyDiff = function (originalUrl, modifiedUrl, ignoreTrimWhitespace) {
+            var original = this._getModel(originalUrl);
+            var modified = this._getModel(modifiedUrl);
+            if (!original || !modified) {
+                return null;
+            }
+            var originalLines = original.getLinesContent();
+            var modifiedLines = modified.getLinesContent();
+            var diffComputer = new diffComputer_1.DiffComputer(originalLines, modifiedLines, {
+                shouldPostProcessCharChanges: false,
+                shouldIgnoreTrimWhitespace: ignoreTrimWhitespace,
+                shouldConsiderTrimWhitespaceInEmptyCase: false
+            });
+            return winjs_base_1.TPromise.as(diffComputer.computeDiff());
+        };
+        // ---- END diff --------------------------------------------------------------------------
+        BaseEditorSimpleWorker.prototype.computeLinks = function (modelUrl) {
+            var model = this._getModel(modelUrl);
+            if (!model) {
+                return null;
+            }
+            return winjs_base_1.TPromise.as(linkComputer_1.computeLinks(model));
+        };
+        // ---- BEGIN suggest --------------------------------------------------------------------------
+        BaseEditorSimpleWorker.prototype.textualSuggest = function (modelUrl, position, wordDef, wordDefFlags) {
+            var model = this._getModel(modelUrl);
+            if (!model) {
+                return null;
+            }
+            return winjs_base_1.TPromise.as(this._suggestFiltered(model, position, new RegExp(wordDef, wordDefFlags)));
+        };
+        BaseEditorSimpleWorker.prototype._suggestFiltered = function (model, position, wordDefRegExp) {
+            var value = this._suggestUnfiltered(model, position, wordDefRegExp);
+            // filter suggestions
+            return [{
+                    currentWord: value.currentWord,
+                    suggestions: value.suggestions.filter(function (element) { return !!filters_1.fuzzyContiguousFilter(value.currentWord, element.label); }),
+                    incomplete: value.incomplete
+                }];
+        };
+        BaseEditorSimpleWorker.prototype._suggestUnfiltered = function (model, position, wordDefRegExp) {
+            var currentWord = model.getWordUntilPosition(position, wordDefRegExp).word;
+            var allWords = model.getAllUniqueWords(wordDefRegExp, currentWord);
+            var suggestions = allWords.filter(function (word) {
+                return !(/^-?\d*\.?\d/.test(word)); // filter out numbers
+            }).map(function (word) {
+                return {
+                    type: 'text',
+                    label: word,
+                    codeSnippet: word,
+                    noAutoAccept: true
+                };
+            });
+            return {
+                currentWord: currentWord,
+                suggestions: suggestions
+            };
+        };
+        // ---- END suggest --------------------------------------------------------------------------
+        BaseEditorSimpleWorker.prototype.navigateValueSet = function (modelUrl, range, up, wordDef, wordDefFlags) {
+            var model = this._getModel(modelUrl);
+            if (!model) {
+                return null;
+            }
+            var wordDefRegExp = new RegExp(wordDef, wordDefFlags);
+            if (range.startColumn === range.endColumn) {
+                range.endColumn += 1;
+            }
+            var selectionText = model.getValueInRange(range);
+            var wordRange = model.getWordAtPosition({ lineNumber: range.startLineNumber, column: range.startColumn }, wordDefRegExp);
+            var word = null;
+            if (wordRange !== null) {
+                word = model.getValueInRange(wordRange);
+            }
+            var result = inplaceReplaceSupport_1.BasicInplaceReplace.INSTANCE.navigateValueSet(range, selectionText, wordRange, word, up);
+            return winjs_base_1.TPromise.as(result);
+        };
+        // ---- BEGIN foreign module support --------------------------------------------------------------------------
+        BaseEditorSimpleWorker.prototype.loadForeignModule = function (moduleId, createData) {
+            var _this = this;
+            return new winjs_base_1.TPromise(function (c, e) {
+                // Use the global require to be sure to get the global config
+                self.require([moduleId], function (foreignModule) {
+                    var ctx = {
+                        getMirrorModels: function () {
+                            return _this._getModels();
+                        }
+                    };
+                    _this._foreignModule = foreignModule.create(ctx, createData);
+                    var methods = [];
+                    for (var prop in _this._foreignModule) {
+                        if (typeof _this._foreignModule[prop] === 'function') {
+                            methods.push(prop);
+                        }
+                    }
+                    c(methods);
+                }, e);
+            });
+        };
+        // foreign method request
+        BaseEditorSimpleWorker.prototype.fmr = function (method, args) {
+            if (!this._foreignModule || typeof this._foreignModule[method] !== 'function') {
+                return winjs_base_1.TPromise.wrapError(new Error('Missing requestHandler or method: ' + method));
+            }
+            try {
+                return winjs_base_1.TPromise.as(this._foreignModule[method].apply(this._foreignModule, args));
+            }
+            catch (e) {
+                return winjs_base_1.TPromise.wrapError(e);
+            }
+        };
+        return BaseEditorSimpleWorker;
+    }());
+    exports.BaseEditorSimpleWorker = BaseEditorSimpleWorker;
+    /**
+     * @internal
+     */
+    var EditorSimpleWorkerImpl = (function (_super) {
+        __extends(EditorSimpleWorkerImpl, _super);
+        function EditorSimpleWorkerImpl() {
+            _super.call(this);
+            this._models = Object.create(null);
+        }
+        EditorSimpleWorkerImpl.prototype.dispose = function () {
+            this._models = Object.create(null);
+        };
+        EditorSimpleWorkerImpl.prototype._getModel = function (uri) {
+            return this._models[uri];
+        };
+        EditorSimpleWorkerImpl.prototype._getModels = function () {
             var _this = this;
             var all = [];
             Object.keys(this._models).forEach(function (key) { return all.push(_this._models[key]); });
@@ -9204,155 +9400,22 @@ define(__m[38], __M([1,0,13,2,7,25,29,21,18,16,17,30]), function (require, expor
             }
             delete this._models[strURL];
         };
-        // ---- BEGIN diff --------------------------------------------------------------------------
-        EditorSimpleWorkerImpl.prototype.computeDiff = function (originalUrl, modifiedUrl, ignoreTrimWhitespace) {
-            var original = this._models[originalUrl];
-            var modified = this._models[modifiedUrl];
-            if (!original || !modified) {
-                return null;
-            }
-            var originalLines = original.getLinesContent();
-            var modifiedLines = modified.getLinesContent();
-            var diffComputer = new diffComputer_1.DiffComputer(originalLines, modifiedLines, {
-                shouldPostProcessCharChanges: true,
-                shouldIgnoreTrimWhitespace: ignoreTrimWhitespace,
-                shouldConsiderTrimWhitespaceInEmptyCase: true
-            });
-            return winjs_base_1.TPromise.as(diffComputer.computeDiff());
-        };
-        EditorSimpleWorkerImpl.prototype.computeDirtyDiff = function (originalUrl, modifiedUrl, ignoreTrimWhitespace) {
-            var original = this._models[originalUrl];
-            var modified = this._models[modifiedUrl];
-            if (!original || !modified) {
-                return null;
-            }
-            var originalLines = original.getLinesContent();
-            var modifiedLines = modified.getLinesContent();
-            var diffComputer = new diffComputer_1.DiffComputer(originalLines, modifiedLines, {
-                shouldPostProcessCharChanges: false,
-                shouldIgnoreTrimWhitespace: ignoreTrimWhitespace,
-                shouldConsiderTrimWhitespaceInEmptyCase: false
-            });
-            return winjs_base_1.TPromise.as(diffComputer.computeDiff());
-        };
-        // ---- END diff --------------------------------------------------------------------------
-        EditorSimpleWorkerImpl.prototype.computeLinks = function (modelUrl) {
-            var model = this._models[modelUrl];
-            if (!model) {
-                return null;
-            }
-            return winjs_base_1.TPromise.as(linkComputer_1.computeLinks(model));
-        };
-        // ---- BEGIN suggest --------------------------------------------------------------------------
-        EditorSimpleWorkerImpl.prototype.textualSuggest = function (modelUrl, position, wordDef, wordDefFlags) {
-            var model = this._models[modelUrl];
-            if (!model) {
-                return null;
-            }
-            return winjs_base_1.TPromise.as(this._suggestFiltered(model, position, new RegExp(wordDef, wordDefFlags)));
-        };
-        EditorSimpleWorkerImpl.prototype._suggestFiltered = function (model, position, wordDefRegExp) {
-            var value = this._suggestUnfiltered(model, position, wordDefRegExp);
-            // filter suggestions
-            return [{
-                    currentWord: value.currentWord,
-                    suggestions: value.suggestions.filter(function (element) { return !!filters_1.fuzzyContiguousFilter(value.currentWord, element.label); }),
-                    incomplete: value.incomplete
-                }];
-        };
-        EditorSimpleWorkerImpl.prototype._suggestUnfiltered = function (model, position, wordDefRegExp) {
-            var currentWord = model.getWordUntilPosition(position, wordDefRegExp).word;
-            var allWords = model.getAllUniqueWords(wordDefRegExp, currentWord);
-            var suggestions = allWords.filter(function (word) {
-                return !(/^-?\d*\.?\d/.test(word)); // filter out numbers
-            }).map(function (word) {
-                return {
-                    type: 'text',
-                    label: word,
-                    codeSnippet: word,
-                    noAutoAccept: true
-                };
-            });
-            return {
-                currentWord: currentWord,
-                suggestions: suggestions
-            };
-        };
-        // ---- END suggest --------------------------------------------------------------------------
-        EditorSimpleWorkerImpl.prototype.navigateValueSet = function (modelUrl, range, up, wordDef, wordDefFlags) {
-            var model = this._models[modelUrl];
-            if (!model) {
-                return null;
-            }
-            var wordDefRegExp = new RegExp(wordDef, wordDefFlags);
-            if (range.startColumn === range.endColumn) {
-                range.endColumn += 1;
-            }
-            var selectionText = model.getValueInRange(range);
-            var wordRange = model.getWordAtPosition({ lineNumber: range.startLineNumber, column: range.startColumn }, wordDefRegExp);
-            var word = null;
-            if (wordRange !== null) {
-                word = model.getValueInRange(wordRange);
-            }
-            var result = inplaceReplaceSupport_1.BasicInplaceReplace.INSTANCE.navigateValueSet(range, selectionText, wordRange, word, up);
-            return winjs_base_1.TPromise.as(result);
-        };
-        // ---- BEGIN foreign module support --------------------------------------------------------------------------
-        EditorSimpleWorkerImpl.prototype.loadForeignModule = function (moduleId, createData) {
-            var _this = this;
-            return new winjs_base_1.TPromise(function (c, e) {
-                // Use the global require to be sure to get the global config
-                self.require([moduleId], function (foreignModule) {
-                    _this._foreignModule = foreignModule.create(createData);
-                    var methods = [];
-                    for (var prop in _this._foreignModule) {
-                        if (typeof _this._foreignModule[prop] === 'function') {
-                            methods.push(prop);
-                        }
-                    }
-                    c(methods);
-                }, e);
-            });
-        };
-        // foreign method request
-        EditorSimpleWorkerImpl.prototype.fmr = function (method, args) {
-            if (!this._foreignModule || typeof this._foreignModule[method] !== 'function') {
-                return winjs_base_1.TPromise.wrapError(new Error('Missing requestHandler or method: ' + method));
-            }
-            try {
-                return winjs_base_1.TPromise.as(this._foreignModule[method].apply(this._foreignModule, args));
-            }
-            catch (e) {
-                return winjs_base_1.TPromise.wrapError(e);
-            }
-        };
         return EditorSimpleWorkerImpl;
-    }());
+    }(BaseEditorSimpleWorker));
     exports.EditorSimpleWorkerImpl = EditorSimpleWorkerImpl;
-    var instance = new EditorSimpleWorkerImpl();
-    /**
-     * Get all available mirror models in this worker.
-     */
-    function getMirrorModels() {
-        return instance.getModels();
-    }
-    exports.getMirrorModels = getMirrorModels;
     /**
      * Called on the worker side
      * @internal
      */
     function create() {
-        return instance;
+        return new EditorSimpleWorkerImpl();
     }
     exports.create = create;
-    function createMonacoWorkerAPI() {
-        return {
-            getMirrorModels: getMirrorModels
-        };
-    }
     var global = self;
-    global.monaco = standaloneBase_1.createMonacoBaseAPI();
-    global.monaco.worker = createMonacoWorkerAPI();
+    var isWebWorker = (typeof global.importScripts === 'function');
+    if (isWebWorker) {
+        global.monaco = standaloneBase_1.createMonacoBaseAPI();
+    }
 });
 
 }).call(this);

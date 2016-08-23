@@ -1,6 +1,6 @@
 /*!-----------------------------------------------------------
  * Copyright (c) Microsoft Corporation. All rights reserved.
- * Version: 0.4.2(1ebfb1b687c4345ac9c6da39051431a46c120a65)
+ * Version: 0.5.3(793ede49d53dba79d39e52205f16321278f5183c)
  * Released under the MIT license
  * https://github.com/Microsoft/vscode/blob/master/LICENSE.txt
  *-----------------------------------------------------------*/
@@ -307,6 +307,10 @@ define("vs/editor/editor.main.nls", {
 		"Pressing Tab in this editor will move focus to the next focusable element. The command {0} is currently not triggerable by a keybinding.",
 		"You can dismiss this tooltip and return to the editor by pressing Escape."
 	],
+	"vs/editor/contrib/carretOperations/common/carretOperations": [
+		"Move Carret Left",
+		"Move Carret Right"
+	],
 	"vs/editor/contrib/clipboard/browser/clipboard": [
 		"Cut",
 		"Copy",
@@ -543,31 +547,6 @@ define("vs/editor/editor.main.nls", {
 	"vs/editor/contrib/zoneWidget/browser/peekViewWidget": [
 		"Close"
 	],
-	"vs/languages/css/common/css.contribution": [
-		"CSS configuration",
-		"Controls CSS validation and problem severities."
-	],
-	"vs/languages/css/common/services/lintRules": [
-		"When using a vendor-specific prefix make sure to also include all other vendor-specific properties",
-		"When using a vendor-specific prefix also include the standard property",
-		"Do not use duplicate style definitions",
-		"Do not use empty rulesets",
-		"Import statements do not load in parallel",
-		"Do not use width or height when using padding or border",
-		"The universal selector (*) is known to be slow",
-		"No unit for zero needed",
-		"@font-face rule must define 'src' and 'font-family' properties",
-		"Hex colors must consist of three or six hex numbers",
-		"Invalid number of parameters",
-		"Unknown property.",
-		"IE hacks are only necessary when supporting IE7 and older",
-		"Unknown vendor specific property.",
-		"Property is ignored due to the display. E.g. with 'display: inline', the width, height, margin-top, margin-bottom, and float properties have no effect",
-		"Avoid using !important. It is an indication that the specificity of the entire CSS has gotten out of control and needs to be refactored.",
-		"Avoid using 'float'. Floats lead to fragile CSS that is easy to break if one aspect of the layout changes.",
-		"Selectors should not contain IDs because these rules are too tightly coupled with the HTML.",
-		"Enables or disables all validations"
-	],
 	"vs/languages/html/common/html.contribution": [
 		"HTML configuration",
 		"Maximum amount of characters per line (0 = disable).",
@@ -579,21 +558,8 @@ define("vs/editor/editor.main.nls", {
 		"End with a newline.",
 		"List of tags, comma separated, that should have an extra newline before them. 'null' defaults to \"head, body, /html\"."
 	],
-	"vs/languages/json/common/json.contribution": [
-		"JSON configuration",
-		"Associate schemas to JSON files in the current project",
-		"A URL to a schema or a relative path to a schema in the current directory",
-		"A file pattern that can contain '*' to match against when resolving JSON files to schemas.",
-		"An array of file patterns to match against when resolving JSON files to schemas.",
-		"The schema definition for the given URL. The schema only needs to be provided to avoid accesses to the schema URL."
-	],
-	"vs/languages/less/common/less.contribution": [
-		"LESS configuration",
-		"Controls LESS validation and problem severities."
-	],
-	"vs/languages/sass/common/sass.contribution": [
-		"SCSS (Sass) configuration",
-		"Controls SCSS validation and problem severities."
+	"vs/platform/actions/browser/menuItemActionItem": [
+		"{0} ({1})"
 	],
 	"vs/platform/configuration/common/configurationRegistry": [
 		"Contributes configuration settings.",

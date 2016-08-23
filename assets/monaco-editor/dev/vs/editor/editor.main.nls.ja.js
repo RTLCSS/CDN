@@ -1,6 +1,6 @@
 /*!-----------------------------------------------------------
  * Copyright (c) Microsoft Corporation. All rights reserved.
- * Version: 0.4.2(1ebfb1b687c4345ac9c6da39051431a46c120a65)
+ * Version: 0.5.3(793ede49d53dba79d39e52205f16321278f5183c)
  * Released under the MIT license
  * https://github.com/Microsoft/vscode/blob/master/LICENSE.txt
  *-----------------------------------------------------------*/
@@ -304,6 +304,10 @@ define("vs/editor/editor.main.nls.ja", {
 		"このエディターで Tab キーを押すと、次のフォーカス可能な要素にフォーカスを移動します。コマンド {0} は、キー バインドでは現在トリガーできません。",
 		"Esc キーを押すと、ヒントを消してエディターに戻ることができます。",
 	],
+	"vs/editor/contrib/carretOperations/common/carretOperations": [
+		"Move Carret Left",
+		"Move Carret Right",
+	],
 	"vs/editor/contrib/clipboard/browser/clipboard": [
 		"切り取り",
 		"コピー",
@@ -540,31 +544,6 @@ define("vs/editor/editor.main.nls.ja", {
 	"vs/editor/contrib/zoneWidget/browser/peekViewWidget": [
 		"閉じる",
 	],
-	"vs/languages/css/common/css.contribution": [
-		"CSS の構成",
-		"CSS 検証と問題の重大度を制御します。",
-	],
-	"vs/languages/css/common/services/lintRules": [
-		"ベンダー固有のプレフィックスを使用する場合は、他のすべてのベンダー固有のプロパティも必ず含めてください",
-		"ベンダー固有のプレフィックスを使用する場合は、標準のプロパティも含めます",
-		"重複するスタイル定義を使用しないでください",
-		"空の規則セットを使用しないでください",
-		"複数の Import ステートメントを同時に読み込むことはできません",
-		"パディングまたは枠線を使用する場合は幅または高さを使用しないでください",
-		"ユニバーサル セレクター (*) を使用すると処理速度が低下することが分かっています",
-		"0 の単位は必要ありません",
-		"@font-face 規則で \'src\' プロパティと \'font-family\' プロパティを定義する必要があります",
-		"16 進数の色には、3 つまたは 6 つの 16 進数が含まれる必要があります",
-		"正しくないパラメーターの数",
-		"不明なプロパティ。",
-		"IE ハックは、IE7 以前をサポートする場合にのみ必要です",
-		"不明なベンダー固有のプロパティ。",
-		"表示によりプロパティが無視されます。たとえば、\'display: inline\' の場合、width、height、margin-top、margin-bottom、および float のプロパティには効果がありません",
-		"!important は使用しないでください。これは CSS 全体の特定性が制御不能になり、リファクタリングが必要なことを示しています。",
-		"\'float\' は使用しないでください。float を使用すると、レイアウトの一部が変更されたときに CSS が破損しやすくなります。",
-		"セレクターには ID を含めないでください。これらの規則と HTML の結合が密接すぎます。",
-		"すべての検証を有効または無効にします",
-	],
 	"vs/languages/html/common/html.contribution": [
 		"HTML 構成",
 		"1 行あたりの最大文字数 (0 = 無効にする)。",
@@ -576,21 +555,8 @@ define("vs/editor/editor.main.nls.ja", {
 		"末尾に改行を入れます。",
 		"直前に改行を 1 つ入れるタグの、コンマで区切られたリストです。\'null\' は、既定値の \"head, body, /html\" を表します。",
 	],
-	"vs/languages/json/common/json.contribution": [
-		"JSON の構成",
-		"現在のプロジェクト内の JSON ファイルにスキーマを関連付けます",
-		"スキーマの URL、またはスキーマへの現在のディレクトリからの相対パス",
-		"JSON ファイルをスキーマに解決するときに照合に使用する、\'*\' を含めることができるファイルのパターン。",
-		"JSON ファイルをスキーマに解決するときに照合に使用する、ファイル パターンの配列。",
-		"指定された URL のスキーマ定義。スキーマの URL へのアクセスを防ぐために、スキーマのみを入力してください。",
-	],
-	"vs/languages/less/common/less.contribution": [
-		"LESS の構成",
-		"LESS 検証と問題の重大度を制御します。",
-	],
-	"vs/languages/sass/common/sass.contribution": [
-		"SASS の構成",
-		"SASS 検証と問題の重大度を制御します。",
+	"vs/platform/actions/browser/menuItemActionItem": [
+		"{0} ({1})",
 	],
 	"vs/platform/configuration/common/configurationRegistry": [
 		"構成の設定を提供します。",

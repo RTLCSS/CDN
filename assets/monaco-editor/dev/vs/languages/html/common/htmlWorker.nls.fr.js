@@ -1,24 +1,11 @@
 /*!-----------------------------------------------------------
  * Copyright (c) Microsoft Corporation. All rights reserved.
- * Version: 0.4.2(1ebfb1b687c4345ac9c6da39051431a46c120a65)
+ * Version: 0.5.3(793ede49d53dba79d39e52205f16321278f5183c)
  * Released under the MIT license
  * https://github.com/Microsoft/vscode/blob/master/LICENSE.txt
  *-----------------------------------------------------------*/
 
 define("vs/languages/html/common/htmlWorker.nls.fr", {
-	"vs/base/common/keyCodes": [
-		"Windows",
-		"Contrôle",
-		"Maj",
-		"Alt",
-		"Commande",
-		"Windows",
-		"Ctrl",
-		"Maj",
-		"Alt",
-		"Commande",
-		"Windows",
-	],
 	"vs/languages/html/common/htmlTags": [
 		"L\'élément html représente la racine d\'un document HTML.",
 		"L\'élément head représente une collection de métadonnées pour le document.",

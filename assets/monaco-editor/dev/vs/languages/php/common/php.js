@@ -1,12 +1,12 @@
 /*!-----------------------------------------------------------
  * Copyright (c) Microsoft Corporation. All rights reserved.
- * Version: 0.4.2(1ebfb1b687c4345ac9c6da39051431a46c120a65)
+ * Version: 0.5.3(793ede49d53dba79d39e52205f16321278f5183c)
  * Released under the MIT license
  * https://github.com/Microsoft/vscode/blob/master/LICENSE.txt
  *-----------------------------------------------------------*/
 
 (function() {
-var __m = ["vs/editor/common/modes/abstractState","vs/languages/php/common/php","exports","vs/base/common/objects","vs/editor/common/modes","vs/editor/common/modes/abstractMode","require","vs/editor/common/services/modeService","vs/editor/common/modes/languageConfigurationRegistry","vs/editor/common/modes/supports/tokenizationSupport","vs/editor/common/modes/supports/suggestSupport","vs/editor/common/services/editorWorkerService","vs/platform/configuration/common/configuration"];
+var __m = ["vs/editor/common/services/modeService","vs/languages/php/common/php","exports","vs/base/common/objects","vs/editor/common/modes","vs/editor/common/modes/abstractMode","vs/editor/common/modes/abstractState","require","vs/editor/common/modes/languageConfigurationRegistry","vs/editor/common/modes/supports/tokenizationSupport","vs/editor/common/modes/supports/suggestSupport","vs/editor/common/services/editorWorkerService","vs/platform/configuration/common/configuration","vs/editor/common/services/compatWorkerService"];
 var __M = function(deps) {
   var result = [];
   for (var i = 0, len = deps.length; i < len; i++) {
@@ -28,7 +28,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
-define(__m[1], __M([6,2,3,4,5,0,7,8,9,10,11,12]), function (require, exports, objects, Modes, abstractMode_1, abstractState_1, modeService_1, languageConfigurationRegistry_1, tokenizationSupport_1, suggestSupport_1, editorWorkerService_1, configuration_1) {
+define(__m[1], __M([7,2,3,4,5,6,0,8,9,10,11,12,13]), function (require, exports, objects, Modes, abstractMode_1, abstractState_1, modeService_1, languageConfigurationRegistry_1, tokenizationSupport_1, suggestSupport_1, editorWorkerService_1, configuration_1, compatWorkerService_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -437,18 +437,15 @@ define(__m[1], __M([6,2,3,4,5,0,7,8,9,10,11,12]), function (require, exports, ob
     exports.PHPEnterHTMLState = PHPEnterHTMLState;
     var PHPMode = (function (_super) {
         __extends(PHPMode, _super);
-        function PHPMode(descriptor, modeService, configurationService, editorWorkerService) {
-            _super.call(this, descriptor.id);
+        function PHPMode(descriptor, modeService, configurationService, editorWorkerService, compatWorkerService) {
+            _super.call(this, descriptor.id, compatWorkerService);
             this.modeService = modeService;
-            this.tokenizationSupport = new tokenizationSupport_1.TokenizationSupport(this, this, true, false);
+            this.tokenizationSupport = new tokenizationSupport_1.TokenizationSupport(this, this, true);
             languageConfigurationRegistry_1.LanguageConfigurationRegistry.register(this.getId(), PHPMode.LANG_CONFIG);
             if (editorWorkerService) {
                 Modes.SuggestRegistry.register(this.getId(), new suggestSupport_1.TextualSuggestSupport(editorWorkerService, configurationService), true);
             }
         }
-        PHPMode.prototype.asyncCtor = function () {
-            return this.modeService.getOrCreateMode('text/html');
-        };
         PHPMode.prototype.getInitialState = function () {
             // Because AbstractMode doesn't allow the initial state to immediately enter a nested
             // mode, we will enter a nested mode ourselves
@@ -511,10 +508,11 @@ define(__m[1], __M([6,2,3,4,5,0,7,8,9,10,11,12]), function (require, exports, ob
         PHPMode = __decorate([
             __param(1, modeService_1.IModeService),
             __param(2, configuration_1.IConfigurationService),
-            __param(3, editorWorkerService_1.IEditorWorkerService)
+            __param(3, editorWorkerService_1.IEditorWorkerService),
+            __param(4, compatWorkerService_1.ICompatWorkerService)
         ], PHPMode);
         return PHPMode;
-    }(abstractMode_1.AbstractMode));
+    }(abstractMode_1.CompatMode));
     exports.PHPMode = PHPMode;
 });
 

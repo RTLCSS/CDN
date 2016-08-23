@@ -1,6 +1,6 @@
 /*!-----------------------------------------------------------
  * Copyright (c) Microsoft Corporation. All rights reserved.
- * Version: 0.4.2(1ebfb1b687c4345ac9c6da39051431a46c120a65)
+ * Version: 0.5.3(793ede49d53dba79d39e52205f16321278f5183c)
  * Released under the MIT license
  * https://github.com/Microsoft/vscode/blob/master/LICENSE.txt
  *-----------------------------------------------------------*/
@@ -67,9 +67,6 @@ define("vs/base/common/worker/workerServer.nls", {
 		"property `{0}` can be omitted and must be of type `string[]`",
 		"property `{0}` can be omitted and must be of type `string[]`",
 		"Invalid `contributes.{0}`. Expected an array."
-	],
-	"vs/editor/common/services/modelServiceImpl": [
-		"Please update your settings: `editor.detectIndentation` replaces `editor.tabSize`: \"auto\" or `editor.insertSpaces`: \"auto\""
 	],
 	"vs/platform/configuration/common/configurationRegistry": [
 		"Contributes configuration settings.",
@@ -144,9 +141,5 @@ define("vs/base/common/worker/workerServer.nls", {
 		"An array of schemas, where at least one must match.",
 		"An array of schemas, exactly one of which must match.",
 		"A schema which must not match."
-	],
-	"vs/platform/message/common/message": [
-		"Close",
-		"Cancel"
 	]
 });

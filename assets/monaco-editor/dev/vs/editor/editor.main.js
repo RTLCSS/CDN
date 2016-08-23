@@ -1,12 +1,12 @@
 /*!-----------------------------------------------------------
  * Copyright (c) Microsoft Corporation. All rights reserved.
- * Version: 0.4.2(1ebfb1b687c4345ac9c6da39051431a46c120a65)
+ * Version: 0.5.3(793ede49d53dba79d39e52205f16321278f5183c)
  * Released under the MIT license
  * https://github.com/Microsoft/vscode/blob/master/LICENSE.txt
  *-----------------------------------------------------------*/
 
 (function() {
-var __m = ["exports","require","vs/base/common/winjs.base","vs/base/common/lifecycle","vs/nls!vs/editor/editor.main","vs/nls","vs/editor/common/core/range","vs/editor/common/editorCommon","vs/base/common/errors","vs/css!vs/editor/editor.main","vs/base/common/strings","vs/base/browser/dom","vs/editor/common/editorCommonExtensions","vs/base/common/keyCodes","vs/base/common/async","vs/platform/instantiation/common/instantiation","vs/editor/common/modes","vs/base/common/platform","vs/base/common/event","vs/editor/common/editorAction","vs/editor/common/core/position","vs/platform/keybinding/common/keybindingService","vs/base/common/eventEmitter","vs/editor/browser/editorBrowser","vs/editor/common/core/selection","vs/editor/common/editorActionEnablement","vs/base/common/types","vs/base/browser/browser","vs/base/browser/styleMutator","vs/base/common/uri","vs/editor/browser/editorBrowserExtensions","vs/platform/platform","vs/base/common/objects","vs/base/common/severity","vs/platform/telemetry/common/telemetry","vs/base/common/arrays","vs/base/browser/builder","vs/base/common/paths","vs/base/browser/mouseEvent","vs/editor/common/modes/modesRegistry","vs/editor/common/services/modelService","vs/editor/common/modes/languageConfigurationRegistry","vs/base/browser/ui/scrollbar/scrollableElementOptions","vs/platform/configuration/common/configurationRegistry","vs/platform/message/common/message","vs/platform/editor/common/editor","vs/base/browser/ui/widget","vs/editor/common/modes/supports","vs/editor/browser/view/viewPart","vs/platform/thread/common/thread","vs/base/common/actions","vs/base/common/collections","vs/editor/common/viewModel/viewEventHandler","vs/platform/keybinding/common/keybindingsRegistry","vs/base/browser/keyboardEvent","vs/base/common/timer","vs/base/common/assert","vs/editor/common/config/defaultConfig","vs/editor/common/core/editOperation","vs/base/common/idGenerator","vs/editor/common/core/viewLineToken","vs/editor/browser/config/configuration","vs/editor/common/services/codeEditorService","vs/base/common/events","vs/editor/common/services/editorWorkerService","vs/base/parts/tree/browser/treeDefaults","vs/base/browser/ui/actionbar/actionbar","vs/base/common/filters","vs/platform/instantiation/common/descriptors","vs/platform/configuration/common/configuration","vs/platform/contextview/browser/contextView","vs/base/browser/touch","vs/platform/instantiation/common/serviceCollection","vs/editor/browser/view/dynamicViewOverlay","vs/base/browser/htmlContentRenderer","vs/platform/workspace/common/workspace","vs/platform/markers/common/markers","vs/base/parts/quickopen/common/quickOpen","vs/editor/common/core/arrays","vs/editor/common/model/wordHelper","vs/base/browser/ui/aria/aria","vs/platform/jsonschemas/common/jsonContributionRegistry","vs/platform/extensions/common/extensionsRegistry","vs/editor/common/services/modeService","vs/editor/common/core/modeTransition","vs/editor/common/modes/supports/richEditBrackets","vs/editor/common/config/config","vs/base/browser/ui/scrollbar/scrollableElement","vs/base/common/network","vs/editor/contrib/snippet/common/snippet","vs/editor/browser/widget/codeEditorWidget","vs/editor/contrib/zoneWidget/browser/peekViewWidget","vs/editor/common/commands/replaceCommand","vs/editor/contrib/referenceSearch/browser/referencesModel","vs/base/browser/globalMouseMoveMonitor","vs/editor/common/viewLayout/viewLineRenderer","vs/editor/common/viewModel/prefixSumComputer","vs/base/common/iterator","vs/css!vs/languages/css/common/css-hover","vs/platform/event/common/event","vs/platform/files/common/files","vs/base/common/map","vs/base/browser/ui/highlightedlabel/highlightedLabel","vs/platform/keybinding/common/keybindingResolver","vs/base/browser/ui/sash/sash","vs/editor/common/viewModel/viewModel","vs/base/browser/ui/inputbox/inputBox","vs/base/browser/ui/scrollbar/scrollbarArrow","vs/editor/common/model/modelLine","vs/editor/contrib/quickOpen/browser/editorQuickOpen","vs/editor/browser/standalone/standaloneServices","vs/editor/common/modes/abstractState","vs/editor/common/modes/monarch/monarchCommon","vs/editor/common/config/commonEditorConfig","vs/base/parts/quickopen/browser/quickOpenModel","vs/base/parts/tree/browser/treeImpl","vs/editor/common/modes/nullMode","vs/editor/common/model/textModel","vs/editor/common/model/textModelWithTokens","vs/languages/css/common/services/lintRules","vs/editor/contrib/suggest/common/suggest","vs/editor/browser/standalone/simpleServices","vs/base/common/flags","vs/editor/common/controller/cursorMoveHelper","vs/base/common/cancellation","vs/editor/common/view/renderingContext","vs/base/common/json","vs/base/browser/ui/scrollbar/scrollbarState","vs/editor/common/modes/supports/tokenizationSupport","vs/editor/common/modes/monarch/monarchLexer","vs/editor/common/services/editorWorkerServiceImpl","vs/editor/common/modes/textToHtmlTokenizer","vs/base/common/glob","vs/base/common/uuid","vs/editor/common/controller/textAreaState","vs/platform/extensions/common/extensions","vs/editor/common/viewModel/splitLinesCollection","vs/base/browser/ui/contextview/contextview","vs/platform/instantiation/common/instantiationService","vs/base/common/stopwatch","vs/base/common/labels","vs/editor/browser/standalone/colorizer","vs/editor/common/modes/lineStream","vs/platform/opener/common/opener","vs/editor/common/model/tokensBinaryEncoding","vs/base/browser/ui/scrollbar/abstractScrollbar","vs/editor/browser/viewParts/glyphMargin/glyphMargin","vs/css!vs/base/browser/ui/progressbar/progressbar","vs/base/worker/defaultWorkerFactory","vs/editor/browser/view/viewLayer","vs/editor/browser/viewParts/overviewRuler/overviewRulerImpl","vs/editor/contrib/hover/browser/hoverWidgets","vs/editor/contrib/zoneWidget/browser/zoneWidget","vs/editor/common/modes/supports/suggestSupport","vs/editor/common/modes/abstractMode","vs/editor/common/viewLayout/viewLineParts","vs/editor/common/controller/oneCursor","vs/platform/keybinding/browser/keybindingServiceImpl","vs/platform/request/common/request","vs/platform/storage/common/storage","vs/editor/common/model/textModelWithTokensHelpers","vs/editor/contrib/comment/common/blockCommentCommand","vs/editor/contrib/parameterHints/common/parameterHints","vs/editor/contrib/quickFix/common/quickFix","vs/editor/contrib/quickOpen/common/quickOpen","vs/editor/contrib/diffNavigator/common/diffNavigator","vs/editor/contrib/find/common/findModel","vs/editor/contrib/toggleTabFocusMode/common/toggleTabFocusMode","vs/editor/contrib/hover/browser/hoverOperation","vs/editor/common/model/model","vs/editor/browser/widget/diffEditorWidget","vs/editor/browser/widget/embeddedCodeEditorWidget","vs/editor/common/modes/monarch/monarchCompile","vs/base/browser/iframe","vs/platform/thread/common/threadService","vs/base/common/mime","vs/editor/contrib/referenceSearch/browser/referencesWidget","vs/editor/contrib/referenceSearch/browser/referencesController","vs/base/common/callbackList","vs/editor/browser/standalone/standaloneCodeEditor","vs/css!vs/editor/browser/viewParts/lineNumbers/lineNumbers","vs/nls!vs/base/browser/ui/aria/aria","vs/nls!vs/base/browser/ui/findinput/findInput","vs/nls!vs/base/browser/ui/inputbox/inputBox","vs/nls!vs/base/common/errors","vs/css!vs/editor/browser/viewParts/lines/viewLines","vs/css!vs/editor/browser/viewParts/linesDecorations/linesDecorations","vs/css!vs/editor/browser/viewParts/overlayWidgets/overlayWidgets","vs/css!vs/editor/browser/viewParts/rulers/rulers","vs/css!vs/editor/browser/viewParts/scrollDecoration/scrollDecoration","vs/css!vs/editor/browser/viewParts/selections/selections","vs/css!vs/editor/browser/viewParts/viewCursors/viewCursors","vs/base/common/scrollable","vs/css!vs/editor/browser/widget/media/diffEditor","vs/css!vs/editor/browser/widget/media/editor","vs/editor/browser/editor.all","vs/css!vs/editor/browser/widget/media/tokens","vs/css!vs/editor/contrib/accessibility/browser/accessibility","vs/base/browser/ui/scrollbar/scrollbarVisibilityController","vs/css!vs/editor/contrib/clipboard/browser/clipboard","vs/base/common/worker/simpleWorker","vs/base/common/worker/workerProtocol","vs/base/common/worker/workerClient","vs/base/parts/quickopen/browser/quickOpenViewer","vs/base/parts/tree/browser/treeModel","vs/base/parts/tree/browser/treeViewModel","vs/css!vs/editor/contrib/codelens/browser/codelens","vs/editor/browser/view/viewEventDispatcher","vs/css!vs/editor/contrib/color/browser/color","vs/editor/common/model/editStack","vs/css!vs/editor/contrib/defineKeybinding/browser/defineKeybinding","vs/css!vs/editor/contrib/find/browser/findWidget","vs/editor/common/modes/languageFeatureRegistry","vs/css!vs/editor/contrib/folding/browser/folding","vs/editor/common/modes/supports/onEnter","vs/css!vs/editor/contrib/goToDeclaration/browser/goToDeclaration","vs/editor/common/commands/shiftCommand","vs/css!vs/editor/contrib/gotoError/browser/gotoError","vs/editor/common/controller/cursorCollection","vs/css!vs/editor/contrib/hover/browser/hover","vs/editor/common/viewModel/viewModelImpl","vs/css!vs/editor/contrib/iPadShowKeyboard/browser/iPadShowKeyboard","vs/editor/contrib/comment/common/lineCommentCommand","vs/css!vs/editor/contrib/inPlaceReplace/browser/inPlaceReplace","vs/css!vs/editor/contrib/links/browser/links","vs/editor/contrib/find/common/findState","vs/css!vs/editor/contrib/outlineMarker/browser/outlineMarker","vs/editor/contrib/links/common/links","vs/css!vs/editor/contrib/parameterHints/browser/parameterHints","vs/editor/contrib/smartSelect/common/tokenTree","vs/editor/contrib/suggest/browser/completionModel","vs/nls!vs/base/common/json","vs/css!vs/editor/contrib/quickFix/browser/quickFix","vs/editor/contrib/defineKeybinding/common/smartSnippetInserter","vs/nls!vs/base/common/keyCodes","vs/css!vs/editor/contrib/quickOpen/browser/gotoLine","vs/css!vs/editor/contrib/quickOpen/browser/quickOutline","vs/css!vs/editor/contrib/referenceSearch/browser/referencesWidget","vs/css!vs/editor/contrib/rename/browser/renameInputField","vs/css!vs/editor/contrib/snippet/browser/snippet","vs/css!vs/editor/contrib/suggest/browser/suggest","vs/css!vs/editor/contrib/wordHighlighter/browser/wordHighlighter","vs/css!vs/editor/contrib/zoneWidget/browser/peekViewWidget","vs/css!vs/editor/contrib/zoneWidget/browser/zoneWidget","vs/base/common/marked/marked","vs/css!vs/platform/contextview/browser/contextMenuHandler","vs/base/browser/ui/countBadge/countBadge","vs/css!vs/platform/keybinding/browser/keybindings","vs/base/browser/ui/fileLabel/fileLabel","vs/base/browser/ui/leftRightWidget/leftRightWidget","vs/base/browser/ui/list/rowCache","vs/base/browser/ui/menu/menu","vs/base/browser/ui/progressbar/progressbar","vs/editor/browser/config/elementSizeObserver","vs/base/browser/ui/list/rangeMap","vs/base/browser/ui/checkbox/checkbox","vs/base/common/graph","vs/base/browser/ui/findinput/findInput","vs/base/common/hash","vs/base/common/htmlContent","vs/base/browser/ui/scrollbar/horizontalScrollbar","vs/base/common/scorer","vs/base/common/sortedList","vs/base/browser/ui/list/listView","vs/base/browser/ui/list/listWidget","vs/base/parts/tree/browser/treeView","vs/editor/common/commands/trimTrailingWhitespaceCommand","vs/editor/browser/controller/mouseHandler","vs/editor/browser/controller/pointerHandler","vs/base/browser/ui/scrollbar/verticalScrollbar","vs/editor/browser/viewLayout/scrollManager","vs/editor/browser/viewLayout/layoutProvider","vs/editor/browser/viewParts/contentWidgets/contentWidgets","vs/editor/browser/viewParts/lines/viewLine","vs/editor/browser/viewParts/overlayWidgets/overlayWidgets","vs/base/common/marshalling","vs/editor/browser/viewParts/overviewRuler/overviewRuler","vs/editor/browser/viewParts/rulers/rulers","vs/editor/browser/viewParts/scrollDecoration/scrollDecoration","vs/editor/browser/viewParts/viewZones/viewZones","vs/editor/common/controller/textAreaHandler","vs/editor/common/commands/surroundSelectionCommand","vs/editor/contrib/hover/browser/modesGlyphHover","vs/editor/contrib/quickFix/browser/lightBulpWidget","vs/base/common/diff/diffChange","vs/nls!vs/base/common/severity","vs/base/browser/ui/octiconLabel/octiconLabel","vs/editor/common/standalone/standaloneBase","vs/nls!vs/base/parts/quickopen/browser/quickOpenModel","vs/nls!vs/base/parts/quickopen/browser/quickOpenWidget","vs/nls!vs/base/parts/tree/browser/treeDefaults","vs/base/parts/tree/browser/tree","vs/base/parts/tree/browser/treeDnd","vs/editor/browser/controller/mouseTarget","vs/base/parts/quickopen/browser/quickOpenWidget","vs/editor/contrib/quickOpen/browser/quickOpenEditorWidget","vs/nls!vs/editor/browser/standalone/standaloneSchemas","vs/editor/browser/standalone/standaloneSchemas","vs/nls!vs/editor/common/config/commonEditorConfig","vs/nls!vs/editor/common/config/defaultConfig","vs/editor/browser/view/viewController","vs/css!vs/base/browser/builder","vs/nls!vs/editor/common/controller/cursor","vs/editor/common/controller/cursor","vs/nls!vs/editor/common/model/textModelWithTokens","vs/editor/common/core/editorState","vs/editor/common/model/mirrorModel","vs/editor/common/model/textModelWithMarkers","vs/editor/common/model/textModelWithTrackedRanges","vs/editor/common/model/textModelWithDecorations","vs/editor/common/model/editableTextModel","vs/editor/common/model/indentationGuesser","vs/nls!vs/editor/common/modes/modesRegistry","vs/nls!vs/editor/common/modes/supports/suggestSupport","vs/nls!vs/editor/common/services/bulkEdit","vs/nls!vs/editor/common/services/modeServiceImpl","vs/nls!vs/editor/common/services/modelServiceImpl","vs/nls!vs/editor/contrib/accessibility/browser/accessibility","vs/nls!vs/editor/contrib/clipboard/browser/clipboard","vs/nls!vs/editor/contrib/comment/common/comment","vs/nls!vs/editor/contrib/contextmenu/browser/contextmenu","vs/nls!vs/editor/contrib/defineKeybinding/browser/defineKeybinding","vs/nls!vs/editor/contrib/find/browser/findWidget","vs/editor/contrib/find/browser/findWidget","vs/nls!vs/editor/contrib/find/common/findController","vs/nls!vs/editor/contrib/folding/browser/folding","vs/nls!vs/editor/contrib/format/common/formatActions","vs/nls!vs/editor/contrib/goToDeclaration/browser/goToDeclaration","vs/nls!vs/editor/contrib/gotoError/browser/gotoError","vs/nls!vs/editor/contrib/hover/browser/hover","vs/nls!vs/editor/contrib/hover/browser/modesContentHover","vs/nls!vs/editor/contrib/inPlaceReplace/common/inPlaceReplace","vs/nls!vs/editor/contrib/indentation/common/indentation","vs/nls!vs/editor/contrib/linesOperations/common/linesOperations","vs/nls!vs/editor/contrib/links/browser/links","vs/nls!vs/editor/contrib/multicursor/common/multicursor","vs/nls!vs/editor/contrib/parameterHints/browser/parameterHints","vs/nls!vs/editor/contrib/parameterHints/browser/parameterHintsWidget","vs/nls!vs/editor/contrib/quickFix/browser/quickFix","vs/nls!vs/editor/contrib/quickFix/browser/quickFixSelectionWidget","vs/editor/contrib/quickFix/browser/quickFixSelectionWidget","vs/nls!vs/editor/contrib/quickOpen/browser/gotoLine","vs/nls!vs/editor/contrib/quickOpen/browser/gotoLine.contribution","vs/nls!vs/editor/contrib/quickOpen/browser/quickCommand","vs/nls!vs/editor/contrib/quickOpen/browser/quickCommand.contribution","vs/nls!vs/editor/contrib/quickOpen/browser/quickOutline","vs/nls!vs/editor/contrib/quickOpen/browser/quickOutline.contribution","vs/nls!vs/editor/contrib/referenceSearch/browser/referenceSearch","vs/nls!vs/editor/contrib/referenceSearch/browser/referencesController","vs/nls!vs/editor/contrib/referenceSearch/browser/referencesWidget","vs/nls!vs/editor/contrib/rename/browser/rename","vs/nls!vs/editor/contrib/rename/browser/renameInputField","vs/editor/contrib/rename/browser/renameInputField","vs/nls!vs/editor/contrib/rename/common/rename","vs/nls!vs/editor/contrib/smartSelect/common/jumpToBracket","vs/nls!vs/editor/contrib/smartSelect/common/smartSelect","vs/nls!vs/editor/contrib/suggest/browser/suggest","vs/nls!vs/editor/contrib/suggest/browser/suggestWidget","vs/nls!vs/editor/contrib/toggleTabFocusMode/common/toggleTabFocusMode","vs/nls!vs/editor/contrib/toggleWordWrap/common/toggleWordWrap","vs/nls!vs/editor/contrib/zoneWidget/browser/peekViewWidget","vs/nls!vs/languages/css/common/css.contribution","vs/nls!vs/languages/css/common/services/lintRules","vs/editor/common/model/lineToken","vs/nls!vs/languages/html/common/html.contribution","vs/nls!vs/languages/json/common/json.contribution","vs/nls!vs/languages/less/common/less.contribution","vs/nls!vs/languages/sass/common/sass.contribution","vs/nls!vs/platform/configuration/common/configurationRegistry","vs/nls!vs/platform/extensions/common/abstractExtensionService","vs/nls!vs/platform/extensions/common/extensionsRegistry","vs/nls!vs/platform/jsonschemas/common/jsonContributionRegistry","vs/nls!vs/platform/keybinding/browser/keybindingServiceImpl","vs/nls!vs/platform/message/common/message","vs/platform/contextview/browser/contextMenuHandler","vs/editor/common/model/tokenIterator","vs/base/common/comparers","vs/css!vs/base/browser/ui/actionbar/actionbar","vs/editor/common/services/abstractCodeEditorService","vs/editor/browser/services/codeEditorServiceImpl","vs/editor/common/modes/languageSelector","vs/css!vs/base/browser/ui/aria/aria","vs/css!vs/base/browser/ui/checkbox/checkbox","vs/css!vs/base/browser/ui/contextview/contextview","vs/editor/common/services/resourceService","vs/editor/contrib/smartSelect/common/tokenSelectionSupport","vs/css!vs/base/browser/ui/countBadge/countBadge","vs/css!vs/base/browser/ui/fileLabel/fileLabel","vs/platform/contextview/browser/contextMenuService","vs/editor/common/modes/supports/characterPair","vs/css!vs/base/browser/ui/findinput/findInput","vs/platform/event/common/eventService","vs/editor/common/modes/supports/electricCharacter","vs/css!vs/base/browser/ui/inputbox/inputBox","vs/editor/common/services/bulkEdit","vs/css!vs/base/browser/ui/leftRightWidget/leftRightWidget","vs/css!vs/base/browser/ui/list/list","vs/editor/common/view/overviewZoneManager","vs/editor/common/commonCodeEditor","vs/css!vs/base/browser/ui/menu/menu","vs/editor/browser/viewParts/lines/rangeUtil","vs/editor/common/view/viewContext","vs/editor/common/viewLayout/editorLayoutProvider","vs/base/common/diff/diff","vs/editor/common/viewLayout/viewLinesViewportData","vs/editor/common/viewLayout/whitespaceComputer","vs/editor/common/services/languagesRegistry","vs/editor/contrib/iPadShowKeyboard/browser/iPadShowKeyboard","vs/editor/common/viewLayout/verticalObjects","vs/editor/contrib/quickOpen/browser/gotoLine","vs/editor/contrib/quickOpen/browser/quickCommand","vs/languages/handlebars/common/handlebars.contribution","vs/languages/markdown/common/markdown.contribution","vs/languages/php/common/php.contribution","vs/languages/razor/common/razor.contribution","vs/editor/common/viewLayout/linesLayout","vs/editor/common/viewModel/filteredLineTokens","vs/css!vs/base/browser/ui/sash/sash","vs/css!vs/base/browser/ui/scrollbar/media/scrollbars","vs/editor/common/viewModel/characterHardWrappingLineMapper","vs/editor/browser/controller/keyboardHandler","vs/editor/browser/view/viewOverlays","vs/editor/browser/viewParts/lines/viewLines","vs/editor/browser/viewParts/viewCursors/viewCursor","vs/editor/browser/viewParts/viewCursors/viewCursors","vs/css!vs/base/parts/quickopen/browser/quickopen","vs/css!vs/base/parts/tree/browser/tree","vs/languages/html/common/html.contribution","vs/languages/json/common/json.contribution","vs/languages/languages.main","vs/languages/less/common/less.contribution","vs/languages/sass/common/sass.contribution","vs/platform/configuration/common/model","vs/platform/configuration/common/configurationService","vs/platform/extensions/common/abstractExtensionService","vs/css!vs/editor/browser/standalone/media/standalone-tokens","vs/editor/browser/viewParts/currentLineHighlight/currentLineHighlight","vs/editor/browser/viewParts/decorations/decorations","vs/css!vs/editor/browser/viewParts/contentWidgets/contentWidgets","vs/editor/browser/viewParts/lineNumbers/lineNumbers","vs/editor/browser/viewParts/linesDecorations/linesDecorations","vs/editor/browser/viewParts/selections/selections","vs/editor/contrib/clipboard/browser/clipboard","vs/editor/contrib/codelens/common/codelens","vs/editor/contrib/codelens/browser/codelens","vs/editor/contrib/color/browser/color","vs/editor/contrib/comment/common/comment","vs/editor/contrib/contextmenu/browser/contextmenu","vs/editor/contrib/find/common/findController","vs/editor/contrib/find/browser/find","vs/editor/contrib/folding/browser/folding","vs/editor/contrib/format/common/format","vs/editor/contrib/format/common/formatActions","vs/editor/contrib/goToDeclaration/common/goToDeclaration","vs/editor/contrib/hover/common/hover","vs/editor/contrib/hover/browser/modesContentHover","vs/editor/contrib/hover/browser/hover","vs/editor/contrib/inPlaceReplace/common/inPlaceReplace","vs/editor/contrib/linesOperations/common/linesOperations","vs/editor/contrib/links/browser/links","vs/editor/contrib/multicursor/common/multicursor","vs/css!vs/editor/browser/viewParts/currentLineHighlight/currentLineHighlight","vs/editor/contrib/parameterHints/browser/parameterHintsWidget","vs/editor/contrib/parameterHints/browser/parameterHints","vs/css!vs/editor/browser/viewParts/decorations/decorations","vs/editor/contrib/gotoError/browser/gotoError","vs/editor/contrib/quickFix/browser/quickFixModel","vs/editor/contrib/quickFix/browser/quickFix","vs/editor/contrib/quickOpen/browser/gotoLine.contribution","vs/editor/contrib/quickOpen/browser/quickCommand.contribution","vs/editor/common/viewModel/viewModelCursors","vs/editor/contrib/outlineMarker/browser/outlineMarker","vs/editor/contrib/quickOpen/browser/quickOutline","vs/editor/contrib/quickOpen/browser/quickOutline.contribution","vs/editor/contrib/referenceSearch/common/referenceSearch","vs/editor/contrib/rename/common/rename","vs/editor/contrib/rename/browser/rename","vs/editor/contrib/smartSelect/common/jumpToBracket","vs/editor/contrib/smartSelect/common/smartSelect","vs/editor/common/viewModel/viewModelDecorations","vs/editor/contrib/defineKeybinding/browser/defineKeybinding","vs/editor/contrib/find/common/findDecorations","vs/editor/contrib/suggest/browser/suggestModel","vs/editor/contrib/suggest/browser/suggestWidget","vs/editor/contrib/suggest/browser/suggest","vs/editor/contrib/find/common/replaceAllCommand","vs/editor/contrib/accessibility/browser/accessibility","vs/editor/contrib/toggleWordWrap/common/toggleWordWrap","vs/editor/contrib/wordHighlighter/common/wordHighlighter","vs/languages/css/common/css.contribution","vs/platform/contextview/browser/contextViewService","vs/platform/request/common/baseRequestService","vs/editor/contrib/folding/common/indentFoldStrategy","vs/platform/theme/common/themes","vs/editor/browser/viewParts/overviewRuler/decorationsOverviewRuler","vs/editor/browser/view/viewImpl","vs/editor/contrib/format/common/formatCommand","vs/editor/contrib/inPlaceReplace/common/inPlaceReplaceCommand","vs/editor/contrib/indentation/common/indentationCommands","vs/editor/contrib/linesOperations/common/copyLinesCommand","vs/editor/contrib/linesOperations/common/deleteLinesCommand","vs/editor/common/services/modeServiceImpl","vs/editor/common/services/modelServiceImpl","vs/platform/markers/common/markerService","vs/platform/telemetry/common/remoteTelemetryService","vs/editor/contrib/linesOperations/common/moveLinesCommand","vs/platform/thread/common/abstractThreadService","vs/platform/thread/common/mainThreadService","vs/editor/contrib/linesOperations/common/sortLinesCommand","vs/editor/common/languages.common","vs/editor/contrib/snippet/browser/snippet","vs/languages/css/common/level","vs/editor/contrib/goToDeclaration/browser/goToDeclaration","vs/editor/contrib/referenceSearch/browser/referenceSearch","vs/platform/workspace/common/baseWorkspaceContextService","vs/nls!vs/base/browser/ui/actionbar/actionbar","vs/css!vs/editor/browser/viewParts/glyphMargin/glyphMargin","vs/editor/browser/standalone/standaloneEditor","vs/editor/browser/standalone/standaloneLanguages","vs/workbench/services/quickopen/common/quickOpenService","vs/editor/contrib/indentation/common/indentation","vs/base/common/winjs.base.raw","vs/editor/edcore.main"];
+var __m = ["require","exports","vs/base/common/winjs.base","vs/base/common/lifecycle","vs/editor/common/core/range","vs/nls","vs/nls!vs/editor/editor.main","vs/editor/common/editorCommon","vs/base/common/errors","vs/css!vs/editor/editor.main","vs/base/common/strings","vs/base/browser/dom","vs/base/common/keyCodes","vs/editor/common/editorCommonExtensions","vs/base/common/async","vs/platform/instantiation/common/instantiation","vs/base/common/event","vs/editor/common/modes","vs/base/common/platform","vs/platform/keybinding/common/keybindingService","vs/editor/common/editorAction","vs/editor/common/core/position","vs/editor/browser/editorBrowser","vs/base/common/eventEmitter","vs/editor/common/core/selection","vs/editor/common/editorActionEnablement","vs/base/common/types","vs/base/browser/styleMutator","vs/base/browser/browser","vs/base/common/uri","vs/editor/browser/editorBrowserExtensions","vs/base/common/objects","vs/base/common/severity","vs/platform/platform","vs/editor/common/services/modelService","vs/base/browser/builder","vs/platform/telemetry/common/telemetry","vs/base/common/arrays","vs/base/common/paths","vs/base/browser/mouseEvent","vs/editor/common/modes/languageConfigurationRegistry","vs/base/browser/ui/scrollbar/scrollableElementOptions","vs/platform/message/common/message","vs/platform/editor/common/editor","vs/base/browser/ui/widget","vs/editor/common/modes/modesRegistry","vs/editor/browser/view/viewPart","vs/base/common/assert","vs/base/common/collections","vs/editor/common/modes/supports","vs/base/common/actions","vs/platform/keybinding/common/keybindingsRegistry","vs/editor/common/services/editorWorkerService","vs/editor/common/viewModel/viewEventHandler","vs/editor/common/services/codeEditorService","vs/editor/common/config/defaultConfig","vs/base/browser/keyboardEvent","vs/platform/configuration/common/configuration","vs/base/browser/ui/actionbar/actionbar","vs/base/common/timer","vs/base/common/events","vs/platform/workspace/common/workspace","vs/editor/common/core/editOperation","vs/base/common/idGenerator","vs/editor/common/core/viewLineToken","vs/base/common/filters","vs/editor/browser/config/configuration","vs/platform/instantiation/common/serviceCollection","vs/platform/instantiation/common/descriptors","vs/base/browser/touch","vs/platform/contextview/browser/contextView","vs/base/browser/htmlContentRenderer","vs/editor/common/services/modeService","vs/platform/markers/common/markers","vs/editor/browser/view/dynamicViewOverlay","vs/base/parts/tree/browser/treeDefaults","vs/editor/common/model/wordHelper","vs/platform/configuration/common/configurationRegistry","vs/base/common/network","vs/platform/actions/common/actions","vs/editor/common/viewModel/prefixSumComputer","vs/base/browser/ui/aria/aria","vs/platform/event/common/event","vs/editor/common/modes/supports/richEditBrackets","vs/platform/extensions/common/extensions","vs/platform/jsonschemas/common/jsonContributionRegistry","vs/platform/extensions/common/extensionsRegistry","vs/base/browser/ui/scrollbar/scrollableElement","vs/editor/common/core/modeTransition","vs/editor/common/core/arrays","vs/editor/common/config/config","vs/base/parts/quickopen/common/quickOpen","vs/base/common/htmlContent","vs/editor/contrib/snippet/common/snippet","vs/editor/browser/widget/codeEditorWidget","vs/editor/contrib/zoneWidget/browser/peekViewWidget","vs/editor/contrib/referenceSearch/browser/referencesModel","vs/editor/common/controller/cursorMoveHelper","vs/base/browser/ui/inputbox/inputBox","vs/base/common/map","vs/base/browser/ui/scrollbar/scrollbarArrow","vs/platform/keybinding/common/keybindingResolver","vs/editor/common/view/renderingContext","vs/editor/common/viewLayout/viewLineRenderer","vs/base/common/cancellation","vs/base/parts/quickopen/browser/quickOpenModel","vs/base/parts/tree/browser/treeImpl","vs/editor/contrib/quickOpen/browser/editorQuickOpen","vs/editor/browser/standalone/standaloneServices","vs/base/common/iterator","vs/editor/common/commands/replaceCommand","vs/editor/common/config/commonEditorConfig","vs/base/browser/globalMouseMoveMonitor","vs/editor/common/services/compatWorkerService","vs/editor/common/modes/abstractState","vs/platform/request/common/request","vs/editor/common/viewModel/viewModel","vs/editor/common/modes/monarch/monarchCommon","vs/base/common/worker/workerClient","vs/editor/contrib/suggest/common/suggest","vs/editor/browser/standalone/simpleServices","vs/editor/common/modes/nullMode","vs/base/browser/ui/highlightedlabel/highlightedLabel","vs/base/browser/ui/sash/sash","vs/base/common/json","vs/editor/common/model/model","vs/editor/contrib/comment/common/blockCommentCommand","vs/editor/contrib/diffNavigator/common/diffNavigator","vs/editor/contrib/find/common/findModel","vs/editor/contrib/hover/browser/hoverOperation","vs/base/common/uuid","vs/editor/common/modes/monarch/monarchCompile","vs/base/common/glob","vs/editor/common/services/editorWorkerServiceImpl","vs/base/common/callbackList","vs/base/browser/ui/scrollbar/scrollbarState","vs/css!vs/base/browser/ui/progressbar/progressbar","vs/base/browser/event","vs/editor/common/modes/supports/tokenizationSupport","vs/platform/files/common/files","vs/editor/common/modes/monarch/monarchLexer","vs/platform/instantiation/common/instantiationService","vs/base/common/labels","vs/base/common/stopwatch","vs/base/common/mime","vs/base/browser/ui/contextview/contextview","vs/editor/common/viewModel/splitLinesCollection","vs/platform/opener/common/opener","vs/editor/common/controller/textAreaState","vs/base/browser/iframe","vs/base/common/diff/diff","vs/editor/browser/standalone/colorizer","vs/editor/browser/viewParts/glyphMargin/glyphMargin","vs/base/browser/ui/scrollbar/abstractScrollbar","vs/editor/common/model/tokensBinaryEncoding","vs/base/worker/defaultWorkerFactory","vs/editor/browser/editorDom","vs/editor/common/modes/supports/suggestSupport","vs/editor/common/modes/abstractMode","vs/editor/browser/view/viewLayer","vs/editor/browser/viewParts/overviewRuler/overviewRulerImpl","vs/platform/keybinding/browser/keybindingServiceImpl","vs/editor/contrib/hover/browser/hoverWidgets","vs/platform/storage/common/storage","vs/editor/contrib/zoneWidget/browser/zoneWidget","vs/editor/common/model/modelLine","vs/editor/contrib/parameterHints/common/parameterHints","vs/editor/contrib/quickFix/common/quickFix","vs/editor/contrib/quickOpen/common/quickOpen","vs/editor/common/standalone/standaloneBase","vs/editor/common/modes/lineStream","vs/editor/contrib/toggleTabFocusMode/common/toggleTabFocusMode","vs/editor/common/viewLayout/viewLineParts","vs/editor/common/controller/oneCursor","vs/editor/browser/widget/diffEditorWidget","vs/editor/browser/widget/embeddedCodeEditorWidget","vs/editor/common/model/textModelWithTokensHelpers","vs/editor/common/model/textModel","vs/editor/contrib/referenceSearch/browser/referencesWidget","vs/editor/contrib/referenceSearch/browser/referencesController","vs/editor/common/model/textModelWithTokens","vs/editor/browser/standalone/standaloneCodeEditor","vs/css!vs/editor/browser/viewParts/decorations/decorations","vs/nls!vs/base/browser/ui/aria/aria","vs/nls!vs/base/browser/ui/findinput/findInput","vs/nls!vs/base/browser/ui/inputbox/inputBox","vs/nls!vs/base/common/errors","vs/css!vs/editor/browser/viewParts/glyphMargin/glyphMargin","vs/css!vs/editor/browser/viewParts/lineNumbers/lineNumbers","vs/css!vs/editor/browser/viewParts/lines/viewLines","vs/css!vs/editor/browser/viewParts/linesDecorations/linesDecorations","vs/css!vs/editor/browser/viewParts/overlayWidgets/overlayWidgets","vs/css!vs/editor/browser/viewParts/rulers/rulers","vs/css!vs/editor/browser/viewParts/scrollDecoration/scrollDecoration","vs/css!vs/editor/browser/viewParts/selections/selections","vs/base/common/scrollable","vs/css!vs/editor/browser/viewParts/viewCursors/viewCursors","vs/css!vs/editor/browser/widget/media/diffEditor","vs/editor/contrib/indentation/common/indentation","vs/css!vs/editor/browser/widget/media/editor","vs/css!vs/editor/browser/widget/media/tokens","vs/base/browser/ui/scrollbar/scrollbarVisibilityController","vs/css!vs/editor/contrib/accessibility/browser/accessibility","vs/base/common/worker/simpleWorker","vs/css!vs/editor/contrib/clipboard/browser/clipboard","vs/base/parts/quickopen/browser/quickOpenViewer","vs/base/parts/tree/browser/treeModel","vs/base/parts/tree/browser/treeViewModel","vs/css!vs/editor/contrib/codelens/browser/codelens","vs/editor/browser/view/viewEventDispatcher","vs/css!vs/editor/contrib/defineKeybinding/browser/defineKeybinding","vs/editor/common/model/editStack","vs/css!vs/editor/contrib/find/browser/findWidget","vs/css!vs/editor/contrib/folding/browser/folding","vs/editor/common/modes/languageFeatureRegistry","vs/css!vs/editor/contrib/goToDeclaration/browser/goToDeclaration","vs/editor/common/modes/supports/onEnter","vs/css!vs/editor/contrib/gotoError/browser/gotoError","vs/editor/common/commands/shiftCommand","vs/css!vs/editor/contrib/hover/browser/hover","vs/editor/common/controller/cursorCollection","vs/css!vs/editor/contrib/iPadShowKeyboard/browser/iPadShowKeyboard","vs/editor/common/viewModel/viewModelImpl","vs/css!vs/editor/contrib/inPlaceReplace/browser/inPlaceReplace","vs/editor/contrib/comment/common/lineCommentCommand","vs/css!vs/editor/contrib/links/browser/links","vs/css!vs/editor/contrib/outlineMarker/browser/outlineMarker","vs/editor/contrib/find/common/findState","vs/css!vs/editor/contrib/parameterHints/browser/parameterHints","vs/editor/contrib/links/common/links","vs/css!vs/editor/contrib/quickFix/browser/quickFix","vs/editor/contrib/smartSelect/common/tokenTree","vs/editor/contrib/suggest/browser/completionModel","vs/nls!vs/base/common/json","vs/css!vs/editor/contrib/quickOpen/browser/gotoLine","vs/editor/contrib/defineKeybinding/common/smartSnippetInserter","vs/nls!vs/base/common/keyCodes","vs/css!vs/editor/contrib/quickOpen/browser/quickOutline","vs/css!vs/editor/contrib/referenceSearch/browser/referencesWidget","vs/css!vs/editor/contrib/rename/browser/renameInputField","vs/css!vs/editor/contrib/snippet/browser/snippet","vs/css!vs/editor/contrib/suggest/browser/suggest","vs/css!vs/editor/contrib/wordHighlighter/browser/wordHighlighter","vs/css!vs/editor/contrib/zoneWidget/browser/peekViewWidget","vs/css!vs/editor/contrib/zoneWidget/browser/zoneWidget","vs/css!vs/platform/contextview/browser/contextMenuHandler","vs/css!vs/platform/keybinding/browser/keybindings","vs/editor/browser/config/elementSizeObserver","vs/base/browser/ui/countBadge/countBadge","vs/base/common/diff/diffChange","vs/base/browser/ui/fileLabel/fileLabel","vs/base/browser/ui/leftRightWidget/leftRightWidget","vs/base/browser/ui/list/rowCache","vs/base/browser/ui/menu/menu","vs/base/browser/ui/progressbar/progressbar","vs/base/common/graph","vs/base/common/flags","vs/base/browser/ui/checkbox/checkbox","vs/base/browser/ui/list/rangeMap","vs/base/common/scorer","vs/base/browser/ui/findinput/findInput","vs/editor/common/commands/trimTrailingWhitespaceCommand","vs/base/browser/ui/scrollbar/horizontalScrollbar","vs/base/browser/ui/scrollbar/verticalScrollbar","vs/base/common/hash","vs/base/browser/ui/list/listView","vs/base/browser/ui/list/listWidget","vs/base/parts/tree/browser/treeView","vs/base/common/marshalling","vs/editor/browser/controller/mouseTarget","vs/editor/common/commands/surroundSelectionCommand","vs/editor/browser/controller/mouseHandler","vs/editor/browser/controller/pointerHandler","vs/base/browser/ui/octiconLabel/octiconLabel","vs/editor/browser/viewLayout/scrollManager","vs/editor/browser/viewLayout/layoutProvider","vs/editor/browser/viewParts/contentWidgets/contentWidgets","vs/editor/browser/viewParts/lines/viewLine","vs/editor/browser/viewParts/overlayWidgets/overlayWidgets","vs/base/common/worker/workerProtocol","vs/editor/browser/viewParts/overviewRuler/overviewRuler","vs/editor/browser/viewParts/rulers/rulers","vs/editor/browser/viewParts/scrollDecoration/scrollDecoration","vs/editor/browser/viewParts/viewZones/viewZones","vs/editor/common/controller/textAreaHandler","vs/editor/common/diff/diffComputer","vs/editor/contrib/hover/browser/modesGlyphHover","vs/editor/contrib/quickFix/browser/lightBulpWidget","vs/base/common/comparers","vs/nls!vs/base/common/severity","vs/base/parts/tree/browser/tree","vs/editor/browser/view/viewController","vs/editor/common/services/editorSimpleWorker","vs/nls!vs/base/parts/quickopen/browser/quickOpenModel","vs/nls!vs/base/parts/quickopen/browser/quickOpenWidget","vs/nls!vs/base/parts/tree/browser/treeDefaults","vs/base/parts/tree/browser/treeDnd","vs/editor/common/core/editorState","vs/editor/common/model/indentationGuesser","vs/base/parts/quickopen/browser/quickOpenWidget","vs/editor/contrib/quickOpen/browser/quickOpenEditorWidget","vs/nls!vs/editor/browser/standalone/standaloneSchemas","vs/editor/browser/standalone/standaloneSchemas","vs/nls!vs/editor/common/config/commonEditorConfig","vs/nls!vs/editor/common/config/defaultConfig","vs/editor/common/model/lineToken","vs/editor/common/model/tokenIterator","vs/nls!vs/editor/common/controller/cursor","vs/editor/common/controller/cursor","vs/nls!vs/editor/common/model/textModelWithTokens","vs/css!vs/base/browser/builder","vs/editor/common/model/textModelWithMarkers","vs/editor/common/model/textModelWithTrackedRanges","vs/editor/common/model/textModelWithDecorations","vs/editor/common/model/editableTextModel","vs/base/common/marked/marked","vs/nls!vs/editor/common/modes/modesRegistry","vs/nls!vs/editor/common/modes/supports/suggestSupport","vs/nls!vs/editor/common/services/bulkEdit","vs/nls!vs/editor/common/services/modeServiceImpl","vs/nls!vs/editor/common/services/modelServiceImpl","vs/nls!vs/editor/contrib/accessibility/browser/accessibility","vs/nls!vs/editor/contrib/carretOperations/common/carretOperations","vs/nls!vs/editor/contrib/clipboard/browser/clipboard","vs/nls!vs/editor/contrib/comment/common/comment","vs/nls!vs/editor/contrib/contextmenu/browser/contextmenu","vs/nls!vs/editor/contrib/defineKeybinding/browser/defineKeybinding","vs/nls!vs/editor/contrib/find/browser/findWidget","vs/editor/contrib/find/browser/findWidget","vs/nls!vs/editor/contrib/find/common/findController","vs/nls!vs/editor/contrib/folding/browser/folding","vs/nls!vs/editor/contrib/format/common/formatActions","vs/nls!vs/editor/contrib/goToDeclaration/browser/goToDeclaration","vs/nls!vs/editor/contrib/gotoError/browser/gotoError","vs/nls!vs/editor/contrib/hover/browser/hover","vs/nls!vs/editor/contrib/hover/browser/modesContentHover","vs/nls!vs/editor/contrib/inPlaceReplace/common/inPlaceReplace","vs/nls!vs/editor/contrib/indentation/common/indentation","vs/nls!vs/editor/contrib/linesOperations/common/linesOperations","vs/nls!vs/editor/contrib/links/browser/links","vs/nls!vs/editor/contrib/multicursor/common/multicursor","vs/nls!vs/editor/contrib/parameterHints/browser/parameterHints","vs/nls!vs/editor/contrib/parameterHints/browser/parameterHintsWidget","vs/nls!vs/editor/contrib/quickFix/browser/quickFix","vs/nls!vs/editor/contrib/quickFix/browser/quickFixSelectionWidget","vs/editor/contrib/quickFix/browser/quickFixSelectionWidget","vs/nls!vs/editor/contrib/quickOpen/browser/gotoLine","vs/nls!vs/editor/contrib/quickOpen/browser/gotoLine.contribution","vs/nls!vs/editor/contrib/quickOpen/browser/quickCommand","vs/nls!vs/editor/contrib/quickOpen/browser/quickCommand.contribution","vs/nls!vs/editor/contrib/quickOpen/browser/quickOutline","vs/nls!vs/editor/contrib/quickOpen/browser/quickOutline.contribution","vs/nls!vs/editor/contrib/referenceSearch/browser/referenceSearch","vs/nls!vs/editor/contrib/referenceSearch/browser/referencesController","vs/nls!vs/editor/contrib/referenceSearch/browser/referencesWidget","vs/nls!vs/editor/contrib/rename/browser/rename","vs/nls!vs/editor/contrib/rename/browser/renameInputField","vs/editor/contrib/rename/browser/renameInputField","vs/nls!vs/editor/contrib/rename/common/rename","vs/nls!vs/editor/contrib/smartSelect/common/jumpToBracket","vs/nls!vs/editor/contrib/smartSelect/common/smartSelect","vs/nls!vs/editor/contrib/suggest/browser/suggest","vs/nls!vs/editor/contrib/suggest/browser/suggestWidget","vs/nls!vs/editor/contrib/toggleTabFocusMode/common/toggleTabFocusMode","vs/nls!vs/editor/contrib/toggleWordWrap/common/toggleWordWrap","vs/nls!vs/editor/contrib/zoneWidget/browser/peekViewWidget","vs/nls!vs/languages/html/common/html.contribution","vs/nls!vs/platform/actions/browser/menuItemActionItem","vs/nls!vs/platform/configuration/common/configurationRegistry","vs/nls!vs/platform/extensions/common/abstractExtensionService","vs/nls!vs/platform/extensions/common/extensionsRegistry","vs/nls!vs/platform/jsonschemas/common/jsonContributionRegistry","vs/nls!vs/platform/keybinding/browser/keybindingServiceImpl","vs/nls!vs/platform/message/common/message","vs/platform/contextview/browser/contextMenuHandler","vs/editor/common/modes/languageSelector","vs/css!vs/base/browser/ui/actionbar/actionbar","vs/editor/common/modes/linkComputer","vs/editor/common/services/abstractCodeEditorService","vs/editor/browser/services/codeEditorServiceImpl","vs/css!vs/base/browser/ui/aria/aria","vs/css!vs/base/browser/ui/checkbox/checkbox","vs/css!vs/base/browser/ui/contextview/contextview","vs/css!vs/base/browser/ui/countBadge/countBadge","vs/editor/common/modes/supports/characterPair","vs/editor/contrib/smartSelect/common/tokenSelectionSupport","vs/editor/common/modes/supports/inplaceReplaceSupport","vs/css!vs/base/browser/ui/fileLabel/fileLabel","vs/platform/contextview/browser/contextMenuService","vs/editor/common/modes/supports/electricCharacter","vs/css!vs/base/browser/ui/findinput/findInput","vs/platform/event/common/eventService","vs/css!vs/base/browser/ui/inputbox/inputBox","vs/editor/common/modes/textToHtmlTokenizer","vs/editor/common/services/bulkEdit","vs/editor/common/view/overviewZoneManager","vs/css!vs/base/browser/ui/leftRightWidget/leftRightWidget","vs/editor/browser/viewParts/lines/rangeUtil","vs/editor/common/commonCodeEditor","vs/editor/common/view/viewContext","vs/platform/actions/browser/menuItemActionItem","vs/platform/actions/common/resourceContextKey","vs/platform/actions/browser/menuService","vs/editor/common/viewLayout/editorLayoutProvider","vs/css!vs/base/browser/ui/list/list","vs/platform/markers/common/markerService","vs/editor/common/viewLayout/viewLinesViewportData","vs/editor/common/viewLayout/whitespaceComputer","vs/editor/common/viewLayout/verticalObjects","vs/editor/common/viewLayout/linesLayout","vs/editor/common/viewModel/filteredLineTokens","vs/editor/common/services/languagesRegistry","vs/editor/contrib/iPadShowKeyboard/browser/iPadShowKeyboard","vs/css!vs/base/browser/ui/menu/menu","vs/editor/contrib/quickOpen/browser/gotoLine","vs/editor/contrib/quickOpen/browser/quickCommand","vs/languages/handlebars/common/handlebars.contribution","vs/languages/php/common/php.contribution","vs/languages/razor/common/razor.contribution","vs/editor/common/model/mirrorModel2","vs/editor/browser/editor.all","vs/editor/common/viewModel/characterHardWrappingLineMapper","vs/css!vs/base/browser/ui/sash/sash","vs/css!vs/base/browser/ui/scrollbar/media/scrollbars","vs/editor/browser/controller/keyboardHandler","vs/editor/browser/view/viewOverlays","vs/editor/browser/viewParts/lines/viewLines","vs/editor/browser/viewParts/viewCursors/viewCursor","vs/editor/browser/viewParts/viewCursors/viewCursors","vs/css!vs/base/parts/quickopen/browser/quickopen","vs/editor/browser/viewParts/currentLineHighlight/currentLineHighlight","vs/editor/common/services/modeServiceImpl","vs/languages/html/common/html.contribution","vs/languages/languages.main","vs/platform/configuration/common/model","vs/platform/configuration/common/configurationService","vs/platform/extensions/common/abstractExtensionService","vs/editor/browser/viewParts/decorations/decorations","vs/css!vs/base/parts/tree/browser/tree","vs/editor/browser/viewParts/lineNumbers/lineNumbers","vs/editor/browser/viewParts/linesDecorations/linesDecorations","vs/editor/browser/viewParts/selections/selections","vs/css!vs/editor/browser/standalone/media/standalone-tokens","vs/css!vs/editor/browser/viewParts/contentWidgets/contentWidgets","vs/editor/common/services/modelServiceImpl","vs/editor/contrib/carretOperations/common/carretOperations","vs/editor/contrib/clipboard/browser/clipboard","vs/editor/contrib/codelens/common/codelens","vs/editor/contrib/codelens/browser/codelens","vs/editor/contrib/comment/common/comment","vs/editor/contrib/contextmenu/browser/contextmenu","vs/editor/contrib/find/common/findController","vs/editor/contrib/find/browser/find","vs/editor/contrib/folding/browser/folding","vs/editor/contrib/format/common/format","vs/editor/contrib/format/common/formatActions","vs/editor/contrib/goToDeclaration/common/goToDeclaration","vs/editor/contrib/hover/common/hover","vs/editor/contrib/hover/browser/modesContentHover","vs/editor/contrib/hover/browser/hover","vs/editor/contrib/inPlaceReplace/common/inPlaceReplace","vs/editor/contrib/linesOperations/common/linesOperations","vs/editor/contrib/links/browser/links","vs/editor/contrib/multicursor/common/multicursor","vs/editor/common/viewModel/viewModelCursors","vs/editor/contrib/parameterHints/browser/parameterHintsWidget","vs/editor/contrib/parameterHints/browser/parameterHints","vs/editor/common/viewModel/viewModelDecorations","vs/editor/contrib/gotoError/browser/gotoError","vs/editor/contrib/quickFix/browser/quickFixModel","vs/editor/contrib/quickFix/browser/quickFix","vs/editor/contrib/quickOpen/browser/gotoLine.contribution","vs/editor/contrib/quickOpen/browser/quickCommand.contribution","vs/editor/contrib/carretOperations/common/moveCarretCommand","vs/editor/contrib/outlineMarker/browser/outlineMarker","vs/editor/contrib/quickOpen/browser/quickOutline","vs/editor/contrib/quickOpen/browser/quickOutline.contribution","vs/editor/contrib/referenceSearch/common/referenceSearch","vs/editor/contrib/rename/common/rename","vs/editor/contrib/rename/browser/rename","vs/editor/contrib/smartSelect/common/jumpToBracket","vs/editor/contrib/smartSelect/common/smartSelect","vs/editor/contrib/find/common/findDecorations","vs/editor/contrib/defineKeybinding/browser/defineKeybinding","vs/editor/contrib/find/common/replaceAllCommand","vs/editor/contrib/suggest/browser/suggestModel","vs/editor/contrib/suggest/browser/suggestWidget","vs/editor/contrib/suggest/browser/suggest","vs/editor/contrib/folding/common/indentFoldStrategy","vs/editor/contrib/accessibility/browser/accessibility","vs/editor/contrib/toggleWordWrap/common/toggleWordWrap","vs/editor/contrib/wordHighlighter/common/wordHighlighter","vs/platform/contextview/browser/contextViewService","vs/platform/request/common/baseRequestService","vs/editor/contrib/format/common/formatCommand","vs/platform/theme/common/themes","vs/editor/browser/viewParts/overviewRuler/decorationsOverviewRuler","vs/editor/browser/view/viewImpl","vs/editor/contrib/inPlaceReplace/common/inPlaceReplaceCommand","vs/editor/contrib/indentation/common/indentationCommands","vs/editor/contrib/linesOperations/common/copyLinesCommand","vs/editor/contrib/linesOperations/common/deleteLinesCommand","vs/editor/contrib/linesOperations/common/moveLinesCommand","vs/editor/common/languages.common","vs/editor/common/services/compatWorkerServiceMain","vs/editor/contrib/linesOperations/common/sortLinesCommand","vs/editor/contrib/snippet/browser/snippet","vs/editor/contrib/goToDeclaration/browser/goToDeclaration","vs/editor/contrib/referenceSearch/browser/referenceSearch","vs/platform/workspace/common/baseWorkspaceContextService","vs/nls!vs/base/browser/ui/actionbar/actionbar","vs/css!vs/editor/browser/viewParts/currentLineHighlight/currentLineHighlight","vs/editor/browser/standalone/standaloneEditor","vs/editor/browser/standalone/standaloneLanguages","vs/workbench/services/quickopen/common/quickOpenService","vs/base/common/winjs.base.raw","vs/base/common/marked/raw.marked","vs/editor/edcore.main"];
 var __M = function(deps) {
   var result = [];
   for (var i = 0, len = deps.length; i < len; i++) {
@@ -14,7 +14,7 @@ var __M = function(deps) {
   }
   return result;
 };
-define(__m[173], __M([1,0]), function (require, exports) {
+define(__m[149], __M([0,1]), function (require, exports) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -131,7 +131,7 @@ define(__m[173], __M([1,0]), function (require, exports) {
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
-define(__m[254], __M([1,0]), function (require, exports) {
+define(__m[258], __M([0,1]), function (require, exports) {
     "use strict";
     /**
      * Returns the intersection between two ranges as a range itself.
@@ -342,7 +342,7 @@ define(__m[254], __M([1,0]), function (require, exports) {
     exports.RangeMap = RangeMap;
 });
 
-define(__m[42], __M([1,0]), function (require, exports) {
+define(__m[41], __M([0,1]), function (require, exports) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -356,7 +356,7 @@ define(__m[42], __M([1,0]), function (require, exports) {
     var ScrollbarVisibility = exports.ScrollbarVisibility;
 });
 
-define(__m[127], __M([1,0]), function (require, exports) {
+define(__m[135], __M([0,1]), function (require, exports) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -484,7 +484,7 @@ define(__m[127], __M([1,0]), function (require, exports) {
     exports.ScrollbarState = ScrollbarState;
 });
 
-define(__m[35], __M([1,0]), function (require, exports) {
+define(__m[37], __M([0,1]), function (require, exports) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -693,6 +693,15 @@ define(__m[35], __M([1,0]), function (require, exports) {
         return arr.reduce(function (r, v) { return r.concat(v); }, []);
     }
     exports.flatten = flatten;
+    function range(to, from) {
+        if (from === void 0) { from = 0; }
+        var result = [];
+        for (var i = from; i < to; i++) {
+            result.push(i);
+        }
+        return result;
+    }
+    exports.range = range;
     function fill(num, valueFn, arr) {
         if (arr === void 0) { arr = []; }
         for (var i = 0; i < num; i++) {
@@ -701,9 +710,15 @@ define(__m[35], __M([1,0]), function (require, exports) {
         return arr;
     }
     exports.fill = fill;
+    function index(array, indexer) {
+        var result = Object.create(null);
+        array.forEach(function (t) { return result[indexer(t)] = t; });
+        return result;
+    }
+    exports.index = index;
 });
 
-define(__m[56], __M([1,0]), function (require, exports) {
+define(__m[47], __M([0,1]), function (require, exports) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -720,7 +735,7 @@ define(__m[56], __M([1,0]), function (require, exports) {
     exports.ok = ok;
 });
 
-define(__m[51], __M([1,0]), function (require, exports) {
+define(__m[48], __M([0,1]), function (require, exports) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -809,7 +824,7 @@ define(__m[51], __M([1,0]), function (require, exports) {
     exports.groupBy = groupBy;
 });
 
-define(__m[284], __M([1,0]), function (require, exports) {
+define(__m[249], __M([0,1]), function (require, exports) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -866,7 +881,7 @@ define(__m[284], __M([1,0]), function (require, exports) {
     exports.DiffChange = DiffChange;
 });
 
-define(__m[403], __M([1,0,284]), function (require, exports, diffChange_1) {
+define(__m[150], __M([0,1,249]), function (require, exports, diffChange_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -1565,7 +1580,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-define(__m[63], __M([1,0]), function (require, exports) {
+define(__m[60], __M([0,1]), function (require, exports) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -1620,7 +1635,7 @@ define(__m[63], __M([1,0]), function (require, exports) {
     };
 });
 
-define(__m[258], __M([1,0]), function (require, exports) {
+define(__m[264], __M([0,1]), function (require, exports) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -1683,8 +1698,53 @@ define(__m[258], __M([1,0]), function (require, exports) {
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
-define(__m[259], __M([1,0]), function (require, exports) {
+define(__m[92], __M([0,1]), function (require, exports) {
     'use strict';
+    function markedStringsEquals(a, b) {
+        if (!a && !b) {
+            return true;
+        }
+        if (!a || !b) {
+            return false;
+        }
+        if (Array.isArray(a)) {
+            if (!Array.isArray(b)) {
+                return false;
+            }
+            return markedStringArrEquals(a, b);
+        }
+        return markedStringEqual(a, b);
+    }
+    exports.markedStringsEquals = markedStringsEquals;
+    function markedStringArrEquals(a, b) {
+        var aLen = a.length, bLen = b.length;
+        if (aLen !== bLen) {
+            return false;
+        }
+        for (var i = 0; i < aLen; i++) {
+            if (!markedStringEqual(a[i], b[i])) {
+                return false;
+            }
+        }
+        return true;
+    }
+    function markedStringEqual(a, b) {
+        if (!a && !b) {
+            return true;
+        }
+        if (!a || !b) {
+            return false;
+        }
+        if (typeof a === 'string') {
+            return typeof b === 'string' && a === b;
+        }
+        return (a['language'] === b['language']
+            && a['value'] === b['value']);
+    }
+    function textToMarkedString(text) {
+        return { language: 'string', value: text };
+    }
+    exports.textToMarkedString = textToMarkedString;
     function htmlContentElementCodeEqual(a, b) {
         if (!a && !b) {
             return true;
@@ -1729,7 +1789,7 @@ define(__m[259], __M([1,0]), function (require, exports) {
     exports.htmlContentElementArrEquals = htmlContentElementArrEquals;
 });
 
-define(__m[59], __M([1,0]), function (require, exports) {
+define(__m[63], __M([0,1]), function (require, exports) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -1758,7 +1818,7 @@ define(__m[59], __M([1,0]), function (require, exports) {
 
 
 
-define(__m[97], __M([1,0]), function (require, exports) {
+define(__m[109], __M([0,1]), function (require, exports) {
     'use strict';
     var ArrayIterator = (function () {
         function ArrayIterator(items, start, end) {
@@ -1814,7 +1874,7 @@ define(__m[97], __M([1,0]), function (require, exports) {
 
 
 
-define(__m[101], __M([1,0]), function (require, exports) {
+define(__m[99], __M([0,1]), function (require, exports) {
     'use strict';
     /**
      * A simple map to store value by a key object. Key can be any object that has toString() function to get
@@ -2028,25 +2088,1311 @@ define(__m[101], __M([1,0]), function (require, exports) {
     exports.LRUCache = LRUCache;
 });
 
-define(__m[244], __M([1,0]), function (require, exports) {
-    "use strict";
-    /*---------------------------------------------------------------------------------------------
-     *  Copyright (c) Microsoft Corporation. All rights reserved.
-     *  Licensed under the MIT License. See License.txt in the project root for license information.
-     *--------------------------------------------------------------------------------------------*/
-    function noop(value) {
-        return value;
-    }
-    noop.Renderer = function () {
-        // No-op
-    };
-    var mock = {
-        marked: noop
-    };
-    return mock;
+
+/**
+ * marked - a markdown parser
+ * Copyright (c) 2011-2014, Christopher Jeffrey. (MIT Licensed)
+ * https://github.com/chjj/marked
+ */
+
+// TODO MonacoChange: we have our own way of defining modules
+// ;(function() {
+// END MonacoChange
+
+/**
+ * Block-Level Grammar
+ */
+
+var block = {
+  newline: /^\n+/,
+  code: /^( {4}[^\n]+\n*)+/,
+  fences: noop,
+  hr: /^( *[-*_]){3,} *(?:\n+|$)/,
+  heading: /^ *(#{1,6}) *([^\n]+?) *#* *(?:\n+|$)/,
+  nptable: noop,
+  lheading: /^([^\n]+)\n *(=|-){2,} *(?:\n+|$)/,
+  blockquote: /^( *>[^\n]+(\n(?!def)[^\n]+)*\n*)+/,
+  list: /^( *)(bull) [\s\S]+?(?:hr|def|\n{2,}(?! )(?!\1bull )\n*|\s*$)/,
+  html: /^ *(?:comment *(?:\n|\s*$)|closed *(?:\n{2,}|\s*$)|closing *(?:\n{2,}|\s*$))/,
+  def: /^ *\[([^\]]+)\]: *<?([^\s>]+)>?(?: +["(]([^\n]+)[")])? *(?:\n+|$)/,
+  table: noop,
+  paragraph: /^((?:[^\n]+\n?(?!hr|heading|lheading|blockquote|tag|def))+)\n*/,
+  text: /^[^\n]+/
+};
+
+block.bullet = /(?:[*+-]|\d+\.)/;
+block.item = /^( *)(bull) [^\n]*(?:\n(?!\1bull )[^\n]*)*/;
+block.item = replace(block.item, 'gm')
+  (/bull/g, block.bullet)
+  ();
+
+block.list = replace(block.list)
+  (/bull/g, block.bullet)
+  ('hr', '\\n+(?=\\1?(?:[-*_] *){3,}(?:\\n+|$))')
+  ('def', '\\n+(?=' + block.def.source + ')')
+  ();
+
+block.blockquote = replace(block.blockquote)
+  ('def', block.def)
+  ();
+
+block._tag = '(?!(?:'
+  + 'a|em|strong|small|s|cite|q|dfn|abbr|data|time|code'
+  + '|var|samp|kbd|sub|sup|i|b|u|mark|ruby|rt|rp|bdi|bdo'
+  + '|span|br|wbr|ins|del|img)\\b)\\w+(?!:/|[^\\w\\s@]*@)\\b';
+
+block.html = replace(block.html)
+  ('comment', /<!--[\s\S]*?-->/)
+  ('closed', /<(tag)[\s\S]+?<\/\1>/)
+  ('closing', /<tag(?:"[^"]*"|'[^']*'|[^'">])*?>/)
+  (/tag/g, block._tag)
+  ();
+
+block.paragraph = replace(block.paragraph)
+  ('hr', block.hr)
+  ('heading', block.heading)
+  ('lheading', block.lheading)
+  ('blockquote', block.blockquote)
+  ('tag', '<' + block._tag)
+  ('def', block.def)
+  ();
+
+/**
+ * Normal Block Grammar
+ */
+
+block.normal = merge({}, block);
+
+/**
+ * GFM Block Grammar
+ */
+
+block.gfm = merge({}, block.normal, {
+  fences: /^ *(`{3,}|~{3,}) *(\S+)? *\n([\s\S]+?)\s*\1 *(?:\n+|$)/,
+  paragraph: /^/
 });
 
-define(__m[17], __M([1,0]), function (require, exports) {
+block.gfm.paragraph = replace(block.paragraph)
+  ('(?!', '(?!'
+    + block.gfm.fences.source.replace('\\1', '\\2') + '|'
+    + block.list.source.replace('\\1', '\\3') + '|')
+  ();
+
+/**
+ * GFM + Tables Block Grammar
+ */
+
+block.tables = merge({}, block.gfm, {
+  nptable: /^ *(\S.*\|.*)\n *([-:]+ *\|[-| :]*)\n((?:.*\|.*(?:\n|$))*)\n*/,
+  table: /^ *\|(.+)\n *\|( *[-:]+[-| :]*)\n((?: *\|.*(?:\n|$))*)\n*/
+});
+
+/**
+ * Block Lexer
+ */
+
+function Lexer(options) {
+  this.tokens = [];
+  this.tokens.links = {};
+  this.options = options || marked.defaults;
+  this.rules = block.normal;
+
+  if (this.options.gfm) {
+    if (this.options.tables) {
+      this.rules = block.tables;
+    } else {
+      this.rules = block.gfm;
+    }
+  }
+}
+
+/**
+ * Expose Block Rules
+ */
+
+Lexer.rules = block;
+
+/**
+ * Static Lex Method
+ */
+
+Lexer.lex = function(src, options) {
+  var lexer = new Lexer(options);
+  return lexer.lex(src);
+};
+
+/**
+ * Preprocessing
+ */
+
+Lexer.prototype.lex = function(src) {
+  src = src
+    .replace(/\r\n|\r/g, '\n')
+    .replace(/\t/g, '    ')
+    .replace(/\u00a0/g, ' ')
+    .replace(/\u2424/g, '\n');
+
+  return this.token(src, true);
+};
+
+/**
+ * Lexing
+ */
+
+Lexer.prototype.token = function(src, top, bq) {
+  var src = src.replace(/^ +$/gm, '')
+    , next
+    , loose
+    , cap
+    , bull
+    , b
+    , item
+    , space
+    , i
+    , l;
+
+  while (src) {
+    // newline
+    if (cap = this.rules.newline.exec(src)) {
+      src = src.substring(cap[0].length);
+      if (cap[0].length > 1) {
+        this.tokens.push({
+          type: 'space'
+        });
+      }
+    }
+
+    // code
+    if (cap = this.rules.code.exec(src)) {
+      src = src.substring(cap[0].length);
+      cap = cap[0].replace(/^ {4}/gm, '');
+      this.tokens.push({
+        type: 'code',
+        text: !this.options.pedantic
+          ? cap.replace(/\n+$/, '')
+          : cap
+      });
+      continue;
+    }
+
+    // fences (gfm)
+    if (cap = this.rules.fences.exec(src)) {
+      src = src.substring(cap[0].length);
+      this.tokens.push({
+        type: 'code',
+        lang: cap[2],
+        text: cap[3]
+      });
+      continue;
+    }
+
+    // heading
+    if (cap = this.rules.heading.exec(src)) {
+      src = src.substring(cap[0].length);
+      this.tokens.push({
+        type: 'heading',
+        depth: cap[1].length,
+        text: cap[2]
+      });
+      continue;
+    }
+
+    // table no leading pipe (gfm)
+    if (top && (cap = this.rules.nptable.exec(src))) {
+      src = src.substring(cap[0].length);
+
+      item = {
+        type: 'table',
+        header: cap[1].replace(/^ *| *\| *$/g, '').split(/ *\| */),
+        align: cap[2].replace(/^ *|\| *$/g, '').split(/ *\| */),
+        cells: cap[3].replace(/\n$/, '').split('\n')
+      };
+
+      for (i = 0; i < item.align.length; i++) {
+        if (/^ *-+: *$/.test(item.align[i])) {
+          item.align[i] = 'right';
+        } else if (/^ *:-+: *$/.test(item.align[i])) {
+          item.align[i] = 'center';
+        } else if (/^ *:-+ *$/.test(item.align[i])) {
+          item.align[i] = 'left';
+        } else {
+          item.align[i] = null;
+        }
+      }
+
+      for (i = 0; i < item.cells.length; i++) {
+        item.cells[i] = item.cells[i].split(/ *\| */);
+      }
+
+      this.tokens.push(item);
+
+      continue;
+    }
+
+    // lheading
+    if (cap = this.rules.lheading.exec(src)) {
+      src = src.substring(cap[0].length);
+      this.tokens.push({
+        type: 'heading',
+        depth: cap[2] === '=' ? 1 : 2,
+        text: cap[1]
+      });
+      continue;
+    }
+
+    // hr
+    if (cap = this.rules.hr.exec(src)) {
+      src = src.substring(cap[0].length);
+      this.tokens.push({
+        type: 'hr'
+      });
+      continue;
+    }
+
+    // blockquote
+    if (cap = this.rules.blockquote.exec(src)) {
+      src = src.substring(cap[0].length);
+
+      this.tokens.push({
+        type: 'blockquote_start'
+      });
+
+      cap = cap[0].replace(/^ *> ?/gm, '');
+
+      // Pass `top` to keep the current
+      // "toplevel" state. This is exactly
+      // how markdown.pl works.
+      this.token(cap, top, true);
+
+      this.tokens.push({
+        type: 'blockquote_end'
+      });
+
+      continue;
+    }
+
+    // list
+    if (cap = this.rules.list.exec(src)) {
+      src = src.substring(cap[0].length);
+      bull = cap[2];
+
+      this.tokens.push({
+        type: 'list_start',
+        ordered: bull.length > 1
+      });
+
+      // Get each top-level item.
+      cap = cap[0].match(this.rules.item);
+
+      next = false;
+      l = cap.length;
+      i = 0;
+
+      for (; i < l; i++) {
+        item = cap[i];
+
+        // Remove the list item's bullet
+        // so it is seen as the next token.
+        space = item.length;
+        item = item.replace(/^ *([*+-]|\d+\.) +/, '');
+
+        // Outdent whatever the
+        // list item contains. Hacky.
+        if (~item.indexOf('\n ')) {
+          space -= item.length;
+          item = !this.options.pedantic
+            ? item.replace(new RegExp('^ {1,' + space + '}', 'gm'), '')
+            : item.replace(/^ {1,4}/gm, '');
+        }
+
+        // Determine whether the next list item belongs here.
+        // Backpedal if it does not belong in this list.
+        if (this.options.smartLists && i !== l - 1) {
+          b = block.bullet.exec(cap[i + 1])[0];
+          if (bull !== b && !(bull.length > 1 && b.length > 1)) {
+            src = cap.slice(i + 1).join('\n') + src;
+            i = l - 1;
+          }
+        }
+
+        // Determine whether item is loose or not.
+        // Use: /(^|\n)(?! )[^\n]+\n\n(?!\s*$)/
+        // for discount behavior.
+        loose = next || /\n\n(?!\s*$)/.test(item);
+        if (i !== l - 1) {
+          next = item.charAt(item.length - 1) === '\n';
+          if (!loose) loose = next;
+        }
+
+        this.tokens.push({
+          type: loose
+            ? 'loose_item_start'
+            : 'list_item_start'
+        });
+
+        // Recurse.
+        this.token(item, false, bq);
+
+        this.tokens.push({
+          type: 'list_item_end'
+        });
+      }
+
+      this.tokens.push({
+        type: 'list_end'
+      });
+
+      continue;
+    }
+
+    // html
+    if (cap = this.rules.html.exec(src)) {
+      src = src.substring(cap[0].length);
+      this.tokens.push({
+        type: this.options.sanitize
+          ? 'paragraph'
+          : 'html',
+        pre: cap[1] === 'pre' || cap[1] === 'script' || cap[1] === 'style',
+        text: cap[0]
+      });
+      continue;
+    }
+
+    // def
+    if ((!bq && top) && (cap = this.rules.def.exec(src))) {
+      src = src.substring(cap[0].length);
+      this.tokens.links[cap[1].toLowerCase()] = {
+        href: cap[2],
+        title: cap[3]
+      };
+      continue;
+    }
+
+    // table (gfm)
+    if (top && (cap = this.rules.table.exec(src))) {
+      src = src.substring(cap[0].length);
+
+      item = {
+        type: 'table',
+        header: cap[1].replace(/^ *| *\| *$/g, '').split(/ *\| */),
+        align: cap[2].replace(/^ *|\| *$/g, '').split(/ *\| */),
+        cells: cap[3].replace(/(?: *\| *)?\n$/, '').split('\n')
+      };
+
+      for (i = 0; i < item.align.length; i++) {
+        if (/^ *-+: *$/.test(item.align[i])) {
+          item.align[i] = 'right';
+        } else if (/^ *:-+: *$/.test(item.align[i])) {
+          item.align[i] = 'center';
+        } else if (/^ *:-+ *$/.test(item.align[i])) {
+          item.align[i] = 'left';
+        } else {
+          item.align[i] = null;
+        }
+      }
+
+      for (i = 0; i < item.cells.length; i++) {
+        item.cells[i] = item.cells[i]
+          .replace(/^ *\| *| *\| *$/g, '')
+          .split(/ *\| */);
+      }
+
+      this.tokens.push(item);
+
+      continue;
+    }
+
+    // top-level paragraph
+    if (top && (cap = this.rules.paragraph.exec(src))) {
+      src = src.substring(cap[0].length);
+      this.tokens.push({
+        type: 'paragraph',
+        text: cap[1].charAt(cap[1].length - 1) === '\n'
+          ? cap[1].slice(0, -1)
+          : cap[1]
+      });
+      continue;
+    }
+
+    // text
+    if (cap = this.rules.text.exec(src)) {
+      // Top-level should never reach here.
+      src = src.substring(cap[0].length);
+      this.tokens.push({
+        type: 'text',
+        text: cap[0]
+      });
+      continue;
+    }
+
+    if (src) {
+      throw new
+        Error('Infinite loop on byte: ' + src.charCodeAt(0));
+    }
+  }
+
+  return this.tokens;
+};
+
+/**
+ * Inline-Level Grammar
+ */
+
+var inline = {
+  escape: /^\\([\\`*{}\[\]()#+\-.!_>])/,
+  autolink: /^<([^ >]+(@|:\/)[^ >]+)>/,
+  url: noop,
+  tag: /^<!--[\s\S]*?-->|^<\/?\w+(?:"[^"]*"|'[^']*'|[^'">])*?>/,
+  link: /^!?\[(inside)\]\(href\)/,
+  reflink: /^!?\[(inside)\]\s*\[([^\]]*)\]/,
+  nolink: /^!?\[((?:\[[^\]]*\]|[^\[\]])*)\]/,
+  strong: /^__([\s\S]+?)__(?!_)|^\*\*([\s\S]+?)\*\*(?!\*)/,
+  em: /^\b_((?:__|[\s\S])+?)_\b|^\*((?:\*\*|[\s\S])+?)\*(?!\*)/,
+  code: /^(`+)\s*([\s\S]*?[^`])\s*\1(?!`)/,
+  br: /^ {2,}\n(?!\s*$)/,
+  del: noop,
+  text: /^[\s\S]+?(?=[\\<!\[_*`]| {2,}\n|$)/
+};
+
+inline._inside = /(?:\[[^\]]*\]|[^\[\]]|\](?=[^\[]*\]))*/;
+inline._href = /\s*<?([\s\S]*?)>?(?:\s+['"]([\s\S]*?)['"])?\s*/;
+
+inline.link = replace(inline.link)
+  ('inside', inline._inside)
+  ('href', inline._href)
+  ();
+
+inline.reflink = replace(inline.reflink)
+  ('inside', inline._inside)
+  ();
+
+/**
+ * Normal Inline Grammar
+ */
+
+inline.normal = merge({}, inline);
+
+/**
+ * Pedantic Inline Grammar
+ */
+
+inline.pedantic = merge({}, inline.normal, {
+  strong: /^__(?=\S)([\s\S]*?\S)__(?!_)|^\*\*(?=\S)([\s\S]*?\S)\*\*(?!\*)/,
+  em: /^_(?=\S)([\s\S]*?\S)_(?!_)|^\*(?=\S)([\s\S]*?\S)\*(?!\*)/
+});
+
+/**
+ * GFM Inline Grammar
+ */
+
+inline.gfm = merge({}, inline.normal, {
+  escape: replace(inline.escape)('])', '~|])')(),
+  url: /^(https?:\/\/[^\s<]+[^<.,:;"')\]\s])/,
+  del: /^~~(?=\S)([\s\S]*?\S)~~/,
+  text: replace(inline.text)
+    (']|', '~]|')
+    ('|', '|https?://|')
+    ()
+});
+
+/**
+ * GFM + Line Breaks Inline Grammar
+ */
+
+inline.breaks = merge({}, inline.gfm, {
+  br: replace(inline.br)('{2,}', '*')(),
+  text: replace(inline.gfm.text)('{2,}', '*')()
+});
+
+/**
+ * Inline Lexer & Compiler
+ */
+
+function InlineLexer(links, options) {
+  this.options = options || marked.defaults;
+  this.links = links;
+  this.rules = inline.normal;
+  this.renderer = this.options.renderer || new Renderer;
+  this.renderer.options = this.options;
+
+  if (!this.links) {
+    throw new
+      Error('Tokens array requires a `links` property.');
+  }
+
+  if (this.options.gfm) {
+    if (this.options.breaks) {
+      this.rules = inline.breaks;
+    } else {
+      this.rules = inline.gfm;
+    }
+  } else if (this.options.pedantic) {
+    this.rules = inline.pedantic;
+  }
+}
+
+/**
+ * Expose Inline Rules
+ */
+
+InlineLexer.rules = inline;
+
+/**
+ * Static Lexing/Compiling Method
+ */
+
+InlineLexer.output = function(src, links, options) {
+  var inline = new InlineLexer(links, options);
+  return inline.output(src);
+};
+
+/**
+ * Lexing/Compiling
+ */
+
+InlineLexer.prototype.output = function(src) {
+  var out = ''
+    , link
+    , text
+    , href
+    , cap;
+
+  while (src) {
+    // escape
+    if (cap = this.rules.escape.exec(src)) {
+      src = src.substring(cap[0].length);
+      out += cap[1];
+      continue;
+    }
+
+    // autolink
+    if (cap = this.rules.autolink.exec(src)) {
+      src = src.substring(cap[0].length);
+      if (cap[2] === '@') {
+        text = cap[1].charAt(6) === ':'
+          ? this.mangle(cap[1].substring(7))
+          : this.mangle(cap[1]);
+        href = this.mangle('mailto:') + text;
+      } else {
+        text = escape(cap[1]);
+        href = text;
+      }
+      out += this.renderer.link(href, null, text);
+      continue;
+    }
+
+    // url (gfm)
+    if (!this.inLink && (cap = this.rules.url.exec(src))) {
+      src = src.substring(cap[0].length);
+      text = escape(cap[1]);
+      href = text;
+      out += this.renderer.link(href, null, text);
+      continue;
+    }
+
+    // tag
+    if (cap = this.rules.tag.exec(src)) {
+      if (!this.inLink && /^<a /i.test(cap[0])) {
+        this.inLink = true;
+      } else if (this.inLink && /^<\/a>/i.test(cap[0])) {
+        this.inLink = false;
+      }
+      src = src.substring(cap[0].length);
+      out += this.options.sanitize
+        ? escape(cap[0])
+        : cap[0];
+      continue;
+    }
+
+    // link
+    if (cap = this.rules.link.exec(src)) {
+      src = src.substring(cap[0].length);
+      this.inLink = true;
+      out += this.outputLink(cap, {
+        href: cap[2],
+        title: cap[3]
+      });
+      this.inLink = false;
+      continue;
+    }
+
+    // reflink, nolink
+    if ((cap = this.rules.reflink.exec(src))
+        || (cap = this.rules.nolink.exec(src))) {
+      src = src.substring(cap[0].length);
+      link = (cap[2] || cap[1]).replace(/\s+/g, ' ');
+      link = this.links[link.toLowerCase()];
+      if (!link || !link.href) {
+        out += cap[0].charAt(0);
+        src = cap[0].substring(1) + src;
+        continue;
+      }
+      this.inLink = true;
+      out += this.outputLink(cap, link);
+      this.inLink = false;
+      continue;
+    }
+
+    // strong
+    if (cap = this.rules.strong.exec(src)) {
+      src = src.substring(cap[0].length);
+      out += this.renderer.strong(this.output(cap[2] || cap[1]));
+      continue;
+    }
+
+    // em
+    if (cap = this.rules.em.exec(src)) {
+      src = src.substring(cap[0].length);
+      out += this.renderer.em(this.output(cap[2] || cap[1]));
+      continue;
+    }
+
+    // code
+    if (cap = this.rules.code.exec(src)) {
+      src = src.substring(cap[0].length);
+      out += this.renderer.codespan(escape(cap[2], true));
+      continue;
+    }
+
+    // br
+    if (cap = this.rules.br.exec(src)) {
+      src = src.substring(cap[0].length);
+      out += this.renderer.br();
+      continue;
+    }
+
+    // del (gfm)
+    if (cap = this.rules.del.exec(src)) {
+      src = src.substring(cap[0].length);
+      out += this.renderer.del(this.output(cap[1]));
+      continue;
+    }
+
+    // text
+    if (cap = this.rules.text.exec(src)) {
+      src = src.substring(cap[0].length);
+      out += escape(this.smartypants(cap[0]));
+      continue;
+    }
+
+    if (src) {
+      throw new
+        Error('Infinite loop on byte: ' + src.charCodeAt(0));
+    }
+  }
+
+  return out;
+};
+
+/**
+ * Compile Link
+ */
+
+InlineLexer.prototype.outputLink = function(cap, link) {
+  var href = escape(link.href)
+    , title = link.title ? escape(link.title) : null;
+
+  return cap[0].charAt(0) !== '!'
+    ? this.renderer.link(href, title, this.output(cap[1]))
+    : this.renderer.image(href, title, escape(cap[1]));
+};
+
+/**
+ * Smartypants Transformations
+ */
+// TODO MonacoChange: Our build fails over the following lines if they are not commented out
+InlineLexer.prototype.smartypants = function(text) {
+	return text;
+//  if (!this.options.smartypants) return text;
+//  return text
+//    // em-dashes
+//    .replace(/--/g, '\u2014')
+//    // opening singles
+//    .replace(/(^|[-\u2014/(\[{"\s])'/g, '$1\u2018')
+//    // closing singles & apostrophes
+//    .replace(/'/g, '\u2019')
+//    // opening doubles
+//    .replace(/(^|[-\u2014/(\[{\u2018\s])"/g, '$1\u201c')
+//    // closing doubles
+//    .replace(/"/g, '\u201d')
+//    // ellipses
+//    .replace(/\.{3}/g, '\u2026');
+// END MonacoChange
+};
+
+/**
+ * Mangle Links
+ */
+
+InlineLexer.prototype.mangle = function(text) {
+  var out = ''
+    , l = text.length
+    , i = 0
+    , ch;
+
+  for (; i < l; i++) {
+    ch = text.charCodeAt(i);
+    if (Math.random() > 0.5) {
+      ch = 'x' + ch.toString(16);
+    }
+    out += '&#' + ch + ';';
+  }
+
+  return out;
+};
+
+/**
+ * Renderer
+ */
+
+function Renderer(options) {
+  this.options = options || {};
+}
+
+Renderer.prototype.code = function(code, lang, escaped) {
+  if (this.options.highlight) {
+    var out = this.options.highlight(code, lang);
+    if (out != null && out !== code) {
+      escaped = true;
+      code = out;
+    }
+  }
+
+  if (!lang) {
+    return '<pre><code>'
+      + (escaped ? code : escape(code, true))
+      + '\n</code></pre>';
+  }
+
+  return '<pre><code class="'
+    + this.options.langPrefix
+    + escape(lang, true)
+    + '">'
+    + (escaped ? code : escape(code, true))
+    + '\n</code></pre>\n';
+};
+
+Renderer.prototype.blockquote = function(quote) {
+  return '<blockquote>\n' + quote + '</blockquote>\n';
+};
+
+Renderer.prototype.html = function(html) {
+  return html;
+};
+
+Renderer.prototype.heading = function(text, level, raw) {
+  return '<h'
+    + level
+    + ' id="'
+    + this.options.headerPrefix
+    + raw.toLowerCase().replace(/[^\w]+/g, '-')
+    + '">'
+    + text
+    + '</h'
+    + level
+    + '>\n';
+};
+
+Renderer.prototype.hr = function() {
+  return this.options.xhtml ? '<hr/>\n' : '<hr>\n';
+};
+
+Renderer.prototype.list = function(body, ordered) {
+  var type = ordered ? 'ol' : 'ul';
+  return '<' + type + '>\n' + body + '</' + type + '>\n';
+};
+
+Renderer.prototype.listitem = function(text) {
+  return '<li>' + text + '</li>\n';
+};
+
+Renderer.prototype.paragraph = function(text) {
+  return '<p>' + text + '</p>\n';
+};
+
+Renderer.prototype.table = function(header, body) {
+  return '<table>\n'
+    + '<thead>\n'
+    + header
+    + '</thead>\n'
+    + '<tbody>\n'
+    + body
+    + '</tbody>\n'
+    + '</table>\n';
+};
+
+Renderer.prototype.tablerow = function(content) {
+  return '<tr>\n' + content + '</tr>\n';
+};
+
+Renderer.prototype.tablecell = function(content, flags) {
+  var type = flags.header ? 'th' : 'td';
+  var tag = flags.align
+    ? '<' + type + ' style="text-align:' + flags.align + '">'
+    : '<' + type + '>';
+  return tag + content + '</' + type + '>\n';
+};
+
+// span level renderer
+Renderer.prototype.strong = function(text) {
+  return '<strong>' + text + '</strong>';
+};
+
+Renderer.prototype.em = function(text) {
+  return '<em>' + text + '</em>';
+};
+
+Renderer.prototype.codespan = function(text) {
+  return '<code>' + text + '</code>';
+};
+
+Renderer.prototype.br = function() {
+  return this.options.xhtml ? '<br/>' : '<br>';
+};
+
+Renderer.prototype.del = function(text) {
+  return '<del>' + text + '</del>';
+};
+
+Renderer.prototype.link = function(href, title, text) {
+  if (this.options.sanitize) {
+    try {
+      var prot = decodeURIComponent(unescape(href))
+        .replace(/[^\w:]/g, '')
+        .toLowerCase();
+    } catch (e) {
+      return '';
+    }
+    if (prot.indexOf('javascript:') === 0) {
+      return '';
+    }
+  }
+  var out = '<a href="' + href + '"';
+  if (title) {
+    out += ' title="' + title + '"';
+  }
+  out += '>' + text + '</a>';
+  return out;
+};
+
+Renderer.prototype.image = function(href, title, text) {
+  var out = '<img src="' + href + '" alt="' + text + '"';
+  if (title) {
+    out += ' title="' + title + '"';
+  }
+  out += this.options.xhtml ? '/>' : '>';
+  return out;
+};
+
+/**
+ * Parsing & Compiling
+ */
+
+function Parser(options) {
+  this.tokens = [];
+  this.token = null;
+  this.options = options || marked.defaults;
+  this.options.renderer = this.options.renderer || new Renderer;
+  this.renderer = this.options.renderer;
+  this.renderer.options = this.options;
+}
+
+/**
+ * Static Parse Method
+ */
+
+Parser.parse = function(src, options, renderer) {
+  var parser = new Parser(options, renderer);
+  return parser.parse(src);
+};
+
+/**
+ * Parse Loop
+ */
+
+Parser.prototype.parse = function(src) {
+  this.inline = new InlineLexer(src.links, this.options, this.renderer);
+  this.tokens = src.reverse();
+
+  var out = '';
+  while (this.next()) {
+    out += this.tok();
+  }
+
+  return out;
+};
+
+/**
+ * Next Token
+ */
+
+Parser.prototype.next = function() {
+  return this.token = this.tokens.pop();
+};
+
+/**
+ * Preview Next Token
+ */
+
+Parser.prototype.peek = function() {
+  return this.tokens[this.tokens.length - 1] || 0;
+};
+
+/**
+ * Parse Text Tokens
+ */
+
+Parser.prototype.parseText = function() {
+  var body = this.token.text;
+
+  while (this.peek().type === 'text') {
+    body += '\n' + this.next().text;
+  }
+
+  return this.inline.output(body);
+};
+
+/**
+ * Parse Current Token
+ */
+
+Parser.prototype.tok = function() {
+  switch (this.token.type) {
+    case 'space': {
+      return '';
+    }
+    case 'hr': {
+      return this.renderer.hr();
+    }
+    case 'heading': {
+      return this.renderer.heading(
+        this.inline.output(this.token.text),
+        this.token.depth,
+        this.token.text);
+    }
+    case 'code': {
+      return this.renderer.code(this.token.text,
+        this.token.lang,
+        this.token.escaped);
+    }
+    case 'table': {
+      var header = ''
+        , body = ''
+        , i
+        , row
+        , cell
+        , flags
+        , j;
+
+      // header
+      cell = '';
+      for (i = 0; i < this.token.header.length; i++) {
+        flags = { header: true, align: this.token.align[i] };
+        cell += this.renderer.tablecell(
+          this.inline.output(this.token.header[i]),
+          { header: true, align: this.token.align[i] }
+        );
+      }
+      header += this.renderer.tablerow(cell);
+
+      for (i = 0; i < this.token.cells.length; i++) {
+        row = this.token.cells[i];
+
+        cell = '';
+        for (j = 0; j < row.length; j++) {
+          cell += this.renderer.tablecell(
+            this.inline.output(row[j]),
+            { header: false, align: this.token.align[j] }
+          );
+        }
+
+        body += this.renderer.tablerow(cell);
+      }
+      return this.renderer.table(header, body);
+    }
+    case 'blockquote_start': {
+      var body = '';
+
+      while (this.next().type !== 'blockquote_end') {
+        body += this.tok();
+      }
+
+      return this.renderer.blockquote(body);
+    }
+    case 'list_start': {
+      var body = ''
+        , ordered = this.token.ordered;
+
+      while (this.next().type !== 'list_end') {
+        body += this.tok();
+      }
+
+      return this.renderer.list(body, ordered);
+    }
+    case 'list_item_start': {
+      var body = '';
+
+      while (this.next().type !== 'list_item_end') {
+        body += this.token.type === 'text'
+          ? this.parseText()
+          : this.tok();
+      }
+
+      return this.renderer.listitem(body);
+    }
+    case 'loose_item_start': {
+      var body = '';
+
+      while (this.next().type !== 'list_item_end') {
+        body += this.tok();
+      }
+
+      return this.renderer.listitem(body);
+    }
+    case 'html': {
+      var html = !this.token.pre && !this.options.pedantic
+        ? this.inline.output(this.token.text)
+        : this.token.text;
+      return this.renderer.html(html);
+    }
+    case 'paragraph': {
+      return this.renderer.paragraph(this.inline.output(this.token.text));
+    }
+    case 'text': {
+      return this.renderer.paragraph(this.parseText());
+    }
+  }
+};
+
+/**
+ * Helpers
+ */
+
+function escape(html, encode) {
+  return html
+    .replace(!encode ? /&(?!#?\w+;)/g : /&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
+function unescape(html) {
+  return html.replace(/&([#\w]+);/g, function(_, n) {
+    n = n.toLowerCase();
+    if (n === 'colon') return ':';
+    if (n.charAt(0) === '#') {
+      return n.charAt(1) === 'x'
+        ? String.fromCharCode(parseInt(n.substring(2), 16))
+        : String.fromCharCode(+n.substring(1));
+    }
+    return '';
+  });
+}
+
+function replace(regex, opt) {
+  regex = regex.source;
+  opt = opt || '';
+  return function self(name, val) {
+    if (!name) return new RegExp(regex, opt);
+    val = val.source || val;
+    val = val.replace(/(^|[^\[])\^/g, '$1');
+    regex = regex.replace(name, val);
+    return self;
+  };
+}
+
+function noop() {}
+noop.exec = noop;
+
+function merge(obj) {
+  var i = 1
+    , target
+    , key;
+
+  for (; i < arguments.length; i++) {
+    target = arguments[i];
+    for (key in target) {
+      if (Object.prototype.hasOwnProperty.call(target, key)) {
+        obj[key] = target[key];
+      }
+    }
+  }
+
+  return obj;
+}
+
+
+/**
+ * Marked
+ */
+
+function marked(src, opt, callback) {
+  if (callback || typeof opt === 'function') {
+    if (!callback) {
+      callback = opt;
+      opt = null;
+    }
+
+    opt = merge({}, marked.defaults, opt || {});
+
+    var highlight = opt.highlight
+      , tokens
+      , pending
+      , i = 0;
+
+    try {
+      tokens = Lexer.lex(src, opt)
+    } catch (e) {
+      return callback(e);
+    }
+
+    pending = tokens.length;
+
+    var done = function(err) {
+      if (err) {
+        opt.highlight = highlight;
+        return callback(err);
+      }
+
+      var out;
+
+      try {
+        out = Parser.parse(tokens, opt);
+      } catch (e) {
+        err = e;
+      }
+
+      opt.highlight = highlight;
+
+      return err
+        ? callback(err)
+        : callback(null, out);
+    };
+
+    if (!highlight || highlight.length < 3) {
+      return done();
+    }
+
+    delete opt.highlight;
+
+    if (!pending) return done();
+
+    for (; i < tokens.length; i++) {
+      (function(token) {
+        if (token.type !== 'code') {
+          return --pending || done();
+        }
+        return highlight(token.text, token.lang, function(err, code) {
+          if (err) return done(err);
+          if (code == null || code === token.text) {
+            return --pending || done();
+          }
+          token.text = code;
+          token.escaped = true;
+          --pending || done();
+        });
+      })(tokens[i]);
+    }
+
+    return;
+  }
+  try {
+    if (opt) opt = merge({}, marked.defaults, opt);
+    return Parser.parse(Lexer.lex(src, opt), opt);
+  } catch (e) {
+    e.message += '\nPlease report this to https://github.com/chjj/marked.';
+    if ((opt || marked.defaults).silent) {
+      return '<p>An error occured:</p><pre>'
+        + escape(e.message + '', true)
+        + '</pre>';
+    }
+    throw e;
+  }
+}
+
+/**
+ * Options
+ */
+
+marked.options =
+marked.setOptions = function(opt) {
+  merge(marked.defaults, opt);
+  return marked;
+};
+
+marked.defaults = {
+  gfm: true,
+  tables: true,
+  breaks: false,
+  pedantic: false,
+  sanitize: false,
+  smartLists: false,
+  silent: false,
+  highlight: null,
+  langPrefix: 'lang-',
+  smartypants: false,
+  headerPrefix: '',
+  renderer: new Renderer,
+  xhtml: false
+};
+
+/**
+ * Expose
+ */
+
+marked.Parser = Parser;
+marked.parser = Parser.parse;
+
+marked.Renderer = Renderer;
+
+marked.Lexer = Lexer;
+marked.lexer = Lexer.lex;
+
+marked.InlineLexer = InlineLexer;
+marked.inlineLexer = InlineLexer.output;
+
+marked.parse = marked;
+
+// TODO MonacoChange: we have our own way of defining modules
+this.marked = marked;
+//if (typeof module !== 'undefined' && typeof exports === 'object') {
+//  module.exports = marked;
+//} else if (typeof define === 'function' && define.amd) {
+//  define(function() { return marked; });
+//} else {
+//  this.marked = marked;
+//}
+//
+//}).call(function() {
+//  return this || (typeof window !== 'undefined' ? window : global);
+//}());
+// END MonacoChange
+;
+define("vs/base/common/marked/raw.marked", [], function () {
+				return this.marked;
+			});
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+require.config({
+	shim: {
+		'vs/base/common/marked/raw.marked': {
+			exports: function () {
+				return this.marked;
+			}
+		}
+	}
+});
+
+define(__m[315], __M([516]), function (marked) {
+	return {
+		marked: marked
+	};
+});
+define(__m[18], __M([0,1]), function (require, exports) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -2148,26 +3494,20 @@ define(__m[17], __M([1,0]), function (require, exports) {
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
-define(__m[122], __M([1,0,17]), function (require, exports, platform_1) {
+define(__m[256], __M([0,1,18]), function (require, exports, platform_1) {
     'use strict';
-    // Telemetry endpoint (used in the standalone editor) for hosts that want to collect editor telemetry
-    exports.standaloneEditorTelemetryEndpoint = environment('telemetryEndpoint', null);
     // Option for hosts to overwrite the worker script url (used in the standalone editor)
     exports.getCrossOriginWorkerScriptUrl = environment('getWorkerUrl', null);
     function environment(name, fallback) {
         if (fallback === void 0) { fallback = false; }
-        if (platform_1.globals.GlobalEnvironment && platform_1.globals.GlobalEnvironment.hasOwnProperty(name)) {
-            return platform_1.globals.GlobalEnvironment[name];
+        if (platform_1.globals.MonacoEnvironment && platform_1.globals.MonacoEnvironment.hasOwnProperty(name)) {
+            return platform_1.globals.MonacoEnvironment[name];
         }
         return fallback;
     }
-    function workersCount(defaultCount) {
-        return environment('workersCount', defaultCount);
-    }
-    exports.workersCount = workersCount;
 });
 
-define(__m[37], __M([1,0,17]), function (require, exports, platform_1) {
+define(__m[38], __M([0,1,18]), function (require, exports, platform_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -2521,7 +3861,7 @@ define(__m[37], __M([1,0,17]), function (require, exports, platform_1) {
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
-define(__m[261], __M([1,0]), function (require, exports) {
+define(__m[259], __M([0,1]), function (require, exports) {
     'use strict';
     // Based on material from:
     /*!
@@ -2636,158 +3976,7 @@ define(__m[261], __M([1,0]), function (require, exports) {
 END THIRD PARTY
 */ 
 
-define(__m[262], __M([1,0,35]), function (require, exports, Arrays) {
-    /*---------------------------------------------------------------------------------------------
-     *  Copyright (c) Microsoft Corporation. All rights reserved.
-     *  Licensed under the MIT License. See License.txt in the project root for license information.
-     *--------------------------------------------------------------------------------------------*/
-    'use strict';
-    var SortedList = (function () {
-        function SortedList(comparator) {
-            this.keys = [];
-            this.values = [];
-            this.comparator = comparator || SortedList.DEFAULT_COMPARATOR;
-        }
-        Object.defineProperty(SortedList.prototype, "count", {
-            get: function () {
-                return this.keys.length;
-            },
-            enumerable: true,
-            configurable: true
-        });
-        SortedList.prototype.getValueByIndex = function (index) {
-            if (0 <= index && index < this.values.length) {
-                return this.values[index];
-            }
-            return null;
-        };
-        SortedList.prototype.getKey = function (index) {
-            if (0 <= index && index < this.keys.length) {
-                return this.keys[index];
-            }
-            return null;
-        };
-        SortedList.prototype.getKeys = function () {
-            return new ListIterator(this.keys);
-        };
-        SortedList.prototype.getValue = function (key) {
-            if (!key) {
-                throw new Error('Key must be defined.');
-            }
-            var indexOfKey = this.indexOfKey(key);
-            if (indexOfKey >= 0) {
-                return this.values[indexOfKey];
-            }
-            return null;
-        };
-        SortedList.prototype.getValues = function () {
-            return new ListIterator(this.values);
-        };
-        SortedList.prototype.indexOfKey = function (key) {
-            if (!key) {
-                throw new Error('Key must be defined.');
-            }
-            return Math.max(-1, Arrays.binarySearch(this.keys, key, this.comparator));
-        };
-        SortedList.prototype.add = function (key, value) {
-            if (!key || !value) {
-                throw new Error('Key and value must be defined.');
-            }
-            var position = 0;
-            while (position < this.keys.length && this.comparator(key, this.keys[position]) > 0) {
-                position++;
-            }
-            this.keys.splice(position, 0, key);
-            this.values.splice(position, 0, value);
-        };
-        SortedList.prototype.remove = function (key) {
-            if (!key) {
-                throw new Error('Key must be defined.');
-            }
-            var indexOfKey = this.indexOfKey(key);
-            if (indexOfKey >= 0) {
-                this.values.splice(indexOfKey, 1);
-                this.keys.splice(indexOfKey, 1);
-            }
-            return indexOfKey >= 0;
-        };
-        SortedList.prototype.getIterator = function () {
-            return new SortedListIterator(this.keys, this.values);
-        };
-        SortedList.DEFAULT_COMPARATOR = function (first, second) {
-            return first < second ? -1 : first > second ? 1 : 0;
-        };
-        return SortedList;
-    }());
-    exports.SortedList = SortedList;
-    var SortedListIterator = (function () {
-        function SortedListIterator(keys, values) {
-            this.keys = keys;
-            this.values = values;
-            this.index = -1;
-        }
-        Object.defineProperty(SortedListIterator.prototype, "current", {
-            get: function () {
-                if (this.index < 0 || this.keys.length < this.index) {
-                    return null;
-                }
-                return {
-                    key: this.keys[this.index],
-                    value: this.values[this.index]
-                };
-            },
-            enumerable: true,
-            configurable: true
-        });
-        SortedListIterator.prototype.moveNext = function () {
-            this.index++;
-            return this.index < this.keys.length;
-        };
-        SortedListIterator.prototype.hasNext = function () {
-            return this.index + 1 < this.keys.length;
-        };
-        SortedListIterator.prototype.reset = function () {
-            this.index = -1;
-        };
-        SortedListIterator.prototype.dispose = function () {
-            this.keys = null;
-            this.values = null;
-        };
-        return SortedListIterator;
-    }());
-    var ListIterator = (function () {
-        function ListIterator(values) {
-            this.values = values;
-            this.index = -1;
-        }
-        Object.defineProperty(ListIterator.prototype, "current", {
-            get: function () {
-                if (this.index < 0 || this.values.length < this.index) {
-                    return null;
-                }
-                return this.values[this.index];
-            },
-            enumerable: true,
-            configurable: true
-        });
-        ListIterator.prototype.moveNext = function () {
-            this.index++;
-            return this.index < this.values.length;
-        };
-        ListIterator.prototype.hasNext = function () {
-            return this.index + 1 < this.values.length;
-        };
-        ListIterator.prototype.reset = function () {
-            this.index = -1;
-        };
-        ListIterator.prototype.dispose = function () {
-            this.values = null;
-        };
-        return ListIterator;
-    }());
-});
-
-define(__m[139], __M([1,0,17]), function (require, exports, platform_1) {
+define(__m[143], __M([0,1,18]), function (require, exports, platform_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -2821,7 +4010,7 @@ define(__m[139], __M([1,0,17]), function (require, exports, platform_1) {
     exports.StopWatch = StopWatch;
 });
 
-define(__m[10], __M([1,0,101]), function (require, exports, map_1) {
+define(__m[10], __M([0,1,99]), function (require, exports, map_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -3374,7 +4563,7 @@ define(__m[10], __M([1,0,101]), function (require, exports, map_1) {
     exports.repeat = repeat;
 });
 
-define(__m[286], __M([1,0,10]), function (require, exports, strings_1) {
+define(__m[273], __M([0,1,10]), function (require, exports, strings_1) {
     "use strict";
     function expand(text) {
         return text;
@@ -3402,7 +4591,7 @@ define(__m[286], __M([1,0,10]), function (require, exports, strings_1) {
     return mock;
 });
 
-define(__m[376], __M([1,0,10]), function (require, exports, strings) {
+define(__m[288], __M([0,1,10]), function (require, exports, strings) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -3467,7 +4656,7 @@ define(__m[376], __M([1,0,10]), function (require, exports, strings) {
     exports.compareByPrefix = compareByPrefix;
 });
 
-define(__m[67], __M([1,0,10,101]), function (require, exports, strings, map_1) {
+define(__m[65], __M([0,1,10,99]), function (require, exports, strings, map_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -3771,7 +4960,7 @@ define(__m[67], __M([1,0,10,101]), function (require, exports, strings, map_1) {
     exports.matchesFuzzy = matchesFuzzy;
 });
 
-define(__m[132], __M([1,0,10,37,101]), function (require, exports, strings, paths, map_1) {
+define(__m[132], __M([0,1,10,38,99]), function (require, exports, strings, paths, map_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -4050,7 +5239,7 @@ define(__m[132], __M([1,0,10,37,101]), function (require, exports, strings, path
     }
 });
 
-define(__m[26], __M([1,0]), function (require, exports) {
+define(__m[26], __M([0,1]), function (require, exports) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -4215,7 +5404,7 @@ define(__m[26], __M([1,0]), function (require, exports) {
     exports.create = create;
 });
 
-define(__m[256], __M([1,0,26,51]), function (require, exports, types_1, collections_1) {
+define(__m[255], __M([0,1,26,48]), function (require, exports, types_1, collections_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -4304,7 +5493,7 @@ define(__m[256], __M([1,0,26,51]), function (require, exports, types_1, collecti
     exports.Graph = Graph;
 });
 
-define(__m[140], __M([1,0,17,26,10,37]), function (require, exports, platform, types, strings, paths) {
+define(__m[142], __M([0,1,18,26,10,38]), function (require, exports, platform, types, strings, paths) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -4355,7 +5544,7 @@ define(__m[140], __M([1,0,17,26,10,37]), function (require, exports, platform, t
 
 
 
-define(__m[3], __M([1,0,26]), function (require, exports, types_1) {
+define(__m[3], __M([0,1,26]), function (require, exports, types_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -4424,7 +5613,7 @@ define(__m[3], __M([1,0,26]), function (require, exports, types_1) {
     exports.Disposables = Disposables;
 });
 
-define(__m[175], __M([1,0,37,26,10,132]), function (require, exports, paths, types, strings, glob_1) {
+define(__m[144], __M([0,1,38,26,10,132]), function (require, exports, paths, types, strings, glob_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -4604,7 +5793,7 @@ define(__m[175], __M([1,0,37,26,10,132]), function (require, exports, paths, typ
     exports.suggestFilename = suggestFilename;
 });
 
-define(__m[32], __M([1,0,26]), function (require, exports, Types) {
+define(__m[31], __M([0,1,26]), function (require, exports, Types) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -4895,7 +6084,7 @@ define(__m[32], __M([1,0,26]), function (require, exports, Types) {
     exports.getOrDefault = getOrDefault;
 });
 
-define(__m[29], __M([1,0,17]), function (require, exports, platform) {
+define(__m[29], __M([0,1,18]), function (require, exports, platform) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -5200,8 +6389,8 @@ define(__m[29], __M([1,0,17]), function (require, exports, platform) {
                 path: this.path,
                 fsPath: this.fsPath,
                 query: this.query,
-                fragment: this.fragment.replace(/URL_MARSHAL_REMOVE.*$/, ''),
-                external: this.toString().replace(/#?URL_MARSHAL_REMOVE.*$/, ''),
+                fragment: this.fragment,
+                external: this.toString(),
                 $mid: 1
             };
         };
@@ -5228,7 +6417,7 @@ define(__m[29], __M([1,0,17]), function (require, exports, platform) {
     exports.default = URI;
 });
 
-define(__m[275], __M([1,0,29]), function (require, exports, uri_1) {
+define(__m[268], __M([0,1,29]), function (require, exports, uri_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -5275,7 +6464,7 @@ define(__m[275], __M([1,0,29]), function (require, exports, uri_1) {
 
 
 
-define(__m[133], __M([1,0]), function (require, exports) {
+define(__m[130], __M([0,1]), function (require, exports) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -7444,7 +8633,32 @@ if (typeof process !== 'undefined' && typeof process.nextTick === 'function') {
 }
 
 })();
-define(__m[77], __M([1,0]), function (require, exports) {
+define(__m[279], __M([0,1]), function (require, exports) {
+    /*---------------------------------------------------------------------------------------------
+     *  Copyright (c) Microsoft Corporation. All rights reserved.
+     *  Licensed under the MIT License. See License.txt in the project root for license information.
+     *--------------------------------------------------------------------------------------------*/
+    'use strict';
+    exports.MessageType = {
+        INITIALIZE: '$initialize',
+        REPLY: '$reply',
+        PRINT: '$print'
+    };
+    exports.ReplyType = {
+        COMPLETE: 'complete',
+        ERROR: 'error',
+        PROGRESS: 'progress'
+    };
+    exports.PrintType = {
+        LOG: 'log',
+        DEBUG: 'debug',
+        INFO: 'info',
+        WARN: 'warn',
+        ERROR: 'error'
+    };
+});
+
+define(__m[91], __M([0,1]), function (require, exports) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -7462,7 +8676,7 @@ define(__m[77], __M([1,0]), function (require, exports) {
 
 
 
-define(__m[291], __M([1,0]), function (require, exports) {
+define(__m[290], __M([0,1]), function (require, exports) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -7552,7 +8766,7 @@ define(__m[291], __M([1,0]), function (require, exports) {
     exports.DRAG_OVER_ACCEPT_BUBBLE_DOWN_COPY = { accept: true, bubble: DragOverBubble.BUBBLE_DOWN, effect: DragOverEffect.COPY };
 });
 
-define(__m[292], __M([1,0]), function (require, exports) {
+define(__m[296], __M([0,1]), function (require, exports) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -7611,57 +8825,55 @@ define(__m[292], __M([1,0]), function (require, exports) {
     exports.DesktopDragAndDropData = DesktopDragAndDropData;
 });
 
-define(__m[301], __M([9]), {});
-define(__m[377], __M([9]), {});
+define(__m[310], __M([9]), {});
+define(__m[376], __M([9]), {});
+define(__m[380], __M([9]), {});
 define(__m[381], __M([9]), {});
 define(__m[382], __M([9]), {});
 define(__m[383], __M([9]), {});
-define(__m[386], __M([9]), {});
 define(__m[387], __M([9]), {});
 define(__m[390], __M([9]), {});
-define(__m[393], __M([9]), {});
-define(__m[395], __M([9]), {});
+define(__m[392], __M([9]), {});
 define(__m[396], __M([9]), {});
-define(__m[399], __M([9]), {});
-define(__m[147], __M([9]), {});
-define(__m[417], __M([9]), {});
-define(__m[418], __M([9]), {});
-define(__m[425], __M([9]), {});
-define(__m[426], __M([9]), {});
-define(__m[435], __M([9]), {});
+define(__m[404], __M([9]), {});
+define(__m[413], __M([9]), {});
+define(__m[136], __M([9]), {});
+define(__m[422], __M([9]), {});
+define(__m[423], __M([9]), {});
+define(__m[429], __M([9]), {});
 define(__m[438], __M([9]), {});
-define(__m[461], __M([9]), {});
-define(__m[464], __M([9]), {});
-define(__m[516], __M([9]), {});
-define(__m[180], __M([9]), {});
-define(__m[185], __M([9]), {});
-define(__m[186], __M([9]), {});
+define(__m[442], __M([9]), {});
+define(__m[443], __M([9]), {});
+define(__m[511], __M([9]), {});
+define(__m[182], __M([9]), {});
 define(__m[187], __M([9]), {});
 define(__m[188], __M([9]), {});
 define(__m[189], __M([9]), {});
 define(__m[190], __M([9]), {});
 define(__m[191], __M([9]), {});
+define(__m[192], __M([9]), {});
 define(__m[193], __M([9]), {});
 define(__m[194], __M([9]), {});
 define(__m[196], __M([9]), {});
 define(__m[197], __M([9]), {});
 define(__m[199], __M([9]), {});
-define(__m[206], __M([9]), {});
+define(__m[200], __M([9]), {});
+define(__m[202], __M([9]), {});
+define(__m[204], __M([9]), {});
 define(__m[208], __M([9]), {});
 define(__m[210], __M([9]), {});
-define(__m[211], __M([9]), {});
+define(__m[212], __M([9]), {});
 define(__m[213], __M([9]), {});
 define(__m[215], __M([9]), {});
 define(__m[217], __M([9]), {});
 define(__m[219], __M([9]), {});
 define(__m[221], __M([9]), {});
 define(__m[223], __M([9]), {});
-define(__m[224], __M([9]), {});
+define(__m[225], __M([9]), {});
 define(__m[226], __M([9]), {});
 define(__m[228], __M([9]), {});
-define(__m[232], __M([9]), {});
-define(__m[235], __M([9]), {});
-define(__m[236], __M([9]), {});
+define(__m[230], __M([9]), {});
+define(__m[234], __M([9]), {});
 define(__m[237], __M([9]), {});
 define(__m[238], __M([9]), {});
 define(__m[239], __M([9]), {});
@@ -7669,15 +8881,15 @@ define(__m[240], __M([9]), {});
 define(__m[241], __M([9]), {});
 define(__m[242], __M([9]), {});
 define(__m[243], __M([9]), {});
-define(__m[98], __M([9]), {});
+define(__m[244], __M([9]), {});
 define(__m[245], __M([9]), {});
-define(__m[247], __M([9]), {});
+define(__m[246], __M([9]), {});
 
 
 
 
 
-define(__m[253], __M([1,0,3]), function (require, exports, lifecycle_1) {
+define(__m[247], __M([0,1,3]), function (require, exports, lifecycle_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -7745,7 +8957,7 @@ define(__m[253], __M([1,0,3]), function (require, exports, lifecycle_1) {
     exports.ElementSizeObserver = ElementSizeObserver;
 });
 
-define(__m[23], __M([1,0]), function (require, exports) {
+define(__m[22], __M([0,1]), function (require, exports) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -7810,7 +9022,7 @@ define(__m[23], __M([1,0]), function (require, exports) {
     var OverlayWidgetPositionPreference = exports.OverlayWidgetPositionPreference;
 });
 
-define(__m[78], __M([1,0]), function (require, exports) {
+define(__m[89], __M([0,1]), function (require, exports) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -7850,7 +9062,7 @@ define(__m[78], __M([1,0]), function (require, exports) {
     })(Arrays = exports.Arrays || (exports.Arrays = {}));
 });
 
-define(__m[84], __M([1,0,78]), function (require, exports, arrays_1) {
+define(__m[88], __M([0,1,89]), function (require, exports, arrays_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -7878,7 +9090,7 @@ define(__m[84], __M([1,0,78]), function (require, exports, arrays_1) {
     exports.ModeTransition = ModeTransition;
 });
 
-define(__m[20], __M([1,0]), function (require, exports) {
+define(__m[21], __M([0,1]), function (require, exports) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -7986,7 +9198,7 @@ define(__m[20], __M([1,0]), function (require, exports) {
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
-define(__m[6], __M([1,0,20]), function (require, exports, position_1) {
+define(__m[4], __M([0,1,21]), function (require, exports, position_1) {
     'use strict';
     /**
      * A range in the editor. (startLineNumber,startColumn) is <= (endLineNumber,endColumn)
@@ -8287,7 +9499,7 @@ define(__m[6], __M([1,0,20]), function (require, exports, position_1) {
     exports.Range = Range;
 });
 
-define(__m[58], __M([1,0,6]), function (require, exports, range_1) {
+define(__m[62], __M([0,1,4]), function (require, exports, range_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -8333,7 +9545,7 @@ define(__m[58], __M([1,0,6]), function (require, exports, range_1) {
     exports.EditOperation = EditOperation;
 });
 
-define(__m[266], __M([1,0,10,58,6]), function (require, exports, strings, editOperation_1, range_1) {
+define(__m[261], __M([0,1,10,62,4]), function (require, exports, strings, editOperation_1, range_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -8420,7 +9632,7 @@ define(__m[266], __M([1,0,10,58,6]), function (require, exports, strings, editOp
 
 
 
-define(__m[24], __M([1,0,6]), function (require, exports, range_1) {
+define(__m[24], __M([0,1,4]), function (require, exports, range_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -8563,7 +9775,7 @@ define(__m[24], __M([1,0,6]), function (require, exports, range_1) {
 
 
 
-define(__m[92], __M([1,0,24]), function (require, exports, selection_1) {
+define(__m[110], __M([0,1,24]), function (require, exports, selection_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -8640,7 +9852,7 @@ define(__m[92], __M([1,0,24]), function (require, exports, selection_1) {
     exports.ReplaceCommandThatPreservesSelection = ReplaceCommandThatPreservesSelection;
 });
 
-define(__m[281], __M([1,0,6,24]), function (require, exports, range_1, selection_1) {
+define(__m[270], __M([0,1,4,24]), function (require, exports, range_1, selection_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -8667,7 +9879,7 @@ define(__m[281], __M([1,0,6,24]), function (require, exports, range_1, selection
     exports.SurroundSelectionCommand = SurroundSelectionCommand;
 });
 
-define(__m[123], __M([1,0,24]), function (require, exports, selection_1) {
+define(__m[97], __M([0,1,24]), function (require, exports, selection_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -8869,7 +10081,7 @@ define(__m[123], __M([1,0,24]), function (require, exports, selection_1) {
     exports.CursorMoveHelper = CursorMoveHelper;
 });
 
-define(__m[60], __M([1,0,78]), function (require, exports, arrays_1) {
+define(__m[64], __M([0,1,89]), function (require, exports, arrays_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -8939,7 +10151,257 @@ define(__m[60], __M([1,0,78]), function (require, exports, arrays_1) {
 
 
 
-define(__m[25], __M([1,0,3]), function (require, exports, lifecycle_1) {
+define(__m[285], __M([0,1,150,10]), function (require, exports, diff_1, strings) {
+    /*---------------------------------------------------------------------------------------------
+     *  Copyright (c) Microsoft Corporation. All rights reserved.
+     *  Licensed under the MIT License. See License.txt in the project root for license information.
+     *--------------------------------------------------------------------------------------------*/
+    'use strict';
+    var MAXIMUM_RUN_TIME = 5000; // 5 seconds
+    var MINIMUM_MATCHING_CHARACTER_LENGTH = 3;
+    function computeDiff(originalSequence, modifiedSequence, continueProcessingPredicate) {
+        var diffAlgo = new diff_1.LcsDiff(originalSequence, modifiedSequence, continueProcessingPredicate);
+        return diffAlgo.ComputeDiff();
+    }
+    var MarkerSequence = (function () {
+        function MarkerSequence(buffer, startMarkers, endMarkers) {
+            this.buffer = buffer;
+            this.startMarkers = startMarkers;
+            this.endMarkers = endMarkers;
+        }
+        MarkerSequence.prototype.equals = function (other) {
+            if (!(other instanceof MarkerSequence)) {
+                return false;
+            }
+            var otherMarkerSequence = other;
+            if (this.getLength() !== otherMarkerSequence.getLength()) {
+                return false;
+            }
+            for (var i = 0, len = this.getLength(); i < len; i++) {
+                var myElement = this.getElementHash(i);
+                var otherElement = otherMarkerSequence.getElementHash(i);
+                if (myElement !== otherElement) {
+                    return false;
+                }
+            }
+            return true;
+        };
+        MarkerSequence.prototype.getLength = function () {
+            return this.startMarkers.length;
+        };
+        MarkerSequence.prototype.getElementHash = function (i) {
+            return this.buffer.substring(this.startMarkers[i].offset, this.endMarkers[i].offset);
+        };
+        MarkerSequence.prototype.getStartLineNumber = function (i) {
+            if (i === this.startMarkers.length) {
+                // This is the special case where a change happened after the last marker
+                return this.startMarkers[i - 1].lineNumber + 1;
+            }
+            return this.startMarkers[i].lineNumber;
+        };
+        MarkerSequence.prototype.getStartColumn = function (i) {
+            return this.startMarkers[i].column;
+        };
+        MarkerSequence.prototype.getEndLineNumber = function (i) {
+            return this.endMarkers[i].lineNumber;
+        };
+        MarkerSequence.prototype.getEndColumn = function (i) {
+            return this.endMarkers[i].column;
+        };
+        return MarkerSequence;
+    }());
+    var LineMarkerSequence = (function (_super) {
+        __extends(LineMarkerSequence, _super);
+        function LineMarkerSequence(lines, shouldIgnoreTrimWhitespace) {
+            var i, length, pos;
+            var buffer = '';
+            var startMarkers = [], endMarkers = [], startColumn, endColumn;
+            for (pos = 0, i = 0, length = lines.length; i < length; i++) {
+                buffer += lines[i];
+                startColumn = 1;
+                endColumn = lines[i].length + 1;
+                if (shouldIgnoreTrimWhitespace) {
+                    startColumn = LineMarkerSequence._getFirstNonBlankColumn(lines[i], 1);
+                    endColumn = LineMarkerSequence._getLastNonBlankColumn(lines[i], 1);
+                }
+                startMarkers.push({
+                    offset: pos + startColumn - 1,
+                    lineNumber: i + 1,
+                    column: startColumn
+                });
+                endMarkers.push({
+                    offset: pos + endColumn - 1,
+                    lineNumber: i + 1,
+                    column: endColumn
+                });
+                pos += lines[i].length;
+            }
+            _super.call(this, buffer, startMarkers, endMarkers);
+        }
+        LineMarkerSequence._getFirstNonBlankColumn = function (txt, defaultValue) {
+            var r = strings.firstNonWhitespaceIndex(txt);
+            if (r === -1) {
+                return defaultValue;
+            }
+            return r + 1;
+        };
+        LineMarkerSequence._getLastNonBlankColumn = function (txt, defaultValue) {
+            var r = strings.lastNonWhitespaceIndex(txt);
+            if (r === -1) {
+                return defaultValue;
+            }
+            return r + 2;
+        };
+        LineMarkerSequence.prototype.getCharSequence = function (startIndex, endIndex) {
+            var startMarkers = [], endMarkers = [], index, i, startMarker, endMarker;
+            for (index = startIndex; index <= endIndex; index++) {
+                startMarker = this.startMarkers[index];
+                endMarker = this.endMarkers[index];
+                for (i = startMarker.offset; i < endMarker.offset; i++) {
+                    startMarkers.push({
+                        offset: i,
+                        lineNumber: startMarker.lineNumber,
+                        column: startMarker.column + (i - startMarker.offset)
+                    });
+                    endMarkers.push({
+                        offset: i + 1,
+                        lineNumber: startMarker.lineNumber,
+                        column: startMarker.column + (i - startMarker.offset) + 1
+                    });
+                }
+            }
+            return new MarkerSequence(this.buffer, startMarkers, endMarkers);
+        };
+        return LineMarkerSequence;
+    }(MarkerSequence));
+    var CharChange = (function () {
+        function CharChange(diffChange, originalCharSequence, modifiedCharSequence) {
+            if (diffChange.originalLength === 0) {
+                this.originalStartLineNumber = 0;
+                this.originalStartColumn = 0;
+                this.originalEndLineNumber = 0;
+                this.originalEndColumn = 0;
+            }
+            else {
+                this.originalStartLineNumber = originalCharSequence.getStartLineNumber(diffChange.originalStart);
+                this.originalStartColumn = originalCharSequence.getStartColumn(diffChange.originalStart);
+                this.originalEndLineNumber = originalCharSequence.getEndLineNumber(diffChange.originalStart + diffChange.originalLength - 1);
+                this.originalEndColumn = originalCharSequence.getEndColumn(diffChange.originalStart + diffChange.originalLength - 1);
+            }
+            if (diffChange.modifiedLength === 0) {
+                this.modifiedStartLineNumber = 0;
+                this.modifiedStartColumn = 0;
+                this.modifiedEndLineNumber = 0;
+                this.modifiedEndColumn = 0;
+            }
+            else {
+                this.modifiedStartLineNumber = modifiedCharSequence.getStartLineNumber(diffChange.modifiedStart);
+                this.modifiedStartColumn = modifiedCharSequence.getStartColumn(diffChange.modifiedStart);
+                this.modifiedEndLineNumber = modifiedCharSequence.getEndLineNumber(diffChange.modifiedStart + diffChange.modifiedLength - 1);
+                this.modifiedEndColumn = modifiedCharSequence.getEndColumn(diffChange.modifiedStart + diffChange.modifiedLength - 1);
+            }
+        }
+        return CharChange;
+    }());
+    function postProcessCharChanges(rawChanges) {
+        if (rawChanges.length <= 1) {
+            return rawChanges;
+        }
+        var result = [rawChanges[0]];
+        var i, len, originalMatchingLength, modifiedMatchingLength, matchingLength, prevChange = result[0], currChange;
+        for (i = 1, len = rawChanges.length; i < len; i++) {
+            currChange = rawChanges[i];
+            originalMatchingLength = currChange.originalStart - (prevChange.originalStart + prevChange.originalLength);
+            modifiedMatchingLength = currChange.modifiedStart - (prevChange.modifiedStart + prevChange.modifiedLength);
+            // Both of the above should be equal, but the continueProcessingPredicate may prevent this from being true
+            matchingLength = Math.min(originalMatchingLength, modifiedMatchingLength);
+            if (matchingLength < MINIMUM_MATCHING_CHARACTER_LENGTH) {
+                // Merge the current change into the previous one
+                prevChange.originalLength = (currChange.originalStart + currChange.originalLength) - prevChange.originalStart;
+                prevChange.modifiedLength = (currChange.modifiedStart + currChange.modifiedLength) - prevChange.modifiedStart;
+            }
+            else {
+                // Add the current change
+                result.push(currChange);
+                prevChange = currChange;
+            }
+        }
+        return result;
+    }
+    var LineChange = (function () {
+        function LineChange(diffChange, originalLineSequence, modifiedLineSequence, continueProcessingPredicate, shouldPostProcessCharChanges) {
+            if (diffChange.originalLength === 0) {
+                this.originalStartLineNumber = originalLineSequence.getStartLineNumber(diffChange.originalStart) - 1;
+                this.originalEndLineNumber = 0;
+            }
+            else {
+                this.originalStartLineNumber = originalLineSequence.getStartLineNumber(diffChange.originalStart);
+                this.originalEndLineNumber = originalLineSequence.getEndLineNumber(diffChange.originalStart + diffChange.originalLength - 1);
+            }
+            if (diffChange.modifiedLength === 0) {
+                this.modifiedStartLineNumber = modifiedLineSequence.getStartLineNumber(diffChange.modifiedStart) - 1;
+                this.modifiedEndLineNumber = 0;
+            }
+            else {
+                this.modifiedStartLineNumber = modifiedLineSequence.getStartLineNumber(diffChange.modifiedStart);
+                this.modifiedEndLineNumber = modifiedLineSequence.getEndLineNumber(diffChange.modifiedStart + diffChange.modifiedLength - 1);
+            }
+            if (diffChange.originalLength !== 0 && diffChange.modifiedLength !== 0 && continueProcessingPredicate()) {
+                var originalCharSequence = originalLineSequence.getCharSequence(diffChange.originalStart, diffChange.originalStart + diffChange.originalLength - 1);
+                var modifiedCharSequence = modifiedLineSequence.getCharSequence(diffChange.modifiedStart, diffChange.modifiedStart + diffChange.modifiedLength - 1);
+                var rawChanges = computeDiff(originalCharSequence, modifiedCharSequence, continueProcessingPredicate);
+                if (shouldPostProcessCharChanges) {
+                    rawChanges = postProcessCharChanges(rawChanges);
+                }
+                this.charChanges = [];
+                for (var i = 0, length = rawChanges.length; i < length; i++) {
+                    this.charChanges.push(new CharChange(rawChanges[i], originalCharSequence, modifiedCharSequence));
+                }
+            }
+        }
+        return LineChange;
+    }());
+    var DiffComputer = (function () {
+        function DiffComputer(originalLines, modifiedLines, opts) {
+            this.shouldPostProcessCharChanges = opts.shouldPostProcessCharChanges;
+            this.shouldIgnoreTrimWhitespace = opts.shouldIgnoreTrimWhitespace;
+            this.maximumRunTimeMs = MAXIMUM_RUN_TIME;
+            this.original = new LineMarkerSequence(originalLines, this.shouldIgnoreTrimWhitespace);
+            this.modified = new LineMarkerSequence(modifiedLines, this.shouldIgnoreTrimWhitespace);
+            if (opts.shouldConsiderTrimWhitespaceInEmptyCase && this.shouldIgnoreTrimWhitespace && this.original.equals(this.modified)) {
+                // Diff would be empty with `shouldIgnoreTrimWhitespace`
+                this.shouldIgnoreTrimWhitespace = false;
+                this.original = new LineMarkerSequence(originalLines, this.shouldIgnoreTrimWhitespace);
+                this.modified = new LineMarkerSequence(modifiedLines, this.shouldIgnoreTrimWhitespace);
+            }
+        }
+        DiffComputer.prototype.computeDiff = function () {
+            this.computationStartTime = (new Date()).getTime();
+            var rawChanges = computeDiff(this.original, this.modified, this._continueProcessingPredicate.bind(this));
+            var lineChanges = [];
+            for (var i = 0, length = rawChanges.length; i < length; i++) {
+                lineChanges.push(new LineChange(rawChanges[i], this.original, this.modified, this._continueProcessingPredicate.bind(this), this.shouldPostProcessCharChanges));
+            }
+            return lineChanges;
+        };
+        DiffComputer.prototype._continueProcessingPredicate = function () {
+            if (this.maximumRunTimeMs === 0) {
+                return true;
+            }
+            var now = (new Date()).getTime();
+            return now - this.computationStartTime < this.maximumRunTimeMs;
+        };
+        return DiffComputer;
+    }());
+    exports.DiffComputer = DiffComputer;
+});
+
+
+
+
+
+
+define(__m[25], __M([0,1,3]), function (require, exports, lifecycle_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -9109,7 +10571,7 @@ define(__m[25], __M([1,0,3]), function (require, exports, lifecycle_1) {
 
 
 
-define(__m[7], __M([1,0]), function (require, exports) {
+define(__m[7], __M([0,1]), function (require, exports) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -10063,629 +11525,7 @@ define(__m[7], __M([1,0]), function (require, exports) {
     exports.OverviewRulerZone = OverviewRulerZone;
 });
 
-define(__m[293], __M([1,0,20,6,7,23]), function (require, exports, position_1, range_1, editorCommon_1, editorBrowser_1) {
-    /*---------------------------------------------------------------------------------------------
-     *  Copyright (c) Microsoft Corporation. All rights reserved.
-     *  Licensed under the MIT License. See License.txt in the project root for license information.
-     *--------------------------------------------------------------------------------------------*/
-    'use strict';
-    var MouseTarget = (function () {
-        function MouseTarget(element, type, mouseColumn, position, range, detail) {
-            if (mouseColumn === void 0) { mouseColumn = 0; }
-            if (position === void 0) { position = null; }
-            if (range === void 0) { range = null; }
-            if (detail === void 0) { detail = null; }
-            this.element = element;
-            this.type = type;
-            this.mouseColumn = mouseColumn;
-            this.position = position;
-            if (!range && position) {
-                range = new range_1.Range(position.lineNumber, position.column, position.lineNumber, position.column);
-            }
-            this.range = range;
-            this.detail = detail;
-        }
-        MouseTarget.prototype._typeToString = function () {
-            if (this.type === editorCommon_1.MouseTargetType.TEXTAREA) {
-                return 'TEXTAREA';
-            }
-            if (this.type === editorCommon_1.MouseTargetType.GUTTER_GLYPH_MARGIN) {
-                return 'GUTTER_GLYPH_MARGIN';
-            }
-            if (this.type === editorCommon_1.MouseTargetType.GUTTER_LINE_NUMBERS) {
-                return 'GUTTER_LINE_NUMBERS';
-            }
-            if (this.type === editorCommon_1.MouseTargetType.GUTTER_LINE_DECORATIONS) {
-                return 'GUTTER_LINE_DECORATIONS';
-            }
-            if (this.type === editorCommon_1.MouseTargetType.GUTTER_VIEW_ZONE) {
-                return 'GUTTER_VIEW_ZONE';
-            }
-            if (this.type === editorCommon_1.MouseTargetType.CONTENT_TEXT) {
-                return 'CONTENT_TEXT';
-            }
-            if (this.type === editorCommon_1.MouseTargetType.CONTENT_EMPTY) {
-                return 'CONTENT_EMPTY';
-            }
-            if (this.type === editorCommon_1.MouseTargetType.CONTENT_VIEW_ZONE) {
-                return 'CONTENT_VIEW_ZONE';
-            }
-            if (this.type === editorCommon_1.MouseTargetType.CONTENT_WIDGET) {
-                return 'CONTENT_WIDGET';
-            }
-            if (this.type === editorCommon_1.MouseTargetType.OVERVIEW_RULER) {
-                return 'OVERVIEW_RULER';
-            }
-            if (this.type === editorCommon_1.MouseTargetType.SCROLLBAR) {
-                return 'SCROLLBAR';
-            }
-            if (this.type === editorCommon_1.MouseTargetType.OVERLAY_WIDGET) {
-                return 'OVERLAY_WIDGET';
-            }
-            return 'UNKNOWN';
-        };
-        MouseTarget.prototype.toString = function () {
-            return this._typeToString() + ': ' + this.position + ' - ' + this.range + ' - ' + this.detail;
-        };
-        return MouseTarget;
-    }());
-    // e.g. of paths:
-    // - overflow-guard/monaco-scrollable-element editor-scrollable vs/lines-content/view-lines/view-line
-    // - overflow-guard/monaco-scrollable-element editor-scrollable vs/lines-content/view-lines/view-line/token comment js
-    // etc.
-    var REGEX = (function () {
-        function nodeWithClass(className) {
-            return '[^/]*' + className + '[^/]*';
-        }
-        function anyNode() {
-            return '[^/]+';
-        }
-        var ANCHOR = '^' + editorBrowser_1.ClassNames.OVERFLOW_GUARD + '\\/';
-        function createRegExp() {
-            var pieces = [];
-            for (var _i = 0; _i < arguments.length; _i++) {
-                pieces[_i - 0] = arguments[_i];
-            }
-            var forceEndMatch = false;
-            if (pieces[pieces.length - 1] === '$') {
-                forceEndMatch = true;
-                pieces.pop();
-            }
-            return new RegExp(ANCHOR + pieces.join('\\/') + (forceEndMatch ? '$' : ''));
-        }
-        return {
-            IS_TEXTAREA_COVER: createRegExp(nodeWithClass(editorBrowser_1.ClassNames.TEXTAREA_COVER), '$'),
-            IS_TEXTAREA: createRegExp(editorBrowser_1.ClassNames.TEXTAREA, '$'),
-            IS_VIEW_LINES: createRegExp(anyNode(), anyNode(), editorBrowser_1.ClassNames.VIEW_LINES, '$'),
-            IS_CURSORS_LAYER: createRegExp(anyNode(), anyNode(), nodeWithClass(editorBrowser_1.ClassNames.VIEW_CURSORS_LAYER), '$'),
-            IS_CHILD_OF_VIEW_LINES: createRegExp(anyNode(), anyNode(), editorBrowser_1.ClassNames.VIEW_LINES),
-            IS_CHILD_OF_SCROLLABLE_ELEMENT: createRegExp(nodeWithClass(editorBrowser_1.ClassNames.SCROLLABLE_ELEMENT)),
-            IS_CHILD_OF_CONTENT_WIDGETS: createRegExp(anyNode(), anyNode(), editorBrowser_1.ClassNames.CONTENT_WIDGETS),
-            IS_CHILD_OF_OVERFLOWING_CONTENT_WIDGETS: new RegExp('^' + editorBrowser_1.ClassNames.OVERFLOWING_CONTENT_WIDGETS + '\\/'),
-            IS_CHILD_OF_OVERLAY_WIDGETS: createRegExp(editorBrowser_1.ClassNames.OVERLAY_WIDGETS),
-            IS_CHILD_OF_VIEW_OVERLAYS: createRegExp(editorBrowser_1.ClassNames.MARGIN_VIEW_OVERLAYS),
-            IS_CHILD_OF_VIEW_ZONES: createRegExp(anyNode(), anyNode(), editorBrowser_1.ClassNames.VIEW_ZONES),
-        };
-    })();
-    var MouseTargetFactory = (function () {
-        function MouseTargetFactory(context, viewHelper) {
-            this._context = context;
-            this._viewHelper = viewHelper;
-        }
-        MouseTargetFactory.prototype.getClassNamePathTo = function (child, stopAt) {
-            var path = [], className;
-            while (child && child !== document.body) {
-                if (child === stopAt) {
-                    break;
-                }
-                if (child.nodeType === child.ELEMENT_NODE) {
-                    className = child.className;
-                    if (className) {
-                        path.unshift(className);
-                    }
-                }
-                child = child.parentNode;
-            }
-            return path.join('/');
-        };
-        MouseTargetFactory.prototype.mouseTargetIsWidget = function (e) {
-            var t = e.target;
-            var path = this.getClassNamePathTo(t, this._viewHelper.viewDomNode);
-            // Is it a content widget?
-            if (REGEX.IS_CHILD_OF_CONTENT_WIDGETS.test(path) || REGEX.IS_CHILD_OF_OVERFLOWING_CONTENT_WIDGETS.test(path)) {
-                return true;
-            }
-            // Is it an overlay widget?
-            if (REGEX.IS_CHILD_OF_OVERLAY_WIDGETS.test(path)) {
-                return true;
-            }
-            return false;
-        };
-        MouseTargetFactory.prototype.createMouseTarget = function (layoutInfo, editorContent, e, testEventTarget) {
-            try {
-                var r = this._unsafeCreateMouseTarget(layoutInfo, editorContent, e, testEventTarget);
-                return r;
-            }
-            catch (e) {
-                return this.createMouseTargetFromUnknownTarget(e.target);
-            }
-        };
-        MouseTargetFactory.prototype._unsafeCreateMouseTarget = function (layoutInfo, editorContent, e, testEventTarget) {
-            var mouseVerticalOffset = Math.max(0, this._viewHelper.getScrollTop() + (e.posy - editorContent.top));
-            var mouseContentHorizontalOffset = this._viewHelper.getScrollLeft() + (e.posx - editorContent.left) - layoutInfo.contentLeft;
-            var mouseColumn = this._getMouseColumn(mouseContentHorizontalOffset);
-            var t = e.target;
-            var path = this.getClassNamePathTo(t, this._viewHelper.viewDomNode);
-            // Is it a content widget?
-            if (REGEX.IS_CHILD_OF_CONTENT_WIDGETS.test(path) || REGEX.IS_CHILD_OF_OVERFLOWING_CONTENT_WIDGETS.test(path)) {
-                return this.createMouseTargetFromContentWidgetsChild(t, mouseColumn);
-            }
-            // Is it an overlay widget?
-            if (REGEX.IS_CHILD_OF_OVERLAY_WIDGETS.test(path)) {
-                return this.createMouseTargetFromOverlayWidgetsChild(t, mouseColumn);
-            }
-            // Is it a cursor ?
-            var lineNumberAttribute = t.hasAttribute && t.hasAttribute('lineNumber') ? t.getAttribute('lineNumber') : null;
-            var columnAttribute = t.hasAttribute && t.hasAttribute('column') ? t.getAttribute('column') : null;
-            if (lineNumberAttribute && columnAttribute) {
-                return this.createMouseTargetFromViewCursor(t, parseInt(lineNumberAttribute, 10), parseInt(columnAttribute, 10), mouseColumn);
-            }
-            // Is it the textarea cover?
-            if (REGEX.IS_TEXTAREA_COVER.test(path)) {
-                if (this._context.configuration.editor.viewInfo.glyphMargin) {
-                    return this.createMouseTargetFromGlyphMargin(t, mouseVerticalOffset, mouseColumn);
-                }
-                else if (this._context.configuration.editor.viewInfo.lineNumbers) {
-                    return this.createMouseTargetFromLineNumbers(t, mouseVerticalOffset, mouseColumn);
-                }
-                else {
-                    return this.createMouseTargetFromLinesDecorationsChild(t, mouseVerticalOffset, mouseColumn);
-                }
-            }
-            // Is it the textarea?
-            if (REGEX.IS_TEXTAREA.test(path)) {
-                return new MouseTarget(t, editorCommon_1.MouseTargetType.TEXTAREA);
-            }
-            // Is it a view zone?
-            if (REGEX.IS_CHILD_OF_VIEW_ZONES.test(path)) {
-                // Check if it is at a view zone
-                var viewZoneData = this._getZoneAtCoord(mouseVerticalOffset);
-                if (viewZoneData) {
-                    return new MouseTarget(t, editorCommon_1.MouseTargetType.CONTENT_VIEW_ZONE, mouseColumn, viewZoneData.position, null, viewZoneData);
-                }
-                return this.createMouseTargetFromUnknownTarget(t);
-            }
-            // Is it the view lines container?
-            if (REGEX.IS_VIEW_LINES.test(path)) {
-                // Sometimes, IE returns this target when right clicking on top of text
-                // -> See Bug #12990: [F12] Context menu shows incorrect position while doing a resize
-                // Check if it is below any lines and any view zones
-                if (this._viewHelper.isAfterLines(mouseVerticalOffset)) {
-                    return this.createMouseTargetFromViewLines(t, mouseVerticalOffset, mouseColumn);
-                }
-                // Check if it is at a view zone
-                var viewZoneData = this._getZoneAtCoord(mouseVerticalOffset);
-                if (viewZoneData) {
-                    return new MouseTarget(t, editorCommon_1.MouseTargetType.CONTENT_VIEW_ZONE, mouseColumn, viewZoneData.position, null, viewZoneData);
-                }
-                // Check if it hits a position
-                var hitTestResult = this._doHitTest(editorContent, e, mouseVerticalOffset);
-                if (hitTestResult.position) {
-                    return this.createMouseTargetFromHitTestPosition(t, hitTestResult.position.lineNumber, hitTestResult.position.column, mouseContentHorizontalOffset, mouseColumn);
-                }
-                // Fall back to view lines
-                return this.createMouseTargetFromViewLines(t, mouseVerticalOffset, mouseColumn);
-            }
-            // Is it a child of the view lines container?
-            if (!testEventTarget || REGEX.IS_CHILD_OF_VIEW_LINES.test(path)) {
-                var hitTestResult = this._doHitTest(editorContent, e, mouseVerticalOffset);
-                if (hitTestResult.position) {
-                    return this.createMouseTargetFromHitTestPosition(t, hitTestResult.position.lineNumber, hitTestResult.position.column, mouseContentHorizontalOffset, mouseColumn);
-                }
-                else if (hitTestResult.hitTarget) {
-                    t = hitTestResult.hitTarget;
-                    path = this.getClassNamePathTo(t, this._viewHelper.viewDomNode);
-                    // TODO@Alex: try again with this different target, but guard against recursion.
-                    // Is it a cursor ?
-                    var lineNumberAttribute = t.hasAttribute && t.hasAttribute('lineNumber') ? t.getAttribute('lineNumber') : null;
-                    var columnAttribute = t.hasAttribute && t.hasAttribute('column') ? t.getAttribute('column') : null;
-                    if (lineNumberAttribute && columnAttribute) {
-                        return this.createMouseTargetFromViewCursor(t, parseInt(lineNumberAttribute, 10), parseInt(columnAttribute, 10), mouseColumn);
-                    }
-                }
-            }
-            // Is it the cursors layer?
-            if (REGEX.IS_CURSORS_LAYER.test(path)) {
-                return new MouseTarget(t, editorCommon_1.MouseTargetType.UNKNOWN);
-            }
-            // Is it a child of the scrollable element?
-            if (REGEX.IS_CHILD_OF_SCROLLABLE_ELEMENT.test(path)) {
-                return this.createMouseTargetFromScrollbar(t, mouseVerticalOffset, mouseColumn);
-            }
-            if (REGEX.IS_CHILD_OF_VIEW_OVERLAYS.test(path)) {
-                var offset = Math.abs(e.posx - editorContent.left);
-                if (offset <= layoutInfo.glyphMarginWidth) {
-                    // On the glyph margin
-                    return this.createMouseTargetFromGlyphMargin(t, mouseVerticalOffset, mouseColumn);
-                }
-                offset -= layoutInfo.glyphMarginWidth;
-                if (offset <= layoutInfo.lineNumbersWidth) {
-                    // On the line numbers
-                    return this.createMouseTargetFromLineNumbers(t, mouseVerticalOffset, mouseColumn);
-                }
-                offset -= layoutInfo.lineNumbersWidth;
-                // On the line decorations
-                return this.createMouseTargetFromLinesDecorationsChild(t, mouseVerticalOffset, mouseColumn);
-            }
-            if (/OverviewRuler/i.test(path)) {
-                return this.createMouseTargetFromScrollbar(t, mouseVerticalOffset, mouseColumn);
-            }
-            return this.createMouseTargetFromUnknownTarget(t);
-        };
-        MouseTargetFactory.prototype._isChild = function (testChild, testAncestor, stopAt) {
-            while (testChild && testChild !== document.body) {
-                if (testChild === testAncestor) {
-                    return true;
-                }
-                if (testChild === stopAt) {
-                    return false;
-                }
-                testChild = testChild.parentNode;
-            }
-            return false;
-        };
-        MouseTargetFactory.prototype._findAttribute = function (element, attr, stopAt) {
-            while (element && element !== document.body) {
-                if (element.hasAttribute && element.hasAttribute(attr)) {
-                    return element.getAttribute(attr);
-                }
-                if (element === stopAt) {
-                    return null;
-                }
-                element = element.parentNode;
-            }
-            return null;
-        };
-        /**
-         * Most probably WebKit browsers
-         */
-        MouseTargetFactory.prototype._doHitTestWithCaretRangeFromPoint = function (editorContent, e, mouseVerticalOffset) {
-            // In Chrome, especially on Linux it is possible to click between lines,
-            // so try to adjust the `hity` below so that it lands in the center of a line
-            var lineNumber = this._viewHelper.getLineNumberAtVerticalOffset(mouseVerticalOffset);
-            var lineVerticalOffset = this._viewHelper.getVerticalOffsetForLineNumber(lineNumber);
-            var centeredVerticalOffset = lineVerticalOffset + Math.floor(this._context.configuration.editor.lineHeight / 2);
-            var adjustedPosy = e.posy + (centeredVerticalOffset - mouseVerticalOffset);
-            if (adjustedPosy <= editorContent.top) {
-                adjustedPosy = editorContent.top + 1;
-            }
-            if (adjustedPosy >= editorContent.top + this._context.configuration.editor.layoutInfo.height) {
-                adjustedPosy = editorContent.top + this._context.configuration.editor.layoutInfo.height - 1;
-            }
-            var hitx = e.posx - document.body.scrollLeft;
-            var r = this._actualDoHitTestWithCaretRangeFromPoint(hitx, adjustedPosy - document.body.scrollTop);
-            if (r.position) {
-                return r;
-            }
-            // Also try to hit test without the adjustment (for the edge cases that we are near the top or bottom)
-            return this._actualDoHitTestWithCaretRangeFromPoint(hitx, e.posy - document.body.scrollTop);
-        };
-        MouseTargetFactory.prototype._actualDoHitTestWithCaretRangeFromPoint = function (hitx, hity) {
-            var range = document.caretRangeFromPoint(hitx, hity);
-            if (!range || !range.startContainer) {
-                return {
-                    position: null,
-                    hitTarget: null
-                };
-            }
-            // Chrome always hits a TEXT_NODE, while Edge sometimes hits a token span
-            var startContainer = range.startContainer;
-            var hitTarget;
-            if (startContainer.nodeType === startContainer.TEXT_NODE) {
-                // startContainer is expected to be the token text
-                var parent1 = startContainer.parentNode; // expected to be the token span
-                var parent2 = parent1 ? parent1.parentNode : null; // expected to be the view line container span
-                var parent3 = parent2 ? parent2.parentNode : null; // expected to be the view line div
-                var parent3ClassName = parent3 && parent3.nodeType === parent3.ELEMENT_NODE ? parent3.className : null;
-                if (parent3ClassName === editorBrowser_1.ClassNames.VIEW_LINE) {
-                    return {
-                        position: this._viewHelper.getPositionFromDOMInfo(parent1, range.startOffset),
-                        hitTarget: null
-                    };
-                }
-                else {
-                    hitTarget = startContainer.parentNode;
-                }
-            }
-            else if (startContainer.nodeType === startContainer.ELEMENT_NODE) {
-                // startContainer is expected to be the token span
-                var parent1 = startContainer.parentNode; // expected to be the view line container span
-                var parent2 = parent1 ? parent1.parentNode : null; // expected to be the view line div
-                var parent2ClassName = parent2 && parent2.nodeType === parent2.ELEMENT_NODE ? parent2.className : null;
-                if (parent2ClassName === editorBrowser_1.ClassNames.VIEW_LINE) {
-                    return {
-                        position: this._viewHelper.getPositionFromDOMInfo(startContainer, startContainer.textContent.length),
-                        hitTarget: null
-                    };
-                }
-                else {
-                    hitTarget = startContainer;
-                }
-            }
-            return {
-                position: null,
-                hitTarget: hitTarget
-            };
-        };
-        /**
-         * Most probably Gecko
-         */
-        MouseTargetFactory.prototype._doHitTestWithCaretPositionFromPoint = function (e) {
-            var resultPosition = null;
-            var resultHitTarget = null;
-            var hitx = e.posx - document.body.scrollLeft - document.documentElement.scrollLeft;
-            var hity = e.posy - document.body.scrollTop - document.documentElement.scrollTop;
-            var hitResult = document.caretPositionFromPoint(hitx, hity);
-            var range = document.createRange();
-            range.setStart(hitResult.offsetNode, hitResult.offset);
-            range.collapse(true);
-            resultPosition = this._viewHelper.getPositionFromDOMInfo(range.startContainer.parentNode, range.startOffset);
-            range.detach();
-            return {
-                position: resultPosition,
-                hitTarget: resultHitTarget
-            };
-        };
-        /**
-         * Most probably IE
-         */
-        MouseTargetFactory.prototype._doHitTestWithMoveToPoint = function (e) {
-            var resultPosition = null;
-            var resultHitTarget = null;
-            var textRange = document.body.createTextRange();
-            try {
-                var hitx = e.posx - document.body.scrollLeft - document.documentElement.scrollLeft;
-                var hity = e.posy - document.body.scrollTop - document.documentElement.scrollTop;
-                textRange.moveToPoint(hitx, hity);
-            }
-            catch (err) {
-                return {
-                    position: null,
-                    hitTarget: null
-                };
-            }
-            textRange.collapse(true);
-            // Now, let's do our best to figure out what we hit :)
-            var parentElement = textRange ? textRange.parentElement() : null;
-            var parent1 = parentElement ? parentElement.parentNode : null;
-            var parent2 = parent1 ? parent1.parentNode : null;
-            var parent2ClassName = parent2 && parent2.nodeType === parent2.ELEMENT_NODE ? parent2.className : '';
-            if (parent2ClassName === editorBrowser_1.ClassNames.VIEW_LINE) {
-                var rangeToContainEntireSpan = textRange.duplicate();
-                rangeToContainEntireSpan.moveToElementText(parentElement);
-                rangeToContainEntireSpan.setEndPoint('EndToStart', textRange);
-                resultPosition = this._viewHelper.getPositionFromDOMInfo(parentElement, rangeToContainEntireSpan.text.length);
-                // Move range out of the span node, IE doesn't like having many ranges in
-                // the same spot and will act badly for lines containing dashes ('-')
-                rangeToContainEntireSpan.moveToElementText(this._viewHelper.viewDomNode);
-            }
-            else {
-                // Looks like we've hit the hover or something foreign
-                resultHitTarget = parentElement;
-            }
-            // Move range out of the span node, IE doesn't like having many ranges in
-            // the same spot and will act badly for lines containing dashes ('-')
-            textRange.moveToElementText(this._viewHelper.viewDomNode);
-            return {
-                position: resultPosition,
-                hitTarget: resultHitTarget
-            };
-        };
-        MouseTargetFactory.prototype._doHitTest = function (editorContent, e, mouseVerticalOffset) {
-            // State of the art (18.10.2012):
-            // The spec says browsers should support document.caretPositionFromPoint, but nobody implemented it (http://dev.w3.org/csswg/cssom-view/)
-            // Gecko:
-            //    - they tried to implement it once, but failed: https://bugzilla.mozilla.org/show_bug.cgi?id=654352
-            //    - however, they do give out rangeParent/rangeOffset properties on mouse events
-            // Webkit:
-            //    - they have implemented a previous version of the spec which was using document.caretRangeFromPoint
-            // IE:
-            //    - they have a proprietary method on ranges, moveToPoint: https://msdn.microsoft.com/en-us/library/ie/ms536632(v=vs.85).aspx
-            // Thank you browsers for making this so 'easy' :)
-            if (document.caretRangeFromPoint) {
-                return this._doHitTestWithCaretRangeFromPoint(editorContent, e, mouseVerticalOffset);
-            }
-            else if (document.caretPositionFromPoint) {
-                return this._doHitTestWithCaretPositionFromPoint(e);
-            }
-            else if (document.body.createTextRange) {
-                return this._doHitTestWithMoveToPoint(e);
-            }
-            return {
-                position: null,
-                hitTarget: null
-            };
-        };
-        MouseTargetFactory.prototype._getZoneAtCoord = function (mouseVerticalOffset) {
-            // The target is either a view zone or the empty space after the last view-line
-            var viewZoneWhitespace = this._viewHelper.getWhitespaceAtVerticalOffset(mouseVerticalOffset);
-            if (viewZoneWhitespace) {
-                var viewZoneMiddle = viewZoneWhitespace.verticalOffset + viewZoneWhitespace.height / 2, lineCount = this._context.model.getLineCount(), positionBefore = null, position, positionAfter = null;
-                if (viewZoneWhitespace.afterLineNumber !== lineCount) {
-                    // There are more lines after this view zone
-                    positionAfter = new position_1.Position(viewZoneWhitespace.afterLineNumber + 1, 1);
-                }
-                if (viewZoneWhitespace.afterLineNumber > 0) {
-                    // There are more lines above this view zone
-                    positionBefore = new position_1.Position(viewZoneWhitespace.afterLineNumber, this._context.model.getLineMaxColumn(viewZoneWhitespace.afterLineNumber));
-                }
-                if (positionAfter === null) {
-                    position = positionBefore;
-                }
-                else if (positionBefore === null) {
-                    position = positionAfter;
-                }
-                else if (mouseVerticalOffset < viewZoneMiddle) {
-                    position = positionBefore;
-                }
-                else {
-                    position = positionAfter;
-                }
-                return {
-                    viewZoneId: viewZoneWhitespace.id,
-                    afterLineNumber: viewZoneWhitespace.afterLineNumber,
-                    positionBefore: positionBefore,
-                    positionAfter: positionAfter,
-                    position: position
-                };
-            }
-            return null;
-        };
-        MouseTargetFactory.prototype._getFullLineRangeAtCoord = function (mouseVerticalOffset) {
-            if (this._viewHelper.isAfterLines(mouseVerticalOffset)) {
-                // Below the last line
-                var lineNumber = this._context.model.getLineCount();
-                var maxLineColumn = this._context.model.getLineMaxColumn(lineNumber);
-                return {
-                    range: new range_1.Range(lineNumber, maxLineColumn, lineNumber, maxLineColumn),
-                    isAfterLines: true
-                };
-            }
-            var lineNumber = this._viewHelper.getLineNumberAtVerticalOffset(mouseVerticalOffset);
-            var maxLineColumn = this._context.model.getLineMaxColumn(lineNumber);
-            return {
-                range: new range_1.Range(lineNumber, 1, lineNumber, maxLineColumn),
-                isAfterLines: false
-            };
-        };
-        MouseTargetFactory.prototype.getMouseColumn = function (layoutInfo, editorContent, e) {
-            var mouseContentHorizontalOffset = this._viewHelper.getScrollLeft() + (e.posx - editorContent.left) - layoutInfo.contentLeft;
-            return this._getMouseColumn(mouseContentHorizontalOffset);
-        };
-        MouseTargetFactory.prototype._getMouseColumn = function (mouseContentHorizontalOffset) {
-            if (mouseContentHorizontalOffset < 0) {
-                return 1;
-            }
-            var charWidth = this._context.configuration.editor.fontInfo.typicalHalfwidthCharacterWidth;
-            var chars = Math.round(mouseContentHorizontalOffset / charWidth);
-            return (chars + 1);
-        };
-        MouseTargetFactory.prototype.createMouseTargetFromViewCursor = function (target, lineNumber, column, mouseColumn) {
-            return new MouseTarget(target, editorCommon_1.MouseTargetType.CONTENT_TEXT, mouseColumn, new position_1.Position(lineNumber, column));
-        };
-        MouseTargetFactory.prototype.createMouseTargetFromViewLines = function (target, mouseVerticalOffset, mouseColumn) {
-            // This most likely indicates it happened after the last view-line
-            var lineCount = this._context.model.getLineCount();
-            var maxLineColumn = this._context.model.getLineMaxColumn(lineCount);
-            return new MouseTarget(target, editorCommon_1.MouseTargetType.CONTENT_EMPTY, mouseColumn, new position_1.Position(lineCount, maxLineColumn));
-        };
-        MouseTargetFactory.prototype.createMouseTargetFromHitTestPosition = function (target, lineNumber, column, mouseHorizontalOffset, mouseColumn) {
-            var pos = new position_1.Position(lineNumber, column);
-            var lineWidth = this._viewHelper.getLineWidth(lineNumber);
-            if (mouseHorizontalOffset > lineWidth) {
-                return new MouseTarget(target, editorCommon_1.MouseTargetType.CONTENT_EMPTY, mouseColumn, pos);
-            }
-            var visibleRange = this._viewHelper.visibleRangeForPosition2(lineNumber, column);
-            if (!visibleRange) {
-                return new MouseTarget(target, editorCommon_1.MouseTargetType.UNKNOWN, mouseColumn, pos);
-            }
-            var columnHorizontalOffset = visibleRange.left;
-            if (mouseHorizontalOffset === columnHorizontalOffset) {
-                return new MouseTarget(target, editorCommon_1.MouseTargetType.CONTENT_TEXT, mouseColumn, pos);
-            }
-            var mouseIsBetween;
-            if (column > 1) {
-                var prevColumnHorizontalOffset = visibleRange.left;
-                mouseIsBetween = false;
-                mouseIsBetween = mouseIsBetween || (prevColumnHorizontalOffset < mouseHorizontalOffset && mouseHorizontalOffset < columnHorizontalOffset); // LTR case
-                mouseIsBetween = mouseIsBetween || (columnHorizontalOffset < mouseHorizontalOffset && mouseHorizontalOffset < prevColumnHorizontalOffset); // RTL case
-                if (mouseIsBetween) {
-                    var rng = new range_1.Range(lineNumber, column, lineNumber, column - 1);
-                    return new MouseTarget(target, editorCommon_1.MouseTargetType.CONTENT_TEXT, mouseColumn, pos, rng);
-                }
-            }
-            var lineMaxColumn = this._context.model.getLineMaxColumn(lineNumber);
-            if (column < lineMaxColumn) {
-                var nextColumnVisibleRange = this._viewHelper.visibleRangeForPosition2(lineNumber, column + 1);
-                if (nextColumnVisibleRange) {
-                    var nextColumnHorizontalOffset = nextColumnVisibleRange.left;
-                    mouseIsBetween = false;
-                    mouseIsBetween = mouseIsBetween || (columnHorizontalOffset < mouseHorizontalOffset && mouseHorizontalOffset < nextColumnHorizontalOffset); // LTR case
-                    mouseIsBetween = mouseIsBetween || (nextColumnHorizontalOffset < mouseHorizontalOffset && mouseHorizontalOffset < columnHorizontalOffset); // RTL case
-                    if (mouseIsBetween) {
-                        var rng = new range_1.Range(lineNumber, column, lineNumber, column + 1);
-                        return new MouseTarget(target, editorCommon_1.MouseTargetType.CONTENT_TEXT, mouseColumn, pos, rng);
-                    }
-                }
-            }
-            return new MouseTarget(target, editorCommon_1.MouseTargetType.CONTENT_TEXT, mouseColumn, pos);
-        };
-        MouseTargetFactory.prototype.createMouseTargetFromContentWidgetsChild = function (target, mouseColumn) {
-            var widgetId = this._findAttribute(target, 'widgetId', this._viewHelper.viewDomNode);
-            if (widgetId) {
-                return new MouseTarget(target, editorCommon_1.MouseTargetType.CONTENT_WIDGET, mouseColumn, null, null, widgetId);
-            }
-            else {
-                return new MouseTarget(target, editorCommon_1.MouseTargetType.UNKNOWN);
-            }
-        };
-        MouseTargetFactory.prototype.createMouseTargetFromOverlayWidgetsChild = function (target, mouseColumn) {
-            var widgetId = this._findAttribute(target, 'widgetId', this._viewHelper.viewDomNode);
-            if (widgetId) {
-                return new MouseTarget(target, editorCommon_1.MouseTargetType.OVERLAY_WIDGET, mouseColumn, null, null, widgetId);
-            }
-            else {
-                return new MouseTarget(target, editorCommon_1.MouseTargetType.UNKNOWN);
-            }
-        };
-        MouseTargetFactory.prototype.createMouseTargetFromLinesDecorationsChild = function (target, mouseVerticalOffset, mouseColumn) {
-            var viewZoneData = this._getZoneAtCoord(mouseVerticalOffset);
-            if (viewZoneData) {
-                return new MouseTarget(target, editorCommon_1.MouseTargetType.GUTTER_VIEW_ZONE, mouseColumn, viewZoneData.position, null, viewZoneData);
-            }
-            var res = this._getFullLineRangeAtCoord(mouseVerticalOffset);
-            return new MouseTarget(target, editorCommon_1.MouseTargetType.GUTTER_LINE_DECORATIONS, mouseColumn, new position_1.Position(res.range.startLineNumber, res.range.startColumn), res.range, res.isAfterLines);
-        };
-        MouseTargetFactory.prototype.createMouseTargetFromLineNumbers = function (target, mouseVerticalOffset, mouseColumn) {
-            var viewZoneData = this._getZoneAtCoord(mouseVerticalOffset);
-            if (viewZoneData) {
-                return new MouseTarget(target, editorCommon_1.MouseTargetType.GUTTER_VIEW_ZONE, mouseColumn, viewZoneData.position, null, viewZoneData);
-            }
-            var res = this._getFullLineRangeAtCoord(mouseVerticalOffset);
-            return new MouseTarget(target, editorCommon_1.MouseTargetType.GUTTER_LINE_NUMBERS, mouseColumn, new position_1.Position(res.range.startLineNumber, res.range.startColumn), res.range, res.isAfterLines);
-        };
-        MouseTargetFactory.prototype.createMouseTargetFromGlyphMargin = function (target, mouseVerticalOffset, mouseColumn) {
-            var viewZoneData = this._getZoneAtCoord(mouseVerticalOffset);
-            if (viewZoneData) {
-                return new MouseTarget(target, editorCommon_1.MouseTargetType.GUTTER_VIEW_ZONE, mouseColumn, viewZoneData.position, null, viewZoneData);
-            }
-            var res = this._getFullLineRangeAtCoord(mouseVerticalOffset);
-            return new MouseTarget(target, editorCommon_1.MouseTargetType.GUTTER_GLYPH_MARGIN, mouseColumn, new position_1.Position(res.range.startLineNumber, res.range.startColumn), res.range, res.isAfterLines);
-        };
-        MouseTargetFactory.prototype.createMouseTargetFromScrollbar = function (target, mouseVerticalOffset, mouseColumn) {
-            var possibleLineNumber = this._viewHelper.getLineNumberAtVerticalOffset(mouseVerticalOffset);
-            var maxColumn = this._context.model.getLineMaxColumn(possibleLineNumber);
-            return new MouseTarget(target, editorCommon_1.MouseTargetType.SCROLLBAR, mouseColumn, new position_1.Position(possibleLineNumber, maxColumn));
-        };
-        MouseTargetFactory.prototype.createMouseTargetFromUnknownTarget = function (target) {
-            var isInView = this._isChild(target, this._viewHelper.viewDomNode, this._viewHelper.viewDomNode);
-            var widgetId = null;
-            if (isInView) {
-                widgetId = this._findAttribute(target, 'widgetId', this._viewHelper.viewDomNode);
-            }
-            if (widgetId) {
-                return new MouseTarget(target, editorCommon_1.MouseTargetType.OVERLAY_WIDGET, null, null, widgetId);
-            }
-            else {
-                return new MouseTarget(target, editorCommon_1.MouseTargetType.UNKNOWN);
-            }
-        };
-        return MouseTargetFactory;
-    }());
-    exports.MouseTargetFactory = MouseTargetFactory;
-});
-
-define(__m[300], __M([1,0,20,7]), function (require, exports, position_1, editorCommon) {
+define(__m[291], __M([0,1,21,7]), function (require, exports, position_1, editorCommon) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -10945,7 +11785,7 @@ define(__m[300], __M([1,0,20,7]), function (require, exports, position_1, editor
 
 
 
-define(__m[134], __M([1,0,10,6,7]), function (require, exports, strings_1, range_1, editorCommon_1) {
+define(__m[148], __M([0,1,10,4,7]), function (require, exports, strings_1, range_1, editorCommon_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -11292,7 +12132,7 @@ define(__m[134], __M([1,0,10,6,7]), function (require, exports, strings_1, range
     exports.NVDAFullTextAreaState = NVDAFullTextAreaState;
 });
 
-define(__m[305], __M([1,0,10,7]), function (require, exports, strings, editorCommon_1) {
+define(__m[297], __M([0,1,10,7]), function (require, exports, strings, editorCommon_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -11348,7 +12188,7 @@ define(__m[305], __M([1,0,10,7]), function (require, exports, strings, editorCom
     exports.EditorState = EditorState;
 });
 
-define(__m[311], __M([1,0]), function (require, exports) {
+define(__m[298], __M([0,1]), function (require, exports) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -11485,7 +12325,7 @@ define(__m[311], __M([1,0]), function (require, exports) {
     exports.guessIndentation = guessIndentation;
 });
 
-define(__m[363], __M([1,0,78]), function (require, exports, arrays_1) {
+define(__m[305], __M([0,1,89]), function (require, exports, arrays_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -11524,7 +12364,7 @@ define(__m[363], __M([1,0,78]), function (require, exports, arrays_1) {
     exports.LineToken = LineToken;
 });
 
-define(__m[375], __M([1,0]), function (require, exports) {
+define(__m[306], __M([0,1]), function (require, exports) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -11648,7 +12488,7 @@ define(__m[375], __M([1,0]), function (require, exports) {
     exports.TokenIterator = TokenIterator;
 });
 
-define(__m[79], __M([1,0]), function (require, exports) {
+define(__m[76], __M([0,1]), function (require, exports) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -11725,7 +12565,7 @@ define(__m[79], __M([1,0]), function (require, exports) {
     exports.getWordAtText = getWordAtText;
 });
 
-define(__m[111], __M([1,0]), function (require, exports) {
+define(__m[114], __M([0,1]), function (require, exports) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -11793,7 +12633,7 @@ define(__m[111], __M([1,0]), function (require, exports) {
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
-define(__m[380], __M([1,0,132]), function (require, exports, glob_1) {
+define(__m[375], __M([0,1,132]), function (require, exports, glob_1) {
     'use strict';
     function matches(selection, uri, language) {
         return score(selection, uri, language) > 0;
@@ -11860,7 +12700,7 @@ define(__m[380], __M([1,0,132]), function (require, exports, glob_1) {
     exports.score = score;
 });
 
-define(__m[142], __M([1,0]), function (require, exports) {
+define(__m[170], __M([0,1]), function (require, exports) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -12211,7 +13051,196 @@ define(__m[142], __M([1,0]), function (require, exports) {
     exports.LineStream = LineStream;
 });
 
-define(__m[112], __M([1,0]), function (require, exports) {
+define(__m[377], __M([0,1]), function (require, exports) {
+    /*---------------------------------------------------------------------------------------------
+     *  Copyright (c) Microsoft Corporation. All rights reserved.
+     *  Licensed under the MIT License. See License.txt in the project root for license information.
+     *--------------------------------------------------------------------------------------------*/
+    'use strict';
+    // State machine for http:// or https://
+    var STATE_MAP = [], START_STATE = 1, END_STATE = 9, ACCEPT_STATE = 10;
+    STATE_MAP[1] = { 'h': 2, 'H': 2, 'f': 11, 'F': 11 };
+    STATE_MAP[2] = { 't': 3, 'T': 3 };
+    STATE_MAP[3] = { 't': 4, 'T': 4 };
+    STATE_MAP[4] = { 'p': 5, 'P': 5 };
+    STATE_MAP[5] = { 's': 6, 'S': 6, ':': 7 };
+    STATE_MAP[6] = { ':': 7 };
+    STATE_MAP[7] = { '/': 8 };
+    STATE_MAP[8] = { '/': 9 };
+    STATE_MAP[11] = { 'i': 12, 'I': 12 };
+    STATE_MAP[12] = { 'l': 13, 'L': 13 };
+    STATE_MAP[13] = { 'e': 6, 'E': 6 };
+    var CharacterClass;
+    (function (CharacterClass) {
+        CharacterClass[CharacterClass["None"] = 0] = "None";
+        CharacterClass[CharacterClass["ForceTermination"] = 1] = "ForceTermination";
+        CharacterClass[CharacterClass["CannotEndIn"] = 2] = "CannotEndIn";
+    })(CharacterClass || (CharacterClass = {}));
+    var _openParens = '('.charCodeAt(0);
+    var _closeParens = ')'.charCodeAt(0);
+    var _openSquareBracket = '['.charCodeAt(0);
+    var _closeSquareBracket = ']'.charCodeAt(0);
+    var _openCurlyBracket = '{'.charCodeAt(0);
+    var _closeCurlyBracket = '}'.charCodeAt(0);
+    var CharacterClassifier = (function () {
+        function CharacterClassifier() {
+            var FORCE_TERMINATION_CHARACTERS = ' \t<>\'\"、。｡､，．：；？！＠＃＄％＆＊‘“〈《「『【〔（［｛｢｣｝］）〕】』」》〉”’｀～…';
+            var CANNOT_END_WITH_CHARACTERS = '.,;';
+            this._asciiMap = [];
+            for (var i = 0; i < 256; i++) {
+                this._asciiMap[i] = CharacterClass.None;
+            }
+            this._map = [];
+            for (var i = 0; i < FORCE_TERMINATION_CHARACTERS.length; i++) {
+                this._set(FORCE_TERMINATION_CHARACTERS.charCodeAt(i), CharacterClass.ForceTermination);
+            }
+            for (var i = 0; i < CANNOT_END_WITH_CHARACTERS.length; i++) {
+                this._set(CANNOT_END_WITH_CHARACTERS.charCodeAt(i), CharacterClass.CannotEndIn);
+            }
+        }
+        CharacterClassifier.prototype._set = function (charCode, charClass) {
+            if (charCode < 256) {
+                this._asciiMap[charCode] = charClass;
+            }
+            this._map[charCode] = charClass;
+        };
+        CharacterClassifier.prototype.classify = function (charCode) {
+            if (charCode < 256) {
+                return this._asciiMap[charCode];
+            }
+            var charClass = this._map[charCode];
+            if (charClass) {
+                return charClass;
+            }
+            return CharacterClass.None;
+        };
+        return CharacterClassifier;
+    }());
+    var LinkComputer = (function () {
+        function LinkComputer() {
+        }
+        LinkComputer._createLink = function (line, lineNumber, linkBeginIndex, linkEndIndex) {
+            return {
+                range: {
+                    startLineNumber: lineNumber,
+                    startColumn: linkBeginIndex + 1,
+                    endLineNumber: lineNumber,
+                    endColumn: linkEndIndex + 1
+                },
+                url: line.substring(linkBeginIndex, linkEndIndex)
+            };
+        };
+        LinkComputer.computeLinks = function (model) {
+            var i, lineCount, result = [];
+            var line, j, lastIncludedCharIndex, len, linkBeginIndex, state, ch, chCode, chClass, resetStateMachine, hasOpenParens, hasOpenSquareBracket, hasOpenCurlyBracket, characterClassifier = LinkComputer._characterClassifier;
+            for (i = 1, lineCount = model.getLineCount(); i <= lineCount; i++) {
+                line = model.getLineContent(i);
+                j = 0;
+                len = line.length;
+                linkBeginIndex = 0;
+                state = START_STATE;
+                hasOpenParens = false;
+                hasOpenSquareBracket = false;
+                hasOpenCurlyBracket = false;
+                while (j < len) {
+                    ch = line.charAt(j);
+                    chCode = line.charCodeAt(j);
+                    resetStateMachine = false;
+                    if (state === ACCEPT_STATE) {
+                        switch (chCode) {
+                            case _openParens:
+                                hasOpenParens = true;
+                                chClass = CharacterClass.None;
+                                break;
+                            case _closeParens:
+                                chClass = (hasOpenParens ? CharacterClass.None : CharacterClass.ForceTermination);
+                                break;
+                            case _openSquareBracket:
+                                hasOpenSquareBracket = true;
+                                chClass = CharacterClass.None;
+                                break;
+                            case _closeSquareBracket:
+                                chClass = (hasOpenSquareBracket ? CharacterClass.None : CharacterClass.ForceTermination);
+                                break;
+                            case _openCurlyBracket:
+                                hasOpenCurlyBracket = true;
+                                chClass = CharacterClass.None;
+                                break;
+                            case _closeCurlyBracket:
+                                chClass = (hasOpenCurlyBracket ? CharacterClass.None : CharacterClass.ForceTermination);
+                                break;
+                            default:
+                                chClass = characterClassifier.classify(chCode);
+                        }
+                        // Check if character terminates link
+                        if (chClass === CharacterClass.ForceTermination) {
+                            // Do not allow to end link in certain characters...
+                            lastIncludedCharIndex = j - 1;
+                            do {
+                                chCode = line.charCodeAt(lastIncludedCharIndex);
+                                chClass = characterClassifier.classify(chCode);
+                                if (chClass !== CharacterClass.CannotEndIn) {
+                                    break;
+                                }
+                                lastIncludedCharIndex--;
+                            } while (lastIncludedCharIndex > linkBeginIndex);
+                            result.push(LinkComputer._createLink(line, i, linkBeginIndex, lastIncludedCharIndex + 1));
+                            resetStateMachine = true;
+                        }
+                    }
+                    else if (state === END_STATE) {
+                        chClass = characterClassifier.classify(chCode);
+                        // Check if character terminates link
+                        if (chClass === CharacterClass.ForceTermination) {
+                            resetStateMachine = true;
+                        }
+                        else {
+                            state = ACCEPT_STATE;
+                        }
+                    }
+                    else {
+                        if (STATE_MAP[state].hasOwnProperty(ch)) {
+                            state = STATE_MAP[state][ch];
+                        }
+                        else {
+                            resetStateMachine = true;
+                        }
+                    }
+                    if (resetStateMachine) {
+                        state = START_STATE;
+                        hasOpenParens = false;
+                        hasOpenSquareBracket = false;
+                        hasOpenCurlyBracket = false;
+                        // Record where the link started
+                        linkBeginIndex = j + 1;
+                    }
+                    j++;
+                }
+                if (state === ACCEPT_STATE) {
+                    result.push(LinkComputer._createLink(line, i, linkBeginIndex, len));
+                }
+            }
+            return result;
+        };
+        LinkComputer._characterClassifier = new CharacterClassifier();
+        return LinkComputer;
+    }());
+    /**
+     * Returns an array of all links contains in the provided
+     * document. *Note* that this operation is computational
+     * expensive and should not run in the UI thread.
+     */
+    function computeLinks(model) {
+        if (!model || typeof model.getLineCount !== 'function' || typeof model.getLineContent !== 'function') {
+            // Unknown caller!
+            return [];
+        }
+        return LinkComputer.computeLinks(model);
+    }
+    exports.computeLinks = computeLinks;
+});
+
+define(__m[117], __M([0,1]), function (require, exports) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -12351,7 +13380,7 @@ define(__m[112], __M([1,0]), function (require, exports) {
     exports.stateExists = stateExists;
 });
 
-define(__m[172], __M([1,0,32,112]), function (require, exports, objects, monarchCommon) {
+define(__m[131], __M([0,1,31,117]), function (require, exports, objects, monarchCommon) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -12854,7 +13883,7 @@ define(__m[172], __M([1,0,32,112]), function (require, exports, objects, monarch
     exports.compile = compile;
 });
 
-define(__m[116], __M([1,0]), function (require, exports) {
+define(__m[121], __M([0,1]), function (require, exports) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -12935,7 +13964,7 @@ define(__m[116], __M([1,0]), function (require, exports) {
     exports.nullTokenize = nullTokenize;
 });
 
-define(__m[47], __M([1,0,10,32,84]), function (require, exports, strings, objects, modeTransition_1) {
+define(__m[49], __M([0,1,10,31,88]), function (require, exports, strings, objects, modeTransition_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -13113,7 +14142,7 @@ define(__m[47], __M([1,0,10,32,84]), function (require, exports, strings, object
     exports.SnippetsRegistry = SnippetsRegistry;
 });
 
-define(__m[389], __M([1,0,47]), function (require, exports, supports_1) {
+define(__m[384], __M([0,1,49]), function (require, exports, supports_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -13171,7 +14200,94 @@ define(__m[389], __M([1,0,47]), function (require, exports, supports_1) {
     exports.CharacterPairSupport = CharacterPairSupport;
 });
 
-define(__m[85], __M([1,0,10,6]), function (require, exports, strings, range_1) {
+define(__m[386], __M([0,1]), function (require, exports) {
+    /*---------------------------------------------------------------------------------------------
+     *  Copyright (c) Microsoft Corporation. All rights reserved.
+     *  Licensed under the MIT License. See License.txt in the project root for license information.
+     *--------------------------------------------------------------------------------------------*/
+    'use strict';
+    var BasicInplaceReplace = (function () {
+        function BasicInplaceReplace() {
+            this._defaultValueSet = [
+                ['true', 'false'],
+                ['True', 'False'],
+                ['Private', 'Public', 'Friend', 'ReadOnly', 'Partial', 'Protected', 'WriteOnly'],
+                ['public', 'protected', 'private'],
+            ];
+        }
+        BasicInplaceReplace.prototype.navigateValueSet = function (range1, text1, range2, text2, up) {
+            if (range1 && text1) {
+                var result = this.doNavigateValueSet(text1, up);
+                if (result) {
+                    return {
+                        range: range1,
+                        value: result
+                    };
+                }
+            }
+            if (range2 && text2) {
+                var result = this.doNavigateValueSet(text2, up);
+                if (result) {
+                    return {
+                        range: range2,
+                        value: result
+                    };
+                }
+            }
+            return null;
+        };
+        BasicInplaceReplace.prototype.doNavigateValueSet = function (text, up) {
+            var numberResult = this.numberReplace(text, up);
+            if (numberResult !== null) {
+                return numberResult;
+            }
+            return this.textReplace(text, up);
+        };
+        BasicInplaceReplace.prototype.numberReplace = function (value, up) {
+            var precision = Math.pow(10, value.length - (value.lastIndexOf('.') + 1)), n1 = Number(value), n2 = parseFloat(value);
+            if (!isNaN(n1) && !isNaN(n2) && n1 === n2) {
+                if (n1 === 0 && !up) {
+                    return null; // don't do negative
+                }
+                else {
+                    n1 = Math.floor(n1 * precision);
+                    n1 += up ? precision : -precision;
+                    return String(n1 / precision);
+                }
+            }
+            return null;
+        };
+        BasicInplaceReplace.prototype.textReplace = function (value, up) {
+            return this.valueSetsReplace(this._defaultValueSet, value, up);
+        };
+        BasicInplaceReplace.prototype.valueSetsReplace = function (valueSets, value, up) {
+            var result = null;
+            for (var i = 0, len = valueSets.length; result === null && i < len; i++) {
+                result = this.valueSetReplace(valueSets[i], value, up);
+            }
+            return result;
+        };
+        BasicInplaceReplace.prototype.valueSetReplace = function (valueSet, value, up) {
+            var idx = valueSet.indexOf(value);
+            if (idx >= 0) {
+                idx += up ? +1 : -1;
+                if (idx < 0) {
+                    idx = valueSet.length - 1;
+                }
+                else {
+                    idx %= valueSet.length;
+                }
+                return valueSet[idx];
+            }
+            return null;
+        };
+        BasicInplaceReplace.INSTANCE = new BasicInplaceReplace();
+        return BasicInplaceReplace;
+    }());
+    exports.BasicInplaceReplace = BasicInplaceReplace;
+});
+
+define(__m[83], __M([0,1,10,4]), function (require, exports, strings, range_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -13289,7 +14405,7 @@ define(__m[85], __M([1,0,10,6]), function (require, exports, strings, range_1) {
     exports.BracketsUtils = BracketsUtils;
 });
 
-define(__m[392], __M([1,0,10,47,85]), function (require, exports, strings, supports_1, richEditBrackets_1) {
+define(__m[389], __M([0,1,10,49,83]), function (require, exports, strings, supports_1, richEditBrackets_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -13423,7 +14539,7 @@ define(__m[392], __M([1,0,10,47,85]), function (require, exports, strings, suppo
     exports.Brackets = Brackets;
 });
 
-define(__m[128], __M([1,0,142,116,47]), function (require, exports, lineStream_1, nullMode_1, supports_1) {
+define(__m[138], __M([0,1,170,121,49]), function (require, exports, lineStream_1, nullMode_1, supports_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -13433,7 +14549,7 @@ define(__m[128], __M([1,0,142,116,47]), function (require, exports, lineStream_1
         return typeof something === 'function';
     }
     var TokenizationSupport = (function () {
-        function TokenizationSupport(mode, customization, supportsNestedModes, shouldGenerateEmbeddedModels) {
+        function TokenizationSupport(mode, customization, supportsNestedModes) {
             this._mode = mode;
             this.customization = customization;
             this.supportsNestedModes = supportsNestedModes;
@@ -13443,7 +14559,6 @@ define(__m[128], __M([1,0,142,116,47]), function (require, exports, lineStream_1
                     throw new Error('Cannot be a mode with nested modes unless I can emit a tokenizationSupport changed event!');
                 }
             }
-            this.shouldGenerateEmbeddedModels = shouldGenerateEmbeddedModels;
             this.defaults = {
                 enterNestedMode: !isFunction(customization.enterNestedMode),
                 getNestedMode: !isFunction(customization.getNestedMode),
@@ -13684,7 +14799,7 @@ define(__m[128], __M([1,0,142,116,47]), function (require, exports, lineStream_1
 
 
 
-define(__m[129], __M([1,0,111,142,112,128]), function (require, exports, abstractState_1, lineStream_1, monarchCommon, tokenizationSupport_1) {
+define(__m[140], __M([0,1,114,170,117,138]), function (require, exports, abstractState_1, lineStream_1, monarchCommon, tokenizationSupport_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -14065,12 +15180,12 @@ define(__m[129], __M([1,0,111,142,112,128]), function (require, exports, abstrac
                     stateAfterNestedMode: mstate
                 };
             }
-        }, lexer.usesEmbedded, false);
+        }, lexer.usesEmbedded);
     }
     exports.createTokenizationSupport = createTokenizationSupport;
 });
 
-define(__m[131], __M([1,0,10,116]), function (require, exports, strings, nullMode_1) {
+define(__m[393], __M([0,1,10,121]), function (require, exports, strings, nullMode_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -14089,7 +15204,6 @@ define(__m[131], __M([1,0,10,116]), function (require, exports, strings, nullMod
             return mode.tokenizationSupport;
         }
         return {
-            shouldGenerateEmbeddedModels: false,
             getInitialState: function () { return new nullMode_1.NullState(null, null); },
             tokenize: function (buffer, state, deltaOffset, stopAtOffset) {
                 if (deltaOffset === void 0) { deltaOffset = 0; }
@@ -14172,7 +15286,7 @@ define(__m[131], __M([1,0,10,116]), function (require, exports, strings, nullMod
     }
 });
 
-define(__m[397], __M([1,0,7]), function (require, exports, editorCommon_1) {
+define(__m[395], __M([0,1,7]), function (require, exports, editorCommon_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -14409,7 +15523,7 @@ define(__m[397], __M([1,0,7]), function (require, exports, editorCommon_1) {
     exports.OverviewZoneManager = OverviewZoneManager;
 });
 
-define(__m[125], __M([1,0]), function (require, exports) {
+define(__m[102], __M([0,1]), function (require, exports) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -14442,7 +15556,7 @@ define(__m[125], __M([1,0]), function (require, exports) {
     exports.HorizontalRange = HorizontalRange;
 });
 
-define(__m[400], __M([1,0,125]), function (require, exports, renderingContext_1) {
+define(__m[397], __M([0,1,102]), function (require, exports, renderingContext_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -14534,7 +15648,7 @@ define(__m[400], __M([1,0,125]), function (require, exports, renderingContext_1)
     exports.RangeUtil = RangeUtil;
 });
 
-define(__m[401], __M([1,0]), function (require, exports) {
+define(__m[399], __M([0,1]), function (require, exports) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -14553,7 +15667,7 @@ define(__m[401], __M([1,0]), function (require, exports) {
     exports.ViewContext = ViewContext;
 });
 
-define(__m[402], __M([1,0,7]), function (require, exports, editorCommon_1) {
+define(__m[403], __M([0,1,7]), function (require, exports, editorCommon_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -14629,7 +15743,7 @@ define(__m[402], __M([1,0,7]), function (require, exports, editorCommon_1) {
     exports.EditorLayoutProvider = EditorLayoutProvider;
 });
 
-define(__m[95], __M([1,0]), function (require, exports) {
+define(__m[103], __M([0,1]), function (require, exports) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -14809,7 +15923,7 @@ define(__m[95], __M([1,0]), function (require, exports) {
     }
 });
 
-define(__m[404], __M([1,0]), function (require, exports) {
+define(__m[406], __M([0,1]), function (require, exports) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -14840,7 +15954,7 @@ define(__m[404], __M([1,0]), function (require, exports) {
     exports.ViewLinesViewportData = ViewLinesViewportData;
 });
 
-define(__m[405], __M([1,0]), function (require, exports) {
+define(__m[407], __M([0,1]), function (require, exports) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -15199,7 +16313,7 @@ define(__m[405], __M([1,0]), function (require, exports) {
     exports.WhitespaceComputer = WhitespaceComputer;
 });
 
-define(__m[408], __M([1,0,405]), function (require, exports, whitespaceComputer_1) {
+define(__m[408], __M([0,1,407]), function (require, exports, whitespaceComputer_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -15586,7 +16700,7 @@ define(__m[408], __M([1,0,405]), function (require, exports, whitespaceComputer_
     exports.VerticalObjects = VerticalObjects;
 });
 
-define(__m[415], __M([1,0,408,6,404]), function (require, exports, verticalObjects_1, range_1, viewLinesViewportData_1) {
+define(__m[409], __M([0,1,408,4,406]), function (require, exports, verticalObjects_1, range_1, viewLinesViewportData_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -15776,7 +16890,7 @@ define(__m[415], __M([1,0,408,6,404]), function (require, exports, verticalObjec
     exports.LinesLayout = LinesLayout;
 });
 
-define(__m[416], __M([1,0,60]), function (require, exports, viewLineToken_1) {
+define(__m[410], __M([0,1,64]), function (require, exports, viewLineToken_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -15807,7 +16921,7 @@ define(__m[416], __M([1,0,60]), function (require, exports, viewLineToken_1) {
     exports.IdentityFilteredLineTokens = IdentityFilteredLineTokens;
 });
 
-define(__m[96], __M([1,0]), function (require, exports) {
+define(__m[80], __M([0,1]), function (require, exports) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -15937,7 +17051,135 @@ define(__m[96], __M([1,0]), function (require, exports) {
     exports.PrefixSumComputer = PrefixSumComputer;
 });
 
-define(__m[136], __M([1,0,20,6,7,416,96]), function (require, exports, position_1, range_1, editorCommon, filteredLineTokens_1, prefixSumComputer_1) {
+define(__m[419], __M([0,1,80]), function (require, exports, prefixSumComputer_1) {
+    /*---------------------------------------------------------------------------------------------
+     *  Copyright (c) Microsoft Corporation. All rights reserved.
+     *  Licensed under the MIT License. See License.txt in the project root for license information.
+     *--------------------------------------------------------------------------------------------*/
+    'use strict';
+    var MirrorModel2 = (function () {
+        function MirrorModel2(uri, lines, eol, versionId) {
+            this._uri = uri;
+            this._lines = lines;
+            this._eol = eol;
+            this._versionId = versionId;
+        }
+        MirrorModel2.prototype.dispose = function () {
+            this._lines.length = 0;
+        };
+        Object.defineProperty(MirrorModel2.prototype, "version", {
+            get: function () {
+                return this._versionId;
+            },
+            enumerable: true,
+            configurable: true
+        });
+        MirrorModel2.prototype.getText = function () {
+            return this._lines.join(this._eol);
+        };
+        MirrorModel2.prototype.onEvents = function (events) {
+            var newEOL = null;
+            for (var i = 0, len = events.length; i < len; i++) {
+                var e = events[i];
+                if (e.eol) {
+                    newEOL = e.eol;
+                }
+            }
+            if (newEOL && newEOL !== this._eol) {
+                this._eol = newEOL;
+                this._lineStarts = null;
+            }
+            // Update my lines
+            var lastVersionId = -1;
+            for (var i = 0, len = events.length; i < len; i++) {
+                var e = events[i];
+                this._acceptDeleteRange(e.range);
+                this._acceptInsertText({
+                    lineNumber: e.range.startLineNumber,
+                    column: e.range.startColumn
+                }, e.text);
+                lastVersionId = Math.max(lastVersionId, e.versionId);
+            }
+            if (lastVersionId !== -1) {
+                this._versionId = lastVersionId;
+            }
+        };
+        MirrorModel2.prototype._ensureLineStarts = function () {
+            if (!this._lineStarts) {
+                var lineStartValues = [];
+                var eolLength = this._eol.length;
+                for (var i = 0, len = this._lines.length; i < len; i++) {
+                    lineStartValues.push(this._lines[i].length + eolLength);
+                }
+                this._lineStarts = new prefixSumComputer_1.PrefixSumComputer(lineStartValues);
+            }
+        };
+        /**
+         * All changes to a line's text go through this method
+         */
+        MirrorModel2.prototype._setLineText = function (lineIndex, newValue) {
+            this._lines[lineIndex] = newValue;
+            if (this._lineStarts) {
+                // update prefix sum
+                this._lineStarts.changeValue(lineIndex, this._lines[lineIndex].length + this._eol.length);
+            }
+        };
+        MirrorModel2.prototype._acceptDeleteRange = function (range) {
+            if (range.startLineNumber === range.endLineNumber) {
+                if (range.startColumn === range.endColumn) {
+                    // Nothing to delete
+                    return;
+                }
+                // Delete text on the affected line
+                this._setLineText(range.startLineNumber - 1, this._lines[range.startLineNumber - 1].substring(0, range.startColumn - 1)
+                    + this._lines[range.startLineNumber - 1].substring(range.endColumn - 1));
+                return;
+            }
+            // Take remaining text on last line and append it to remaining text on first line
+            this._setLineText(range.startLineNumber - 1, this._lines[range.startLineNumber - 1].substring(0, range.startColumn - 1)
+                + this._lines[range.endLineNumber - 1].substring(range.endColumn - 1));
+            // Delete middle lines
+            this._lines.splice(range.startLineNumber, range.endLineNumber - range.startLineNumber);
+            if (this._lineStarts) {
+                // update prefix sum
+                this._lineStarts.removeValues(range.startLineNumber, range.endLineNumber - range.startLineNumber);
+            }
+        };
+        MirrorModel2.prototype._acceptInsertText = function (position, insertText) {
+            if (insertText.length === 0) {
+                // Nothing to insert
+                return;
+            }
+            var insertLines = insertText.split(/\r\n|\r|\n/);
+            if (insertLines.length === 1) {
+                // Inserting text on one line
+                this._setLineText(position.lineNumber - 1, this._lines[position.lineNumber - 1].substring(0, position.column - 1)
+                    + insertLines[0]
+                    + this._lines[position.lineNumber - 1].substring(position.column - 1));
+                return;
+            }
+            // Append overflowing text from first line to the end of text to insert
+            insertLines[insertLines.length - 1] += this._lines[position.lineNumber - 1].substring(position.column - 1);
+            // Delete overflowing text from first line and insert text on first line
+            this._setLineText(position.lineNumber - 1, this._lines[position.lineNumber - 1].substring(0, position.column - 1)
+                + insertLines[0]);
+            // Insert new lines & store lengths
+            var newLengths = new Array(insertLines.length - 1);
+            for (var i = 1; i < insertLines.length; i++) {
+                this._lines.splice(position.lineNumber + i - 1, 0, insertLines[i]);
+                newLengths[i - 1] = insertLines[i].length + this._eol.length;
+            }
+            if (this._lineStarts) {
+                // update prefix sum
+                this._lineStarts.insertValues(position.lineNumber, newLengths);
+            }
+        };
+        return MirrorModel2;
+    }());
+    exports.MirrorModel2 = MirrorModel2;
+});
+
+define(__m[146], __M([0,1,21,4,7,410,80]), function (require, exports, position_1, range_1, editorCommon, filteredLineTokens_1, prefixSumComputer_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -16491,7 +17733,7 @@ define(__m[136], __M([1,0,20,6,7,416,96]), function (require, exports, position_
     exports.SplitLinesCollection = SplitLinesCollection;
 });
 
-define(__m[419], __M([1,0,10,7,96,136]), function (require, exports, strings, editorCommon_1, prefixSumComputer_1, splitLinesCollection_1) {
+define(__m[421], __M([0,1,10,7,80,146]), function (require, exports, strings, editorCommon_1, prefixSumComputer_1, splitLinesCollection_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -16731,7 +17973,7 @@ define(__m[419], __M([1,0,10,7,96,136]), function (require, exports, strings, ed
     exports.CharacterHardWrappingLineMapping = CharacterHardWrappingLineMapping;
 });
 
-define(__m[52], __M([1,0,7]), function (require, exports, editorCommon) {
+define(__m[53], __M([0,1,7]), function (require, exports, editorCommon) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -16909,7 +18151,7 @@ define(__m[52], __M([1,0,7]), function (require, exports, editorCommon) {
 
 
 
-define(__m[73], __M([1,0,52]), function (require, exports, viewEventHandler_1) {
+define(__m[74], __M([0,1,53]), function (require, exports, viewEventHandler_1) {
     'use strict';
     var DynamicViewOverlay = (function (_super) {
         __extends(DynamicViewOverlay, _super);
@@ -16926,7 +18168,7 @@ define(__m[73], __M([1,0,52]), function (require, exports, viewEventHandler_1) {
 
 
 
-define(__m[48], __M([1,0,52]), function (require, exports, viewEventHandler_1) {
+define(__m[46], __M([0,1,53]), function (require, exports, viewEventHandler_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -16957,7 +18199,7 @@ define(__m[48], __M([1,0,52]), function (require, exports, viewEventHandler_1) {
 
 
 
-define(__m[436], __M([1,0,73,461]), function (require, exports, dynamicViewOverlay_1) {
+define(__m[430], __M([0,1,74,511]), function (require, exports, dynamicViewOverlay_1) {
     'use strict';
     var CurrentLineHighlightOverlay = (function (_super) {
         __extends(CurrentLineHighlightOverlay, _super);
@@ -17069,7 +18311,7 @@ define(__m[436], __M([1,0,73,461]), function (require, exports, dynamicViewOverl
 
 
 
-define(__m[437], __M([1,0,73,464]), function (require, exports, dynamicViewOverlay_1) {
+define(__m[437], __M([0,1,74,182]), function (require, exports, dynamicViewOverlay_1) {
     'use strict';
     var DecorationsOverlay = (function (_super) {
         __extends(DecorationsOverlay, _super);
@@ -17242,7 +18484,7 @@ define(__m[437], __M([1,0,73,464]), function (require, exports, dynamicViewOverl
 
 
 
-define(__m[146], __M([1,0,73,516]), function (require, exports, dynamicViewOverlay_1) {
+define(__m[152], __M([0,1,74,187]), function (require, exports, dynamicViewOverlay_1) {
     'use strict';
     var DecorationToRender = (function () {
         function DecorationToRender(startLineNumber, endLineNumber, className) {
@@ -17428,7 +18670,7 @@ define(__m[146], __M([1,0,73,516]), function (require, exports, dynamicViewOverl
 
 
 
-define(__m[439], __M([1,0,17,73,23,180]), function (require, exports, platform, dynamicViewOverlay_1, editorBrowser_1) {
+define(__m[439], __M([0,1,18,74,22,188]), function (require, exports, platform, dynamicViewOverlay_1, editorBrowser_1) {
     'use strict';
     var LineNumbersOverlay = (function (_super) {
         __extends(LineNumbersOverlay, _super);
@@ -17545,7 +18787,7 @@ define(__m[439], __M([1,0,17,73,23,180]), function (require, exports, platform, 
 
 
 
-define(__m[440], __M([1,0,146,186]), function (require, exports, glyphMargin_1) {
+define(__m[440], __M([0,1,152,190]), function (require, exports, glyphMargin_1) {
     'use strict';
     var LinesDecorationsOverlay = (function (_super) {
         __extends(LinesDecorationsOverlay, _super);
@@ -17667,7 +18909,7 @@ define(__m[440], __M([1,0,146,186]), function (require, exports, glyphMargin_1) 
 
 
 
-define(__m[441], __M([1,0,73,190]), function (require, exports, dynamicViewOverlay_1) {
+define(__m[441], __M([0,1,74,194]), function (require, exports, dynamicViewOverlay_1) {
     'use strict';
     var CornerStyle;
     (function (CornerStyle) {
@@ -17997,7 +19239,7 @@ define(__m[441], __M([1,0,73,190]), function (require, exports, dynamicViewOverl
     exports.SelectionsOverlay = SelectionsOverlay;
 });
 
-define(__m[105], __M([1,0]), function (require, exports) {
+define(__m[116], __M([0,1]), function (require, exports) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -18013,7 +19255,7 @@ define(__m[105], __M([1,0]), function (require, exports) {
     exports.InlineDecoration = InlineDecoration;
 });
 
-define(__m[155], __M([1,0,10,78,6,60,105]), function (require, exports, strings, arrays_1, range_1, viewLineToken_1, viewModel_1) {
+define(__m[172], __M([0,1,10,89,4,64,116]), function (require, exports, strings, arrays_1, range_1, viewLineToken_1, viewModel_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -18353,7 +19595,7 @@ define(__m[155], __M([1,0,10,78,6,60,105]), function (require, exports, strings,
     exports.LineDecorationsNormalizer = LineDecorationsNormalizer;
 });
 
-define(__m[470], __M([1,0,6,24,7]), function (require, exports, range_1, selection_1, editorCommon) {
+define(__m[464], __M([0,1,4,24,7]), function (require, exports, range_1, selection_1, editorCommon) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -18452,7 +19694,7 @@ define(__m[470], __M([1,0,6,24,7]), function (require, exports, range_1, selecti
     exports.ViewModelCursors = ViewModelCursors;
 });
 
-define(__m[479], __M([1,0,6,7,105]), function (require, exports, range_1, editorCommon, viewModel_1) {
+define(__m[467], __M([0,1,4,7,116]), function (require, exports, range_1, editorCommon, viewModel_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -18649,7 +19891,65 @@ define(__m[479], __M([1,0,6,7,105]), function (require, exports, range_1, editor
     }
 });
 
-define(__m[481], __M([1,0,7]), function (require, exports, editorCommon) {
+define(__m[473], __M([0,1,4]), function (require, exports, range_1) {
+    /*---------------------------------------------------------------------------------------------
+     *  Copyright (c) Microsoft Corporation. All rights reserved.
+     *  Licensed under the MIT License. See License.txt in the project root for license information.
+     *--------------------------------------------------------------------------------------------*/
+    'use strict';
+    var MoveCarretCommand = (function () {
+        function MoveCarretCommand(selection, isMovingLeft) {
+            this._selection = selection;
+            this._isMovingLeft = isMovingLeft;
+        }
+        MoveCarretCommand.prototype.getEditOperations = function (model, builder) {
+            var s = this._selection;
+            this._selectionId = builder.trackSelection(s);
+            if (s.startLineNumber !== s.endLineNumber) {
+                return;
+            }
+            if (this._isMovingLeft && s.startColumn === 0) {
+                return;
+            }
+            else if (!this._isMovingLeft && s.endColumn === model.getLineMaxColumn(s.startLineNumber)) {
+                return;
+            }
+            var lineNumber = s.selectionStartLineNumber;
+            var lineContent = model.getLineContent(lineNumber);
+            var left;
+            var middle;
+            var right;
+            if (this._isMovingLeft) {
+                left = lineContent.substring(0, s.startColumn - 2);
+                middle = lineContent.substring(s.startColumn - 1, s.endColumn - 1);
+                right = lineContent.substring(s.startColumn - 2, s.startColumn - 1) + lineContent.substring(s.endColumn - 1);
+            }
+            else {
+                left = lineContent.substring(0, s.startColumn - 1) + lineContent.substring(s.endColumn - 1, s.endColumn);
+                middle = lineContent.substring(s.startColumn - 1, s.endColumn - 1);
+                right = lineContent.substring(s.endColumn);
+            }
+            var newLineContent = left + middle + right;
+            builder.addEditOperation(new range_1.Range(lineNumber, 1, lineNumber, model.getLineMaxColumn(lineNumber)), null);
+            builder.addEditOperation(new range_1.Range(lineNumber, 1, lineNumber, 1), newLineContent);
+            this._cutStartIndex = s.startColumn + (this._isMovingLeft ? -1 : 1);
+            this._cutEndIndex = this._cutStartIndex + s.endColumn - s.startColumn;
+            this._moved = true;
+        };
+        MoveCarretCommand.prototype.computeCursorState = function (model, helper) {
+            var result = helper.getTrackedSelection(this._selectionId);
+            if (this._moved) {
+                result = result.setStartPosition(result.startLineNumber, this._cutStartIndex);
+                result = result.setEndPosition(result.startLineNumber, this._cutEndIndex);
+            }
+            return result;
+        };
+        return MoveCarretCommand;
+    }());
+    exports.MoveCarretCommand = MoveCarretCommand;
+});
+
+define(__m[482], __M([0,1,7]), function (require, exports, editorCommon) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -18782,7 +20082,7 @@ define(__m[481], __M([1,0,7]), function (require, exports, editorCommon) {
     exports.FindDecorations = FindDecorations;
 });
 
-define(__m[485], __M([1,0,6]), function (require, exports, range_1) {
+define(__m[484], __M([0,1,4]), function (require, exports, range_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -18841,7 +20141,7 @@ define(__m[485], __M([1,0,6]), function (require, exports, range_1) {
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
-define(__m[492], __M([1,0]), function (require, exports) {
+define(__m[488], __M([0,1]), function (require, exports) {
     'use strict';
     function computeRanges(model, tabSize, minimumRangeSize) {
         if (minimumRangeSize === void 0) { minimumRangeSize = 1; }
@@ -18927,7 +20227,7 @@ define(__m[492], __M([1,0]), function (require, exports) {
     exports.limitByIndent = limitByIndent;
 });
 
-define(__m[496], __M([1,0,10,6]), function (require, exports, strings, range_1) {
+define(__m[494], __M([0,1,10,4]), function (require, exports, strings, range_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -19013,7 +20313,7 @@ define(__m[496], __M([1,0,10,6]), function (require, exports, strings, range_1) 
     exports.EditOperationsCommand = EditOperationsCommand;
 });
 
-define(__m[497], __M([1,0,24]), function (require, exports, selection_1) {
+define(__m[498], __M([0,1,24]), function (require, exports, selection_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -19046,7 +20346,7 @@ define(__m[497], __M([1,0,24]), function (require, exports, selection_1) {
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
-define(__m[498], __M([1,0,6]), function (require, exports, range_1) {
+define(__m[499], __M([0,1,4]), function (require, exports, range_1) {
     "use strict";
     function getIndentationEditOperations(model, builder, tabSize, tabsToSpaces) {
         if (model.getLineCount() === 1 && model.getLineMaxColumn(1) === 1) {
@@ -19101,7 +20401,7 @@ define(__m[498], __M([1,0,6]), function (require, exports, range_1) {
     exports.IndentationToTabsCommand = IndentationToTabsCommand;
 });
 
-define(__m[499], __M([1,0,6,24]), function (require, exports, range_1, selection_1) {
+define(__m[500], __M([0,1,4,24]), function (require, exports, range_1, selection_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -19162,7 +20462,7 @@ define(__m[499], __M([1,0,6,24]), function (require, exports, range_1, selection
     exports.CopyLinesCommand = CopyLinesCommand;
 });
 
-define(__m[500], __M([1,0,6,24]), function (require, exports, range_1, selection_1) {
+define(__m[501], __M([0,1,4,24]), function (require, exports, range_1, selection_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -19210,7 +20510,7 @@ define(__m[500], __M([1,0,6,24]), function (require, exports, range_1, selection
     exports.DeleteLinesCommand = DeleteLinesCommand;
 });
 
-define(__m[505], __M([1,0,6,24]), function (require, exports, range_1, selection_1) {
+define(__m[502], __M([0,1,4,24]), function (require, exports, range_1, selection_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -19286,7 +20586,7 @@ define(__m[505], __M([1,0,6,24]), function (require, exports, range_1, selection
     exports.MoveLinesCommand = MoveLinesCommand;
 });
 
-define(__m[508], __M([1,0,58,6]), function (require, exports, editOperation_1, range_1) {
+define(__m[505], __M([0,1,62,4]), function (require, exports, editOperation_1, range_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -19344,39 +20644,16 @@ define(__m[508], __M([1,0,58,6]), function (require, exports, editOperation_1, r
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
-define(__m[510], __M([1,0,239]), function (require, exports) {
+define(__m[506], __M([0,1,240]), function (require, exports) {
     'use strict';
 });
 
-define(__m[511], __M([1,0]), function (require, exports) {
-    /*---------------------------------------------------------------------------------------------
-     *  Copyright (c) Microsoft Corporation. All rights reserved.
-     *  Licensed under the MIT License. See License.txt in the project root for license information.
-     *--------------------------------------------------------------------------------------------*/
-    'use strict';
-    (function (Level) {
-        Level[Level["Ignore"] = 1] = "Ignore";
-        Level[Level["Warning"] = 2] = "Warning";
-        Level[Level["Error"] = 4] = "Error";
-    })(exports.Level || (exports.Level = {}));
-    var Level = exports.Level;
-    function toLevel(level) {
-        switch (level) {
-            case 'ignore': return Level.Ignore;
-            case 'warning': return Level.Warning;
-            case 'error': return Level.Error;
-        }
-        return null;
-    }
-    exports.toLevel = toLevel;
-});
-
-define(__m[515], __M([5,4]), function(nls, data) { return nls.create("vs/base/browser/ui/actionbar/actionbar", data); });
-define(__m[181], __M([5,4]), function(nls, data) { return nls.create("vs/base/browser/ui/aria/aria", data); });
-define(__m[182], __M([5,4]), function(nls, data) { return nls.create("vs/base/browser/ui/findinput/findInput", data); });
-define(__m[183], __M([5,4]), function(nls, data) { return nls.create("vs/base/browser/ui/inputbox/inputBox", data); });
-define(__m[184], __M([5,4]), function(nls, data) { return nls.create("vs/base/common/errors", data); });
-define(__m[8], __M([1,0,184,32,17,26,35,10]), function (require, exports, nls, objects, platform, types, arrays, strings) {
+define(__m[510], __M([5,6]), function(nls, data) { return nls.create("vs/base/browser/ui/actionbar/actionbar", data); });
+define(__m[183], __M([5,6]), function(nls, data) { return nls.create("vs/base/browser/ui/aria/aria", data); });
+define(__m[184], __M([5,6]), function(nls, data) { return nls.create("vs/base/browser/ui/findinput/findInput", data); });
+define(__m[185], __M([5,6]), function(nls, data) { return nls.create("vs/base/browser/ui/inputbox/inputBox", data); });
+define(__m[186], __M([5,6]), function(nls, data) { return nls.create("vs/base/common/errors", data); });
+define(__m[8], __M([0,1,186,31,18,26,37,10]), function (require, exports, nls, objects, platform, types, arrays, strings) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -19704,7 +20981,7 @@ define(__m[8], __M([1,0,184,32,17,26,35,10]), function (require, exports, nls, o
     exports.create = create;
 });
 
-define(__m[178], __M([1,0,8]), function (require, exports, errors_1) {
+define(__m[134], __M([0,1,8]), function (require, exports, errors_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -19781,7 +21058,7 @@ define(__m[178], __M([1,0,8]), function (require, exports, errors_1) {
     exports.default = CallbackList;
 });
 
-define(__m[18], __M([1,0,178]), function (require, exports, callbackList_1) {
+define(__m[16], __M([0,1,134]), function (require, exports, callbackList_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -19914,10 +21191,41 @@ define(__m[18], __M([1,0,178]), function (require, exports, callbackList_1) {
     exports.fromEventEmitter = fromEventEmitter;
     function mapEvent(event, map) {
         return function (listener, thisArgs, disposables) {
-            return event(function (i) { return listener(map(i)); }, thisArgs, disposables);
+            if (thisArgs === void 0) { thisArgs = null; }
+            return event(function (i) { return listener.call(thisArgs, map(i)); }, null, disposables);
         };
     }
     exports.mapEvent = mapEvent;
+    function filterEvent(event, filter) {
+        return function (listener, thisArgs, disposables) {
+            if (thisArgs === void 0) { thisArgs = null; }
+            return event(function (e) { return filter(e) && listener.call(thisArgs, e); }, null, disposables);
+        };
+    }
+    exports.filterEvent = filterEvent;
+    function debounceEvent(event, merger, delay) {
+        if (delay === void 0) { delay = 100; }
+        var subscription;
+        var output;
+        var handle;
+        var emitter = new Emitter({
+            onFirstListenerAdd: function () {
+                subscription = event(function (cur) {
+                    output = merger(output, cur);
+                    clearTimeout(handle);
+                    handle = setTimeout(function () {
+                        emitter.fire(output);
+                        output = undefined;
+                    }, delay);
+                });
+            },
+            onLastListenerRemove: function () {
+                subscription.dispose();
+            }
+        });
+        return emitter.event;
+    }
+    exports.debounceEvent = debounceEvent;
     var EventDelayerState;
     (function (EventDelayerState) {
         EventDelayerState[EventDelayerState["Idle"] = 0] = "Idle";
@@ -19973,7 +21281,7 @@ define(__m[18], __M([1,0,178]), function (require, exports, callbackList_1) {
     exports.EventBufferer = EventBufferer;
 });
 
-define(__m[27], __M([1,0,26,17,18]), function (require, exports, types, Platform, event_1) {
+define(__m[28], __M([0,1,26,18,16]), function (require, exports, types, Platform, event_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -20085,12 +21393,32 @@ define(__m[27], __M([1,0,26,17,18]), function (require, exports, types, Platform
     exports.supportsExecCommand = supportsExecCommand;
 });
 
+define(__m[137], __M([0,1,16]), function (require, exports, event_1) {
+    /*---------------------------------------------------------------------------------------------
+     *  Copyright (c) Microsoft Corporation. All rights reserved.
+     *  Licensed under the MIT License. See License.txt in the project root for license information.
+     *--------------------------------------------------------------------------------------------*/
+    'use strict';
+    exports.domEvent = function (element, type, useCapture) {
+        var fn = function (e) { return emitter.fire(e); };
+        var emitter = new event_1.Emitter({
+            onFirstListenerAdd: function () {
+                element.addEventListener(type, fn);
+            },
+            onLastListenerRemove: function () {
+                element.removeEventListener(type, fn);
+            }
+        });
+        return emitter.event;
+    };
+});
 
 
 
 
 
-define(__m[38], __M([1,0,17,27,173]), function (require, exports, platform, browser, iframe_1) {
+
+define(__m[39], __M([0,1,18,28,149]), function (require, exports, platform, browser, iframe_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -20098,47 +21426,28 @@ define(__m[38], __M([1,0,17,27,173]), function (require, exports, platform, brow
     'use strict';
     var StandardMouseEvent = (function () {
         function StandardMouseEvent(e) {
-            var _this = this;
             this.timestamp = Date.now();
             this.browserEvent = e;
             this.leftButton = e.button === 0;
             this.middleButton = e.button === 1;
             this.rightButton = e.button === 2;
-            this.target = e.target || e.targetNode || e.srcElement;
+            this.target = e.target;
             this.detail = e.detail || 1;
             if (e.type === 'dblclick') {
                 this.detail = 2;
             }
-            this.posx = 0;
-            this.posy = 0;
             this.ctrlKey = e.ctrlKey;
             this.shiftKey = e.shiftKey;
             this.altKey = e.altKey;
             this.metaKey = e.metaKey;
-            var readClientCoords = function () {
-                if (e.clientX || e.clientY) {
-                    _this.posx = e.clientX + document.body.scrollLeft + document.documentElement.scrollLeft;
-                    _this.posy = e.clientY + document.body.scrollTop + document.documentElement.scrollTop;
-                    return true;
-                }
-                return false;
-            };
-            var readPageCoords = function () {
-                if (e.pageX || e.pageY) {
-                    _this.posx = e.pageX;
-                    _this.posy = e.pageY;
-                    return true;
-                }
-                return false;
-            };
-            var test1 = readPageCoords, test2 = readClientCoords;
-            if (browser.isIE10) {
-                // The if A elseif B logic here is inversed in IE10 due to an IE10 issue
-                test1 = readClientCoords;
-                test2 = readPageCoords;
+            if (typeof e.pageX === 'number') {
+                this.posx = e.pageX;
+                this.posy = e.pageY;
             }
-            if (!test1()) {
-                test2();
+            else {
+                // Probably hit by MSGestureEvent
+                this.posx = e.clientX + document.body.scrollLeft + document.documentElement.scrollLeft;
+                this.posy = e.clientY + document.body.scrollTop + document.documentElement.scrollTop;
             }
             // Find the position of the iframe this code is executing in relative to the iframe where the event was captured.
             var iframeOffsets = iframe_1.IframeUtils.getPositionOfChildWindowRelativeToAncestorWindow(self, e.view);
@@ -20234,7 +21543,7 @@ define(__m[38], __M([1,0,17,27,173]), function (require, exports, platform, brow
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
-define(__m[124], __M([1,0,18]), function (require, exports, event_1) {
+define(__m[104], __M([0,1,16]), function (require, exports, event_1) {
     'use strict';
     var CancellationToken;
     (function (CancellationToken) {
@@ -20325,7 +21634,7 @@ define(__m[124], __M([1,0,18]), function (require, exports, event_1) {
 
 
 
-define(__m[22], __M([1,0,8]), function (require, exports, Errors) {
+define(__m[23], __M([0,1,8]), function (require, exports, Errors) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -20580,7 +21889,7 @@ define(__m[22], __M([1,0,8]), function (require, exports, Errors) {
 
 
 
-define(__m[192], __M([1,0,3,18]), function (require, exports, lifecycle_1, event_1) {
+define(__m[195], __M([0,1,3,16]), function (require, exports, lifecycle_1, event_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -20677,7 +21986,7 @@ define(__m[192], __M([1,0,3,18]), function (require, exports, lifecycle_1, event
     exports.Scrollable = Scrollable;
 });
 
-define(__m[55], __M([1,0,17,8,139]), function (require, exports, Platform, errors, precision) {
+define(__m[59], __M([0,1,18,8,143]), function (require, exports, Platform, errors, precision) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -20899,7 +22208,7 @@ define(__m[55], __M([1,0,17,8,139]), function (require, exports, Platform, error
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-define(__m[2], __M([521,8]), function (winjs, __Errors__) {
+define(__m[2], __M([515,8]), function (winjs, __Errors__) {
 	'use strict';
 
 	var outstandingPromiseErrors = {};
@@ -20961,7 +22270,7 @@ define(__m[2], __M([521,8]), function (winjs, __Errors__) {
 
 
 
-define(__m[50], __M([1,0,2,22,63]), function (require, exports, winjs_base_1, eventEmitter_1, Events) {
+define(__m[50], __M([0,1,2,23,60]), function (require, exports, winjs_base_1, eventEmitter_1, Events) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -21170,7 +22479,7 @@ define(__m[50], __M([1,0,2,22,63]), function (require, exports, winjs_base_1, ev
 
 
 
-define(__m[14], __M([1,0,8,17,2,124,3]), function (require, exports, errors, platform, winjs_base_1, cancellation_1, lifecycle_1) {
+define(__m[14], __M([0,1,8,18,2,104,3]), function (require, exports, errors, platform, winjs_base_1, cancellation_1, lifecycle_1) {
     'use strict';
     function isThenable(obj) {
         return obj && typeof obj.then === 'function';
@@ -21702,7 +23011,7 @@ define(__m[14], __M([1,0,8,17,2,124,3]), function (require, exports, errors, pla
 
 
 
-define(__m[198], __M([1,0,3,14,42]), function (require, exports, lifecycle_1, async_1, scrollableElementOptions_1) {
+define(__m[201], __M([0,1,3,14,41]), function (require, exports, lifecycle_1, async_1, scrollableElementOptions_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -21787,7 +23096,7 @@ define(__m[198], __M([1,0,3,14,42]), function (require, exports, lifecycle_1, as
     exports.ScrollbarVisibilityController = ScrollbarVisibilityController;
 });
 
-define(__m[88], __M([1,0,2]), function (require, exports, winjs_base_1) {
+define(__m[78], __M([0,1,2]), function (require, exports, winjs_base_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -21800,6 +23109,14 @@ define(__m[88], __M([1,0,2]), function (require, exports, winjs_base_1) {
          * only and that have no correspondence on a server or such.
          */
         Schemas.inMemory = 'inmemory';
+        /**
+         * A schema that is used for setting files
+         */
+        Schemas.vscode = 'vscode';
+        /**
+         * A schema that is used for internal private files
+         */
+        Schemas.internal = 'private';
         Schemas.http = 'http';
         Schemas.https = 'https';
         Schemas.file = 'file';
@@ -21852,7 +23169,7 @@ define(__m[88], __M([1,0,2]), function (require, exports, winjs_base_1) {
 
 
 
-define(__m[200], __M([1,0,8,3,2,14]), function (require, exports, errors_1, lifecycle_1, winjs_base_1, async_1) {
+define(__m[203], __M([0,1,8,3,2,14]), function (require, exports, errors_1, lifecycle_1, winjs_base_1, async_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -21964,8 +23281,14 @@ define(__m[200], __M([1,0,8,3,2,14]), function (require, exports, errors_1, life
             var _this = this;
             _super.call(this);
             this._lastRequestTimestamp = -1;
+            var lazyProxyFulfill = null;
+            var lazyProxyReject = null;
             this._worker = this._register(workerFactory.create('vs/base/common/worker/simpleWorker', function (msg) {
                 _this._protocol.handleMessage(msg);
+            }, function (err) {
+                // in Firefox, web workers fail lazily :(
+                // we will reject the proxy
+                lazyProxyReject(err);
             }));
             this._protocol = new SimpleWorkerProtocol({
                 sendMessage: function (msg) {
@@ -21988,8 +23311,6 @@ define(__m[200], __M([1,0,8,3,2,14]), function (require, exports, errors_1, life
                 // Get the configuration from requirejs
                 loaderConfiguration = window.requirejs.s.contexts._.config;
             }
-            var lazyProxyFulfill = null;
-            var lazyProxyReject = null;
             this._lazyProxy = new winjs_base_1.TPromise(function (c, e, p) {
                 lazyProxyFulfill = c;
                 lazyProxyReject = e;
@@ -22137,80 +23458,35 @@ define(__m[200], __M([1,0,8,3,2,14]), function (require, exports, errors_1, life
     exports.create = create;
 });
 
-define(__m[201], __M([1,0,2]), function (require, exports, winjs_base_1) {
+define(__m[118], __M([0,1,8,268,2,279]), function (require, exports, errors_1, marshalling_1, winjs_base_1, workerProtocol) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
      *--------------------------------------------------------------------------------------------*/
     'use strict';
-    exports.MessageType = {
-        INITIALIZE: '$initialize',
-        REPLY: '$reply',
-        PRINT: '$print'
-    };
-    exports.ReplyType = {
-        COMPLETE: 'complete',
-        ERROR: 'error',
-        PROGRESS: 'progress'
-    };
-    exports.PrintType = {
-        LOG: 'log',
-        DEBUG: 'debug',
-        INFO: 'info',
-        WARN: 'warn',
-        ERROR: 'error'
-    };
-    var RemoteCom = (function () {
-        function RemoteCom(requester) {
-            this._requester = requester;
-            this._bigHandler = null;
+    var webWorkerWarningLogged = false;
+    function logOnceWebWorkerWarning(err) {
+        if (!webWorkerWarningLogged) {
+            webWorkerWarningLogged = true;
+            console.warn('Could not create web worker(s). Falling back to loading web worker code in main thread, which might cause UI freezes. Please see https://github.com/Microsoft/monaco-editor#faq');
         }
-        RemoteCom.prototype.callOnRemote = function (proxyId, path, args) {
-            return this._requester.request('_proxyObj', {
-                proxyId: proxyId,
-                path: path,
-                args: args
-            });
-        };
-        RemoteCom.prototype.setManyHandler = function (handler) {
-            this._bigHandler = handler;
-        };
-        RemoteCom.prototype.handleMessage = function (msg) {
-            if (!this._bigHandler) {
-                throw new Error('got message before big handler attached!');
-            }
-            return this._invokeHandler(msg.proxyId, msg.path, msg.args);
-        };
-        RemoteCom.prototype._invokeHandler = function (rpcId, method, args) {
-            try {
-                return winjs_base_1.TPromise.as(this._bigHandler.handle(rpcId, method, args));
-            }
-            catch (err) {
-                return winjs_base_1.TPromise.wrapError(err);
-            }
-        };
-        return RemoteCom;
-    }());
-    exports.RemoteCom = RemoteCom;
-});
-
-define(__m[202], __M([1,0,8,275,55,2,201]), function (require, exports, errors_1, marshalling_1, timer, winjs_base_1, workerProtocol) {
-    /*---------------------------------------------------------------------------------------------
-     *  Copyright (c) Microsoft Corporation. All rights reserved.
-     *  Licensed under the MIT License. See License.txt in the project root for license information.
-     *--------------------------------------------------------------------------------------------*/
-    'use strict';
+        console.warn(err.message);
+    }
+    exports.logOnceWebWorkerWarning = logOnceWebWorkerWarning;
     var WorkerClient = (function () {
-        function WorkerClient(workerFactory, moduleId, decodeMessageName) {
+        function WorkerClient(workerFactory, moduleId) {
             var _this = this;
-            this._decodeMessageName = decodeMessageName;
             this._lastMessageId = 0;
             this._promises = {};
             this._messagesQueue = [];
             this._processQueueTimeout = -1;
             this._waitingForWorkerReply = false;
-            this._lastTimerEvent = null;
-            this._worker = workerFactory.create('vs/base/common/worker/workerServer', function (msg) { return _this._onSerializedMessage(msg); });
+            this._worker = workerFactory.create('vs/base/common/worker/workerServer', function (msg) { return _this._onSerializedMessage(msg); }, function (err) {
+                // reject the onModuleLoaded promise, this signals that things are bad
+                var promiseEntry = _this._promises[1];
+                delete _this._promises[1];
+                promiseEntry.error(err);
+            });
             var loaderConfiguration = null;
             var globalRequire = window.require;
             if (typeof globalRequire.getConfig === 'function') {
@@ -22221,23 +23497,13 @@ define(__m[202], __M([1,0,8,275,55,2,201]), function (require, exports, errors_1
                 // Get the configuration from requirejs
                 loaderConfiguration = window.requirejs.s.contexts._.config;
             }
-            var GlobalEnvironment = window.GlobalEnvironment || null;
             this.onModuleLoaded = this._sendMessage(workerProtocol.MessageType.INITIALIZE, {
                 id: this._worker.getId(),
                 moduleId: moduleId,
-                loaderConfiguration: loaderConfiguration,
-                GlobalEnvironment: GlobalEnvironment
+                loaderConfiguration: loaderConfiguration
             });
-            this.onModuleLoaded.then(null, function (e) { return _this._onError('Worker failed to load ' + moduleId, e); });
-            this._remoteCom = new workerProtocol.RemoteCom(this);
         }
-        WorkerClient.prototype.getRemoteCom = function () {
-            return this._remoteCom;
-        };
-        WorkerClient.prototype.getQueueSize = function () {
-            return this._messagesQueue.length + (this._waitingForWorkerReply ? 1 : 0);
-        };
-        WorkerClient.prototype.request = function (requestName, payload, forceTimestamp) {
+        WorkerClient.prototype.request = function (requestName, payload) {
             var _this = this;
             if (requestName.charAt(0) === '$') {
                 throw new Error('Illegal requestName: ' + requestName);
@@ -22248,7 +23514,7 @@ define(__m[202], __M([1,0,8,275,55,2,201]), function (require, exports, errors_1
                 // promise so that it won't be canceled by accident
                 _this.onModuleLoaded.then(function () {
                     if (!shouldCancelPromise) {
-                        messagePromise = _this._sendMessage(requestName, payload, forceTimestamp).then(c, e, p);
+                        messagePromise = _this._sendMessage(requestName, payload).then(c, e, p);
                     }
                 }, e, p);
             }, function () {
@@ -22260,9 +23526,6 @@ define(__m[202], __M([1,0,8,275,55,2,201]), function (require, exports, errors_1
                     shouldCancelPromise = true;
                 }
             });
-        };
-        WorkerClient.prototype.destroy = function () {
-            this.dispose();
         };
         WorkerClient.prototype.dispose = function () {
             var promises = Object.keys(this._promises);
@@ -22277,13 +23540,12 @@ define(__m[202], __M([1,0,8,275,55,2,201]), function (require, exports, errors_1
             }
             this._worker.dispose();
         };
-        WorkerClient.prototype._sendMessage = function (type, payload, forceTimestamp) {
+        WorkerClient.prototype._sendMessage = function (type, payload) {
             var _this = this;
-            if (forceTimestamp === void 0) { forceTimestamp = (new Date()).getTime(); }
             var msg = {
                 id: ++this._lastMessageId,
                 type: type,
-                timestamp: forceTimestamp,
+                timestamp: Date.now(),
                 payload: payload
             };
             var pc, pe, pp;
@@ -22349,7 +23611,6 @@ define(__m[202], __M([1,0,8,275,55,2,201]), function (require, exports, errors_1
                 }
                 _this._waitingForWorkerReply = true;
                 var msg = _this._messagesQueue.shift();
-                _this._lastTimerEvent = timer.start(timer.Topic.WORKER, _this._decodeMessageName(msg));
                 _this._postMessage(msg);
             }, delayUntilNextMessage);
         };
@@ -22378,9 +23639,6 @@ define(__m[202], __M([1,0,8,275,55,2,201]), function (require, exports, errors_1
                 case workerProtocol.MessageType.REPLY:
                     var serverReplyMessage = msg;
                     this._waitingForWorkerReply = false;
-                    if (this._lastTimerEvent) {
-                        this._lastTimerEvent.stop();
-                    }
                     if (!this._promises.hasOwnProperty(String(serverReplyMessage.id))) {
                         this._onError('Received unexpected message from Worker:', msg);
                         return;
@@ -22410,51 +23668,9 @@ define(__m[202], __M([1,0,8,275,55,2,201]), function (require, exports, errors_1
                     this._consoleLog(serverPrintMessage.level, serverPrintMessage.payload);
                     break;
                 default:
-                    this._dispatchRequestFromWorker(msg);
+                    this._onError('Received unexpected message from worker:', msg);
             }
             this._processMessagesQueue();
-        };
-        WorkerClient.prototype._dispatchRequestFromWorker = function (msg) {
-            var _this = this;
-            this._handleWorkerRequest(msg).then(function (result) {
-                var reply = {
-                    id: 0,
-                    type: workerProtocol.MessageType.REPLY,
-                    timestamp: (new Date()).getTime(),
-                    seq: msg.req,
-                    payload: (result instanceof Error ? errors_1.transformErrorForSerialization(result) : result),
-                    err: null
-                };
-                _this._postMessage(reply);
-            }, function (err) {
-                var reply = {
-                    id: 0,
-                    type: workerProtocol.MessageType.REPLY,
-                    timestamp: (new Date()).getTime(),
-                    seq: msg.req,
-                    payload: null,
-                    err: (err instanceof Error ? errors_1.transformErrorForSerialization(err) : err)
-                };
-                _this._postMessage(reply);
-            });
-        };
-        WorkerClient.prototype._handleWorkerRequest = function (msg) {
-            if (msg.type === '_proxyObj') {
-                return this._remoteCom.handleMessage(msg.payload);
-            }
-            if (typeof this[msg.type] === 'function') {
-                return this._invokeHandler(this[msg.type], this, msg.payload);
-            }
-            this._onError('Received unexpected message from Worker:', msg);
-            return winjs_base_1.TPromise.wrapError(new Error('No handler found'));
-        };
-        WorkerClient.prototype._invokeHandler = function (handler, handlerCtx, payload) {
-            try {
-                return winjs_base_1.TPromise.as(handler.call(handlerCtx, payload));
-            }
-            catch (err) {
-                return winjs_base_1.TPromise.wrapError(err);
-            }
         };
         WorkerClient.prototype._consoleLog = function (level, payload) {
             switch (level) {
@@ -22490,7 +23706,7 @@ define(__m[202], __M([1,0,8,275,55,2,201]), function (require, exports, errors_1
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
-define(__m[203], __M([1,0,2,26]), function (require, exports, winjs_base_1, types_1) {
+define(__m[205], __M([0,1,2,26]), function (require, exports, winjs_base_1, types_1) {
     "use strict";
     var DataSource = (function () {
         function DataSource(arg) {
@@ -22576,7 +23792,7 @@ define(__m[203], __M([1,0,2,26]), function (require, exports, winjs_base_1, type
 
 
 
-define(__m[204], __M([1,0,56,8,3,35,22,2]), function (require, exports, Assert, errors_1, lifecycle_1, arrays, Events, WinJS) {
+define(__m[206], __M([0,1,47,8,3,37,23,2]), function (require, exports, Assert, errors_1, lifecycle_1, arrays, Events, WinJS) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -23669,7 +24885,7 @@ define(__m[204], __M([1,0,56,8,3,35,22,2]), function (require, exports, Assert, 
 
 
 
-define(__m[205], __M([1,0,22,97]), function (require, exports, eventEmitter_1, iterator_1) {
+define(__m[207], __M([0,1,23,109]), function (require, exports, eventEmitter_1, iterator_1) {
     "use strict";
     var HeightMap = (function (_super) {
         __extends(HeightMap, _super);
@@ -23859,7 +25075,7 @@ define(__m[205], __M([1,0,22,97]), function (require, exports, eventEmitter_1, i
     exports.HeightMap = HeightMap;
 });
 
-define(__m[141], __M([1,0,14,2,95,60]), function (require, exports, async_1, winjs_base_1, viewLineRenderer_1, viewLineToken_1) {
+define(__m[151], __M([0,1,14,2,103,64]), function (require, exports, async_1, winjs_base_1, viewLineRenderer_1, viewLineToken_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -23961,7 +25177,7 @@ define(__m[141], __M([1,0,14,2,95,60]), function (require, exports, async_1, win
     }
 });
 
-define(__m[207], __M([1,0,22]), function (require, exports, eventEmitter_1) {
+define(__m[209], __M([0,1,23]), function (require, exports, eventEmitter_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -24047,7 +25263,7 @@ define(__m[207], __M([1,0,22]), function (require, exports, eventEmitter_1) {
 
 
 
-define(__m[19], __M([1,0,50,10,2,25]), function (require, exports, actions_1, strings, winjs_base_1, editorActionEnablement_1) {
+define(__m[20], __M([0,1,50,10,2,25]), function (require, exports, actions_1, strings, winjs_base_1, editorActionEnablement_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -24230,7 +25446,7 @@ define(__m[19], __M([1,0,50,10,2,25]), function (require, exports, actions_1, st
     }
 });
 
-define(__m[209], __M([1,0,8]), function (require, exports, errors_1) {
+define(__m[211], __M([0,1,8]), function (require, exports, errors_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -24335,7 +25551,7 @@ define(__m[209], __M([1,0,8]), function (require, exports, errors_1) {
     exports.EditStack = EditStack;
 });
 
-define(__m[144], __M([1,0,8,10,60]), function (require, exports, errors_1, strings, viewLineToken_1) {
+define(__m[154], __M([0,1,8,10,64]), function (require, exports, errors_1, strings, viewLineToken_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -24481,7 +25697,7 @@ define(__m[144], __M([1,0,8,10,60]), function (require, exports, errors_1, strin
     exports.TokensBinaryEncoding = TokensBinaryEncoding;
 });
 
-define(__m[108], __M([1,0,10,144,84,60]), function (require, exports, strings, tokensBinaryEncoding_1, modeTransition_1, viewLineToken_1) {
+define(__m[165], __M([0,1,10,154,88,64]), function (require, exports, strings, tokensBinaryEncoding_1, modeTransition_1, viewLineToken_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -25122,7 +26338,7 @@ define(__m[108], __M([1,0,10,144,84,60]), function (require, exports, strings, t
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
-define(__m[212], __M([1,0,18,380]), function (require, exports, event_1, languageSelector_1) {
+define(__m[214], __M([0,1,16,375]), function (require, exports, event_1, languageSelector_1) {
     'use strict';
     var LanguageFeatureRegistry = (function () {
         function LanguageFeatureRegistry() {
@@ -25261,7 +26477,7 @@ define(__m[212], __M([1,0,18,380]), function (require, exports, event_1, languag
     exports.default = LanguageFeatureRegistry;
 });
 
-define(__m[16], __M([1,0,212]), function (require, exports, languageFeatureRegistry_1) {
+define(__m[17], __M([0,1,214]), function (require, exports, languageFeatureRegistry_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -25495,7 +26711,7 @@ define(__m[16], __M([1,0,212]), function (require, exports, languageFeatureRegis
     exports.LinkProviderRegistry = new languageFeatureRegistry_1.default();
 });
 
-define(__m[214], __M([1,0,8,10,16,47]), function (require, exports, errors_1, strings, modes_1, supports_1) {
+define(__m[216], __M([0,1,8,10,17,49]), function (require, exports, errors_1, strings, modes_1, supports_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -25629,7 +26845,7 @@ define(__m[214], __M([1,0,8,10,16,47]), function (require, exports, errors_1, st
     exports.OnEnterSupport = OnEnterSupport;
 });
 
-define(__m[41], __M([1,0,16,389,392,214,85,18,8,20,10,79]), function (require, exports, modes_1, characterPair_1, electricCharacter_1, onEnter_1, richEditBrackets_1, event_1, errors_1, position_1, strings, wordHelper_1) {
+define(__m[40], __M([0,1,17,384,389,216,83,16,8,21,10,76]), function (require, exports, modes_1, characterPair_1, electricCharacter_1, onEnter_1, richEditBrackets_1, event_1, errors_1, position_1, strings, wordHelper_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -25815,7 +27031,7 @@ define(__m[41], __M([1,0,16,389,392,214,85,18,8,20,10,79]), function (require, e
     exports.LanguageConfigurationRegistry = new LanguageConfigurationRegistryImpl();
 });
 
-define(__m[216], __M([1,0,10,123,6,24,41]), function (require, exports, strings, cursorMoveHelper_1, range_1, selection_1, languageConfigurationRegistry_1) {
+define(__m[218], __M([0,1,10,97,4,24,40]), function (require, exports, strings, cursorMoveHelper_1, range_1, selection_1, languageConfigurationRegistry_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -25935,7 +27151,7 @@ define(__m[216], __M([1,0,10,123,6,24,41]), function (require, exports, strings,
     exports.ShiftCommand = ShiftCommand;
 });
 
-define(__m[156], __M([1,0,8,10,92,216,281,123,20,6,24,7,16,41]), function (require, exports, errors_1, strings, replaceCommand_1, shiftCommand_1, surroundSelectionCommand_1, cursorMoveHelper_1, position_1, range_1, selection_1, editorCommon, modes_1, languageConfigurationRegistry_1) {
+define(__m[173], __M([0,1,8,10,110,218,270,97,21,4,24,7,17,40]), function (require, exports, errors_1, strings, replaceCommand_1, shiftCommand_1, surroundSelectionCommand_1, cursorMoveHelper_1, position_1, range_1, selection_1, editorCommon, modes_1, languageConfigurationRegistry_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -27670,7 +28886,7 @@ define(__m[156], __M([1,0,8,10,92,216,281,123,20,6,24,7,16,41]), function (requi
     }());
 });
 
-define(__m[218], __M([1,0,8,156,24,41]), function (require, exports, errors_1, oneCursor_1, selection_1, languageConfigurationRegistry_1) {
+define(__m[220], __M([0,1,8,173,24,40]), function (require, exports, errors_1, oneCursor_1, selection_1, languageConfigurationRegistry_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -27982,7 +29198,7 @@ define(__m[218], __M([1,0,8,156,24,41]), function (require, exports, errors_1, o
     exports.CursorCollection = CursorCollection;
 });
 
-define(__m[160], __M([1,0,84,41,79]), function (require, exports, modeTransition_1, languageConfigurationRegistry_1, wordHelper_1) {
+define(__m[176], __M([0,1,88,40,76]), function (require, exports, modeTransition_1, languageConfigurationRegistry_1, wordHelper_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -28024,7 +29240,7 @@ define(__m[160], __M([1,0,84,41,79]), function (require, exports, modeTransition
 
 
 
-define(__m[220], __M([1,0,22,3,10,20,6,24,7,470,479]), function (require, exports, eventEmitter_1, lifecycle_1, strings, position_1, range_1, selection_1, editorCommon, viewModelCursors_1, viewModelDecorations_1) {
+define(__m[222], __M([0,1,23,3,10,21,4,24,7,464,467]), function (require, exports, eventEmitter_1, lifecycle_1, strings, position_1, range_1, selection_1, editorCommon, viewModelCursors_1, viewModelDecorations_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -28418,7 +29634,7 @@ define(__m[220], __M([1,0,22,3,10,20,6,24,7,470,479]), function (require, export
     exports.ViewModel = ViewModel;
 });
 
-define(__m[161], __M([1,0,58,20,6,24,41]), function (require, exports, editOperation_1, position_1, range_1, selection_1, languageConfigurationRegistry_1) {
+define(__m[126], __M([0,1,62,21,4,24,40]), function (require, exports, editOperation_1, position_1, range_1, selection_1, languageConfigurationRegistry_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -28535,7 +29751,7 @@ define(__m[161], __M([1,0,58,20,6,24,41]), function (require, exports, editOpera
     exports.BlockCommentCommand = BlockCommentCommand;
 });
 
-define(__m[222], __M([1,0,10,58,20,6,24,161,41]), function (require, exports, strings, editOperation_1, position_1, range_1, selection_1, blockCommentCommand_1, languageConfigurationRegistry_1) {
+define(__m[224], __M([0,1,10,62,21,4,24,126,40]), function (require, exports, strings, editOperation_1, position_1, range_1, selection_1, blockCommentCommand_1, languageConfigurationRegistry_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -28865,7 +30081,7 @@ define(__m[222], __M([1,0,10,58,20,6,24,161,41]), function (require, exports, st
 
 
 
-define(__m[165], __M([1,0,56,22,32,6,3]), function (require, exports, assert, eventEmitter_1, objects, range_1, lifecycle_1) {
+define(__m[127], __M([0,1,47,23,31,4,3]), function (require, exports, assert, eventEmitter_1, objects, range_1, lifecycle_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -29041,7 +30257,7 @@ define(__m[165], __M([1,0,56,22,32,6,3]), function (require, exports, assert, ev
     exports.DiffNavigator = DiffNavigator;
 });
 
-define(__m[166], __M([1,0,14,3,10,92,20,6,7,481,485,24]), function (require, exports, async_1, lifecycle_1, strings, replaceCommand_1, position_1, range_1, editorCommon, findDecorations_1, replaceAllCommand_1, selection_1) {
+define(__m[128], __M([0,1,14,3,10,110,21,4,7,482,484,24]), function (require, exports, async_1, lifecycle_1, strings, replaceCommand_1, position_1, range_1, editorCommon, findDecorations_1, replaceAllCommand_1, selection_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -29425,7 +30641,7 @@ define(__m[166], __M([1,0,14,3,10,92,20,6,7,481,485,24]), function (require, exp
     exports.parseReplaceString = parseReplaceString;
 });
 
-define(__m[225], __M([1,0,22,6]), function (require, exports, eventEmitter_1, range_1) {
+define(__m[227], __M([0,1,23,4]), function (require, exports, eventEmitter_1, range_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -29617,7 +30833,7 @@ define(__m[225], __M([1,0,22,6]), function (require, exports, eventEmitter_1, ra
     exports.FindReplaceState = FindReplaceState;
 });
 
-define(__m[168], __M([1,0,14,8]), function (require, exports, async_1, errors_1) {
+define(__m[129], __M([0,1,14,8]), function (require, exports, async_1, errors_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -29750,7 +30966,7 @@ define(__m[168], __M([1,0,14,8]), function (require, exports, async_1, errors_1)
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
-define(__m[227], __M([1,0,8,2,16,14]), function (require, exports, errors_1, winjs_base_1, modes_1, async_1) {
+define(__m[229], __M([0,1,8,2,17,14]), function (require, exports, errors_1, winjs_base_1, modes_1, async_1) {
     'use strict';
     function getLinks(model) {
         var promises = modes_1.LinkProviderRegistry.ordered(model).map(function (support) {
@@ -29778,7 +30994,7 @@ define(__m[227], __M([1,0,8,2,16,14]), function (require, exports, errors_1, win
     exports.getLinks = getLinks;
 });
 
-define(__m[93], __M([1,0,22,18,37,10,59,2,6]), function (require, exports, eventEmitter_1, event_1, paths_1, strings, idGenerator_1, winjs_base_1, range_1) {
+define(__m[96], __M([0,1,23,16,38,10,63,2,4]), function (require, exports, eventEmitter_1, event_1, paths_1, strings, idGenerator_1, winjs_base_1, range_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -30056,7 +31272,7 @@ define(__m[93], __M([1,0,22,18,37,10,59,2,6]), function (require, exports, event
 
 
 
-define(__m[229], __M([1,0,6,47,85,41]), function (require, exports, range_1, supports_1, richEditBrackets_1, languageConfigurationRegistry_1) {
+define(__m[231], __M([0,1,4,49,83,40]), function (require, exports, range_1, supports_1, richEditBrackets_1, languageConfigurationRegistry_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -30378,7 +31594,7 @@ define(__m[229], __M([1,0,6,47,85,41]), function (require, exports, range_1, sup
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
-define(__m[230], __M([1,0,35,32,2,67,14]), function (require, exports, arrays_1, objects_1, winjs_base_1, filters_1, async_1) {
+define(__m[232], __M([0,1,37,31,2,65,14]), function (require, exports, arrays_1, objects_1, winjs_base_1, filters_1, async_1) {
     'use strict';
     var CompletionItem = (function () {
         function CompletionItem(suggestion, container) {
@@ -30495,8 +31711,8 @@ define(__m[230], __M([1,0,35,32,2,67,14]), function (require, exports, arrays_1,
     exports.CompletionModel = CompletionModel;
 });
 
-define(__m[231], __M([5,4]), function(nls, data) { return nls.create("vs/base/common/json", data); });
-define(__m[126], __M([1,0,231]), function (require, exports, nls_1) {
+define(__m[233], __M([5,6]), function(nls, data) { return nls.create("vs/base/common/json", data); });
+define(__m[124], __M([0,1,233]), function (require, exports, nls_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -31545,7 +32761,7 @@ define(__m[126], __M([1,0,231]), function (require, exports, nls_1) {
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
-define(__m[233], __M([1,0,126,20,6]), function (require, exports, json_1, position_1, range_1) {
+define(__m[235], __M([0,1,124,21,4]), function (require, exports, json_1, position_1, range_1) {
     'use strict';
     var SmartSnippetInserter = (function () {
         function SmartSnippetInserter() {
@@ -31675,12 +32891,12 @@ define(__m[233], __M([1,0,126,20,6]), function (require, exports, json_1, positi
     exports.SmartSnippetInserter = SmartSnippetInserter;
 });
 
-define(__m[234], __M([5,4]), function(nls, data) { return nls.create("vs/base/common/keyCodes", data); });
+define(__m[236], __M([5,6]), function(nls, data) { return nls.create("vs/base/common/keyCodes", data); });
 /*---------------------------------------------------------------------------------------------
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
-define(__m[13], __M([1,0,234,17]), function (require, exports, nls, defaultPlatform) {
+define(__m[12], __M([0,1,236,18]), function (require, exports, nls, defaultPlatform) {
     'use strict';
     /**
      * Virtual Key Codes, the value does not hold any inherent meaning.
@@ -32568,7 +33784,7 @@ define(__m[13], __M([1,0,234,17]), function (require, exports, nls, defaultPlatf
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
-define(__m[54], __M([1,0,13,17,27]), function (require, exports, keyCodes_1, platform, browser) {
+define(__m[56], __M([0,1,12,18,28]), function (require, exports, keyCodes_1, platform, browser) {
     'use strict';
     var KEY_CODE_MAP = {};
     (function () {
@@ -32724,32 +33940,20 @@ define(__m[54], __M([1,0,13,17,27]), function (require, exports, keyCodes_1, pla
     var metaKeyMod = (platform.isMacintosh ? keyCodes_1.KeyMod.CtrlCmd : keyCodes_1.KeyMod.WinCtrl);
     var StandardKeyboardEvent = (function () {
         function StandardKeyboardEvent(source) {
-            if (source instanceof StandardKeyboardEvent) {
-                this.browserEvent = null;
-                this.target = source.target;
-                this.ctrlKey = source.ctrlKey;
-                this.shiftKey = source.shiftKey;
-                this.altKey = source.altKey;
-                this.metaKey = source.metaKey;
-                this.keyCode = source.keyCode;
-                this._asKeybinding = source._asKeybinding;
-            }
-            else {
-                var e = source;
-                this.browserEvent = e;
-                this.target = e.target || e.targetNode;
-                this.ctrlKey = e.ctrlKey;
-                this.shiftKey = e.shiftKey;
-                this.altKey = e.altKey;
-                this.metaKey = e.metaKey;
-                this.keyCode = extractKeyCode(e);
-                // console.info(e.type + ": keyCode: " + e.keyCode + ", which: " + e.which + ", charCode: " + e.charCode + ", detail: " + e.detail + " ====> " + this.keyCode + ' -- ' + KeyCode[this.keyCode]);
-                this.ctrlKey = this.ctrlKey || this.keyCode === keyCodes_1.KeyCode.Ctrl;
-                this.altKey = this.altKey || this.keyCode === keyCodes_1.KeyCode.Alt;
-                this.shiftKey = this.shiftKey || this.keyCode === keyCodes_1.KeyCode.Shift;
-                this.metaKey = this.metaKey || this.keyCode === keyCodes_1.KeyCode.Meta;
-                this._asKeybinding = this._computeKeybinding();
-            }
+            var e = source;
+            this.browserEvent = e;
+            this.target = e.target;
+            this.ctrlKey = e.ctrlKey;
+            this.shiftKey = e.shiftKey;
+            this.altKey = e.altKey;
+            this.metaKey = e.metaKey;
+            this.keyCode = extractKeyCode(e);
+            // console.info(e.type + ": keyCode: " + e.keyCode + ", which: " + e.which + ", charCode: " + e.charCode + ", detail: " + e.detail + " ====> " + this.keyCode + ' -- ' + KeyCode[this.keyCode]);
+            this.ctrlKey = this.ctrlKey || this.keyCode === keyCodes_1.KeyCode.Ctrl;
+            this.altKey = this.altKey || this.keyCode === keyCodes_1.KeyCode.Alt;
+            this.shiftKey = this.shiftKey || this.keyCode === keyCodes_1.KeyCode.Shift;
+            this.metaKey = this.metaKey || this.keyCode === keyCodes_1.KeyCode.Meta;
+            this._asKeybinding = this._computeKeybinding();
         }
         StandardKeyboardEvent.prototype.preventDefault = function () {
             if (this.browserEvent && this.browserEvent.preventDefault) {
@@ -32760,9 +33964,6 @@ define(__m[54], __M([1,0,13,17,27]), function (require, exports, keyCodes_1, pla
             if (this.browserEvent && this.browserEvent.stopPropagation) {
                 this.browserEvent.stopPropagation();
             }
-        };
-        StandardKeyboardEvent.prototype.clone = function () {
-            return new StandardKeyboardEvent(this);
         };
         StandardKeyboardEvent.prototype.asKeybinding = function () {
             return this._asKeybinding;
@@ -32801,7 +34002,7 @@ define(__m[54], __M([1,0,13,17,27]), function (require, exports, keyCodes_1, pla
 
 
 
-define(__m[11], __M([1,0,14,8,22,3,26,27,54,38]), function (require, exports, async_1, errors_1, eventEmitter_1, lifecycle_1, types_1, browser_1, keyboardEvent_1, mouseEvent_1) {
+define(__m[11], __M([0,1,14,8,23,3,26,28,56,39]), function (require, exports, async_1, errors_1, eventEmitter_1, lifecycle_1, types_1, browser_1, keyboardEvent_1, mouseEvent_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -33285,16 +34486,50 @@ define(__m[11], __M([1,0,14,8,22,3,26,27,54,38]), function (require, exports, as
         };
     }
     exports.getTopLeftOffset = getTopLeftOffset;
-    function getDomNodePosition(domNode) {
-        var r = getTopLeftOffset(domNode);
+    /**
+     * Returns the position of a dom node relative to the entire page.
+     */
+    function getDomNodePagePosition(domNode) {
+        var bb = domNode.getBoundingClientRect();
         return {
-            left: r.left,
-            top: r.top,
-            width: domNode.clientWidth,
-            height: domNode.clientHeight
+            left: bb.left + exports.StandardWindow.scrollX,
+            top: bb.top + exports.StandardWindow.scrollY,
+            width: bb.width,
+            height: bb.height
         };
     }
-    exports.getDomNodePosition = getDomNodePosition;
+    exports.getDomNodePagePosition = getDomNodePagePosition;
+    exports.StandardWindow = new (function () {
+        function class_1() {
+        }
+        Object.defineProperty(class_1.prototype, "scrollX", {
+            get: function () {
+                if (typeof window.scrollX === 'number') {
+                    // modern browsers
+                    return window.scrollX;
+                }
+                else {
+                    return document.body.scrollLeft + document.documentElement.scrollLeft;
+                }
+            },
+            enumerable: true,
+            configurable: true
+        });
+        Object.defineProperty(class_1.prototype, "scrollY", {
+            get: function () {
+                if (typeof window.scrollY === 'number') {
+                    // modern browsers
+                    return window.scrollY;
+                }
+                else {
+                    return document.body.scrollTop + document.documentElement.scrollTop;
+                }
+            },
+            enumerable: true,
+            configurable: true
+        });
+        return class_1;
+    }());
     // Adapted from WinJS
     // Gets the width of the content of the specified element. The content width does not include borders or padding.
     function getContentWidth(element) {
@@ -33334,17 +34569,6 @@ define(__m[11], __M([1,0,14,8,22,3,26,27,54,38]), function (require, exports, as
         var parentPosition = getTopLeftOffset(parent);
         return elementPosition.left - parentPosition.left;
     }
-    exports.getRelativeLeft = getRelativeLeft;
-    // Gets the top coordinate of the element relative to the specified parent.
-    function getRelativeTop(element, parent) {
-        if (element === null) {
-            return 0;
-        }
-        var elementPosition = getTopLeftOffset(element);
-        var parentPosition = getTopLeftOffset(parent);
-        return parentPosition.top - elementPosition.top;
-    }
-    exports.getRelativeTop = getRelativeTop;
     function getLargestChildWidth(parent, children) {
         var childWidths = children.map(function (child) {
             return getTotalWidth(child) + getRelativeLeft(child, parent) || 0;
@@ -33646,6 +34870,14 @@ define(__m[11], __M([1,0,14,8,22,3,26,27,54,38]), function (require, exports, as
         return Array.prototype.slice.call(document.getElementsByTagName(tag), 0);
     }
     exports.getElementsByTagName = getElementsByTagName;
+    function finalHandler(fn) {
+        return function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            fn(e);
+        };
+    }
+    exports.finalHandler = finalHandler;
 });
 
 
@@ -33653,7 +34885,7 @@ define(__m[11], __M([1,0,14,8,22,3,26,27,54,38]), function (require, exports, as
 
 
 
-define(__m[36], __M([1,0,2,26,3,10,56,11,301]), function (require, exports, winjs_base_1, types, lifecycle_1, strings, assert, DOM) {
+define(__m[35], __M([0,1,2,26,3,10,47,11,310]), function (require, exports, winjs_base_1, types, lifecycle_1, strings, assert, DOM) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -34963,21 +36195,6 @@ define(__m[36], __M([1,0,2,26,3,10,56,11,301]), function (require, exports, winj
         Builder.prototype.dispose = function () {
             this.destroy();
         };
-        Builder.prototype.getPositionRelativeTo = function (element) {
-            if (element instanceof Builder) {
-                element = element.getHTMLElement();
-            }
-            var left = DOM.getRelativeLeft(this.currentElement, element);
-            var top = DOM.getRelativeTop(this.currentElement, element);
-            return new Box(top, -1, -1, left);
-        };
-        /**
-         *  Gets the absolute coordinates of the element.
-         */
-        Builder.prototype.getPosition = function () {
-            var position = DOM.getTopLeftOffset(this.currentElement);
-            return new Box(position.top, -1, -1, position.left);
-        };
         /**
          *  Gets the size (in pixels) of an element, including the margin.
          */
@@ -34998,10 +36215,9 @@ define(__m[36], __M([1,0,2,26,3,10,56,11,301]), function (require, exports, winj
          *  Another variant of getting the inner dimensions of an element.
          */
         Builder.prototype.getClientArea = function () {
-            // 0.) Try with DOM getDomNodePosition
+            // 0.) Try with DOM clientWidth / clientHeight
             if (this.currentElement !== document.body) {
-                var dimensions = DOM.getDomNodePosition(this.currentElement);
-                return new Dimension(dimensions.width, dimensions.height);
+                return new Dimension(this.currentElement.clientWidth, this.currentElement.clientHeight);
             }
             // 1.) Try innerWidth / innerHeight
             if (window.innerWidth && window.innerHeight) {
@@ -35310,7 +36526,7 @@ define(__m[36], __M([1,0,2,26,3,10,56,11,301]), function (require, exports, winj
 
 
 
-define(__m[94], __M([1,0,3,11,173,38]), function (require, exports, lifecycle_1, dom, iframe_1, mouseEvent_1) {
+define(__m[112], __M([0,1,3,11,149,39]), function (require, exports, lifecycle_1, dom, iframe_1, mouseEvent_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -35403,8 +36619,22 @@ define(__m[94], __M([1,0,3,11,173,38]), function (require, exports, lifecycle_1,
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
-define(__m[74], __M([1,0,11,59,10,2,244]), function (require, exports, DOM, idGenerator_1, strings_1, winjs_base_1, marked_1) {
+define(__m[71], __M([0,1,11,63,10,2,315]), function (require, exports, DOM, idGenerator_1, strings_1, winjs_base_1, marked_1) {
     'use strict';
+    function renderMarkedString(markedStrings, options) {
+        if (options === void 0) { options = {}; }
+        var htmlContentElements = markedStrings.map(function (value) {
+            if (typeof value === 'string') {
+                return { markdown: value };
+            }
+            else if (typeof value === 'object') {
+                return { code: value };
+            }
+            ;
+        });
+        return renderHtml(htmlContentElements, options);
+    }
+    exports.renderMarkedString = renderMarkedString;
     /**
      * Create html nodes for the given content element.
      *
@@ -35711,7 +36941,7 @@ define(__m[74], __M([1,0,11,59,10,2,244]), function (require, exports, DOM, idGe
 
 
 
-define(__m[28], __M([1,0,11]), function (require, exports, dom) {
+define(__m[27], __M([0,1,11]), function (require, exports, dom) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -35998,7 +37228,7 @@ define(__m[28], __M([1,0,11]), function (require, exports, dom) {
     })();
 });
 
-define(__m[71], __M([1,0,35,3,11]), function (require, exports, arrays, lifecycle_1, DomUtils) {
+define(__m[69], __M([0,1,37,3,11]), function (require, exports, arrays, lifecycle_1, DomUtils) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -36192,7 +37422,7 @@ define(__m[71], __M([1,0,35,3,11]), function (require, exports, arrays, lifecycl
 
 
 
-define(__m[66], __M([1,0,515,3,36,17,50,11,63,26,22,71,54,13,377]), function (require, exports, nls, lifecycle, builder_1, platform, actions_1, DOM, events_1, types, eventEmitter_1, touch_1, keyboardEvent_1, keyCodes_1) {
+define(__m[58], __M([0,1,510,3,35,18,50,11,60,26,23,69,56,12,376]), function (require, exports, nls, lifecycle, builder_1, platform, actions_1, DOM, events_1, types, eventEmitter_1, touch_1, keyboardEvent_1, keyCodes_1) {
     'use strict';
     var BaseActionItem = (function (_super) {
         __extends(BaseActionItem, _super);
@@ -36515,6 +37745,9 @@ define(__m[66], __M([1,0,515,3,36,17,50,11,63,26,22,71,54,13,377]), function (re
             this.focusedItem = undefined;
             this.domNode = document.createElement('div');
             this.domNode.className = 'monaco-action-bar';
+            if (options.animated !== false) {
+                DOM.addClass(this.domNode, 'animated');
+            }
             var isVertical = this.options.orientation === ActionsOrientation.VERTICAL;
             if (isVertical) {
                 this.domNode.className += ' vertical';
@@ -36829,7 +38062,7 @@ define(__m[66], __M([1,0,515,3,36,17,50,11,63,26,22,71,54,13,377]), function (re
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
-define(__m[80], __M([1,0,181,17,36,381]), function (require, exports, nls, platform_1, builder_1) {
+define(__m[81], __M([0,1,183,18,35,380]), function (require, exports, nls, platform_1, builder_1) {
     'use strict';
     var ariaContainer;
     var alertContainer;
@@ -36881,7 +38114,7 @@ define(__m[80], __M([1,0,181,17,36,381]), function (require, exports, nls, platf
 
 
 
-define(__m[137], __M([1,0,36,11,3,22,383]), function (require, exports, builder_1, DOM, lifecycle_1, eventEmitter_1) {
+define(__m[145], __M([0,1,35,11,3,23,382]), function (require, exports, builder_1, DOM, lifecycle_1, eventEmitter_1) {
     'use strict';
     (function (AnchorAlignment) {
         AnchorAlignment[AnchorAlignment["LEFT"] = 0] = "LEFT";
@@ -36893,35 +38126,44 @@ define(__m[137], __M([1,0,36,11,3,22,383]), function (require, exports, builder_
         AnchorPosition[AnchorPosition["ABOVE"] = 1] = "ABOVE";
     })(exports.AnchorPosition || (exports.AnchorPosition = {}));
     var AnchorPosition = exports.AnchorPosition;
-    function layout(view, around, inside, anchorPosition, anchorAlignment) {
-        var top, left;
-        if (anchorPosition === AnchorPosition.BELOW) {
-            top = around.top + around.height - inside.top;
-            if (inside.top + top + view.height > inside.height && around.top - inside.top > view.height) {
-                top = around.top - view.height - inside.top;
+    function layout(view, around, viewport, anchorPosition, anchorAlignment) {
+        var chooseBiased = function (a, aIsGood, b, bIsGood) {
+            if (aIsGood) {
+                return a;
             }
-        }
-        else {
-            top = around.top - view.height - inside.top;
-            if (top + inside.top < 0 && around.top + around.height + view.height - inside.top < inside.height) {
-                top = around.top + around.height - inside.top;
+            if (bIsGood) {
+                return b;
             }
-        }
-        if (anchorAlignment === AnchorAlignment.LEFT) {
-            left = around.left - inside.left;
-            if (inside.left + left + view.width > inside.width) {
-                left -= view.width - around.width;
+            return a;
+        };
+        var chooseOne = function (a, aIsGood, b, bIsGood, aIsPreferred) {
+            if (aIsPreferred) {
+                return chooseBiased(a, aIsGood, b, bIsGood);
             }
-        }
-        else {
-            left = around.left + around.width - view.width - inside.left;
-            if (left + inside.left < 0 && around.left + view.width < inside.width) {
-                left = around.left - inside.left;
+            else {
+                return chooseBiased(b, bIsGood, a, aIsGood);
             }
-        }
+        };
+        var top = (function () {
+            // Compute both options (putting the segment above and below)
+            var posAbove = around.top - view.height;
+            var posBelow = around.top + around.height;
+            // Check for both options if they are good
+            var aboveIsGood = (posAbove >= viewport.top && posAbove + view.height <= viewport.top + viewport.height);
+            var belowIsGood = (posBelow >= viewport.top && posBelow + view.height <= viewport.top + viewport.height);
+            return chooseOne(posAbove, aboveIsGood, posBelow, belowIsGood, anchorPosition === AnchorPosition.ABOVE);
+        })();
+        var left = (function () {
+            // Compute both options (aligning left and right)
+            var posLeft = around.left;
+            var posRight = around.left + around.width - view.width;
+            // Check for both options if they are good
+            var leftIsGood = (posLeft >= viewport.left && posLeft + view.width <= viewport.left + viewport.width);
+            var rightIsGood = (posRight >= viewport.left && posRight + view.width <= viewport.left + viewport.width);
+            return chooseOne(posLeft, leftIsGood, posRight, rightIsGood, anchorAlignment === AnchorAlignment.LEFT);
+        })();
         return { top: top, left: left };
     }
-    exports.layout = layout;
     var ContextView = (function (_super) {
         __extends(ContextView, _super);
         function ContextView(container) {
@@ -36987,14 +38229,12 @@ define(__m[137], __M([1,0,36,11,3,22,383]), function (require, exports, builder_
             var around;
             // Get the element's position and size (to anchor the view)
             if (DOM.isHTMLElement(anchor)) {
-                var $anchor = builder_1.$(anchor);
-                var elementPosition = $anchor.getPosition();
-                var elementSize = $anchor.getTotalSize();
+                var elementPosition = DOM.getDomNodePagePosition(anchor);
                 around = {
                     top: elementPosition.top,
                     left: elementPosition.left,
-                    width: elementSize.width,
-                    height: elementSize.height
+                    width: elementPosition.width,
+                    height: elementPosition.height
                 };
             }
             else {
@@ -37006,11 +38246,9 @@ define(__m[137], __M([1,0,36,11,3,22,383]), function (require, exports, builder_
                     height: realAnchor.height || 0
                 };
             }
-            // Get the container's position
-            var insidePosition = this.$container.getPosition();
-            var inside = {
-                top: insidePosition.top,
-                left: insidePosition.left,
+            var viewport = {
+                top: DOM.StandardWindow.scrollY,
+                left: DOM.StandardWindow.scrollX,
                 height: window.innerHeight,
                 width: window.innerWidth
             };
@@ -37019,7 +38257,10 @@ define(__m[137], __M([1,0,36,11,3,22,383]), function (require, exports, builder_
             var view = { width: viewSize.width, height: viewSize.height };
             var anchorPosition = this.delegate.anchorPosition || AnchorPosition.BELOW;
             var anchorAlignment = this.delegate.anchorAlignment || AnchorAlignment.LEFT;
-            var result = layout(view, around, inside, anchorPosition, anchorAlignment);
+            var result = layout(view, around, viewport, anchorPosition, anchorAlignment);
+            var containerPosition = DOM.getDomNodePagePosition(this.$container.getHTMLElement());
+            result.top -= containerPosition.top;
+            result.left -= containerPosition.left;
             this.$view.removeClass('top', 'bottom', 'left', 'right');
             this.$view.addClass(anchorPosition === AnchorPosition.BELOW ? 'bottom' : 'top');
             this.$view.addClass(anchorAlignment === AnchorAlignment.LEFT ? 'left' : 'right');
@@ -37065,7 +38306,7 @@ define(__m[137], __M([1,0,36,11,3,22,383]), function (require, exports, builder_
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
-define(__m[246], __M([1,0,36,10,386]), function (require, exports, builder_1, strings) {
+define(__m[248], __M([0,1,35,10,383]), function (require, exports, builder_1, strings) {
     'use strict';
     var CountBadge = (function () {
         function CountBadge(container, count, titleFormat) {
@@ -37096,7 +38337,7 @@ define(__m[246], __M([1,0,36,10,386]), function (require, exports, builder_1, st
     exports.CountBadge = CountBadge;
 });
 
-define(__m[102], __M([1,0,10,11,32,286]), function (require, exports, strings_1, dom, objects, octiconLabel_1) {
+define(__m[122], __M([0,1,10,11,31,273]), function (require, exports, strings_1, dom, objects, octiconLabel_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -37167,7 +38408,7 @@ define(__m[102], __M([1,0,10,11,32,286]), function (require, exports, strings_1,
     exports.HighlightedLabel = HighlightedLabel;
 });
 
-define(__m[248], __M([1,0,11,37,26,102,140,387]), function (require, exports, dom, paths, types, highlightedLabel_1, labels_1) {
+define(__m[250], __M([0,1,11,38,26,122,142,387]), function (require, exports, dom, paths, types, highlightedLabel_1, labels_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -37223,7 +38464,7 @@ define(__m[248], __M([1,0,11,37,26,102,140,387]), function (require, exports, do
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
-define(__m[249], __M([1,0,36,395]), function (require, exports, builder_1) {
+define(__m[251], __M([0,1,35,396]), function (require, exports, builder_1) {
     'use strict';
     var LeftRightWidget = (function () {
         function LeftRightWidget(container, renderLeftFn, renderRightFn) {
@@ -37248,7 +38489,7 @@ define(__m[249], __M([1,0,36,395]), function (require, exports, builder_1) {
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
-define(__m[250], __M([1,0,11]), function (require, exports, dom_1) {
+define(__m[252], __M([0,1,11]), function (require, exports, dom_1) {
     "use strict";
     function getLastScrollTime(element) {
         var value = element.getAttribute('last-scroll-time');
@@ -37351,7 +38592,7 @@ define(__m[250], __M([1,0,11]), function (require, exports, dom_1) {
 
 
 
-define(__m[251], __M([1,0,36,66,22,399]), function (require, exports, builder_1, actionbar_1, eventEmitter_1) {
+define(__m[253], __M([0,1,35,58,23,413]), function (require, exports, builder_1, actionbar_1, eventEmitter_1) {
     'use strict';
     var Menu = (function (_super) {
         __extends(Menu, _super);
@@ -37392,7 +38633,7 @@ define(__m[251], __M([1,0,36,66,22,399]), function (require, exports, builder_1,
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
-define(__m[252], __M([1,0,2,56,27,36,11,133,3,147]), function (require, exports, winjs_base_1, assert, browser, builder_1, DOM, uuid, lifecycle_1) {
+define(__m[254], __M([0,1,2,47,28,35,11,130,3,136]), function (require, exports, winjs_base_1, assert, browser, builder_1, DOM, uuid, lifecycle_1) {
     'use strict';
     var css_done = 'done';
     var css_active = 'active';
@@ -37583,7 +38824,7 @@ define(__m[252], __M([1,0,2,56,27,36,11,133,3,147]), function (require, exports,
 
 
 
-define(__m[104], __M([1,0,3,36,27,17,26,11,71,22,38,417]), function (require, exports, lifecycle_1, builder_1, browser_1, platform_1, types, DOM, touch_1, eventEmitter_1, mouseEvent_1) {
+define(__m[123], __M([0,1,3,35,28,18,26,11,69,23,39,422]), function (require, exports, lifecycle_1, builder_1, browser_1, platform_1, types, DOM, touch_1, eventEmitter_1, mouseEvent_1) {
     'use strict';
     (function (Orientation) {
         Orientation[Orientation["VERTICAL"] = 0] = "VERTICAL";
@@ -37766,7 +39007,7 @@ define(__m[104], __M([1,0,3,36,27,17,26,11,71,22,38,417]), function (require, ex
 
 
 
-define(__m[46], __M([1,0,3,38,54,11]), function (require, exports, lifecycle_1, mouseEvent_1, keyboardEvent_1, DomUtils) {
+define(__m[44], __M([0,1,3,39,56,11]), function (require, exports, lifecycle_1, mouseEvent_1, keyboardEvent_1, DomUtils) {
     'use strict';
     var Widget = (function (_super) {
         __extends(Widget, _super);
@@ -37817,7 +39058,7 @@ define(__m[46], __M([1,0,3,38,54,11]), function (require, exports, lifecycle_1, 
 
 
 
-define(__m[255], __M([1,0,11,13,46,382]), function (require, exports, DOM, keyCodes_1, widget_1) {
+define(__m[257], __M([0,1,11,12,44,381]), function (require, exports, DOM, keyCodes_1, widget_1) {
     'use strict';
     var Checkbox = (function (_super) {
         __extends(Checkbox, _super);
@@ -37889,7 +39130,7 @@ define(__m[255], __M([1,0,11,13,46,382]), function (require, exports, DOM, keyCo
 
 
 
-define(__m[106], __M([1,0,183,27,11,74,80,66,137,18,46,393]), function (require, exports, nls, Bal, dom, htmlContentRenderer_1, aria, actionbar_1, contextview_1, event_1, widget_1) {
+define(__m[98], __M([0,1,185,28,11,71,81,58,145,16,44,392]), function (require, exports, nls, Bal, dom, htmlContentRenderer_1, aria, actionbar_1, contextview_1, event_1, widget_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -38201,7 +39442,7 @@ define(__m[106], __M([1,0,183,27,11,74,80,66,137,18,46,393]), function (require,
 
 
 
-define(__m[257], __M([1,0,182,11,106,255,46,18,13,390]), function (require, exports, nls, dom, inputBox_1, checkbox_1, widget_1, event_1, keyCodes_1) {
+define(__m[260], __M([0,1,184,11,98,257,44,16,12,390]), function (require, exports, nls, dom, inputBox_1, checkbox_1, widget_1, event_1, keyCodes_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -38477,7 +39718,7 @@ define(__m[257], __M([1,0,182,11,106,255,46,18,13,390]), function (require, expo
 
 
 
-define(__m[107], __M([1,0,94,46,14]), function (require, exports, globalMouseMoveMonitor_1, widget_1, async_1) {
+define(__m[100], __M([0,1,112,44,14]), function (require, exports, globalMouseMoveMonitor_1, widget_1, async_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -38559,7 +39800,7 @@ define(__m[107], __M([1,0,94,46,14]), function (require, exports, globalMouseMov
 
 
 
-define(__m[145], __M([1,0,17,11,38,94,46,28,107,198]), function (require, exports, Platform, DomUtils, mouseEvent_1, globalMouseMoveMonitor_1, widget_1, styleMutator_1, scrollbarArrow_1, scrollbarVisibilityController_1) {
+define(__m[153], __M([0,1,18,11,39,112,44,27,100,201]), function (require, exports, Platform, DomUtils, mouseEvent_1, globalMouseMoveMonitor_1, widget_1, styleMutator_1, scrollbarArrow_1, scrollbarVisibilityController_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -38691,7 +39932,7 @@ define(__m[145], __M([1,0,17,11,38,94,46,28,107,198]), function (require, export
             }
         };
         AbstractScrollbar.prototype._onMouseDown = function (e) {
-            var domNodePosition = DomUtils.getDomNodePosition(this.domNode.domNode);
+            var domNodePosition = DomUtils.getDomNodePagePosition(this.domNode.domNode);
             var desiredSliderPosition = this._mouseDownRelativePosition(e, domNodePosition) - this._scrollbarState.getArrowSize() - this._scrollbarState.getSliderSize() / 2;
             this.setDesiredScrollPosition(this._scrollbarState.convertSliderPositionToScrollPosition(desiredSliderPosition));
             this._sliderMouseDown(e);
@@ -38747,7 +39988,7 @@ define(__m[145], __M([1,0,17,11,38,94,46,28,107,198]), function (require, export
 
 
 
-define(__m[260], __M([1,0,145,38,42,127,107]), function (require, exports, abstractScrollbar_1, mouseEvent_1, scrollableElementOptions_1, scrollbarState_1, scrollbarArrow_1) {
+define(__m[262], __M([0,1,153,39,41,135,100]), function (require, exports, abstractScrollbar_1, mouseEvent_1, scrollableElementOptions_1, scrollbarState_1, scrollbarArrow_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -38842,7 +40083,7 @@ define(__m[260], __M([1,0,145,38,42,127,107]), function (require, exports, abstr
 
 
 
-define(__m[269], __M([1,0,145,38,42,127,107]), function (require, exports, abstractScrollbar_1, mouseEvent_1, scrollableElementOptions_1, scrollbarState_1, scrollbarArrow_1) {
+define(__m[263], __M([0,1,153,39,41,135,100]), function (require, exports, abstractScrollbar_1, mouseEvent_1, scrollableElementOptions_1, scrollbarState_1, scrollbarArrow_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -38939,7 +40180,7 @@ define(__m[269], __M([1,0,145,38,42,127,107]), function (require, exports, abstr
 
 
 
-define(__m[87], __M([1,0,27,11,17,38,260,269,42,3,192,46,14,28,18,418]), function (require, exports, Browser, DomUtils, Platform, mouseEvent_1, horizontalScrollbar_1, verticalScrollbar_1, scrollableElementOptions_1, lifecycle_1, scrollable_1, widget_1, async_1, styleMutator_1, event_1) {
+define(__m[87], __M([0,1,28,11,18,39,262,263,41,3,195,44,14,27,16,423]), function (require, exports, Browser, DomUtils, Platform, mouseEvent_1, horizontalScrollbar_1, verticalScrollbar_1, scrollableElementOptions_1, lifecycle_1, scrollable_1, widget_1, async_1, styleMutator_1, event_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -39287,7 +40528,7 @@ define(__m[87], __M([1,0,27,11,17,38,260,269,42,3,192,46,14,28,18,418]), functio
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
-define(__m[263], __M([1,0,32,3,71,11,87,42,254,250]), function (require, exports, objects_1, lifecycle_1, touch_1, DOM, scrollableElement_1, scrollableElementOptions_1, rangeMap_1, rowCache_1) {
+define(__m[265], __M([0,1,31,3,69,11,87,41,258,252]), function (require, exports, objects_1, lifecycle_1, touch_1, DOM, scrollableElement_1, scrollableElementOptions_1, rangeMap_1, rowCache_1) {
     "use strict";
     var MouseEventTypes = [
         'click',
@@ -39299,9 +40540,13 @@ define(__m[263], __M([1,0,32,3,71,11,87,42,254,250]), function (require, exports
         'mouseout',
         'contextmenu'
     ];
+    var DefaultOptions = {
+        useShadows: true
+    };
     var ListView = (function () {
-        function ListView(container, delegate, renderers) {
+        function ListView(container, delegate, renderers, options) {
             var _this = this;
+            if (options === void 0) { options = DefaultOptions; }
             this.delegate = delegate;
             this.items = [];
             this.itemId = 0;
@@ -39312,7 +40557,6 @@ define(__m[263], __M([1,0,32,3,71,11,87,42,254,250]), function (require, exports
             this.lastRenderHeight = 0;
             this._domNode = document.createElement('div');
             this._domNode.className = 'monaco-list';
-            this._domNode.tabIndex = 0;
             this.rowsContainer = document.createElement('div');
             this.rowsContainer.className = 'monaco-list-rows';
             this.gesture = new touch_1.Gesture(this.rowsContainer);
@@ -39320,7 +40564,7 @@ define(__m[263], __M([1,0,32,3,71,11,87,42,254,250]), function (require, exports
                 canUseTranslate3d: false,
                 horizontal: scrollableElementOptions_1.ScrollbarVisibility.Hidden,
                 vertical: scrollableElementOptions_1.ScrollbarVisibility.Auto,
-                useShadows: false,
+                useShadows: objects_1.getOrDefault(options, function (o) { return o.useShadows; }, DefaultOptions.useShadows),
                 saveLastScrollTimeOnClassName: 'monaco-list-row'
             });
             var listener = this.scrollableElement.onScroll(function (e) { return _this.render(e.scrollTop, e.height); });
@@ -39495,7 +40739,7 @@ define(__m[263], __M([1,0,32,3,71,11,87,42,254,250]), function (require, exports
 
 
 
-define(__m[264], __M([1,0,3,26,11,18,263,396]), function (require, exports, lifecycle_1, types_1, DOM, event_1, listView_1) {
+define(__m[266], __M([0,1,3,26,11,16,137,265,404]), function (require, exports, lifecycle_1, types_1, DOM, event_1, event_2, listView_1) {
     "use strict";
     var TraitRenderer = (function () {
         function TraitRenderer(controller, renderer) {
@@ -39604,6 +40848,8 @@ define(__m[264], __M([1,0,3,26,11,18,263,396]), function (require, exports, life
         Controller.prototype.onClick = function (e) {
             e.preventDefault();
             e.stopPropagation();
+            this.view.domNode.focus();
+            this.list.setFocus(e.index);
             this.list.setSelection(e.index);
         };
         Controller.prototype.dispose = function () {
@@ -39611,9 +40857,11 @@ define(__m[264], __M([1,0,3,26,11,18,263,396]), function (require, exports, life
         };
         return Controller;
     }());
+    var DefaultOptions = {};
     var List = (function () {
-        function List(container, delegate, renderers) {
+        function List(container, delegate, renderers, options) {
             var _this = this;
+            if (options === void 0) { options = DefaultOptions; }
             this.idPrefix = "list_id_" + ++List.InstanceCount;
             this.focus = new FocusTrait(function (i) { return _this.getElementId(i); });
             this.selection = new Trait('selected');
@@ -39623,9 +40871,11 @@ define(__m[264], __M([1,0,3,26,11,18,263,396]), function (require, exports, life
                 r = _this.selection.wrapRenderer(r);
                 return r;
             });
-            this.view = new listView_1.ListView(container, delegate, renderers);
+            this.view = new listView_1.ListView(container, delegate, renderers, options);
             this.view.domNode.setAttribute('role', 'listbox');
+            this.view.domNode.tabIndex = 0;
             this.controller = new Controller(this, this.view);
+            this._onDOMFocus = event_2.domEvent(this.view.domNode, 'focus');
         }
         Object.defineProperty(List.prototype, "onFocusChange", {
             get: function () {
@@ -39640,6 +40890,11 @@ define(__m[264], __M([1,0,3,26,11,18,263,396]), function (require, exports, life
                 var _this = this;
                 return this.eventBufferer.wrapEvent(event_1.mapEvent(this.selection.onChange, function (e) { return _this.toListEvent(e); }));
             },
+            enumerable: true,
+            configurable: true
+        });
+        Object.defineProperty(List.prototype, "onDOMFocus", {
+            get: function () { return this._onDOMFocus; },
             enumerable: true,
             configurable: true
         });
@@ -39666,6 +40921,13 @@ define(__m[264], __M([1,0,3,26,11,18,263,396]), function (require, exports, life
         Object.defineProperty(List.prototype, "contentHeight", {
             get: function () {
                 return this.view.getContentHeight();
+            },
+            enumerable: true,
+            configurable: true
+        });
+        Object.defineProperty(List.prototype, "scrollTop", {
+            get: function () {
+                return this.view.getScrollTop();
             },
             enumerable: true,
             configurable: true
@@ -39708,6 +40970,9 @@ define(__m[264], __M([1,0,3,26,11,18,263,396]), function (require, exports, life
             }
             this.setSelection(Math.max(index, 0));
         };
+        List.prototype.getSelection = function () {
+            return this.selection.get();
+        };
         List.prototype.setFocus = function () {
             var _this = this;
             var indexes = [];
@@ -39748,7 +41013,7 @@ define(__m[264], __M([1,0,3,26,11,18,263,396]), function (require, exports, life
             var lastPageIndex = this.view.indexAt(this.view.getScrollTop() + this.view.renderHeight);
             lastPageIndex = lastPageIndex === 0 ? 0 : lastPageIndex - 1;
             var lastPageElement = this.view.element(lastPageIndex);
-            var currentlyFocusedElement = this.getFocus()[0];
+            var currentlyFocusedElement = this.getFocusedElements()[0];
             if (currentlyFocusedElement !== lastPageElement) {
                 this.setFocus(lastPageIndex);
             }
@@ -39772,7 +41037,7 @@ define(__m[264], __M([1,0,3,26,11,18,263,396]), function (require, exports, life
                 firstPageIndex = this.view.indexAfter(scrollTop - 1);
             }
             var firstPageElement = this.view.element(firstPageIndex);
-            var currentlyFocusedElement = this.getFocus()[0];
+            var currentlyFocusedElement = this.getFocusedElements()[0];
             if (currentlyFocusedElement !== firstPageElement) {
                 this.setFocus(firstPageIndex);
             }
@@ -39786,8 +41051,11 @@ define(__m[264], __M([1,0,3,26,11,18,263,396]), function (require, exports, life
             }
         };
         List.prototype.getFocus = function () {
+            return this.focus.get();
+        };
+        List.prototype.getFocusedElements = function () {
             var _this = this;
-            return this.focus.get().map(function (i) { return _this.view.element(i); });
+            return this.getFocus().map(function (i) { return _this.view.element(i); });
         };
         List.prototype.reveal = function (index, relativeTop) {
             var scrollTop = this.view.getScrollTop();
@@ -39835,7 +41103,7 @@ define(__m[264], __M([1,0,3,26,11,18,263,396]), function (require, exports, life
 
 
 
-define(__m[265], __M([1,0,17,27,2,3,11,403,71,10,38,54,292,97,87,42,205,291,13]), function (require, exports, Platform, Browser, WinJS, Lifecycle, DOM, Diff, Touch, strings, Mouse, Keyboard, dnd, iterator_1, scrollableElement_1, scrollableElementOptions_1, treeViewModel_1, _, keyCodes_1) {
+define(__m[267], __M([0,1,18,28,2,3,11,150,69,10,39,56,296,109,87,41,207,290,12]), function (require, exports, Platform, Browser, WinJS, Lifecycle, DOM, Diff, Touch, strings, Mouse, Keyboard, dnd, iterator_1, scrollableElement_1, scrollableElementOptions_1, treeViewModel_1, _, keyCodes_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -40807,7 +42075,7 @@ define(__m[265], __M([1,0,17,27,2,3,11,403,71,10,38,54,292,97,87,42,205,291,13])
                 }
                 var id = this.context.dataSource.getId(this.context.tree, element);
                 var viewItem = this.items[id];
-                var position = DOM.getDomNodePosition(viewItem.element);
+                var position = DOM.getDomNodePagePosition(viewItem.element);
                 resultEvent = new _.KeyboardContextMenuEvent(position.left + position.width, position.top, keyboardEvent);
             }
             else {
@@ -41144,7 +42412,7 @@ define(__m[265], __M([1,0,17,27,2,3,11,403,71,10,38,54,292,97,87,42,205,291,13])
     exports.TreeView = TreeView;
 });
 
-define(__m[148], __M([1,0,122,3,11]), function (require, exports, flags, lifecycle_1, dom) {
+define(__m[155], __M([0,1,256,3,118,11]), function (require, exports, flags, lifecycle_1, workerClient_1, dom) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -41159,13 +42427,16 @@ define(__m[148], __M([1,0,122,3,11]), function (require, exports, flags, lifecyc
      * its own global scope and its own thread.
      */
     var WebWorker = (function () {
-        function WebWorker(moduleId, id, label, onMessageCallback) {
+        function WebWorker(moduleId, id, label, onMessageCallback, onErrorCallback) {
             this.id = id;
             this.worker = new Worker(getWorkerUrl('workerMain.js', label));
             this.postMessage(moduleId);
             this.worker.onmessage = function (ev) {
                 onMessageCallback(ev.data);
             };
+            if (typeof this.worker.addEventListener === 'function') {
+                this.worker.addEventListener('error', onErrorCallback);
+            }
         }
         WebWorker.prototype.getId = function () {
             return this.id;
@@ -41238,14 +42509,38 @@ define(__m[148], __M([1,0,122,3,11]), function (require, exports, flags, lifecyc
         return FrameWorker;
     }());
     var DefaultWorkerFactory = (function () {
-        function DefaultWorkerFactory() {
+        function DefaultWorkerFactory(fallbackToIframe) {
+            this._fallbackToIframe = fallbackToIframe;
+            this._webWorkerFailedBeforeError = false;
         }
-        DefaultWorkerFactory.prototype.create = function (moduleId, onMessageCallback) {
+        DefaultWorkerFactory.prototype.create = function (moduleId, onMessageCallback, onErrorCallback) {
+            var _this = this;
             var workerId = (++DefaultWorkerFactory.LAST_WORKER_ID);
-            if (typeof WebWorker !== 'undefined') {
-                return new WebWorker(moduleId, workerId, 'service' + workerId, onMessageCallback);
+            if (this._fallbackToIframe) {
+                if (this._webWorkerFailedBeforeError) {
+                    // Avoid always trying to create web workers if they would just fail...
+                    return new FrameWorker(moduleId, workerId, onMessageCallback);
+                }
+                try {
+                    return new WebWorker(moduleId, workerId, 'service' + workerId, onMessageCallback, function (err) {
+                        workerClient_1.logOnceWebWorkerWarning(err);
+                        _this._webWorkerFailedBeforeError = err;
+                        onErrorCallback(err);
+                    });
+                }
+                catch (err) {
+                    workerClient_1.logOnceWebWorkerWarning(err);
+                    return new FrameWorker(moduleId, workerId, onMessageCallback);
+                }
             }
-            return new FrameWorker(moduleId, workerId, onMessageCallback);
+            if (this._webWorkerFailedBeforeError) {
+                throw this._webWorkerFailedBeforeError;
+            }
+            return new WebWorker(moduleId, workerId, 'service' + workerId, onMessageCallback, function (err) {
+                workerClient_1.logOnceWebWorkerWarning(err);
+                _this._webWorkerFailedBeforeError = err;
+                onErrorCallback(err);
+            });
         };
         DefaultWorkerFactory.LAST_WORKER_ID = 0;
         return DefaultWorkerFactory;
@@ -41253,12 +42548,709 @@ define(__m[148], __M([1,0,122,3,11]), function (require, exports, flags, lifecyc
     exports.DefaultWorkerFactory = DefaultWorkerFactory;
 });
 
+define(__m[269], __M([0,1,21,4,7,22,11]), function (require, exports, position_1, range_1, editorCommon_1, editorBrowser_1, dom) {
+    /*---------------------------------------------------------------------------------------------
+     *  Copyright (c) Microsoft Corporation. All rights reserved.
+     *  Licensed under the MIT License. See License.txt in the project root for license information.
+     *--------------------------------------------------------------------------------------------*/
+    'use strict';
+    var MouseTarget = (function () {
+        function MouseTarget(element, type, mouseColumn, position, range, detail) {
+            if (mouseColumn === void 0) { mouseColumn = 0; }
+            if (position === void 0) { position = null; }
+            if (range === void 0) { range = null; }
+            if (detail === void 0) { detail = null; }
+            this.element = element;
+            this.type = type;
+            this.mouseColumn = mouseColumn;
+            this.position = position;
+            if (!range && position) {
+                range = new range_1.Range(position.lineNumber, position.column, position.lineNumber, position.column);
+            }
+            this.range = range;
+            this.detail = detail;
+        }
+        MouseTarget.prototype._typeToString = function () {
+            if (this.type === editorCommon_1.MouseTargetType.TEXTAREA) {
+                return 'TEXTAREA';
+            }
+            if (this.type === editorCommon_1.MouseTargetType.GUTTER_GLYPH_MARGIN) {
+                return 'GUTTER_GLYPH_MARGIN';
+            }
+            if (this.type === editorCommon_1.MouseTargetType.GUTTER_LINE_NUMBERS) {
+                return 'GUTTER_LINE_NUMBERS';
+            }
+            if (this.type === editorCommon_1.MouseTargetType.GUTTER_LINE_DECORATIONS) {
+                return 'GUTTER_LINE_DECORATIONS';
+            }
+            if (this.type === editorCommon_1.MouseTargetType.GUTTER_VIEW_ZONE) {
+                return 'GUTTER_VIEW_ZONE';
+            }
+            if (this.type === editorCommon_1.MouseTargetType.CONTENT_TEXT) {
+                return 'CONTENT_TEXT';
+            }
+            if (this.type === editorCommon_1.MouseTargetType.CONTENT_EMPTY) {
+                return 'CONTENT_EMPTY';
+            }
+            if (this.type === editorCommon_1.MouseTargetType.CONTENT_VIEW_ZONE) {
+                return 'CONTENT_VIEW_ZONE';
+            }
+            if (this.type === editorCommon_1.MouseTargetType.CONTENT_WIDGET) {
+                return 'CONTENT_WIDGET';
+            }
+            if (this.type === editorCommon_1.MouseTargetType.OVERVIEW_RULER) {
+                return 'OVERVIEW_RULER';
+            }
+            if (this.type === editorCommon_1.MouseTargetType.SCROLLBAR) {
+                return 'SCROLLBAR';
+            }
+            if (this.type === editorCommon_1.MouseTargetType.OVERLAY_WIDGET) {
+                return 'OVERLAY_WIDGET';
+            }
+            return 'UNKNOWN';
+        };
+        MouseTarget.prototype.toString = function () {
+            return this._typeToString() + ': ' + this.position + ' - ' + this.range + ' - ' + this.detail;
+        };
+        return MouseTarget;
+    }());
+    // e.g. of paths:
+    // - overflow-guard/monaco-scrollable-element editor-scrollable vs/lines-content/view-lines/view-line
+    // - overflow-guard/monaco-scrollable-element editor-scrollable vs/lines-content/view-lines/view-line/token comment js
+    // etc.
+    var REGEX = (function () {
+        function nodeWithClass(className) {
+            return '[^/]*' + className + '[^/]*';
+        }
+        function anyNode() {
+            return '[^/]+';
+        }
+        var ANCHOR = '^' + editorBrowser_1.ClassNames.OVERFLOW_GUARD + '\\/';
+        function createRegExp() {
+            var pieces = [];
+            for (var _i = 0; _i < arguments.length; _i++) {
+                pieces[_i - 0] = arguments[_i];
+            }
+            var forceEndMatch = false;
+            if (pieces[pieces.length - 1] === '$') {
+                forceEndMatch = true;
+                pieces.pop();
+            }
+            return new RegExp(ANCHOR + pieces.join('\\/') + (forceEndMatch ? '$' : ''));
+        }
+        return {
+            IS_TEXTAREA_COVER: createRegExp(nodeWithClass(editorBrowser_1.ClassNames.TEXTAREA_COVER), '$'),
+            IS_TEXTAREA: createRegExp(editorBrowser_1.ClassNames.TEXTAREA, '$'),
+            IS_VIEW_LINES: createRegExp(anyNode(), anyNode(), editorBrowser_1.ClassNames.VIEW_LINES, '$'),
+            IS_CURSORS_LAYER: createRegExp(anyNode(), anyNode(), nodeWithClass(editorBrowser_1.ClassNames.VIEW_CURSORS_LAYER), '$'),
+            IS_CHILD_OF_VIEW_LINES: createRegExp(anyNode(), anyNode(), editorBrowser_1.ClassNames.VIEW_LINES),
+            IS_CHILD_OF_SCROLLABLE_ELEMENT: createRegExp(nodeWithClass(editorBrowser_1.ClassNames.SCROLLABLE_ELEMENT)),
+            IS_CHILD_OF_CONTENT_WIDGETS: createRegExp(anyNode(), anyNode(), editorBrowser_1.ClassNames.CONTENT_WIDGETS),
+            IS_CHILD_OF_OVERFLOWING_CONTENT_WIDGETS: new RegExp('^' + editorBrowser_1.ClassNames.OVERFLOWING_CONTENT_WIDGETS + '\\/'),
+            IS_CHILD_OF_OVERLAY_WIDGETS: createRegExp(editorBrowser_1.ClassNames.OVERLAY_WIDGETS),
+            IS_CHILD_OF_VIEW_OVERLAYS: createRegExp(editorBrowser_1.ClassNames.MARGIN_VIEW_OVERLAYS),
+            IS_CHILD_OF_VIEW_ZONES: createRegExp(anyNode(), anyNode(), editorBrowser_1.ClassNames.VIEW_ZONES),
+        };
+    })();
+    var MouseTargetFactory = (function () {
+        function MouseTargetFactory(context, viewHelper) {
+            this._context = context;
+            this._viewHelper = viewHelper;
+        }
+        MouseTargetFactory.prototype.getClassNamePathTo = function (child, stopAt) {
+            var path = [], className;
+            while (child && child !== document.body) {
+                if (child === stopAt) {
+                    break;
+                }
+                if (child.nodeType === child.ELEMENT_NODE) {
+                    className = child.className;
+                    if (className) {
+                        path.unshift(className);
+                    }
+                }
+                child = child.parentNode;
+            }
+            return path.join('/');
+        };
+        MouseTargetFactory.prototype.mouseTargetIsWidget = function (e) {
+            var t = e.target;
+            var path = this.getClassNamePathTo(t, this._viewHelper.viewDomNode);
+            // Is it a content widget?
+            if (REGEX.IS_CHILD_OF_CONTENT_WIDGETS.test(path) || REGEX.IS_CHILD_OF_OVERFLOWING_CONTENT_WIDGETS.test(path)) {
+                return true;
+            }
+            // Is it an overlay widget?
+            if (REGEX.IS_CHILD_OF_OVERLAY_WIDGETS.test(path)) {
+                return true;
+            }
+            return false;
+        };
+        MouseTargetFactory.prototype.createMouseTarget = function (layoutInfo, e, testEventTarget) {
+            try {
+                var r = this._unsafeCreateMouseTarget(layoutInfo, e, testEventTarget);
+                return r;
+            }
+            catch (e) {
+                return this.createMouseTargetFromUnknownTarget(e.target);
+            }
+        };
+        MouseTargetFactory.prototype._unsafeCreateMouseTarget = function (layoutInfo, e, testEventTarget) {
+            var mouseVerticalOffset = Math.max(0, this._viewHelper.getScrollTop() + (e.posy - e.editorPos.top));
+            var mouseContentHorizontalOffset = this._viewHelper.getScrollLeft() + (e.posx - e.editorPos.left) - layoutInfo.contentLeft;
+            var mouseColumn = this._getMouseColumn(mouseContentHorizontalOffset);
+            var t = e.target;
+            var path = this.getClassNamePathTo(t, this._viewHelper.viewDomNode);
+            // Is it a content widget?
+            if (REGEX.IS_CHILD_OF_CONTENT_WIDGETS.test(path) || REGEX.IS_CHILD_OF_OVERFLOWING_CONTENT_WIDGETS.test(path)) {
+                return this.createMouseTargetFromContentWidgetsChild(t, mouseColumn);
+            }
+            // Is it an overlay widget?
+            if (REGEX.IS_CHILD_OF_OVERLAY_WIDGETS.test(path)) {
+                return this.createMouseTargetFromOverlayWidgetsChild(t, mouseColumn);
+            }
+            // Is it a cursor ?
+            var lineNumberAttribute = t.hasAttribute && t.hasAttribute('lineNumber') ? t.getAttribute('lineNumber') : null;
+            var columnAttribute = t.hasAttribute && t.hasAttribute('column') ? t.getAttribute('column') : null;
+            if (lineNumberAttribute && columnAttribute) {
+                return this.createMouseTargetFromViewCursor(t, parseInt(lineNumberAttribute, 10), parseInt(columnAttribute, 10), mouseColumn);
+            }
+            // Is it the textarea cover?
+            if (REGEX.IS_TEXTAREA_COVER.test(path)) {
+                if (this._context.configuration.editor.viewInfo.glyphMargin) {
+                    return this.createMouseTargetFromGlyphMargin(t, mouseVerticalOffset, mouseColumn);
+                }
+                else if (this._context.configuration.editor.viewInfo.lineNumbers) {
+                    return this.createMouseTargetFromLineNumbers(t, mouseVerticalOffset, mouseColumn);
+                }
+                else {
+                    return this.createMouseTargetFromLinesDecorationsChild(t, mouseVerticalOffset, mouseColumn);
+                }
+            }
+            // Is it the textarea?
+            if (REGEX.IS_TEXTAREA.test(path)) {
+                return new MouseTarget(t, editorCommon_1.MouseTargetType.TEXTAREA);
+            }
+            // Is it a view zone?
+            if (REGEX.IS_CHILD_OF_VIEW_ZONES.test(path)) {
+                // Check if it is at a view zone
+                var viewZoneData = this._getZoneAtCoord(mouseVerticalOffset);
+                if (viewZoneData) {
+                    return new MouseTarget(t, editorCommon_1.MouseTargetType.CONTENT_VIEW_ZONE, mouseColumn, viewZoneData.position, null, viewZoneData);
+                }
+                return this.createMouseTargetFromUnknownTarget(t);
+            }
+            // Is it the view lines container?
+            if (REGEX.IS_VIEW_LINES.test(path)) {
+                // Sometimes, IE returns this target when right clicking on top of text
+                // -> See Bug #12990: [F12] Context menu shows incorrect position while doing a resize
+                // Check if it is below any lines and any view zones
+                if (this._viewHelper.isAfterLines(mouseVerticalOffset)) {
+                    return this.createMouseTargetFromViewLines(t, mouseVerticalOffset, mouseColumn);
+                }
+                // Check if it is at a view zone
+                var viewZoneData = this._getZoneAtCoord(mouseVerticalOffset);
+                if (viewZoneData) {
+                    return new MouseTarget(t, editorCommon_1.MouseTargetType.CONTENT_VIEW_ZONE, mouseColumn, viewZoneData.position, null, viewZoneData);
+                }
+                // Check if it hits a position
+                var hitTestResult = this._doHitTest(e, mouseVerticalOffset);
+                if (hitTestResult.position) {
+                    return this.createMouseTargetFromHitTestPosition(t, hitTestResult.position.lineNumber, hitTestResult.position.column, mouseContentHorizontalOffset, mouseColumn);
+                }
+                // Fall back to view lines
+                return this.createMouseTargetFromViewLines(t, mouseVerticalOffset, mouseColumn);
+            }
+            // Is it a child of the view lines container?
+            if (!testEventTarget || REGEX.IS_CHILD_OF_VIEW_LINES.test(path)) {
+                var hitTestResult = this._doHitTest(e, mouseVerticalOffset);
+                if (hitTestResult.position) {
+                    return this.createMouseTargetFromHitTestPosition(t, hitTestResult.position.lineNumber, hitTestResult.position.column, mouseContentHorizontalOffset, mouseColumn);
+                }
+                else if (hitTestResult.hitTarget) {
+                    t = hitTestResult.hitTarget;
+                    path = this.getClassNamePathTo(t, this._viewHelper.viewDomNode);
+                    // TODO@Alex: try again with this different target, but guard against recursion.
+                    // Is it a cursor ?
+                    var lineNumberAttribute_1 = t.hasAttribute && t.hasAttribute('lineNumber') ? t.getAttribute('lineNumber') : null;
+                    var columnAttribute_1 = t.hasAttribute && t.hasAttribute('column') ? t.getAttribute('column') : null;
+                    if (lineNumberAttribute_1 && columnAttribute_1) {
+                        return this.createMouseTargetFromViewCursor(t, parseInt(lineNumberAttribute_1, 10), parseInt(columnAttribute_1, 10), mouseColumn);
+                    }
+                }
+            }
+            // Is it the cursors layer?
+            if (REGEX.IS_CURSORS_LAYER.test(path)) {
+                return new MouseTarget(t, editorCommon_1.MouseTargetType.UNKNOWN);
+            }
+            // Is it a child of the scrollable element?
+            if (REGEX.IS_CHILD_OF_SCROLLABLE_ELEMENT.test(path)) {
+                return this.createMouseTargetFromScrollbar(t, mouseVerticalOffset, mouseColumn);
+            }
+            if (REGEX.IS_CHILD_OF_VIEW_OVERLAYS.test(path)) {
+                var offset = Math.abs(e.posx - e.editorPos.left);
+                if (offset <= layoutInfo.glyphMarginWidth) {
+                    // On the glyph margin
+                    return this.createMouseTargetFromGlyphMargin(t, mouseVerticalOffset, mouseColumn);
+                }
+                offset -= layoutInfo.glyphMarginWidth;
+                if (offset <= layoutInfo.lineNumbersWidth) {
+                    // On the line numbers
+                    return this.createMouseTargetFromLineNumbers(t, mouseVerticalOffset, mouseColumn);
+                }
+                offset -= layoutInfo.lineNumbersWidth;
+                // On the line decorations
+                return this.createMouseTargetFromLinesDecorationsChild(t, mouseVerticalOffset, mouseColumn);
+            }
+            if (/OverviewRuler/i.test(path)) {
+                return this.createMouseTargetFromScrollbar(t, mouseVerticalOffset, mouseColumn);
+            }
+            return this.createMouseTargetFromUnknownTarget(t);
+        };
+        MouseTargetFactory.prototype._isChild = function (testChild, testAncestor, stopAt) {
+            while (testChild && testChild !== document.body) {
+                if (testChild === testAncestor) {
+                    return true;
+                }
+                if (testChild === stopAt) {
+                    return false;
+                }
+                testChild = testChild.parentNode;
+            }
+            return false;
+        };
+        MouseTargetFactory.prototype._findAttribute = function (element, attr, stopAt) {
+            while (element && element !== document.body) {
+                if (element.hasAttribute && element.hasAttribute(attr)) {
+                    return element.getAttribute(attr);
+                }
+                if (element === stopAt) {
+                    return null;
+                }
+                element = element.parentNode;
+            }
+            return null;
+        };
+        /**
+         * Most probably WebKit browsers
+         */
+        MouseTargetFactory.prototype._doHitTestWithCaretRangeFromPoint = function (e, mouseVerticalOffset) {
+            // In Chrome, especially on Linux it is possible to click between lines,
+            // so try to adjust the `hity` below so that it lands in the center of a line
+            var lineNumber = this._viewHelper.getLineNumberAtVerticalOffset(mouseVerticalOffset);
+            var lineVerticalOffset = this._viewHelper.getVerticalOffsetForLineNumber(lineNumber);
+            var centeredVerticalOffset = lineVerticalOffset + Math.floor(this._context.configuration.editor.lineHeight / 2);
+            var adjustedPosy = e.posy + (centeredVerticalOffset - mouseVerticalOffset);
+            if (adjustedPosy <= e.editorPos.top) {
+                adjustedPosy = e.editorPos.top + 1;
+            }
+            if (adjustedPosy >= e.editorPos.top + this._context.configuration.editor.layoutInfo.height) {
+                adjustedPosy = e.editorPos.top + this._context.configuration.editor.layoutInfo.height - 1;
+            }
+            var r = this._actualDoHitTestWithCaretRangeFromPoint(e.viewportx, adjustedPosy - dom.StandardWindow.scrollY);
+            if (r.position) {
+                return r;
+            }
+            // Also try to hit test without the adjustment (for the edge cases that we are near the top or bottom)
+            return this._actualDoHitTestWithCaretRangeFromPoint(e.viewportx, e.viewporty);
+        };
+        MouseTargetFactory.prototype._actualDoHitTestWithCaretRangeFromPoint = function (hitx, hity) {
+            var range = document.caretRangeFromPoint(hitx, hity);
+            if (!range || !range.startContainer) {
+                return {
+                    position: null,
+                    hitTarget: null
+                };
+            }
+            // Chrome always hits a TEXT_NODE, while Edge sometimes hits a token span
+            var startContainer = range.startContainer;
+            var hitTarget;
+            if (startContainer.nodeType === startContainer.TEXT_NODE) {
+                // startContainer is expected to be the token text
+                var parent1 = startContainer.parentNode; // expected to be the token span
+                var parent2 = parent1 ? parent1.parentNode : null; // expected to be the view line container span
+                var parent3 = parent2 ? parent2.parentNode : null; // expected to be the view line div
+                var parent3ClassName = parent3 && parent3.nodeType === parent3.ELEMENT_NODE ? parent3.className : null;
+                if (parent3ClassName === editorBrowser_1.ClassNames.VIEW_LINE) {
+                    return {
+                        position: this._viewHelper.getPositionFromDOMInfo(parent1, range.startOffset),
+                        hitTarget: null
+                    };
+                }
+                else {
+                    hitTarget = startContainer.parentNode;
+                }
+            }
+            else if (startContainer.nodeType === startContainer.ELEMENT_NODE) {
+                // startContainer is expected to be the token span
+                var parent1 = startContainer.parentNode; // expected to be the view line container span
+                var parent2 = parent1 ? parent1.parentNode : null; // expected to be the view line div
+                var parent2ClassName = parent2 && parent2.nodeType === parent2.ELEMENT_NODE ? parent2.className : null;
+                if (parent2ClassName === editorBrowser_1.ClassNames.VIEW_LINE) {
+                    return {
+                        position: this._viewHelper.getPositionFromDOMInfo(startContainer, startContainer.textContent.length),
+                        hitTarget: null
+                    };
+                }
+                else {
+                    hitTarget = startContainer;
+                }
+            }
+            return {
+                position: null,
+                hitTarget: hitTarget
+            };
+        };
+        /**
+         * Most probably Gecko
+         */
+        MouseTargetFactory.prototype._doHitTestWithCaretPositionFromPoint = function (e) {
+            var hitResult = document.caretPositionFromPoint(e.viewportx, e.viewporty);
+            var range = document.createRange();
+            range.setStart(hitResult.offsetNode, hitResult.offset);
+            range.collapse(true);
+            var resultPosition = this._viewHelper.getPositionFromDOMInfo(range.startContainer.parentNode, range.startOffset);
+            range.detach();
+            return {
+                position: resultPosition,
+                hitTarget: null
+            };
+        };
+        /**
+         * Most probably IE
+         */
+        MouseTargetFactory.prototype._doHitTestWithMoveToPoint = function (e) {
+            var resultPosition = null;
+            var resultHitTarget = null;
+            var textRange = document.body.createTextRange();
+            try {
+                textRange.moveToPoint(e.viewportx, e.viewporty);
+            }
+            catch (err) {
+                return {
+                    position: null,
+                    hitTarget: null
+                };
+            }
+            textRange.collapse(true);
+            // Now, let's do our best to figure out what we hit :)
+            var parentElement = textRange ? textRange.parentElement() : null;
+            var parent1 = parentElement ? parentElement.parentNode : null;
+            var parent2 = parent1 ? parent1.parentNode : null;
+            var parent2ClassName = parent2 && parent2.nodeType === parent2.ELEMENT_NODE ? parent2.className : '';
+            if (parent2ClassName === editorBrowser_1.ClassNames.VIEW_LINE) {
+                var rangeToContainEntireSpan = textRange.duplicate();
+                rangeToContainEntireSpan.moveToElementText(parentElement);
+                rangeToContainEntireSpan.setEndPoint('EndToStart', textRange);
+                resultPosition = this._viewHelper.getPositionFromDOMInfo(parentElement, rangeToContainEntireSpan.text.length);
+                // Move range out of the span node, IE doesn't like having many ranges in
+                // the same spot and will act badly for lines containing dashes ('-')
+                rangeToContainEntireSpan.moveToElementText(this._viewHelper.viewDomNode);
+            }
+            else {
+                // Looks like we've hit the hover or something foreign
+                resultHitTarget = parentElement;
+            }
+            // Move range out of the span node, IE doesn't like having many ranges in
+            // the same spot and will act badly for lines containing dashes ('-')
+            textRange.moveToElementText(this._viewHelper.viewDomNode);
+            return {
+                position: resultPosition,
+                hitTarget: resultHitTarget
+            };
+        };
+        MouseTargetFactory.prototype._doHitTest = function (e, mouseVerticalOffset) {
+            // State of the art (18.10.2012):
+            // The spec says browsers should support document.caretPositionFromPoint, but nobody implemented it (http://dev.w3.org/csswg/cssom-view/)
+            // Gecko:
+            //    - they tried to implement it once, but failed: https://bugzilla.mozilla.org/show_bug.cgi?id=654352
+            //    - however, they do give out rangeParent/rangeOffset properties on mouse events
+            // Webkit:
+            //    - they have implemented a previous version of the spec which was using document.caretRangeFromPoint
+            // IE:
+            //    - they have a proprietary method on ranges, moveToPoint: https://msdn.microsoft.com/en-us/library/ie/ms536632(v=vs.85).aspx
+            // Thank you browsers for making this so 'easy' :)
+            if (document.caretRangeFromPoint) {
+                return this._doHitTestWithCaretRangeFromPoint(e, mouseVerticalOffset);
+            }
+            else if (document.caretPositionFromPoint) {
+                return this._doHitTestWithCaretPositionFromPoint(e);
+            }
+            else if (document.body.createTextRange) {
+                return this._doHitTestWithMoveToPoint(e);
+            }
+            return {
+                position: null,
+                hitTarget: null
+            };
+        };
+        MouseTargetFactory.prototype._getZoneAtCoord = function (mouseVerticalOffset) {
+            // The target is either a view zone or the empty space after the last view-line
+            var viewZoneWhitespace = this._viewHelper.getWhitespaceAtVerticalOffset(mouseVerticalOffset);
+            if (viewZoneWhitespace) {
+                var viewZoneMiddle = viewZoneWhitespace.verticalOffset + viewZoneWhitespace.height / 2, lineCount = this._context.model.getLineCount(), positionBefore = null, position = void 0, positionAfter = null;
+                if (viewZoneWhitespace.afterLineNumber !== lineCount) {
+                    // There are more lines after this view zone
+                    positionAfter = new position_1.Position(viewZoneWhitespace.afterLineNumber + 1, 1);
+                }
+                if (viewZoneWhitespace.afterLineNumber > 0) {
+                    // There are more lines above this view zone
+                    positionBefore = new position_1.Position(viewZoneWhitespace.afterLineNumber, this._context.model.getLineMaxColumn(viewZoneWhitespace.afterLineNumber));
+                }
+                if (positionAfter === null) {
+                    position = positionBefore;
+                }
+                else if (positionBefore === null) {
+                    position = positionAfter;
+                }
+                else if (mouseVerticalOffset < viewZoneMiddle) {
+                    position = positionBefore;
+                }
+                else {
+                    position = positionAfter;
+                }
+                return {
+                    viewZoneId: viewZoneWhitespace.id,
+                    afterLineNumber: viewZoneWhitespace.afterLineNumber,
+                    positionBefore: positionBefore,
+                    positionAfter: positionAfter,
+                    position: position
+                };
+            }
+            return null;
+        };
+        MouseTargetFactory.prototype._getFullLineRangeAtCoord = function (mouseVerticalOffset) {
+            if (this._viewHelper.isAfterLines(mouseVerticalOffset)) {
+                // Below the last line
+                var lineNumber_1 = this._context.model.getLineCount();
+                var maxLineColumn_1 = this._context.model.getLineMaxColumn(lineNumber_1);
+                return {
+                    range: new range_1.Range(lineNumber_1, maxLineColumn_1, lineNumber_1, maxLineColumn_1),
+                    isAfterLines: true
+                };
+            }
+            var lineNumber = this._viewHelper.getLineNumberAtVerticalOffset(mouseVerticalOffset);
+            var maxLineColumn = this._context.model.getLineMaxColumn(lineNumber);
+            return {
+                range: new range_1.Range(lineNumber, 1, lineNumber, maxLineColumn),
+                isAfterLines: false
+            };
+        };
+        MouseTargetFactory.prototype.getMouseColumn = function (layoutInfo, e) {
+            var mouseContentHorizontalOffset = this._viewHelper.getScrollLeft() + (e.posx - e.editorPos.left) - layoutInfo.contentLeft;
+            return this._getMouseColumn(mouseContentHorizontalOffset);
+        };
+        MouseTargetFactory.prototype._getMouseColumn = function (mouseContentHorizontalOffset) {
+            if (mouseContentHorizontalOffset < 0) {
+                return 1;
+            }
+            var charWidth = this._context.configuration.editor.fontInfo.typicalHalfwidthCharacterWidth;
+            var chars = Math.round(mouseContentHorizontalOffset / charWidth);
+            return (chars + 1);
+        };
+        MouseTargetFactory.prototype.createMouseTargetFromViewCursor = function (target, lineNumber, column, mouseColumn) {
+            return new MouseTarget(target, editorCommon_1.MouseTargetType.CONTENT_TEXT, mouseColumn, new position_1.Position(lineNumber, column));
+        };
+        MouseTargetFactory.prototype.createMouseTargetFromViewLines = function (target, mouseVerticalOffset, mouseColumn) {
+            // This most likely indicates it happened after the last view-line
+            var lineCount = this._context.model.getLineCount();
+            var maxLineColumn = this._context.model.getLineMaxColumn(lineCount);
+            return new MouseTarget(target, editorCommon_1.MouseTargetType.CONTENT_EMPTY, mouseColumn, new position_1.Position(lineCount, maxLineColumn));
+        };
+        MouseTargetFactory.prototype.createMouseTargetFromHitTestPosition = function (target, lineNumber, column, mouseHorizontalOffset, mouseColumn) {
+            var pos = new position_1.Position(lineNumber, column);
+            var lineWidth = this._viewHelper.getLineWidth(lineNumber);
+            if (mouseHorizontalOffset > lineWidth) {
+                return new MouseTarget(target, editorCommon_1.MouseTargetType.CONTENT_EMPTY, mouseColumn, pos);
+            }
+            var visibleRange = this._viewHelper.visibleRangeForPosition2(lineNumber, column);
+            if (!visibleRange) {
+                return new MouseTarget(target, editorCommon_1.MouseTargetType.UNKNOWN, mouseColumn, pos);
+            }
+            var columnHorizontalOffset = visibleRange.left;
+            if (mouseHorizontalOffset === columnHorizontalOffset) {
+                return new MouseTarget(target, editorCommon_1.MouseTargetType.CONTENT_TEXT, mouseColumn, pos);
+            }
+            var mouseIsBetween;
+            if (column > 1) {
+                var prevColumnHorizontalOffset = visibleRange.left;
+                mouseIsBetween = false;
+                mouseIsBetween = mouseIsBetween || (prevColumnHorizontalOffset < mouseHorizontalOffset && mouseHorizontalOffset < columnHorizontalOffset); // LTR case
+                mouseIsBetween = mouseIsBetween || (columnHorizontalOffset < mouseHorizontalOffset && mouseHorizontalOffset < prevColumnHorizontalOffset); // RTL case
+                if (mouseIsBetween) {
+                    var rng = new range_1.Range(lineNumber, column, lineNumber, column - 1);
+                    return new MouseTarget(target, editorCommon_1.MouseTargetType.CONTENT_TEXT, mouseColumn, pos, rng);
+                }
+            }
+            var lineMaxColumn = this._context.model.getLineMaxColumn(lineNumber);
+            if (column < lineMaxColumn) {
+                var nextColumnVisibleRange = this._viewHelper.visibleRangeForPosition2(lineNumber, column + 1);
+                if (nextColumnVisibleRange) {
+                    var nextColumnHorizontalOffset = nextColumnVisibleRange.left;
+                    mouseIsBetween = false;
+                    mouseIsBetween = mouseIsBetween || (columnHorizontalOffset < mouseHorizontalOffset && mouseHorizontalOffset < nextColumnHorizontalOffset); // LTR case
+                    mouseIsBetween = mouseIsBetween || (nextColumnHorizontalOffset < mouseHorizontalOffset && mouseHorizontalOffset < columnHorizontalOffset); // RTL case
+                    if (mouseIsBetween) {
+                        var rng = new range_1.Range(lineNumber, column, lineNumber, column + 1);
+                        return new MouseTarget(target, editorCommon_1.MouseTargetType.CONTENT_TEXT, mouseColumn, pos, rng);
+                    }
+                }
+            }
+            return new MouseTarget(target, editorCommon_1.MouseTargetType.CONTENT_TEXT, mouseColumn, pos);
+        };
+        MouseTargetFactory.prototype.createMouseTargetFromContentWidgetsChild = function (target, mouseColumn) {
+            var widgetId = this._findAttribute(target, 'widgetId', this._viewHelper.viewDomNode);
+            if (widgetId) {
+                return new MouseTarget(target, editorCommon_1.MouseTargetType.CONTENT_WIDGET, mouseColumn, null, null, widgetId);
+            }
+            else {
+                return new MouseTarget(target, editorCommon_1.MouseTargetType.UNKNOWN);
+            }
+        };
+        MouseTargetFactory.prototype.createMouseTargetFromOverlayWidgetsChild = function (target, mouseColumn) {
+            var widgetId = this._findAttribute(target, 'widgetId', this._viewHelper.viewDomNode);
+            if (widgetId) {
+                return new MouseTarget(target, editorCommon_1.MouseTargetType.OVERLAY_WIDGET, mouseColumn, null, null, widgetId);
+            }
+            else {
+                return new MouseTarget(target, editorCommon_1.MouseTargetType.UNKNOWN);
+            }
+        };
+        MouseTargetFactory.prototype.createMouseTargetFromLinesDecorationsChild = function (target, mouseVerticalOffset, mouseColumn) {
+            var viewZoneData = this._getZoneAtCoord(mouseVerticalOffset);
+            if (viewZoneData) {
+                return new MouseTarget(target, editorCommon_1.MouseTargetType.GUTTER_VIEW_ZONE, mouseColumn, viewZoneData.position, null, viewZoneData);
+            }
+            var res = this._getFullLineRangeAtCoord(mouseVerticalOffset);
+            return new MouseTarget(target, editorCommon_1.MouseTargetType.GUTTER_LINE_DECORATIONS, mouseColumn, new position_1.Position(res.range.startLineNumber, res.range.startColumn), res.range, res.isAfterLines);
+        };
+        MouseTargetFactory.prototype.createMouseTargetFromLineNumbers = function (target, mouseVerticalOffset, mouseColumn) {
+            var viewZoneData = this._getZoneAtCoord(mouseVerticalOffset);
+            if (viewZoneData) {
+                return new MouseTarget(target, editorCommon_1.MouseTargetType.GUTTER_VIEW_ZONE, mouseColumn, viewZoneData.position, null, viewZoneData);
+            }
+            var res = this._getFullLineRangeAtCoord(mouseVerticalOffset);
+            return new MouseTarget(target, editorCommon_1.MouseTargetType.GUTTER_LINE_NUMBERS, mouseColumn, new position_1.Position(res.range.startLineNumber, res.range.startColumn), res.range, res.isAfterLines);
+        };
+        MouseTargetFactory.prototype.createMouseTargetFromGlyphMargin = function (target, mouseVerticalOffset, mouseColumn) {
+            var viewZoneData = this._getZoneAtCoord(mouseVerticalOffset);
+            if (viewZoneData) {
+                return new MouseTarget(target, editorCommon_1.MouseTargetType.GUTTER_VIEW_ZONE, mouseColumn, viewZoneData.position, null, viewZoneData);
+            }
+            var res = this._getFullLineRangeAtCoord(mouseVerticalOffset);
+            return new MouseTarget(target, editorCommon_1.MouseTargetType.GUTTER_GLYPH_MARGIN, mouseColumn, new position_1.Position(res.range.startLineNumber, res.range.startColumn), res.range, res.isAfterLines);
+        };
+        MouseTargetFactory.prototype.createMouseTargetFromScrollbar = function (target, mouseVerticalOffset, mouseColumn) {
+            var possibleLineNumber = this._viewHelper.getLineNumberAtVerticalOffset(mouseVerticalOffset);
+            var maxColumn = this._context.model.getLineMaxColumn(possibleLineNumber);
+            return new MouseTarget(target, editorCommon_1.MouseTargetType.SCROLLBAR, mouseColumn, new position_1.Position(possibleLineNumber, maxColumn));
+        };
+        MouseTargetFactory.prototype.createMouseTargetFromUnknownTarget = function (target) {
+            var isInView = this._isChild(target, this._viewHelper.viewDomNode, this._viewHelper.viewDomNode);
+            var widgetId = null;
+            if (isInView) {
+                widgetId = this._findAttribute(target, 'widgetId', this._viewHelper.viewDomNode);
+            }
+            if (widgetId) {
+                return new MouseTarget(target, editorCommon_1.MouseTargetType.OVERLAY_WIDGET, null, null, widgetId);
+            }
+            else {
+                return new MouseTarget(target, editorCommon_1.MouseTargetType.UNKNOWN);
+            }
+        };
+        return MouseTargetFactory;
+    }());
+    exports.MouseTargetFactory = MouseTargetFactory;
+});
 
 
 
 
 
-define(__m[267], __M([1,0,3,17,27,11,94,38,20,24,7,52,293,14]), function (require, exports, lifecycle_1, platform, browser, dom, globalMouseMoveMonitor_1, mouseEvent_1, position_1, selection_1, editorCommon, viewEventHandler_1, mouseTarget_1, async_1) {
+
+define(__m[156], __M([0,1,3,39,11,112]), function (require, exports, lifecycle_1, mouseEvent_1, dom, globalMouseMoveMonitor_1) {
+    /*---------------------------------------------------------------------------------------------
+     *  Copyright (c) Microsoft Corporation. All rights reserved.
+     *  Licensed under the MIT License. See License.txt in the project root for license information.
+     *--------------------------------------------------------------------------------------------*/
+    'use strict';
+    var EditorMouseEvent = (function (_super) {
+        __extends(EditorMouseEvent, _super);
+        function EditorMouseEvent(e, editorViewDomNode) {
+            _super.call(this, e);
+            this.editorPos = dom.getDomNodePagePosition(editorViewDomNode);
+            this.viewportx = this.posx - dom.StandardWindow.scrollX;
+            this.viewporty = this.posy - dom.StandardWindow.scrollY;
+        }
+        return EditorMouseEvent;
+    }(mouseEvent_1.StandardMouseEvent));
+    exports.EditorMouseEvent = EditorMouseEvent;
+    var EditorMouseEventFactory = (function () {
+        function EditorMouseEventFactory(editorViewDomNode) {
+            this._editorViewDomNode = editorViewDomNode;
+        }
+        EditorMouseEventFactory.prototype._create = function (e) {
+            return new EditorMouseEvent(e, this._editorViewDomNode);
+        };
+        EditorMouseEventFactory.prototype.onContextMenu = function (target, callback) {
+            var _this = this;
+            return dom.addDisposableListener(target, 'contextmenu', function (e) {
+                callback(_this._create(e));
+            });
+        };
+        EditorMouseEventFactory.prototype.onMouseUp = function (target, callback) {
+            var _this = this;
+            return dom.addDisposableListener(target, 'mouseup', function (e) {
+                callback(_this._create(e));
+            });
+        };
+        EditorMouseEventFactory.prototype.onMouseDown = function (target, callback) {
+            var _this = this;
+            return dom.addDisposableListener(target, 'mousedown', function (e) {
+                callback(_this._create(e));
+            });
+        };
+        EditorMouseEventFactory.prototype.onMouseLeave = function (target, callback) {
+            var _this = this;
+            return dom.addDisposableNonBubblingMouseOutListener(target, function (e) {
+                callback(_this._create(e));
+            });
+        };
+        EditorMouseEventFactory.prototype.onMouseMoveThrottled = function (target, callback, merger, minimumTimeMs) {
+            var _this = this;
+            var myMerger = function (lastEvent, currentEvent) {
+                return merger(lastEvent, _this._create(currentEvent));
+            };
+            return dom.addDisposableThrottledListener(target, 'mousemove', callback, myMerger, minimumTimeMs);
+        };
+        return EditorMouseEventFactory;
+    }());
+    exports.EditorMouseEventFactory = EditorMouseEventFactory;
+    var GlobalEditorMouseMoveMonitor = (function (_super) {
+        __extends(GlobalEditorMouseMoveMonitor, _super);
+        function GlobalEditorMouseMoveMonitor(editorViewDomNode) {
+            _super.call(this);
+            this._editorViewDomNode = editorViewDomNode;
+            this._globalMouseMoveMonitor = this._register(new globalMouseMoveMonitor_1.GlobalMouseMoveMonitor());
+        }
+        GlobalEditorMouseMoveMonitor.prototype.startMonitoring = function (merger, mouseMoveCallback, onStopCallback) {
+            var _this = this;
+            var myMerger = function (lastEvent, currentEvent) {
+                return merger(lastEvent, new EditorMouseEvent(currentEvent, _this._editorViewDomNode));
+            };
+            this._globalMouseMoveMonitor.startMonitoring(myMerger, mouseMoveCallback, onStopCallback);
+        };
+        return GlobalEditorMouseMoveMonitor;
+    }(lifecycle_1.Disposable));
+    exports.GlobalEditorMouseMoveMonitor = GlobalEditorMouseMoveMonitor;
+});
+
+
+
+
+
+
+define(__m[271], __M([0,1,3,18,28,21,24,7,53,269,14,156]), function (require, exports, lifecycle_1, platform, browser, position_1, selection_1, editorCommon, viewEventHandler_1, mouseTarget_1, async_1, editorDom_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -41269,15 +43261,14 @@ define(__m[267], __M([1,0,3,17,27,11,94,38,20,24,7,52,293,14]), function (requir
      */
     function createMouseMoveEventMerger(mouseTargetFactory) {
         return function (lastEvent, currentEvent) {
-            var r = new mouseEvent_1.StandardMouseEvent(currentEvent);
             var targetIsWidget = false;
             if (mouseTargetFactory) {
-                targetIsWidget = mouseTargetFactory.mouseTargetIsWidget(r);
+                targetIsWidget = mouseTargetFactory.mouseTargetIsWidget(currentEvent);
             }
             if (!targetIsWidget) {
-                r.preventDefault();
+                currentEvent.preventDefault();
             }
-            return r;
+            return currentEvent;
         };
     }
     var EventGateKeeper = (function (_super) {
@@ -41332,13 +43323,14 @@ define(__m[267], __M([1,0,3,17,27,11,94,38,20,24,7,52,293,14]), function (requir
             this._mouseDownOperation = new MouseDownOperation(this._context, this.viewController, this.viewHelper, function (e, testEventTarget) { return _this._createMouseTarget(e, testEventTarget); }, function (e) { return _this._getMouseColumn(e); });
             this.toDispose = [];
             this.lastMouseLeaveTime = -1;
-            this.listenersToRemove.push(dom.addDisposableListener(this.viewHelper.viewDomNode, 'contextmenu', function (e) { return _this._onContextMenu(e, true); }));
+            var mouseEvents = new editorDom_1.EditorMouseEventFactory(this.viewHelper.viewDomNode);
+            this.listenersToRemove.push(mouseEvents.onContextMenu(this.viewHelper.viewDomNode, function (e) { return _this._onContextMenu(e, true); }));
             this._mouseMoveEventHandler = new EventGateKeeper(function (e) { return _this._onMouseMove(e); }, function () { return !_this.viewHelper.isDirty(); });
             this.toDispose.push(this._mouseMoveEventHandler);
-            this.listenersToRemove.push(dom.addDisposableThrottledListener(this.viewHelper.viewDomNode, 'mousemove', this._mouseMoveEventHandler.handler, createMouseMoveEventMerger(this.mouseTargetFactory), MouseHandler.MOUSE_MOVE_MINIMUM_TIME));
-            this.listenersToRemove.push(dom.addDisposableListener(this.viewHelper.viewDomNode, 'mouseup', function (e) { return _this._onMouseUp(e); }));
-            this.listenersToRemove.push(dom.addDisposableNonBubblingMouseOutListener(this.viewHelper.viewDomNode, function (e) { return _this._onMouseLeave(e); }));
-            this.listenersToRemove.push(dom.addDisposableListener(this.viewHelper.viewDomNode, 'mousedown', function (e) { return _this._onMouseDown(e); }));
+            this.listenersToRemove.push(mouseEvents.onMouseMoveThrottled(this.viewHelper.viewDomNode, this._mouseMoveEventHandler.handler, createMouseMoveEventMerger(this.mouseTargetFactory), MouseHandler.MOUSE_MOVE_MINIMUM_TIME));
+            this.listenersToRemove.push(mouseEvents.onMouseUp(this.viewHelper.viewDomNode, function (e) { return _this._onMouseUp(e); }));
+            this.listenersToRemove.push(mouseEvents.onMouseLeave(this.viewHelper.viewDomNode, function (e) { return _this._onMouseLeave(e); }));
+            this.listenersToRemove.push(mouseEvents.onMouseDown(this.viewHelper.viewDomNode, function (e) { return _this._onMouseDown(e); }));
             this._context.addEventHandler(this);
         }
         MouseHandler.prototype.dispose = function () {
@@ -41361,21 +43353,16 @@ define(__m[267], __M([1,0,3,17,27,11,94,38,20,24,7,52,293,14]), function (requir
         };
         // --- end event handlers
         MouseHandler.prototype._createMouseTarget = function (e, testEventTarget) {
-            var editorContent = dom.getDomNodePosition(this.viewHelper.viewDomNode);
-            return this.mouseTargetFactory.createMouseTarget(this._layoutInfo, editorContent, e, testEventTarget);
+            return this.mouseTargetFactory.createMouseTarget(this._layoutInfo, e, testEventTarget);
         };
         MouseHandler.prototype._getMouseColumn = function (e) {
-            var editorContent = dom.getDomNodePosition(this.viewHelper.viewDomNode);
-            return this.mouseTargetFactory.getMouseColumn(this._layoutInfo, editorContent, e);
+            return this.mouseTargetFactory.getMouseColumn(this._layoutInfo, e);
         };
-        MouseHandler.prototype._onContextMenu = function (rawEvent, testEventTarget) {
-            var e = new mouseEvent_1.StandardMouseEvent(rawEvent);
-            var t = this._createMouseTarget(e, testEventTarget);
-            var mouseEvent = {
+        MouseHandler.prototype._onContextMenu = function (e, testEventTarget) {
+            this.viewController.emitContextMenu({
                 event: e,
-                target: t
-            };
-            this.viewController.emitContextMenu(mouseEvent);
+                target: this._createMouseTarget(e, testEventTarget)
+            });
         };
         MouseHandler.prototype._onMouseMove = function (e) {
             if (this._mouseDownOperation.isActive()) {
@@ -41387,33 +43374,26 @@ define(__m[267], __M([1,0,3,17,27,11,94,38,20,24,7,52,293,14]), function (requir
                 // Due to throttling, this event occured before the mouse left the editor, therefore ignore it.
                 return;
             }
-            var t = this._createMouseTarget(e, true);
-            var mouseEvent = {
+            this.viewController.emitMouseMove({
                 event: e,
-                target: t
-            };
-            this.viewController.emitMouseMove(mouseEvent);
+                target: this._createMouseTarget(e, true)
+            });
         };
-        MouseHandler.prototype._onMouseLeave = function (rawEvent) {
+        MouseHandler.prototype._onMouseLeave = function (e) {
             this.lastMouseLeaveTime = (new Date()).getTime();
-            var mouseEvent = {
-                event: new mouseEvent_1.StandardMouseEvent(rawEvent),
-                target: null
-            };
-            this.viewController.emitMouseLeave(mouseEvent);
-        };
-        MouseHandler.prototype._onMouseUp = function (rawEvent) {
-            var e = new mouseEvent_1.StandardMouseEvent(rawEvent);
-            var t = this._createMouseTarget(e, true);
-            var mouseEvent = {
+            this.viewController.emitMouseLeave({
                 event: e,
-                target: t
-            };
-            this.viewController.emitMouseUp(mouseEvent);
+                target: null
+            });
         };
-        MouseHandler.prototype._onMouseDown = function (rawEvent) {
+        MouseHandler.prototype._onMouseUp = function (e) {
+            this.viewController.emitMouseUp({
+                event: e,
+                target: this._createMouseTarget(e, true)
+            });
+        };
+        MouseHandler.prototype._onMouseDown = function (e) {
             var _this = this;
-            var e = new mouseEvent_1.StandardMouseEvent(rawEvent);
             var t = this._createMouseTarget(e, true);
             var targetIsContent = (t.type === editorCommon.MouseTargetType.CONTENT_TEXT || t.type === editorCommon.MouseTargetType.CONTENT_EMPTY);
             var targetIsGutter = (t.type === editorCommon.MouseTargetType.GUTTER_GLYPH_MARGIN || t.type === editorCommon.MouseTargetType.GUTTER_LINE_NUMBERS || t.type === editorCommon.MouseTargetType.GUTTER_LINE_DECORATIONS);
@@ -41454,11 +43434,10 @@ define(__m[267], __M([1,0,3,17,27,11,94,38,20,24,7,52,293,14]), function (requir
                     e.preventDefault();
                 }
             }
-            var mouseEvent = {
+            this.viewController.emitMouseDown({
                 event: e,
                 target: t
-            };
-            this.viewController.emitMouseDown(mouseEvent);
+            });
         };
         MouseHandler.MOUSE_MOVE_MINIMUM_TIME = 100; // ms
         return MouseHandler;
@@ -41479,7 +43458,7 @@ define(__m[267], __M([1,0,3,17,27,11,94,38,20,24,7,52,293,14]), function (requir
             this._onScrollTimeout = this._register(new async_1.TimeoutTimer());
             this._isActive = false;
             this._lastMouseEvent = null;
-            this._mouseMoveMonitor = this._register(new globalMouseMoveMonitor_1.GlobalMouseMoveMonitor());
+            this._mouseMoveMonitor = this._register(new editorDom_1.GlobalEditorMouseMoveMonitor(this._viewHelper.viewDomNode));
             this._mouseDownThenMoveEventHandler = this._register(new EventGateKeeper(function (e) { return _this._onMouseDownThenMove(e); }, function () { return !_this._viewHelper.isDirty(); }));
         }
         MouseDownOperation.prototype.dispose = function () {
@@ -41538,9 +43517,8 @@ define(__m[267], __M([1,0,3,17,27,11,94,38,20,24,7,52,293,14]), function (requir
         MouseDownOperation.prototype.onCursorSelectionChanged = function (e) {
             this._currentSelection = e.selection;
         };
-        // private _getMouseColumn(e: ISimplifiedMouseEvent)
         MouseDownOperation.prototype._getPositionOutsideEditor = function (e) {
-            var editorContent = dom.getDomNodePosition(this._viewHelper.viewDomNode);
+            var editorContent = e.editorPos;
             var mouseColumn = this._getMouseColumn(e);
             if (e.posy < editorContent.top) {
                 var aboveLineNumber = this._viewHelper.getLineNumberAtVerticalOffset(Math.max(this._viewHelper.getScrollTop() - (editorContent.top - e.posy), 0));
@@ -41686,7 +43664,7 @@ define(__m[267], __M([1,0,3,17,27,11,94,38,20,24,7,52,293,14]), function (requir
 
 
 
-define(__m[268], __M([1,0,11,38,71,267]), function (require, exports, dom, mouseEvent_1, touch_1, mouseHandler_1) {
+define(__m[272], __M([0,1,11,69,271,156]), function (require, exports, dom, touch_1, mouseHandler_1, editorDom_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -41751,7 +43729,7 @@ define(__m[268], __M([1,0,11,38,71,267]), function (require, exports, dom, mouse
         };
         MsPointerHandler.prototype._onCaptureGestureTap = function (rawEvent) {
             var _this = this;
-            var e = new mouseEvent_1.StandardMouseEvent(rawEvent);
+            var e = new editorDom_1.EditorMouseEvent(rawEvent, this.viewHelper.viewDomNode);
             var t = this._createMouseTarget(e, false);
             if (t.position) {
                 this.viewController.moveTo('mouse', t.position);
@@ -41827,7 +43805,7 @@ define(__m[268], __M([1,0,11,38,71,267]), function (require, exports, dom, mouse
         };
         StandardPointerHandler.prototype._onCaptureGestureTap = function (rawEvent) {
             var _this = this;
-            var e = new mouseEvent_1.StandardMouseEvent(rawEvent);
+            var e = new editorDom_1.EditorMouseEvent(rawEvent, this.viewHelper.viewDomNode);
             var t = this._createMouseTarget(e, false);
             if (t.position) {
                 this.viewController.moveTo('mouse', t.position);
@@ -41864,7 +43842,7 @@ define(__m[268], __M([1,0,11,38,71,267]), function (require, exports, dom, mouse
             this.gesture = new touch_1.Gesture(this.viewHelper.linesContentDomNode);
             this.listenersToRemove.push(dom.addDisposableListener(this.viewHelper.linesContentDomNode, touch_1.EventType.Tap, function (e) { return _this.onTap(e); }));
             this.listenersToRemove.push(dom.addDisposableListener(this.viewHelper.linesContentDomNode, touch_1.EventType.Change, function (e) { return _this.onChange(e); }));
-            this.listenersToRemove.push(dom.addDisposableListener(this.viewHelper.linesContentDomNode, touch_1.EventType.Contextmenu, function (e) { return _this._onContextMenu(e, false); }));
+            this.listenersToRemove.push(dom.addDisposableListener(this.viewHelper.linesContentDomNode, touch_1.EventType.Contextmenu, function (e) { return _this._onContextMenu(new editorDom_1.EditorMouseEvent(e, _this.viewHelper.viewDomNode), false); }));
         }
         TouchHandler.prototype.dispose = function () {
             this.gesture.dispose();
@@ -41873,8 +43851,7 @@ define(__m[268], __M([1,0,11,38,71,267]), function (require, exports, dom, mouse
         TouchHandler.prototype.onTap = function (event) {
             event.preventDefault();
             this.viewHelper.focusTextArea();
-            var mouseEvent = new mouseEvent_1.StandardMouseEvent(event);
-            var target = this._createMouseTarget(mouseEvent, false);
+            var target = this._createMouseTarget(new editorDom_1.EditorMouseEvent(event, this.viewHelper.viewDomNode), false);
             if (target.position) {
                 this.viewController.moveTo('mouse', target.position);
             }
@@ -41918,7 +43895,7 @@ define(__m[268], __M([1,0,11,38,71,267]), function (require, exports, dom, mouse
 
 
 
-define(__m[149], __M([1,0,48,28]), function (require, exports, viewPart_1, styleMutator_1) {
+define(__m[159], __M([0,1,46,27]), function (require, exports, viewPart_1, styleMutator_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -42351,7 +44328,7 @@ define(__m[149], __M([1,0,48,28]), function (require, exports, viewPart_1, style
     }());
 });
 
-define(__m[270], __M([1,0,3,11,87,7,23]), function (require, exports, lifecycle_1, dom, scrollableElement_1, editorCommon_1, editorBrowser_1) {
+define(__m[274], __M([0,1,3,11,87,7,22]), function (require, exports, lifecycle_1, dom, scrollableElement_1, editorCommon_1, editorBrowser_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -42494,7 +44471,7 @@ define(__m[270], __M([1,0,3,11,87,7,23]), function (require, exports, lifecycle_
 
 
 
-define(__m[271], __M([1,0,7,415,52,270]), function (require, exports, editorCommon, linesLayout_1, viewEventHandler_1, scrollManager_1) {
+define(__m[275], __M([0,1,7,409,53,274]), function (require, exports, editorCommon, linesLayout_1, viewEventHandler_1, scrollManager_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -42692,7 +44669,7 @@ define(__m[271], __M([1,0,7,415,52,270]), function (require, exports, editorComm
 
 
 
-define(__m[272], __M([1,0,11,28,23,48,438]), function (require, exports, dom, styleMutator_1, editorBrowser_1, viewPart_1) {
+define(__m[276], __M([0,1,11,27,22,46,443]), function (require, exports, dom, styleMutator_1, editorBrowser_1, viewPart_1) {
     'use strict';
     var ViewContentWidgets = (function (_super) {
         __extends(ViewContentWidgets, _super);
@@ -42850,10 +44827,15 @@ define(__m[272], __M([1,0,11,28,23,48,438]), function (require, exports, dom, st
             if (left0 + width < 0 || left0 > this._contentWidth) {
                 return null;
             }
-            var aboveTop = visibleRange.top - height, belowTop = visibleRange.top + this._lineHeight, left = left0 + this._contentLeft;
-            var domNodePosition = dom.getDomNodePosition(this._viewDomNode);
-            var absoluteAboveTop = domNodePosition.top + aboveTop - document.body.scrollTop - document.documentElement.scrollTop, absoluteBelowTop = domNodePosition.top + belowTop - document.body.scrollTop - document.documentElement.scrollTop, absoluteLeft = domNodePosition.left + left - document.body.scrollLeft - document.documentElement.scrollLeft;
-            var INNER_WIDTH = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth, INNER_HEIGHT = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+            var aboveTop = visibleRange.top - height;
+            var belowTop = visibleRange.top + this._lineHeight;
+            var left = left0 + this._contentLeft;
+            var domNodePosition = dom.getDomNodePagePosition(this._viewDomNode);
+            var absoluteAboveTop = domNodePosition.top + aboveTop - dom.StandardWindow.scrollY;
+            var absoluteBelowTop = domNodePosition.top + belowTop - dom.StandardWindow.scrollY;
+            var absoluteLeft = domNodePosition.left + left - dom.StandardWindow.scrollX;
+            var INNER_WIDTH = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+            var INNER_HEIGHT = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
             // Leave some clearance to the bottom
             var BOTTOM_PADDING = 22;
             var fitsAbove = (absoluteAboveTop >= 0), fitsBelow = (absoluteBelowTop + height <= INNER_HEIGHT - BOTTOM_PADDING);
@@ -43002,7 +44984,7 @@ define(__m[272], __M([1,0,11,28,23,48,438]), function (require, exports, dom, st
 
 
 
-define(__m[273], __M([1,0,27,28,155,95,23,400,125]), function (require, exports, browser, styleMutator_1, viewLineParts_1, viewLineRenderer_1, editorBrowser_1, rangeUtil_1, renderingContext_1) {
+define(__m[277], __M([0,1,28,27,172,103,22,397,102]), function (require, exports, browser, styleMutator_1, viewLineParts_1, viewLineRenderer_1, editorBrowser_1, rangeUtil_1, renderingContext_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -43275,7 +45257,7 @@ define(__m[273], __M([1,0,27,28,155,95,23,400,125]), function (require, exports,
 
 
 
-define(__m[274], __M([1,0,28,23,48,187]), function (require, exports, styleMutator_1, editorBrowser_1, viewPart_1) {
+define(__m[278], __M([0,1,27,22,46,191]), function (require, exports, styleMutator_1, editorBrowser_1, viewPart_1) {
     'use strict';
     var ViewOverlayWidgets = (function (_super) {
         __extends(ViewOverlayWidgets, _super);
@@ -43385,7 +45367,7 @@ define(__m[274], __M([1,0,28,23,48,187]), function (require, exports, styleMutat
     exports.ViewOverlayWidgets = ViewOverlayWidgets;
 });
 
-define(__m[150], __M([1,0,28,7,27,397]), function (require, exports, styleMutator_1, editorCommon_1, browser, overviewZoneManager_1) {
+define(__m[160], __M([0,1,27,7,28,395]), function (require, exports, styleMutator_1, editorCommon_1, browser, overviewZoneManager_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -43584,7 +45566,7 @@ define(__m[150], __M([1,0,28,7,27,397]), function (require, exports, styleMutato
 
 
 
-define(__m[276], __M([1,0,52,150]), function (require, exports, viewEventHandler_1, overviewRulerImpl_1) {
+define(__m[280], __M([0,1,53,160]), function (require, exports, viewEventHandler_1, overviewRulerImpl_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -43649,7 +45631,7 @@ define(__m[276], __M([1,0,52,150]), function (require, exports, viewEventHandler
 
 
 
-define(__m[277], __M([1,0,28,48,188]), function (require, exports, styleMutator_1, viewPart_1) {
+define(__m[281], __M([0,1,27,46,192]), function (require, exports, styleMutator_1, viewPart_1) {
     'use strict';
     var Rulers = (function (_super) {
         __extends(Rulers, _super);
@@ -43720,7 +45702,7 @@ define(__m[277], __M([1,0,28,48,188]), function (require, exports, styleMutator_
 
 
 
-define(__m[278], __M([1,0,11,28,23,48,189]), function (require, exports, dom, styleMutator_1, editorBrowser_1, viewPart_1) {
+define(__m[282], __M([0,1,11,27,22,46,193]), function (require, exports, dom, styleMutator_1, editorBrowser_1, viewPart_1) {
     'use strict';
     var ScrollDecorationViewPart = (function (_super) {
         __extends(ScrollDecorationViewPart, _super);
@@ -43782,7 +45764,7 @@ define(__m[278], __M([1,0,11,28,23,48,189]), function (require, exports, dom, st
 
 
 
-define(__m[279], __M([1,0,8,28,23,48]), function (require, exports, errors_1, styleMutator_1, editorBrowser_1, viewPart_1) {
+define(__m[283], __M([0,1,8,27,22,46]), function (require, exports, errors_1, styleMutator_1, editorBrowser_1, viewPart_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -44031,7 +46013,7 @@ define(__m[279], __M([1,0,8,28,23,48]), function (require, exports, errors_1, st
 
 
 
-define(__m[280], __M([1,0,14,18,13,3,134,20,6,7]), function (require, exports, async_1, event_1, keyCodes_1, lifecycle_1, textAreaState_1, position_1, range_1, editorCommon_1) {
+define(__m[284], __M([0,1,14,16,12,3,148,21,4,7]), function (require, exports, async_1, event_1, keyCodes_1, lifecycle_1, textAreaState_1, position_1, range_1, editorCommon_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -44310,7 +46292,7 @@ define(__m[280], __M([1,0,14,18,13,3,134,20,6,7]), function (require, exports, a
 
 
 
-define(__m[151], __M([1,0,13,28,20,23,46]), function (require, exports, keyCodes_1, styleMutator_1, position_1, editorBrowser, widget_1) {
+define(__m[162], __M([0,1,12,27,21,22,44]), function (require, exports, keyCodes_1, styleMutator_1, position_1, editorBrowser, widget_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -44467,7 +46449,7 @@ define(__m[151], __M([1,0,13,28,20,23,46]), function (require, exports, keyCodes
 
 
 
-define(__m[282], __M([1,0,168,151]), function (require, exports, hoverOperation_1, hoverWidgets_1) {
+define(__m[286], __M([0,1,129,162]), function (require, exports, hoverOperation_1, hoverWidgets_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -44489,9 +46471,9 @@ define(__m[282], __M([1,0,168,151]), function (require, exports, hoverOperation_
             var result = [], lineDecorations = this._editor.getLineDecorations(this._lineNumber), i, len, d;
             for (i = 0, len = lineDecorations.length; i < len; i++) {
                 d = lineDecorations[i];
-                if (d.options.glyphMarginClassName && d.options.hoverMessage) {
+                if (d.options.glyphMarginClassName && d.options.glyphMarginHoverMessage) {
                     result.push({
-                        value: d.options.hoverMessage
+                        value: d.options.glyphMarginHoverMessage
                     });
                 }
             }
@@ -44582,7 +46564,7 @@ define(__m[282], __M([1,0,168,151]), function (require, exports, hoverOperation_
     exports.ModesGlyphHoverWidget = ModesGlyphHoverWidget;
 });
 
-define(__m[283], __M([1,0,3,11,20,23]), function (require, exports, lifecycle_1, dom, position_1, editorBrowser_1) {
+define(__m[287], __M([0,1,3,11,21,22]), function (require, exports, lifecycle_1, dom, position_1, editorBrowser_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -44647,7 +46629,7 @@ define(__m[283], __M([1,0,3,11,20,23]), function (require, exports, lifecycle_1,
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
-define(__m[152], __M([1,0,3,32,11,104,6,243]), function (require, exports, lifecycle_1, objects, dom, sash_1, range_1) {
+define(__m[164], __M([0,1,3,31,11,123,4,244]), function (require, exports, lifecycle_1, objects, dom, sash_1, range_1) {
     'use strict';
     var defaultOptions = {
         showArrow: true,
@@ -44881,8 +46863,8 @@ define(__m[152], __M([1,0,3,32,11,104,6,243]), function (require, exports, lifec
     exports.ZoneWidget = ZoneWidget;
 });
 
-define(__m[285], __M([5,4]), function(nls, data) { return nls.create("vs/base/common/severity", data); });
-define(__m[33], __M([1,0,285,10]), function (require, exports, nls, strings) {
+define(__m[289], __M([5,6]), function(nls, data) { return nls.create("vs/base/common/severity", data); });
+define(__m[32], __M([0,1,289,10]), function (require, exports, nls, strings) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -44935,7 +46917,7 @@ define(__m[33], __M([1,0,285,10]), function (require, exports, nls, strings) {
     exports.default = Severity;
 });
 
-define(__m[287], __M([1,0,18,13,20,6,24,2,124,33,29]), function (require, exports, event_1, keyCodes_1, position_1, range_1, selection_1, winjs_base_1, cancellation_1, severity_1, uri_1) {
+define(__m[169], __M([0,1,16,12,21,4,24,2,104,32,29]), function (require, exports, event_1, keyCodes_1, position_1, range_1, selection_1, winjs_base_1, cancellation_1, severity_1, uri_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -44944,7 +46926,6 @@ define(__m[287], __M([1,0,18,13,20,6,24,2,124,33,29]), function (require, export
     function createMonacoBaseAPI() {
         return {
             editor: undefined,
-            worker: undefined,
             languages: undefined,
             CancellationTokenSource: cancellation_1.CancellationTokenSource,
             Emitter: event_1.Emitter,
@@ -44962,15 +46943,329 @@ define(__m[287], __M([1,0,18,13,20,6,24,2,124,33,29]), function (require, export
     exports.createMonacoBaseAPI = createMonacoBaseAPI;
 });
 
-define(__m[288], __M([5,4]), function(nls, data) { return nls.create("vs/base/parts/quickopen/browser/quickOpenModel", data); });
-define(__m[289], __M([5,4]), function(nls, data) { return nls.create("vs/base/parts/quickopen/browser/quickOpenWidget", data); });
-define(__m[290], __M([5,4]), function(nls, data) { return nls.create("vs/base/parts/tree/browser/treeDefaults", data); });
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
 
 
 
 
 
-define(__m[65], __M([1,0,290,2,50,17,8,11,13]), function (require, exports, nls, winjs_base_1, actions_1, platform, errors, dom, keyCodes_1) {
+define(__m[292], __M([0,1,29,2,4,65,285,419,377,386,76,169]), function (require, exports, uri_1, winjs_base_1, range_1, filters_1, diffComputer_1, mirrorModel2_1, linkComputer_1, inplaceReplaceSupport_1, wordHelper_1, standaloneBase_1) {
+    'use strict';
+    /**
+     * @internal
+     */
+    var MirrorModel = (function (_super) {
+        __extends(MirrorModel, _super);
+        function MirrorModel() {
+            _super.apply(this, arguments);
+        }
+        Object.defineProperty(MirrorModel.prototype, "uri", {
+            get: function () {
+                return this._uri;
+            },
+            enumerable: true,
+            configurable: true
+        });
+        Object.defineProperty(MirrorModel.prototype, "version", {
+            get: function () {
+                return this._versionId;
+            },
+            enumerable: true,
+            configurable: true
+        });
+        MirrorModel.prototype.getValue = function () {
+            return this.getText();
+        };
+        MirrorModel.prototype.getLinesContent = function () {
+            return this._lines.slice(0);
+        };
+        MirrorModel.prototype.getLineCount = function () {
+            return this._lines.length;
+        };
+        MirrorModel.prototype.getLineContent = function (lineNumber) {
+            return this._lines[lineNumber - 1];
+        };
+        MirrorModel.prototype.getWordAtPosition = function (position, wordDefinition) {
+            var wordAtText = wordHelper_1.getWordAtText(position.column, wordHelper_1.ensureValidWordDefinition(wordDefinition), this._lines[position.lineNumber - 1], 0);
+            if (wordAtText) {
+                return new range_1.Range(position.lineNumber, wordAtText.startColumn, position.lineNumber, wordAtText.endColumn);
+            }
+            return null;
+        };
+        MirrorModel.prototype.getWordUntilPosition = function (position, wordDefinition) {
+            var wordAtPosition = this.getWordAtPosition(position, wordDefinition);
+            if (!wordAtPosition) {
+                return {
+                    word: '',
+                    startColumn: position.column,
+                    endColumn: position.column
+                };
+            }
+            return {
+                word: this._lines[position.lineNumber - 1].substring(wordAtPosition.startColumn - 1, position.column - 1),
+                startColumn: wordAtPosition.startColumn,
+                endColumn: position.column
+            };
+        };
+        MirrorModel.prototype._getAllWords = function (wordDefinition) {
+            var _this = this;
+            var result = [];
+            this._lines.forEach(function (line) {
+                _this._wordenize(line, wordDefinition).forEach(function (info) {
+                    result.push(line.substring(info.start, info.end));
+                });
+            });
+            return result;
+        };
+        MirrorModel.prototype.getAllUniqueWords = function (wordDefinition, skipWordOnce) {
+            var foundSkipWord = false;
+            var uniqueWords = {};
+            return this._getAllWords(wordDefinition).filter(function (word) {
+                if (skipWordOnce && !foundSkipWord && skipWordOnce === word) {
+                    foundSkipWord = true;
+                    return false;
+                }
+                else if (uniqueWords[word]) {
+                    return false;
+                }
+                else {
+                    uniqueWords[word] = true;
+                    return true;
+                }
+            });
+        };
+        // TODO@Joh, TODO@Alex - remove these and make sure the super-things work
+        MirrorModel.prototype._wordenize = function (content, wordDefinition) {
+            var result = [];
+            var match;
+            while (match = wordDefinition.exec(content)) {
+                if (match[0].length === 0) {
+                    // it did match the empty string
+                    break;
+                }
+                result.push({ start: match.index, end: match.index + match[0].length });
+            }
+            return result;
+        };
+        MirrorModel.prototype.getValueInRange = function (range) {
+            if (range.startLineNumber === range.endLineNumber) {
+                return this._lines[range.startLineNumber - 1].substring(range.startColumn - 1, range.endColumn - 1);
+            }
+            var lineEnding = this._eol, startLineIndex = range.startLineNumber - 1, endLineIndex = range.endLineNumber - 1, resultLines = [];
+            resultLines.push(this._lines[startLineIndex].substring(range.startColumn - 1));
+            for (var i = startLineIndex + 1; i < endLineIndex; i++) {
+                resultLines.push(this._lines[i]);
+            }
+            resultLines.push(this._lines[endLineIndex].substring(0, range.endColumn - 1));
+            return resultLines.join(lineEnding);
+        };
+        return MirrorModel;
+    }(mirrorModel2_1.MirrorModel2));
+    exports.MirrorModel = MirrorModel;
+    /**
+     * @internal
+     */
+    var BaseEditorSimpleWorker = (function () {
+        function BaseEditorSimpleWorker() {
+            this._foreignModule = null;
+        }
+        // ---- BEGIN diff --------------------------------------------------------------------------
+        BaseEditorSimpleWorker.prototype.computeDiff = function (originalUrl, modifiedUrl, ignoreTrimWhitespace) {
+            var original = this._getModel(originalUrl);
+            var modified = this._getModel(modifiedUrl);
+            if (!original || !modified) {
+                return null;
+            }
+            var originalLines = original.getLinesContent();
+            var modifiedLines = modified.getLinesContent();
+            var diffComputer = new diffComputer_1.DiffComputer(originalLines, modifiedLines, {
+                shouldPostProcessCharChanges: true,
+                shouldIgnoreTrimWhitespace: ignoreTrimWhitespace,
+                shouldConsiderTrimWhitespaceInEmptyCase: true
+            });
+            return winjs_base_1.TPromise.as(diffComputer.computeDiff());
+        };
+        BaseEditorSimpleWorker.prototype.computeDirtyDiff = function (originalUrl, modifiedUrl, ignoreTrimWhitespace) {
+            var original = this._getModel(originalUrl);
+            var modified = this._getModel(modifiedUrl);
+            if (!original || !modified) {
+                return null;
+            }
+            var originalLines = original.getLinesContent();
+            var modifiedLines = modified.getLinesContent();
+            var diffComputer = new diffComputer_1.DiffComputer(originalLines, modifiedLines, {
+                shouldPostProcessCharChanges: false,
+                shouldIgnoreTrimWhitespace: ignoreTrimWhitespace,
+                shouldConsiderTrimWhitespaceInEmptyCase: false
+            });
+            return winjs_base_1.TPromise.as(diffComputer.computeDiff());
+        };
+        // ---- END diff --------------------------------------------------------------------------
+        BaseEditorSimpleWorker.prototype.computeLinks = function (modelUrl) {
+            var model = this._getModel(modelUrl);
+            if (!model) {
+                return null;
+            }
+            return winjs_base_1.TPromise.as(linkComputer_1.computeLinks(model));
+        };
+        // ---- BEGIN suggest --------------------------------------------------------------------------
+        BaseEditorSimpleWorker.prototype.textualSuggest = function (modelUrl, position, wordDef, wordDefFlags) {
+            var model = this._getModel(modelUrl);
+            if (!model) {
+                return null;
+            }
+            return winjs_base_1.TPromise.as(this._suggestFiltered(model, position, new RegExp(wordDef, wordDefFlags)));
+        };
+        BaseEditorSimpleWorker.prototype._suggestFiltered = function (model, position, wordDefRegExp) {
+            var value = this._suggestUnfiltered(model, position, wordDefRegExp);
+            // filter suggestions
+            return [{
+                    currentWord: value.currentWord,
+                    suggestions: value.suggestions.filter(function (element) { return !!filters_1.fuzzyContiguousFilter(value.currentWord, element.label); }),
+                    incomplete: value.incomplete
+                }];
+        };
+        BaseEditorSimpleWorker.prototype._suggestUnfiltered = function (model, position, wordDefRegExp) {
+            var currentWord = model.getWordUntilPosition(position, wordDefRegExp).word;
+            var allWords = model.getAllUniqueWords(wordDefRegExp, currentWord);
+            var suggestions = allWords.filter(function (word) {
+                return !(/^-?\d*\.?\d/.test(word)); // filter out numbers
+            }).map(function (word) {
+                return {
+                    type: 'text',
+                    label: word,
+                    codeSnippet: word,
+                    noAutoAccept: true
+                };
+            });
+            return {
+                currentWord: currentWord,
+                suggestions: suggestions
+            };
+        };
+        // ---- END suggest --------------------------------------------------------------------------
+        BaseEditorSimpleWorker.prototype.navigateValueSet = function (modelUrl, range, up, wordDef, wordDefFlags) {
+            var model = this._getModel(modelUrl);
+            if (!model) {
+                return null;
+            }
+            var wordDefRegExp = new RegExp(wordDef, wordDefFlags);
+            if (range.startColumn === range.endColumn) {
+                range.endColumn += 1;
+            }
+            var selectionText = model.getValueInRange(range);
+            var wordRange = model.getWordAtPosition({ lineNumber: range.startLineNumber, column: range.startColumn }, wordDefRegExp);
+            var word = null;
+            if (wordRange !== null) {
+                word = model.getValueInRange(wordRange);
+            }
+            var result = inplaceReplaceSupport_1.BasicInplaceReplace.INSTANCE.navigateValueSet(range, selectionText, wordRange, word, up);
+            return winjs_base_1.TPromise.as(result);
+        };
+        // ---- BEGIN foreign module support --------------------------------------------------------------------------
+        BaseEditorSimpleWorker.prototype.loadForeignModule = function (moduleId, createData) {
+            var _this = this;
+            return new winjs_base_1.TPromise(function (c, e) {
+                // Use the global require to be sure to get the global config
+                self.require([moduleId], function (foreignModule) {
+                    var ctx = {
+                        getMirrorModels: function () {
+                            return _this._getModels();
+                        }
+                    };
+                    _this._foreignModule = foreignModule.create(ctx, createData);
+                    var methods = [];
+                    for (var prop in _this._foreignModule) {
+                        if (typeof _this._foreignModule[prop] === 'function') {
+                            methods.push(prop);
+                        }
+                    }
+                    c(methods);
+                }, e);
+            });
+        };
+        // foreign method request
+        BaseEditorSimpleWorker.prototype.fmr = function (method, args) {
+            if (!this._foreignModule || typeof this._foreignModule[method] !== 'function') {
+                return winjs_base_1.TPromise.wrapError(new Error('Missing requestHandler or method: ' + method));
+            }
+            try {
+                return winjs_base_1.TPromise.as(this._foreignModule[method].apply(this._foreignModule, args));
+            }
+            catch (e) {
+                return winjs_base_1.TPromise.wrapError(e);
+            }
+        };
+        return BaseEditorSimpleWorker;
+    }());
+    exports.BaseEditorSimpleWorker = BaseEditorSimpleWorker;
+    /**
+     * @internal
+     */
+    var EditorSimpleWorkerImpl = (function (_super) {
+        __extends(EditorSimpleWorkerImpl, _super);
+        function EditorSimpleWorkerImpl() {
+            _super.call(this);
+            this._models = Object.create(null);
+        }
+        EditorSimpleWorkerImpl.prototype.dispose = function () {
+            this._models = Object.create(null);
+        };
+        EditorSimpleWorkerImpl.prototype._getModel = function (uri) {
+            return this._models[uri];
+        };
+        EditorSimpleWorkerImpl.prototype._getModels = function () {
+            var _this = this;
+            var all = [];
+            Object.keys(this._models).forEach(function (key) { return all.push(_this._models[key]); });
+            return all;
+        };
+        EditorSimpleWorkerImpl.prototype.acceptNewModel = function (data) {
+            this._models[data.url] = new MirrorModel(uri_1.default.parse(data.url), data.value.lines, data.value.EOL, data.versionId);
+        };
+        EditorSimpleWorkerImpl.prototype.acceptModelChanged = function (strURL, events) {
+            if (!this._models[strURL]) {
+                return;
+            }
+            var model = this._models[strURL];
+            model.onEvents(events);
+        };
+        EditorSimpleWorkerImpl.prototype.acceptRemovedModel = function (strURL) {
+            if (!this._models[strURL]) {
+                return;
+            }
+            delete this._models[strURL];
+        };
+        return EditorSimpleWorkerImpl;
+    }(BaseEditorSimpleWorker));
+    exports.EditorSimpleWorkerImpl = EditorSimpleWorkerImpl;
+    /**
+     * Called on the worker side
+     * @internal
+     */
+    function create() {
+        return new EditorSimpleWorkerImpl();
+    }
+    exports.create = create;
+    var global = self;
+    var isWebWorker = (typeof global.importScripts === 'function');
+    if (isWebWorker) {
+        global.monaco = standaloneBase_1.createMonacoBaseAPI();
+    }
+});
+
+define(__m[293], __M([5,6]), function(nls, data) { return nls.create("vs/base/parts/quickopen/browser/quickOpenModel", data); });
+define(__m[294], __M([5,6]), function(nls, data) { return nls.create("vs/base/parts/quickopen/browser/quickOpenWidget", data); });
+define(__m[295], __M([5,6]), function(nls, data) { return nls.create("vs/base/parts/tree/browser/treeDefaults", data); });
+
+
+
+
+
+define(__m[75], __M([0,1,295,2,50,18,8,11,12]), function (require, exports, nls, winjs_base_1, actions_1, platform, errors, dom, keyCodes_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -45351,7 +47646,7 @@ define(__m[65], __M([1,0,290,2,50,17,8,11,13]), function (require, exports, nls,
 
 
 
-define(__m[114], __M([1,0,288,2,26,67,10,37,376,66,65,102,11,261]), function (require, exports, nls, winjs_base_1, types, filters, strings, paths, comparers_1, actionbar_1, treeDefaults_1, highlightedLabel_1, DOM, scorer) {
+define(__m[105], __M([0,1,293,2,26,65,10,38,288,58,75,122,11,259]), function (require, exports, nls, winjs_base_1, types, filters, strings, paths, comparers_1, actionbar_1, treeDefaults_1, highlightedLabel_1, DOM, scorer) {
     'use strict';
     var IDS = 0;
     var QuickOpenEntry = (function () {
@@ -45970,7 +48265,7 @@ define(__m[114], __M([1,0,288,2,26,67,10,37,376,66,65,102,11,261]), function (re
 
 
 
-define(__m[115], __M([1,0,65,22,204,265,97,426]), function (require, exports, TreeDefaults, Events, Model, View, iterator_1) {
+define(__m[106], __M([0,1,75,23,206,267,109,438]), function (require, exports, TreeDefaults, Events, Model, View, iterator_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -46224,7 +48519,7 @@ define(__m[115], __M([1,0,65,22,204,265,97,426]), function (require, exports, Tr
 
 
 
-define(__m[294], __M([1,0,289,2,17,27,63,26,8,133,77,203,36,106,33,115,252,54,65,11,13,3,42,425]), function (require, exports, nls, winjs_base_1, platform, browser, events_1, types, errors, uuid, quickOpen_1, quickOpenViewer_1, builder_1, inputBox_1, severity_1, treeImpl_1, progressbar_1, keyboardEvent_1, treeDefaults_1, DOM, keyCodes_1, lifecycle_1, scrollableElementOptions_1) {
+define(__m[299], __M([0,1,294,2,18,28,60,26,8,130,91,205,35,98,32,106,254,56,75,11,12,3,41,429]), function (require, exports, nls, winjs_base_1, platform, browser, events_1, types, errors, uuid, quickOpen_1, quickOpenViewer_1, builder_1, inputBox_1, severity_1, treeImpl_1, progressbar_1, keyboardEvent_1, treeDefaults_1, DOM, keyCodes_1, lifecycle_1, scrollableElementOptions_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -46645,6 +48940,11 @@ define(__m[294], __M([1,0,289,2,17,27,63,26,8,133,77,203,36,106,33,115,252,54,65
                     this.tree.focusNth(1);
                 }
             }
+            else if (autoFocus.autoFocusLastEntry) {
+                if (entries.length > 1) {
+                    this.tree.focusLast();
+                }
+            }
         };
         QuickOpenWidget.prototype.refresh = function (input, autoFocus) {
             var _this = this;
@@ -46760,8 +49060,8 @@ define(__m[294], __M([1,0,289,2,17,27,63,26,8,133,77,203,36,106,33,115,252,54,65
                 this.callbacks.onHide(reason === HideReason.FOCUS_LOST);
             }
         };
-        QuickOpenWidget.prototype.isQuickNavigating = function () {
-            return !!this.quickNavigateConfiguration;
+        QuickOpenWidget.prototype.getQuickNavigateConfiguration = function () {
+            return this.quickNavigateConfiguration;
         };
         QuickOpenWidget.prototype.setPlaceHolder = function (placeHolder) {
             if (this.inputBox) {
@@ -46882,7 +49182,7 @@ define(__m[294], __M([1,0,289,2,17,27,63,26,8,133,77,203,36,106,33,115,252,54,65
     exports.QuickOpenWidget = QuickOpenWidget;
 });
 
-define(__m[295], __M([1,0,36,294,23]), function (require, exports, builder_1, quickOpenWidget_1, editorBrowser_1) {
+define(__m[300], __M([0,1,35,299,22]), function (require, exports, builder_1, quickOpenWidget_1, editorBrowser_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -46950,12 +49250,12 @@ define(__m[295], __M([1,0,36,294,23]), function (require, exports, builder_1, qu
     exports.QuickOpenEditorWidget = QuickOpenEditorWidget;
 });
 
-define(__m[296], __M([5,4]), function(nls, data) { return nls.create("vs/editor/browser/standalone/standaloneSchemas", data); });
+define(__m[301], __M([5,6]), function(nls, data) { return nls.create("vs/editor/browser/standalone/standaloneSchemas", data); });
 /*---------------------------------------------------------------------------------------------
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
-define(__m[297], __M([1,0,296]), function (require, exports, nls) {
+define(__m[302], __M([0,1,301]), function (require, exports, nls) {
     'use strict';
     var global = self;
     global.MonacoEditorSchemas = global.MonacoEditorSchemas || {};
@@ -47783,9 +50083,9 @@ define(__m[297], __M([1,0,296]), function (require, exports, nls) {
     };
 });
 
-define(__m[298], __M([5,4]), function(nls, data) { return nls.create("vs/editor/common/config/commonEditorConfig", data); });
-define(__m[299], __M([5,4]), function(nls, data) { return nls.create("vs/editor/common/config/defaultConfig", data); });
-define(__m[57], __M([1,0,299,17,79]), function (require, exports, nls, platform, wordHelper_1) {
+define(__m[303], __M([5,6]), function(nls, data) { return nls.create("vs/editor/common/config/commonEditorConfig", data); });
+define(__m[304], __M([5,6]), function(nls, data) { return nls.create("vs/editor/common/config/defaultConfig", data); });
+define(__m[55], __M([0,1,304,18,76]), function (require, exports, nls, platform, wordHelper_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -47876,7 +50176,7 @@ define(__m[57], __M([1,0,299,17,79]), function (require, exports, nls, platform,
 
 
 
-define(__m[117], __M([1,0,22,10,20,6,7,108,311,57,96]), function (require, exports, eventEmitter_1, strings, position_1, range_1, editorCommon, modelLine_1, indentationGuesser_1, defaultConfig_1, prefixSumComputer_1) {
+define(__m[177], __M([0,1,23,10,21,4,7,165,298,55,80]), function (require, exports, eventEmitter_1, strings, position_1, range_1, editorCommon, modelLine_1, indentationGuesser_1, defaultConfig_1, prefixSumComputer_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -48335,7 +50635,7 @@ define(__m[117], __M([1,0,22,10,20,6,7,108,311,57,96]), function (require, expor
             while ((lastCarriageReturnIndex = rawText.indexOf('\r', lastCarriageReturnIndex + 1)) !== -1) {
                 carriageReturnCnt++;
             }
-            // Split the text into liens
+            // Split the text into lines
             var lines = rawText.split(/\r\n|\r|\n/);
             // Remove the BOM (if present)
             var BOM = '';
@@ -48558,13 +50858,13 @@ define(__m[117], __M([1,0,22,10,20,6,7,108,311,57,96]), function (require, expor
     exports.RawText = RawText;
 });
 
-define(__m[302], __M([5,4]), function(nls, data) { return nls.create("vs/editor/common/controller/cursor", data); });
+define(__m[307], __M([5,6]), function(nls, data) { return nls.create("vs/editor/common/controller/cursor", data); });
 
 
 
 
 
-define(__m[303], __M([1,0,302,8,22,3,92,218,156,20,6,24,7,41]), function (require, exports, nls, errors_1, eventEmitter_1, lifecycle_1, replaceCommand_1, cursorCollection_1, oneCursor_1, position_1, range_1, selection_1, editorCommon, languageConfigurationRegistry_1) {
+define(__m[308], __M([0,1,307,8,23,3,110,220,173,21,4,24,7,40]), function (require, exports, nls, errors_1, eventEmitter_1, lifecycle_1, replaceCommand_1, cursorCollection_1, oneCursor_1, position_1, range_1, selection_1, editorCommon, languageConfigurationRegistry_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -49805,13 +52105,13 @@ define(__m[303], __M([1,0,302,8,22,3,92,218,156,20,6,24,7,41]), function (requir
     exports.Cursor = Cursor;
 });
 
-define(__m[304], __M([5,4]), function(nls, data) { return nls.create("vs/editor/common/model/textModelWithTokens", data); });
+define(__m[309], __M([5,6]), function(nls, data) { return nls.create("vs/editor/common/model/textModelWithTokens", data); });
 
 
 
 
 
-define(__m[118], __M([1,0,304,14,8,3,139,55,2,7,117,160,375,116,47,85,84,363,144,41]), function (require, exports, nls, async_1, errors_1, lifecycle_1, stopwatch_1, timer, winjs_base_1, editorCommon, textModel_1, textModelWithTokensHelpers_1, tokenIterator_1, nullMode_1, supports_1, richEditBrackets_1, modeTransition_1, lineToken_1, tokensBinaryEncoding_1, languageConfigurationRegistry_1) {
+define(__m[180], __M([0,1,309,14,8,3,143,59,2,7,177,176,306,121,49,83,88,305,154,40]), function (require, exports, nls, async_1, errors_1, lifecycle_1, stopwatch_1, timer, winjs_base_1, editorCommon, textModel_1, textModelWithTokensHelpers_1, tokenIterator_1, nullMode_1, supports_1, richEditBrackets_1, modeTransition_1, lineToken_1, tokensBinaryEncoding_1, languageConfigurationRegistry_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -50711,392 +53011,7 @@ define(__m[118], __M([1,0,304,14,8,3,139,55,2,7,117,160,375,116,47,85,84,363,144
 
 
 
-define(__m[306], __M([1,0,3,7,108,117,118,6,20]), function (require, exports, lifecycle_1, editorCommon, modelLine_1, textModel_1, textModelWithTokens_1, range_1, position_1) {
-    /*---------------------------------------------------------------------------------------------
-     *  Copyright (c) Microsoft Corporation. All rights reserved.
-     *  Licensed under the MIT License. See License.txt in the project root for license information.
-     *--------------------------------------------------------------------------------------------*/
-    'use strict';
-    var AbstractMirrorModel = (function (_super) {
-        __extends(AbstractMirrorModel, _super);
-        function AbstractMirrorModel(allowedEventTypes, versionId, value, mode, associatedResource) {
-            _super.call(this, allowedEventTypes.concat([editorCommon.EventType.ModelDispose]), value, false, mode);
-            this._setVersionId(versionId);
-            this._associatedResource = associatedResource;
-        }
-        AbstractMirrorModel.prototype.getModeId = function () {
-            return this.getMode().getId();
-        };
-        AbstractMirrorModel.prototype.getEmbeddedAtPosition = function (position) {
-            return null;
-        };
-        AbstractMirrorModel.prototype.getAllEmbedded = function () {
-            return [];
-        };
-        AbstractMirrorModel.prototype._constructLines = function (rawText) {
-            _super.prototype._constructLines.call(this, rawText);
-            // Force EOL to be \n
-            this._EOL = '\n';
-        };
-        AbstractMirrorModel.prototype.destroy = function () {
-            this.dispose();
-        };
-        AbstractMirrorModel.prototype.dispose = function () {
-            this.emit(editorCommon.EventType.ModelDispose);
-            _super.prototype.dispose.call(this);
-        };
-        Object.defineProperty(AbstractMirrorModel.prototype, "uri", {
-            get: function () {
-                return this._associatedResource;
-            },
-            enumerable: true,
-            configurable: true
-        });
-        AbstractMirrorModel.prototype.getRangeFromOffsetAndLength = function (offset, length) {
-            var startPosition = this.getPositionAt(offset);
-            var endPosition = this.getPositionAt(offset + length);
-            return new range_1.Range(startPosition.lineNumber, startPosition.column, endPosition.lineNumber, endPosition.column);
-        };
-        AbstractMirrorModel.prototype.getOffsetAndLengthFromRange = function (range) {
-            var startOffset = this.getOffsetAt(new position_1.Position(range.startLineNumber, range.startColumn));
-            var endOffset = this.getOffsetAt(new position_1.Position(range.endLineNumber, range.endColumn));
-            return {
-                offset: startOffset,
-                length: endOffset - startOffset
-            };
-        };
-        AbstractMirrorModel.prototype.getPositionFromOffset = function (offset) {
-            return this.getPositionAt(offset);
-        };
-        AbstractMirrorModel.prototype.getOffsetFromPosition = function (position) {
-            return this.getOffsetAt(position);
-        };
-        AbstractMirrorModel.prototype.getLineStart = function (lineNumber) {
-            if (lineNumber < 1) {
-                lineNumber = 1;
-            }
-            if (lineNumber > this.getLineCount()) {
-                lineNumber = this.getLineCount();
-            }
-            return this.getOffsetAt(new position_1.Position(lineNumber, 1));
-        };
-        AbstractMirrorModel.prototype.getAllWordsWithRange = function () {
-            if (this._lines.length > 10000) {
-                // This is a very heavy method, unavailable for very heavy models
-                return [];
-            }
-            var result = [], i;
-            var toTextRange = function (info) {
-                var s = line.text.substring(info.start, info.end);
-                var r = { startLineNumber: i + 1, startColumn: info.start + 1, endLineNumber: i + 1, endColumn: info.end + 1 };
-                result.push({ text: s, range: r });
-            };
-            for (i = 0; i < this._lines.length; i++) {
-                var line = this._lines[i];
-                this.wordenize(line.text).forEach(toTextRange);
-            }
-            return result;
-        };
-        AbstractMirrorModel.prototype.getAllWords = function () {
-            var _this = this;
-            var result = [];
-            this._lines.forEach(function (line) {
-                _this.wordenize(line.text).forEach(function (info) {
-                    result.push(line.text.substring(info.start, info.end));
-                });
-            });
-            return result;
-        };
-        AbstractMirrorModel.prototype.getAllUniqueWords = function (skipWordOnce) {
-            var foundSkipWord = false;
-            var uniqueWords = {};
-            return this.getAllWords().filter(function (word) {
-                if (skipWordOnce && !foundSkipWord && skipWordOnce === word) {
-                    foundSkipWord = true;
-                    return false;
-                }
-                else if (uniqueWords[word]) {
-                    return false;
-                }
-                else {
-                    uniqueWords[word] = true;
-                    return true;
-                }
-            });
-        };
-        //	// TODO@Joh, TODO@Alex - remove these and make sure the super-things work
-        AbstractMirrorModel.prototype.wordenize = function (content) {
-            var result = [];
-            var match;
-            var wordsRegexp = this._getWordDefinition();
-            while (match = wordsRegexp.exec(content)) {
-                result.push({ start: match.index, end: match.index + match[0].length });
-            }
-            return result;
-        };
-        return AbstractMirrorModel;
-    }(textModelWithTokens_1.TextModelWithTokens));
-    exports.AbstractMirrorModel = AbstractMirrorModel;
-    var MirrorModelEmbedded = (function (_super) {
-        __extends(MirrorModelEmbedded, _super);
-        function MirrorModelEmbedded(actualModel, includeRanges, mode, url) {
-            _super.call(this, ['changed'], actualModel.getVersionId(), MirrorModelEmbedded._getMirrorValueWithinRanges(actualModel, includeRanges), mode, url);
-            this._actualModel = actualModel;
-        }
-        MirrorModelEmbedded._getMirrorValueWithinRanges = function (actualModel, includeRanges) {
-            var resultingText = '', prevLineAdded = 1, prevColumnAdded = 1, i;
-            for (i = 0; i < includeRanges.length; i++) {
-                var includeRange = includeRanges[i];
-                resultingText += actualModel.getEmptiedValueInRange({
-                    startLineNumber: prevLineAdded,
-                    startColumn: prevColumnAdded,
-                    endLineNumber: includeRange.startLineNumber,
-                    endColumn: includeRange.startColumn
-                }, ' ');
-                resultingText += actualModel.getValueInRange(includeRange);
-                prevLineAdded = includeRange.endLineNumber;
-                prevColumnAdded = includeRange.endColumn;
-            }
-            var lastLineNumber = actualModel.getLineCount(), lastColumn = actualModel.getLineMaxColumn(lastLineNumber);
-            resultingText += actualModel.getEmptiedValueInRange({
-                startLineNumber: prevLineAdded,
-                startColumn: prevColumnAdded,
-                endLineNumber: lastLineNumber,
-                endColumn: lastColumn
-            }, ' ');
-            var actualModelOptions = actualModel.getOptions();
-            return textModel_1.TextModel.toRawText(resultingText, {
-                tabSize: actualModelOptions.tabSize,
-                insertSpaces: actualModelOptions.insertSpaces,
-                detectIndentation: false,
-                defaultEOL: actualModelOptions.defaultEOL,
-                trimAutoWhitespace: actualModelOptions.trimAutoWhitespace
-            });
-        };
-        MirrorModelEmbedded.prototype.setIncludedRanges = function (newIncludedRanges) {
-            var prevVersionId = this.getVersionId();
-            // Force recreating of line starts (when used)
-            this._constructLines(MirrorModelEmbedded._getMirrorValueWithinRanges(this._actualModel, newIncludedRanges));
-            this._resetTokenizationState();
-            this._setVersionId(prevVersionId + 1);
-            this.emit('changed', {});
-        };
-        return MirrorModelEmbedded;
-    }(AbstractMirrorModel));
-    exports.MirrorModelEmbedded = MirrorModelEmbedded;
-    var EmbeddedModeRange = (function () {
-        function EmbeddedModeRange(mode) {
-            this.mode = mode;
-            this.ranges = [];
-        }
-        return EmbeddedModeRange;
-    }());
-    function createTestMirrorModelFromString(value, mode, associatedResource) {
-        if (mode === void 0) { mode = null; }
-        return new MirrorModel(null, 0, textModel_1.TextModel.toRawText(value, textModel_1.TextModel.DEFAULT_CREATION_OPTIONS), mode, associatedResource);
-    }
-    exports.createTestMirrorModelFromString = createTestMirrorModelFromString;
-    var MirrorModel = (function (_super) {
-        __extends(MirrorModel, _super);
-        function MirrorModel(resourceService, versionId, value, mode, associatedResource) {
-            _super.call(this, ['changed'], versionId, value, mode, associatedResource);
-            this._resourceService = resourceService;
-            this._embeddedModels = {};
-            this._updateEmbeddedModels();
-        }
-        MirrorModel.prototype.getEmbeddedAtPosition = function (position) {
-            var modeIdAtPosition = this.getModeIdAtPosition(position.lineNumber, position.column);
-            if (this._embeddedModels.hasOwnProperty(modeIdAtPosition)) {
-                return this._embeddedModels[modeIdAtPosition];
-            }
-            return null;
-        };
-        MirrorModel.prototype.getAllEmbedded = function () {
-            var _this = this;
-            return Object.keys(this._embeddedModels).map(function (embeddedModeId) { return _this._embeddedModels[embeddedModeId]; });
-        };
-        MirrorModel.prototype.dispose = function () {
-            var _this = this;
-            _super.prototype.dispose.call(this);
-            var embeddedModels = Object.keys(this._embeddedModels).map(function (modeId) { return _this._embeddedModels[modeId]; });
-            embeddedModels.forEach(function (embeddedModel) { return _this._resourceService.remove(embeddedModel.uri); });
-            lifecycle_1.dispose(embeddedModels);
-            this._embeddedModels = {};
-        };
-        MirrorModel.prototype.setMode = function (newModeOrPromise) {
-            _super.prototype.setMode.call(this, newModeOrPromise);
-            this._updateEmbeddedModels();
-        };
-        MirrorModel._getModesRanges = function (model) {
-            var encounteredModesRanges = {};
-            var getOrCreateEmbeddedModeRange = function (modeId, mode) {
-                if (!encounteredModesRanges.hasOwnProperty(modeId)) {
-                    encounteredModesRanges[modeId] = new EmbeddedModeRange(mode);
-                }
-                return encounteredModesRanges[modeId];
-            };
-            var lineCount = model.getLineCount();
-            var currentModeId = model.getMode().getId();
-            var currentMode = model.getMode();
-            var currentStartLineNumber = 1, currentStartColumn = 1;
-            for (var lineNumber = 1; lineNumber <= lineCount; lineNumber++) {
-                var modeTransitions = model._getLineModeTransitions(lineNumber);
-                for (var i = 0; i < modeTransitions.length; i++) {
-                    var modeTransition = modeTransitions[i];
-                    if (modeTransition.modeId !== currentModeId) {
-                        var modeRange = getOrCreateEmbeddedModeRange(currentModeId, currentMode);
-                        modeRange.ranges.push({
-                            startLineNumber: currentStartLineNumber,
-                            startColumn: currentStartColumn,
-                            endLineNumber: lineNumber,
-                            endColumn: modeTransition.startIndex + 1
-                        });
-                        currentModeId = modeTransition.modeId;
-                        currentMode = modeTransition.mode;
-                        currentStartLineNumber = lineNumber;
-                        currentStartColumn = modeTransition.startIndex + 1;
-                    }
-                }
-            }
-            var lastLineNumber = lineCount;
-            var lastColumn = model.getLineMaxColumn(lastLineNumber);
-            if (currentStartLineNumber !== lastLineNumber || currentStartColumn !== lastColumn) {
-                var modeRange = getOrCreateEmbeddedModeRange(currentModeId, currentMode);
-                modeRange.ranges.push({
-                    startLineNumber: currentStartLineNumber,
-                    startColumn: currentStartColumn,
-                    endLineNumber: lastLineNumber,
-                    endColumn: lastColumn
-                });
-            }
-            return encounteredModesRanges;
-        };
-        MirrorModel.prototype._updateEmbeddedModels = function () {
-            if (!this._resourceService || !this.getMode().tokenizationSupport || !this.getMode().tokenizationSupport.shouldGenerateEmbeddedModels) {
-                return false;
-            }
-            var newModesRanges = MirrorModel._getModesRanges(this);
-            // Empty out embedded models that have disappeared
-            var oldNestedModesIds = Object.keys(this._embeddedModels);
-            for (var i = 0; i < oldNestedModesIds.length; i++) {
-                var oldNestedModeId = oldNestedModesIds[i];
-                if (!newModesRanges.hasOwnProperty(oldNestedModeId)) {
-                    this._embeddedModels[oldNestedModeId].setIncludedRanges([{
-                            startLineNumber: 1,
-                            startColumn: 1,
-                            endLineNumber: 1,
-                            endColumn: 1
-                        }]);
-                }
-            }
-            var newNestedModesIds = Object.keys(newModesRanges);
-            for (var i = 0; i < newNestedModesIds.length; i++) {
-                var newNestedModeId = newNestedModesIds[i];
-                if (this._embeddedModels.hasOwnProperty(newNestedModeId)) {
-                    this._embeddedModels[newNestedModeId].setIncludedRanges(newModesRanges[newNestedModeId].ranges);
-                }
-                else {
-                    // TODO@Alex: implement derived resources (embedded mirror models) better
-                    var embeddedModelUrl = this.uri.with({ fragment: this.uri.fragment + 'URL_MARSHAL_REMOVE' + newNestedModeId });
-                    this._embeddedModels[newNestedModeId] = new MirrorModelEmbedded(this, newModesRanges[newNestedModeId].ranges, newModesRanges[newNestedModeId].mode, embeddedModelUrl);
-                    this._resourceService.insert(this._embeddedModels[newNestedModeId].uri, this._embeddedModels[newNestedModeId]);
-                }
-            }
-            return false;
-        };
-        MirrorModel.prototype.onEvents = function (events) {
-            var changed = false;
-            for (var i = 0, len = events.contentChanged.length; i < len; i++) {
-                var contentChangedEvent = events.contentChanged[i];
-                this._setVersionId(contentChangedEvent.versionId);
-                switch (contentChangedEvent.changeType) {
-                    case editorCommon.EventType.ModelRawContentChangedFlush:
-                        this._onLinesFlushed(contentChangedEvent);
-                        changed = true;
-                        break;
-                    case editorCommon.EventType.ModelRawContentChangedLinesDeleted:
-                        this._onLinesDeleted(contentChangedEvent);
-                        changed = true;
-                        break;
-                    case editorCommon.EventType.ModelRawContentChangedLinesInserted:
-                        this._onLinesInserted(contentChangedEvent);
-                        changed = true;
-                        break;
-                    case editorCommon.EventType.ModelRawContentChangedLineChanged:
-                        this._onLineChanged(contentChangedEvent);
-                        changed = true;
-                        break;
-                }
-            }
-            var shouldFlushMarkers = false;
-            if (changed) {
-                this.emit('changed', {});
-                shouldFlushMarkers = this._updateEmbeddedModels();
-            }
-            return shouldFlushMarkers;
-        };
-        MirrorModel.prototype._onLinesFlushed = function (e) {
-            // Flush my lines
-            this._constructLines(e.detail);
-            this._resetTokenizationState();
-        };
-        MirrorModel.prototype._onLineChanged = function (e) {
-            this._lines[e.lineNumber - 1].applyEdits({}, [{
-                    startColumn: 1,
-                    endColumn: Number.MAX_VALUE,
-                    text: e.detail,
-                    forceMoveMarkers: false
-                }]);
-            if (this._lineStarts) {
-                // update prefix sum
-                this._lineStarts.changeValue(e.lineNumber - 1, this._lines[e.lineNumber - 1].text.length + this._EOL.length);
-            }
-            this._invalidateLine(e.lineNumber - 1);
-        };
-        MirrorModel.prototype._onLinesDeleted = function (e) {
-            var fromLineIndex = e.fromLineNumber - 1, toLineIndex = e.toLineNumber - 1;
-            // Save first line's state
-            var firstLineState = this._lines[fromLineIndex].getState();
-            this._lines.splice(fromLineIndex, toLineIndex - fromLineIndex + 1);
-            if (this._lineStarts) {
-                // update prefix sum
-                this._lineStarts.removeValues(fromLineIndex, toLineIndex - fromLineIndex + 1);
-            }
-            if (fromLineIndex < this._lines.length) {
-                // This check is always true in real world, but the tests forced this
-                // Restore first line's state
-                this._lines[fromLineIndex].setState(firstLineState);
-                // Invalidate line
-                this._invalidateLine(fromLineIndex);
-            }
-        };
-        MirrorModel.prototype._onLinesInserted = function (e) {
-            var lineIndex, i, splitLines = e.detail.split('\n');
-            var newLengths = [];
-            for (lineIndex = e.fromLineNumber - 1, i = 0; lineIndex < e.toLineNumber; lineIndex++, i++) {
-                this._lines.splice(lineIndex, 0, new modelLine_1.ModelLine(0, splitLines[i]));
-                newLengths.push(splitLines[i].length + this._EOL.length);
-            }
-            if (this._lineStarts) {
-                // update prefix sum
-                this._lineStarts.insertValues(e.fromLineNumber - 1, newLengths);
-            }
-            if (e.fromLineNumber >= 2) {
-                // This check is always true in real world, but the tests forced this
-                this._invalidateLine(e.fromLineNumber - 2);
-            }
-        };
-        return MirrorModel;
-    }(AbstractMirrorModel));
-    exports.MirrorModel = MirrorModel;
-});
-
-
-
-
-
-
-define(__m[307], __M([1,0,59,20,118]), function (require, exports, idGenerator_1, position_1, textModelWithTokens_1) {
+define(__m[311], __M([0,1,63,21,180]), function (require, exports, idGenerator_1, position_1, textModelWithTokens_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -51247,7 +53162,7 @@ define(__m[307], __M([1,0,59,20,118]), function (require, exports, idGenerator_1
 
 
 
-define(__m[308], __M([1,0,59,6,7,307,118]), function (require, exports, idGenerator_1, range_1, editorCommon, textModelWithMarkers_1, textModelWithTokens_1) {
+define(__m[312], __M([0,1,63,4,7,311,180]), function (require, exports, idGenerator_1, range_1, editorCommon, textModelWithMarkers_1, textModelWithTokens_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -51537,7 +53452,7 @@ define(__m[308], __M([1,0,59,6,7,307,118]), function (require, exports, idGenera
 
 
 
-define(__m[309], __M([1,0,8,259,10,59,6,7,308]), function (require, exports, errors_1, htmlContent_1, strings, idGenerator_1, range_1, editorCommon, textModelWithTrackedRanges_1) {
+define(__m[313], __M([0,1,8,92,10,63,4,7,312]), function (require, exports, errors_1, htmlContent_1, strings, idGenerator_1, range_1, editorCommon, textModelWithTrackedRanges_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -52029,8 +53944,8 @@ define(__m[309], __M([1,0,8,259,10,59,6,7,308]), function (require, exports, err
         function ModelDecorationOptions(options) {
             this.stickiness = options.stickiness || editorCommon.TrackedRangeStickiness.AlwaysGrowsWhenTypingAtEdges;
             this.className = cleanClassName(options.className || strings.empty);
-            this.hoverMessage = options.hoverMessage || strings.empty;
-            this.htmlMessage = options.htmlMessage || [];
+            this.glyphMarginHoverMessage = options.glyphMarginHoverMessage || strings.empty;
+            this.hoverMessage = options.hoverMessage || [];
             this.isWholeLine = options.isWholeLine || false;
             this.overviewRuler = _normalizeOverviewRulerOptions(options.overviewRuler, options.showInOverviewRuler);
             this.glyphMarginClassName = cleanClassName(options.glyphMarginClassName || strings.empty);
@@ -52047,7 +53962,7 @@ define(__m[309], __M([1,0,8,259,10,59,6,7,308]), function (require, exports, err
         ModelDecorationOptions.prototype.equals = function (other) {
             return (this.stickiness === other.stickiness
                 && this.className === other.className
-                && this.hoverMessage === other.hoverMessage
+                && this.glyphMarginHoverMessage === other.glyphMarginHoverMessage
                 && this.isWholeLine === other.isWholeLine
                 && this.showInOverviewRuler === other.showInOverviewRuler
                 && this.glyphMarginClassName === other.glyphMarginClassName
@@ -52055,7 +53970,7 @@ define(__m[309], __M([1,0,8,259,10,59,6,7,308]), function (require, exports, err
                 && this.inlineClassName === other.inlineClassName
                 && this.beforeContentClassName === other.beforeContentClassName
                 && this.afterContentClassName === other.afterContentClassName
-                && htmlContent_1.htmlContentElementArrEquals(this.htmlMessage, other.htmlMessage)
+                && htmlContent_1.markedStringsEquals(this.hoverMessage, other.hoverMessage)
                 && ModelDecorationOptions._overviewRulerEquals(this.overviewRuler, other.overviewRuler));
         };
         return ModelDecorationOptions;
@@ -52102,7 +54017,7 @@ define(__m[309], __M([1,0,8,259,10,59,6,7,308]), function (require, exports, err
 
 
 
-define(__m[310], __M([1,0,6,7,209,108,309,10]), function (require, exports, range_1, editorCommon, editStack_1, modelLine_1, textModelWithDecorations_1, strings) {
+define(__m[314], __M([0,1,4,7,211,165,313,10]), function (require, exports, range_1, editorCommon, editStack_1, modelLine_1, textModelWithDecorations_1, strings) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -52733,7 +54648,7 @@ define(__m[310], __M([1,0,6,7,209,108,309,10]), function (require, exports, rang
 
 
 
-define(__m[169], __M([1,0,29,7,310,117]), function (require, exports, uri_1, editorCommon_1, editableTextModel_1, textModel_1) {
+define(__m[125], __M([0,1,29,7,314,177]), function (require, exports, uri_1, editorCommon_1, editableTextModel_1, textModel_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -52768,11 +54683,11 @@ define(__m[169], __M([1,0,29,7,310,117]), function (require, exports, uri_1, edi
          *   The resource associated with this model. If the value is not provided an
          *   unique in memory URL is constructed as the associated resource.
          */
-        function Model(rawText, options, modeOrPromise, associatedResource) {
+        function Model(rawText, modeOrPromise, associatedResource) {
             if (associatedResource === void 0) { associatedResource = null; }
             _super.call(this, [
                 editorCommon_1.EventType.ModelDispose
-            ], textModel_1.TextModel.toRawText(rawText, options), modeOrPromise);
+            ], rawText, modeOrPromise);
             // Generate a new unique model id
             MODEL_ID++;
             this.id = '$model' + MODEL_ID;
@@ -52807,6 +54722,13 @@ define(__m[169], __M([1,0,29,7,310,117]), function (require, exports, uri_1, edi
         Model.prototype.addBulkListener = function (listener) {
             return _super.prototype.addBulkListener.call(this, listener);
         };
+        Model.createFromString = function (text, options, mode, uri) {
+            if (options === void 0) { options = textModel_1.TextModel.DEFAULT_CREATION_OPTIONS; }
+            if (mode === void 0) { mode = null; }
+            if (uri === void 0) { uri = null; }
+            var rawText = textModel_1.TextModel.toRawText(text, options);
+            return new Model(rawText, mode, uri);
+        };
         Model.prototype.getModeId = function () {
             return this.getMode().getId();
         };
@@ -52840,23 +54762,23 @@ define(__m[169], __M([1,0,29,7,310,117]), function (require, exports, uri_1, edi
             enumerable: true,
             configurable: true
         });
-        Model.DEFAULT_CREATION_OPTIONS = textModel_1.TextModel.DEFAULT_CREATION_OPTIONS;
         return Model;
     }(editableTextModel_1.EditableTextModel));
     exports.Model = Model;
 });
 
-define(__m[312], __M([5,4]), function(nls, data) { return nls.create("vs/editor/common/modes/modesRegistry", data); });
-define(__m[313], __M([5,4]), function(nls, data) { return nls.create("vs/editor/common/modes/supports/suggestSupport", data); });
-define(__m[314], __M([5,4]), function(nls, data) { return nls.create("vs/editor/common/services/bulkEdit", data); });
-define(__m[315], __M([5,4]), function(nls, data) { return nls.create("vs/editor/common/services/modeServiceImpl", data); });
-define(__m[316], __M([5,4]), function(nls, data) { return nls.create("vs/editor/common/services/modelServiceImpl", data); });
-define(__m[317], __M([5,4]), function(nls, data) { return nls.create("vs/editor/contrib/accessibility/browser/accessibility", data); });
-define(__m[318], __M([5,4]), function(nls, data) { return nls.create("vs/editor/contrib/clipboard/browser/clipboard", data); });
-define(__m[319], __M([5,4]), function(nls, data) { return nls.create("vs/editor/contrib/comment/common/comment", data); });
-define(__m[320], __M([5,4]), function(nls, data) { return nls.create("vs/editor/contrib/contextmenu/browser/contextmenu", data); });
-define(__m[321], __M([5,4]), function(nls, data) { return nls.create("vs/editor/contrib/defineKeybinding/browser/defineKeybinding", data); });
-define(__m[322], __M([5,4]), function(nls, data) { return nls.create("vs/editor/contrib/find/browser/findWidget", data); });
+define(__m[316], __M([5,6]), function(nls, data) { return nls.create("vs/editor/common/modes/modesRegistry", data); });
+define(__m[317], __M([5,6]), function(nls, data) { return nls.create("vs/editor/common/modes/supports/suggestSupport", data); });
+define(__m[318], __M([5,6]), function(nls, data) { return nls.create("vs/editor/common/services/bulkEdit", data); });
+define(__m[319], __M([5,6]), function(nls, data) { return nls.create("vs/editor/common/services/modeServiceImpl", data); });
+define(__m[320], __M([5,6]), function(nls, data) { return nls.create("vs/editor/common/services/modelServiceImpl", data); });
+define(__m[321], __M([5,6]), function(nls, data) { return nls.create("vs/editor/contrib/accessibility/browser/accessibility", data); });
+define(__m[322], __M([5,6]), function(nls, data) { return nls.create("vs/editor/contrib/carretOperations/common/carretOperations", data); });
+define(__m[323], __M([5,6]), function(nls, data) { return nls.create("vs/editor/contrib/clipboard/browser/clipboard", data); });
+define(__m[324], __M([5,6]), function(nls, data) { return nls.create("vs/editor/contrib/comment/common/comment", data); });
+define(__m[325], __M([5,6]), function(nls, data) { return nls.create("vs/editor/contrib/contextmenu/browser/contextmenu", data); });
+define(__m[326], __M([5,6]), function(nls, data) { return nls.create("vs/editor/contrib/defineKeybinding/browser/defineKeybinding", data); });
+define(__m[327], __M([5,6]), function(nls, data) { return nls.create("vs/editor/contrib/find/browser/findWidget", data); });
 /*---------------------------------------------------------------------------------------------
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -52866,7 +54788,7 @@ define(__m[322], __M([5,4]), function(nls, data) { return nls.create("vs/editor/
 
 
 
-define(__m[323], __M([1,0,322,8,13,10,11,257,106,46,23,166,211]), function (require, exports, nls, errors_1, keyCodes_1, strings, dom, findInput_1, inputBox_1, widget_1, editorBrowser_1, findModel_1) {
+define(__m[328], __M([0,1,327,8,12,10,11,260,98,44,22,128,212]), function (require, exports, nls, errors_1, keyCodes_1, strings, dom, findInput_1, inputBox_1, widget_1, editorBrowser_1, findModel_1) {
     'use strict';
     var NLS_FIND_INPUT_LABEL = nls.localize(0, null);
     var NLS_FIND_INPUT_PLACEHOLDER = nls.localize(1, null);
@@ -53446,22 +55368,22 @@ define(__m[323], __M([1,0,322,8,13,10,11,257,106,46,23,166,211]), function (requ
     }(widget_1.Widget));
 });
 
-define(__m[324], __M([5,4]), function(nls, data) { return nls.create("vs/editor/contrib/find/common/findController", data); });
-define(__m[325], __M([5,4]), function(nls, data) { return nls.create("vs/editor/contrib/folding/browser/folding", data); });
-define(__m[326], __M([5,4]), function(nls, data) { return nls.create("vs/editor/contrib/format/common/formatActions", data); });
-define(__m[327], __M([5,4]), function(nls, data) { return nls.create("vs/editor/contrib/goToDeclaration/browser/goToDeclaration", data); });
-define(__m[328], __M([5,4]), function(nls, data) { return nls.create("vs/editor/contrib/gotoError/browser/gotoError", data); });
-define(__m[329], __M([5,4]), function(nls, data) { return nls.create("vs/editor/contrib/hover/browser/hover", data); });
-define(__m[330], __M([5,4]), function(nls, data) { return nls.create("vs/editor/contrib/hover/browser/modesContentHover", data); });
-define(__m[331], __M([5,4]), function(nls, data) { return nls.create("vs/editor/contrib/inPlaceReplace/common/inPlaceReplace", data); });
-define(__m[332], __M([5,4]), function(nls, data) { return nls.create("vs/editor/contrib/indentation/common/indentation", data); });
-define(__m[333], __M([5,4]), function(nls, data) { return nls.create("vs/editor/contrib/linesOperations/common/linesOperations", data); });
-define(__m[334], __M([5,4]), function(nls, data) { return nls.create("vs/editor/contrib/links/browser/links", data); });
-define(__m[335], __M([5,4]), function(nls, data) { return nls.create("vs/editor/contrib/multicursor/common/multicursor", data); });
-define(__m[336], __M([5,4]), function(nls, data) { return nls.create("vs/editor/contrib/parameterHints/browser/parameterHints", data); });
-define(__m[337], __M([5,4]), function(nls, data) { return nls.create("vs/editor/contrib/parameterHints/browser/parameterHintsWidget", data); });
-define(__m[338], __M([5,4]), function(nls, data) { return nls.create("vs/editor/contrib/quickFix/browser/quickFix", data); });
-define(__m[339], __M([5,4]), function(nls, data) { return nls.create("vs/editor/contrib/quickFix/browser/quickFixSelectionWidget", data); });
+define(__m[329], __M([5,6]), function(nls, data) { return nls.create("vs/editor/contrib/find/common/findController", data); });
+define(__m[330], __M([5,6]), function(nls, data) { return nls.create("vs/editor/contrib/folding/browser/folding", data); });
+define(__m[331], __M([5,6]), function(nls, data) { return nls.create("vs/editor/contrib/format/common/formatActions", data); });
+define(__m[332], __M([5,6]), function(nls, data) { return nls.create("vs/editor/contrib/goToDeclaration/browser/goToDeclaration", data); });
+define(__m[333], __M([5,6]), function(nls, data) { return nls.create("vs/editor/contrib/gotoError/browser/gotoError", data); });
+define(__m[334], __M([5,6]), function(nls, data) { return nls.create("vs/editor/contrib/hover/browser/hover", data); });
+define(__m[335], __M([5,6]), function(nls, data) { return nls.create("vs/editor/contrib/hover/browser/modesContentHover", data); });
+define(__m[336], __M([5,6]), function(nls, data) { return nls.create("vs/editor/contrib/inPlaceReplace/common/inPlaceReplace", data); });
+define(__m[337], __M([5,6]), function(nls, data) { return nls.create("vs/editor/contrib/indentation/common/indentation", data); });
+define(__m[338], __M([5,6]), function(nls, data) { return nls.create("vs/editor/contrib/linesOperations/common/linesOperations", data); });
+define(__m[339], __M([5,6]), function(nls, data) { return nls.create("vs/editor/contrib/links/browser/links", data); });
+define(__m[340], __M([5,6]), function(nls, data) { return nls.create("vs/editor/contrib/multicursor/common/multicursor", data); });
+define(__m[341], __M([5,6]), function(nls, data) { return nls.create("vs/editor/contrib/parameterHints/browser/parameterHints", data); });
+define(__m[342], __M([5,6]), function(nls, data) { return nls.create("vs/editor/contrib/parameterHints/browser/parameterHintsWidget", data); });
+define(__m[343], __M([5,6]), function(nls, data) { return nls.create("vs/editor/contrib/quickFix/browser/quickFix", data); });
+define(__m[344], __M([5,6]), function(nls, data) { return nls.create("vs/editor/contrib/quickFix/browser/quickFixSelectionWidget", data); });
 /*---------------------------------------------------------------------------------------------
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -53471,7 +55393,7 @@ define(__m[339], __M([5,4]), function(nls, data) { return nls.create("vs/editor/
 
 
 
-define(__m[340], __M([1,0,339,8,2,11,65,115,23,80,42,3,232]), function (require, exports, nls, errors_1, winjs_base_1, dom, treeDefaults_1, treeImpl_1, editorBrowser_1, aria_1, scrollableElementOptions_1, lifecycle_1) {
+define(__m[345], __M([0,1,344,8,2,11,75,106,22,81,41,3,230]), function (require, exports, nls, errors_1, winjs_base_1, dom, treeDefaults_1, treeImpl_1, editorBrowser_1, aria_1, scrollableElementOptions_1, lifecycle_1) {
     'use strict';
     var $ = dom.emmet;
     function isQuickFix(quickfix) {
@@ -53954,22 +55876,22 @@ define(__m[340], __M([1,0,339,8,2,11,65,115,23,80,42,3,232]), function (require,
     exports.QuickFixSelectionWidget = QuickFixSelectionWidget;
 });
 
-define(__m[341], __M([5,4]), function(nls, data) { return nls.create("vs/editor/contrib/quickOpen/browser/gotoLine", data); });
-define(__m[342], __M([5,4]), function(nls, data) { return nls.create("vs/editor/contrib/quickOpen/browser/gotoLine.contribution", data); });
-define(__m[343], __M([5,4]), function(nls, data) { return nls.create("vs/editor/contrib/quickOpen/browser/quickCommand", data); });
-define(__m[344], __M([5,4]), function(nls, data) { return nls.create("vs/editor/contrib/quickOpen/browser/quickCommand.contribution", data); });
-define(__m[345], __M([5,4]), function(nls, data) { return nls.create("vs/editor/contrib/quickOpen/browser/quickOutline", data); });
-define(__m[346], __M([5,4]), function(nls, data) { return nls.create("vs/editor/contrib/quickOpen/browser/quickOutline.contribution", data); });
-define(__m[347], __M([5,4]), function(nls, data) { return nls.create("vs/editor/contrib/referenceSearch/browser/referenceSearch", data); });
-define(__m[348], __M([5,4]), function(nls, data) { return nls.create("vs/editor/contrib/referenceSearch/browser/referencesController", data); });
-define(__m[349], __M([5,4]), function(nls, data) { return nls.create("vs/editor/contrib/referenceSearch/browser/referencesWidget", data); });
-define(__m[350], __M([5,4]), function(nls, data) { return nls.create("vs/editor/contrib/rename/browser/rename", data); });
-define(__m[351], __M([5,4]), function(nls, data) { return nls.create("vs/editor/contrib/rename/browser/renameInputField", data); });
+define(__m[346], __M([5,6]), function(nls, data) { return nls.create("vs/editor/contrib/quickOpen/browser/gotoLine", data); });
+define(__m[347], __M([5,6]), function(nls, data) { return nls.create("vs/editor/contrib/quickOpen/browser/gotoLine.contribution", data); });
+define(__m[348], __M([5,6]), function(nls, data) { return nls.create("vs/editor/contrib/quickOpen/browser/quickCommand", data); });
+define(__m[349], __M([5,6]), function(nls, data) { return nls.create("vs/editor/contrib/quickOpen/browser/quickCommand.contribution", data); });
+define(__m[350], __M([5,6]), function(nls, data) { return nls.create("vs/editor/contrib/quickOpen/browser/quickOutline", data); });
+define(__m[351], __M([5,6]), function(nls, data) { return nls.create("vs/editor/contrib/quickOpen/browser/quickOutline.contribution", data); });
+define(__m[352], __M([5,6]), function(nls, data) { return nls.create("vs/editor/contrib/referenceSearch/browser/referenceSearch", data); });
+define(__m[353], __M([5,6]), function(nls, data) { return nls.create("vs/editor/contrib/referenceSearch/browser/referencesController", data); });
+define(__m[354], __M([5,6]), function(nls, data) { return nls.create("vs/editor/contrib/referenceSearch/browser/referencesWidget", data); });
+define(__m[355], __M([5,6]), function(nls, data) { return nls.create("vs/editor/contrib/rename/browser/rename", data); });
+define(__m[356], __M([5,6]), function(nls, data) { return nls.create("vs/editor/contrib/rename/browser/renameInputField", data); });
 /*---------------------------------------------------------------------------------------------
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
-define(__m[352], __M([1,0,351,8,3,2,6,23,238]), function (require, exports, nls_1, errors_1, lifecycle_1, winjs_base_1, range_1, editorBrowser_1) {
+define(__m[357], __M([0,1,356,8,3,2,4,22,239]), function (require, exports, nls_1, errors_1, lifecycle_1, winjs_base_1, range_1, editorBrowser_1) {
     'use strict';
     var RenameInputField = (function () {
         function RenameInputField(editor) {
@@ -54079,169 +56001,27 @@ define(__m[352], __M([1,0,351,8,3,2,6,23,238]), function (require, exports, nls_
     exports.default = RenameInputField;
 });
 
-define(__m[353], __M([5,4]), function(nls, data) { return nls.create("vs/editor/contrib/rename/common/rename", data); });
-define(__m[354], __M([5,4]), function(nls, data) { return nls.create("vs/editor/contrib/smartSelect/common/jumpToBracket", data); });
-define(__m[355], __M([5,4]), function(nls, data) { return nls.create("vs/editor/contrib/smartSelect/common/smartSelect", data); });
-define(__m[356], __M([5,4]), function(nls, data) { return nls.create("vs/editor/contrib/suggest/browser/suggest", data); });
-define(__m[357], __M([5,4]), function(nls, data) { return nls.create("vs/editor/contrib/suggest/browser/suggestWidget", data); });
-define(__m[358], __M([5,4]), function(nls, data) { return nls.create("vs/editor/contrib/toggleTabFocusMode/common/toggleTabFocusMode", data); });
-define(__m[359], __M([5,4]), function(nls, data) { return nls.create("vs/editor/contrib/toggleWordWrap/common/toggleWordWrap", data); });
-define(__m[360], __M([5,4]), function(nls, data) { return nls.create("vs/editor/contrib/zoneWidget/browser/peekViewWidget", data); });
-define(__m[361], __M([5,4]), function(nls, data) { return nls.create("vs/languages/css/common/css.contribution", data); });
-define(__m[362], __M([5,4]), function(nls, data) { return nls.create("vs/languages/css/common/services/lintRules", data); });
-define(__m[119], __M([1,0,362,511]), function (require, exports, nls, _level) {
-    /*---------------------------------------------------------------------------------------------
-     *  Copyright (c) Microsoft Corporation. All rights reserved.
-     *  Licensed under the MIT License. See License.txt in the project root for license information.
-     *--------------------------------------------------------------------------------------------*/
-    'use strict';
-    var Warning = 'warning';
-    var Error = 'error';
-    var Ignore = 'ignore';
-    var Rule = (function () {
-        function Rule(id, message, defaultValue) {
-            this.id = id;
-            this.message = message;
-            this.defaultValue = defaultValue;
-            // nothing to do
-        }
-        Rule.prototype.getConfiguration = function () {
-            return {
-                type: 'string',
-                enum: [Ignore, Warning, Error],
-                default: this.defaultValue,
-                description: this.message
-            };
-        };
-        return Rule;
-    }());
-    exports.Rule = Rule;
-    exports.Rules = {
-        AllVendorPrefixes: new Rule('compatibleVendorPrefixes', nls.localize(0, null), Ignore),
-        IncludeStandardPropertyWhenUsingVendorPrefix: new Rule('vendorPrefix', nls.localize(1, null), Warning),
-        DuplicateDeclarations: new Rule('duplicateProperties', nls.localize(2, null), Ignore),
-        EmptyRuleSet: new Rule('emptyRules', nls.localize(3, null), Warning),
-        ImportStatemement: new Rule('importStatement', nls.localize(4, null), Ignore),
-        NoWidthOrHeightWhenPaddingOrBorder: new Rule('boxModel', nls.localize(5, null), Ignore),
-        UniversalSelector: new Rule('universalSelector', nls.localize(6, null), Ignore),
-        ZeroWithUnit: new Rule('zeroUnits', nls.localize(7, null), Ignore),
-        RequiredPropertiesForFontFace: new Rule('fontFaceProperties', nls.localize(8, null), Warning),
-        HexColorLength: new Rule('hexColorLength', nls.localize(9, null), Error),
-        ArgsInColorFunction: new Rule('argumentsInColorFunction', nls.localize(10, null), Error),
-        UnknownProperty: new Rule('unknownProperties', nls.localize(11, null), Warning),
-        IEStarHack: new Rule('ieHack', nls.localize(12, null), Ignore),
-        UnknownVendorSpecificProperty: new Rule('unknownVendorSpecificProperties', nls.localize(13, null), Ignore),
-        PropertyIgnoredDueToDisplay: new Rule('propertyIgnoredDueToDisplay', nls.localize(14, null), Warning),
-        AvoidImportant: new Rule('important', nls.localize(15, null), Ignore),
-        AvoidFloat: new Rule('float', nls.localize(16, null), Ignore),
-        AvoidIdSelector: new Rule('idSelector', nls.localize(17, null), Ignore),
-    };
-    function getConfigurationProperties(keyPrefix) {
-        var properties = {};
-        properties[keyPrefix + '.validate'] = {
-            type: 'boolean',
-            default: true,
-            description: nls.localize(18, null)
-        };
-        for (var ruleName in exports.Rules) {
-            var rule = exports.Rules[ruleName];
-            properties[keyPrefix + '.lint.' + rule.id] = rule.getConfiguration();
-        }
-        return properties;
-    }
-    exports.getConfigurationProperties = getConfigurationProperties;
-    function sanitize(conf) {
-        var settings = {};
-        for (var ruleName in exports.Rules) {
-            var rule = exports.Rules[ruleName];
-            var level = _level.toLevel(conf[rule.id]);
-            if (level) {
-                settings[rule.id] = level;
-            }
-        }
-        return settings;
-    }
-    exports.sanitize = sanitize;
-});
-/* old rules
-        'duplicate-background-images' : {
-            'type': 'string',
-            'enum': ['ignore', 'warning', 'error'],
-            'default': 'ignore',
-            'description': nls.localize('duplicateBackgroundImages', "Every background-image should be unique. Use a common class for e.g. sprites.")
-        },
-        'gradients' : {
-            'type': 'string',
-            'enum': ['ignore', 'warning', 'error'],
-            'default': 'warning',
-            'description': nls.localize('gradients', "When using a vendor-prefixed gradient, make sure to use them all.")
-        },
-        'outline-none' : {
-            'type': 'string',
-            'enum': ['ignore', 'warning', 'error'],
-            'default': 'warning',
-            'description': nls.localize('outlineNone', "Use of outline: none or outline: 0 should be limited to :focus rules.")
-        },
-        'overqualified-elements' : {
-            'type': 'string',
-            'enum': ['ignore', 'warning', 'error'],
-            'default': 'ignore',
-            'description': nls.localize('overqualifiedElements', "Don't use classes or IDs with elements (a.foo or a#foo).")
-        },
-        'qualified-headings' : {
-            'type': 'string',
-            'enum': ['ignore', 'warning', 'error'],
-            'default': 'ignore',
-            'description': nls.localize('qualifiedHeadings', "Headings should not be qualified (namespaced).")
-        },
-        'regex-selectors' : {
-            'type': 'string',
-            'enum': ['ignore', 'warning', 'error'],
-            'default': 'ignore',
-            'description': nls.localize('regexSelectors', "Selectors that look like regular expressions are slow and should be avoided.")
-        },
-        'shorthand' : {
-            'type': 'string',
-            'enum': ['ignore', 'warning', 'error'],
-            'default': 'ignore',
-            'description': nls.localize('shorthand', "Use shorthand properties where possible.")
-        },
-        'text-indent' : {
-            'type': 'string',
-            'enum': ['ignore', 'warning', 'error'],
-            'default': 'ignore',
-            'description': nls.localize('textIndent', "Checks for text indent less than -99px.")
-        },
-        'unique-headings' : {
-            'type': 'string',
-            'enum': ['ignore', 'warning', 'error'],
-            'default': 'ignore',
-            'description': nls.localize('uniqueHeadings', "Headings should be defined only once.")
-        },
-
-        'unqualified-attributes' : {
-            'type': 'string',
-            'enum': ['ignore', 'warning', 'error'],
-            'default': 'ignore',
-            'description': nls.localize('unqualifiedAttributes', "Unqualified attribute selectors are known to be slow.")
-        },
-        */
-
-define(__m[364], __M([5,4]), function(nls, data) { return nls.create("vs/languages/html/common/html.contribution", data); });
-define(__m[365], __M([5,4]), function(nls, data) { return nls.create("vs/languages/json/common/json.contribution", data); });
-define(__m[366], __M([5,4]), function(nls, data) { return nls.create("vs/languages/less/common/less.contribution", data); });
-define(__m[367], __M([5,4]), function(nls, data) { return nls.create("vs/languages/sass/common/sass.contribution", data); });
-define(__m[368], __M([5,4]), function(nls, data) { return nls.create("vs/platform/configuration/common/configurationRegistry", data); });
-define(__m[369], __M([5,4]), function(nls, data) { return nls.create("vs/platform/extensions/common/abstractExtensionService", data); });
-define(__m[370], __M([5,4]), function(nls, data) { return nls.create("vs/platform/extensions/common/extensionsRegistry", data); });
-define(__m[371], __M([5,4]), function(nls, data) { return nls.create("vs/platform/jsonschemas/common/jsonContributionRegistry", data); });
-define(__m[372], __M([5,4]), function(nls, data) { return nls.create("vs/platform/keybinding/browser/keybindingServiceImpl", data); });
-define(__m[373], __M([5,4]), function(nls, data) { return nls.create("vs/platform/message/common/message", data); });
+define(__m[358], __M([5,6]), function(nls, data) { return nls.create("vs/editor/contrib/rename/common/rename", data); });
+define(__m[359], __M([5,6]), function(nls, data) { return nls.create("vs/editor/contrib/smartSelect/common/jumpToBracket", data); });
+define(__m[360], __M([5,6]), function(nls, data) { return nls.create("vs/editor/contrib/smartSelect/common/smartSelect", data); });
+define(__m[361], __M([5,6]), function(nls, data) { return nls.create("vs/editor/contrib/suggest/browser/suggest", data); });
+define(__m[362], __M([5,6]), function(nls, data) { return nls.create("vs/editor/contrib/suggest/browser/suggestWidget", data); });
+define(__m[363], __M([5,6]), function(nls, data) { return nls.create("vs/editor/contrib/toggleTabFocusMode/common/toggleTabFocusMode", data); });
+define(__m[364], __M([5,6]), function(nls, data) { return nls.create("vs/editor/contrib/toggleWordWrap/common/toggleWordWrap", data); });
+define(__m[365], __M([5,6]), function(nls, data) { return nls.create("vs/editor/contrib/zoneWidget/browser/peekViewWidget", data); });
+define(__m[366], __M([5,6]), function(nls, data) { return nls.create("vs/languages/html/common/html.contribution", data); });
+define(__m[367], __M([5,6]), function(nls, data) { return nls.create("vs/platform/actions/browser/menuItemActionItem", data); });
+define(__m[368], __M([5,6]), function(nls, data) { return nls.create("vs/platform/configuration/common/configurationRegistry", data); });
+define(__m[369], __M([5,6]), function(nls, data) { return nls.create("vs/platform/extensions/common/abstractExtensionService", data); });
+define(__m[370], __M([5,6]), function(nls, data) { return nls.create("vs/platform/extensions/common/extensionsRegistry", data); });
+define(__m[371], __M([5,6]), function(nls, data) { return nls.create("vs/platform/jsonschemas/common/jsonContributionRegistry", data); });
+define(__m[372], __M([5,6]), function(nls, data) { return nls.create("vs/platform/keybinding/browser/keybindingServiceImpl", data); });
+define(__m[373], __M([5,6]), function(nls, data) { return nls.create("vs/platform/message/common/message", data); });
 /*---------------------------------------------------------------------------------------------
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
-define(__m[374], __M([1,0,36,3,38,50,251,63,33,245]), function (require, exports, builder_1, lifecycle_1, mouseEvent_1, actions_1, menu_1, events_1, severity_1) {
+define(__m[374], __M([0,1,35,3,39,50,253,60,32,245]), function (require, exports, builder_1, lifecycle_1, mouseEvent_1, actions_1, menu_1, events_1, severity_1) {
     'use strict';
     var ContextMenuHandler = (function () {
         function ContextMenuHandler(element, contextViewService, telemetryService, messageService) {
@@ -54346,7 +56126,7 @@ define(__m[374], __M([1,0,36,3,38,50,251,63,33,245]), function (require, exports
 
 
 
-define(__m[68], __M([1,0,8]), function (require, exports, errors_1) {
+define(__m[68], __M([0,1,8]), function (require, exports, errors_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -54474,7 +56254,7 @@ define(__m[68], __M([1,0,8]), function (require, exports, errors_1) {
     exports.createAsyncDescriptor7 = _createAsyncDescriptor;
 });
 
-define(__m[15], __M([1,0]), function (require, exports) {
+define(__m[15], __M([0,1]), function (require, exports) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -54528,7 +56308,7 @@ define(__m[15], __M([1,0]), function (require, exports) {
     exports.optional = optional;
 });
 
-define(__m[62], __M([1,0,15]), function (require, exports, instantiation_1) {
+define(__m[54], __M([0,1,15]), function (require, exports, instantiation_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -54538,7 +56318,7 @@ define(__m[62], __M([1,0,15]), function (require, exports, instantiation_1) {
     exports.ICodeEditorService = instantiation_1.createDecorator(exports.ID_CODE_EDITOR_SERVICE);
 });
 
-define(__m[378], __M([1,0,18,62]), function (require, exports, event_1, codeEditorService_1) {
+define(__m[378], __M([0,1,16,54]), function (require, exports, event_1, codeEditorService_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -54606,7 +56386,7 @@ define(__m[378], __M([1,0,18,62]), function (require, exports, event_1, codeEdit
 
 
 
-define(__m[379], __M([1,0,32,10,29,11,7,378,3]), function (require, exports, objects, strings, uri_1, dom, editorCommon_1, abstractCodeEditorService_1, lifecycle_1) {
+define(__m[379], __M([0,1,31,10,29,11,7,378,3]), function (require, exports, objects, strings, uri_1, dom, editorCommon_1, abstractCodeEditorService_1, lifecycle_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -54614,9 +56394,10 @@ define(__m[379], __M([1,0,32,10,29,11,7,378,3]), function (require, exports, obj
     'use strict';
     var CodeEditorServiceImpl = (function (_super) {
         __extends(CodeEditorServiceImpl, _super);
-        function CodeEditorServiceImpl() {
+        function CodeEditorServiceImpl(styleSheet) {
+            if (styleSheet === void 0) { styleSheet = dom.createStyleSheet(); }
             _super.call(this);
-            this._styleSheet = dom.createStyleSheet();
+            this._styleSheet = styleSheet;
             this._decorationOptionProviders = Object.create(null);
         }
         CodeEditorServiceImpl.prototype.registerDecorationType = function (key, options, parentTypeKey) {
@@ -54692,6 +56473,7 @@ define(__m[379], __M([1,0,32,10,29,11,7,378,3]), function (require, exports, obj
     }());
     var DecorationTypeOptionsProvider = (function () {
         function DecorationTypeOptionsProvider(styleSheet, key, options) {
+            this.refCount = 0;
             var themedOpts = getThemedRenderOptions(options);
             this.className = DecorationRenderHelper.createCSSRules(styleSheet, key, null, ModelDecorationCSSRuleType.ClassName, {
                 light: DecorationRenderHelper.getCSSTextForModelDecorationClassName(themedOpts.light),
@@ -54796,7 +56578,10 @@ define(__m[379], __M([1,0,32,10,29,11,7,378,3]), function (require, exports, obj
         DecorationRenderHelper.getCSSTextForModelDecorationGlyphMarginClassName = function (opts) {
             var cssTextArr = [];
             if (typeof opts.gutterIconPath !== 'undefined') {
-                cssTextArr.push(strings.format(this._CSS_MAP.gutterIconPath, uri_1.default.file(opts.gutterIconPath).toString()));
+                cssTextArr.push(strings.format(this._CSS_MAP.gutterIconPath, uri_1.default.parse(opts.gutterIconPath).toString()));
+                if (typeof opts.gutterIconSize !== 'undefined') {
+                    cssTextArr.push(strings.format(this._CSS_MAP.gutterIconSize, opts.gutterIconSize));
+                }
             }
             return cssTextArr.join('');
         };
@@ -54861,6 +56646,7 @@ define(__m[379], __M([1,0,32,10,29,11,7,378,3]), function (require, exports, obj
             cursor: 'cursor:{0};',
             letterSpacing: 'letter-spacing:{0};',
             gutterIconPath: 'background:url(\'{0}\') center center no-repeat;',
+            gutterIconSize: 'background-size:{0};',
             contentText: 'content:\'{0}\';',
             contentIconPath: 'content:url(\'{0}\')',
             margin: 'margin:{0};',
@@ -54929,7 +56715,36 @@ define(__m[379], __M([1,0,32,10,29,11,7,378,3]), function (require, exports, obj
     }
 });
 
-define(__m[64], __M([1,0,15]), function (require, exports, instantiation_1) {
+define(__m[113], __M([0,1,15]), function (require, exports, instantiation_1) {
+    /*---------------------------------------------------------------------------------------------
+     *  Copyright (c) Microsoft Corporation. All rights reserved.
+     *  Licensed under the MIT License. See License.txt in the project root for license information.
+     *--------------------------------------------------------------------------------------------*/
+    'use strict';
+    exports.ICompatWorkerService = instantiation_1.createDecorator('compatWorkerService');
+    function findMember(proto, target) {
+        for (var i in proto) {
+            if (proto[i] === target) {
+                return i;
+            }
+        }
+        throw new Error('Member not found in prototype');
+    }
+    function CompatWorkerAttr(type, target) {
+        var methodName = findMember(type.prototype, target);
+        type.prototype[methodName] = function () {
+            var param = [];
+            for (var _i = 0; _i < arguments.length; _i++) {
+                param[_i - 0] = arguments[_i];
+            }
+            var obj = this;
+            return obj.compatWorkerService.CompatWorker(obj, methodName, target, param);
+        };
+    }
+    exports.CompatWorkerAttr = CompatWorkerAttr;
+});
+
+define(__m[52], __M([0,1,15]), function (require, exports, instantiation_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -54939,7 +56754,7 @@ define(__m[64], __M([1,0,15]), function (require, exports, instantiation_1) {
     exports.IEditorWorkerService = instantiation_1.createDecorator(exports.ID_EDITOR_WORKER_SERVICE);
 });
 
-define(__m[83], __M([1,0,15]), function (require, exports, instantiation_1) {
+define(__m[72], __M([0,1,15]), function (require, exports, instantiation_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -54948,7 +56763,7 @@ define(__m[83], __M([1,0,15]), function (require, exports, instantiation_1) {
     exports.IModeService = instantiation_1.createDecorator('modeService');
 });
 
-define(__m[40], __M([1,0,15]), function (require, exports, instantiation_1) {
+define(__m[34], __M([0,1,15]), function (require, exports, instantiation_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -54971,7 +56786,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
-define(__m[130], __M([1,0,14,3,2,200,148,7,160,64,40]), function (require, exports, async_1, lifecycle_1, winjs_base_1, simpleWorker_1, defaultWorkerFactory_1, editorCommon, textModelWithTokensHelpers_1, editorWorkerService_1, modelService_1) {
+define(__m[133], __M([0,1,14,3,2,203,155,7,176,52,34,292,118]), function (require, exports, async_1, lifecycle_1, winjs_base_1, simpleWorker_1, defaultWorkerFactory_1, editorCommon, textModelWithTokensHelpers_1, editorWorkerService_1, modelService_1, editorSimpleWorker_1, workerClient_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -55143,22 +56958,49 @@ define(__m[130], __M([1,0,14,3,2,200,148,7,160,64,40]), function (require, expor
         };
         return EditorModelManager;
     }(lifecycle_1.Disposable));
+    var SynchronousWorkerClient = (function () {
+        function SynchronousWorkerClient(instance) {
+            this._instance = instance;
+            this._proxyObj = winjs_base_1.TPromise.as(this._instance);
+        }
+        SynchronousWorkerClient.prototype.dispose = function () {
+            this._instance.dispose();
+            this._instance = null;
+            this._proxyObj = null;
+        };
+        SynchronousWorkerClient.prototype.getProxyObject = function () {
+            return new async_1.ShallowCancelThenPromise(this._proxyObj);
+        };
+        return SynchronousWorkerClient;
+    }());
     var EditorWorkerClient = (function (_super) {
         __extends(EditorWorkerClient, _super);
         function EditorWorkerClient(modelService) {
             _super.call(this);
             this._modelService = modelService;
+            this._workerFactory = new defaultWorkerFactory_1.DefaultWorkerFactory(/*do not use iframe*/ false);
             this._worker = null;
             this._modelManager = null;
         }
         EditorWorkerClient.prototype._getOrCreateWorker = function () {
             if (!this._worker) {
-                this._worker = this._register(new simpleWorker_1.SimpleWorkerClient(new defaultWorkerFactory_1.DefaultWorkerFactory(), 'vs/editor/common/services/editorSimpleWorker'));
+                try {
+                    this._worker = this._register(new simpleWorker_1.SimpleWorkerClient(this._workerFactory, 'vs/editor/common/services/editorSimpleWorker'));
+                }
+                catch (err) {
+                    workerClient_1.logOnceWebWorkerWarning(err);
+                    this._worker = new SynchronousWorkerClient(new editorSimpleWorker_1.EditorSimpleWorkerImpl());
+                }
             }
             return this._worker;
         };
         EditorWorkerClient.prototype._getProxy = function () {
-            return this._getOrCreateWorker().getProxyObject();
+            var _this = this;
+            return new async_1.ShallowCancelThenPromise(this._getOrCreateWorker().getProxyObject().then(null, function (err) {
+                workerClient_1.logOnceWebWorkerWarning(err);
+                _this._worker = new SynchronousWorkerClient(new editorSimpleWorker_1.EditorSimpleWorkerImpl());
+                return _this._getOrCreateWorker().getProxyObject();
+            }));
         };
         EditorWorkerClient.prototype._getOrCreateModelManager = function (proxy) {
             if (!this._modelManager) {
@@ -55219,20 +57061,6 @@ define(__m[130], __M([1,0,14,3,2,200,148,7,160,64,40]), function (require, expor
     exports.EditorWorkerClient = EditorWorkerClient;
 });
 
-define(__m[384], __M([1,0,15]), function (require, exports, instantiation_1) {
-    /*---------------------------------------------------------------------------------------------
-     *  Copyright (c) Microsoft Corporation. All rights reserved.
-     *  Licensed under the MIT License. See License.txt in the project root for license information.
-     *--------------------------------------------------------------------------------------------*/
-    'use strict';
-    // Resource Service
-    exports.ResourceEvents = {
-        ADDED: 'resource.added',
-        REMOVED: 'resource.removed',
-        CHANGED: 'resource.changed'
-    };
-    exports.IResourceService = instantiation_1.createDecorator('resourceService');
-});
 
 
 
@@ -55242,8 +57070,7 @@ define(__m[384], __M([1,0,15]), function (require, exports, instantiation_1) {
 
 
 
-
-define(__m[385], __M([1,0,2,6,40,229]), function (require, exports, winjs_base_1, range_1, modelService_1, tokenTree_1) {
+define(__m[385], __M([0,1,2,4,34,231]), function (require, exports, winjs_base_1, range_1, modelService_1, tokenTree_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -55294,7 +57121,7 @@ define(__m[385], __M([1,0,2,6,40,229]), function (require, exports, winjs_base_1
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
-define(__m[69], __M([1,0,15]), function (require, exports, instantiation_1) {
+define(__m[57], __M([0,1,15]), function (require, exports, instantiation_1) {
     "use strict";
     exports.IConfigurationService = instantiation_1.createDecorator('configurationService');
     function getConfigurationValue(config, settingPath, defaultValue) {
@@ -55317,7 +57144,7 @@ define(__m[69], __M([1,0,15]), function (require, exports, instantiation_1) {
     exports.getConfigurationValue = getConfigurationValue;
 });
 
-define(__m[70], __M([1,0,15]), function (require, exports, instantiation_1) {
+define(__m[70], __M([0,1,15]), function (require, exports, instantiation_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -55336,7 +57163,7 @@ define(__m[70], __M([1,0,15]), function (require, exports, instantiation_1) {
     exports.ContextSubMenu = ContextSubMenu;
 });
 
-define(__m[388], __M([1,0,374,70]), function (require, exports, contextMenuHandler_1, contextView_1) {
+define(__m[388], __M([0,1,374,70]), function (require, exports, contextMenuHandler_1, contextView_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -55362,7 +57189,7 @@ define(__m[388], __M([1,0,374,70]), function (require, exports, contextMenuHandl
     exports.ContextMenuService = ContextMenuService;
 });
 
-define(__m[45], __M([1,0,15]), function (require, exports, instantiation_1) {
+define(__m[43], __M([0,1,15]), function (require, exports, instantiation_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -55389,7 +57216,7 @@ define(__m[45], __M([1,0,15]), function (require, exports, instantiation_1) {
     var Direction = exports.Direction;
 });
 
-define(__m[99], __M([1,0,15]), function (require, exports, instantiation_1) {
+define(__m[82], __M([0,1,15]), function (require, exports, instantiation_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -55403,7 +57230,7 @@ define(__m[99], __M([1,0,15]), function (require, exports, instantiation_1) {
 
 
 
-define(__m[391], __M([1,0,22,99]), function (require, exports, eventEmitter_1, event_1) {
+define(__m[391], __M([0,1,23,82]), function (require, exports, eventEmitter_1, event_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -55421,7 +57248,7 @@ define(__m[391], __M([1,0,22,99]), function (require, exports, eventEmitter_1, e
     exports.EventService = EventService;
 });
 
-define(__m[135], __M([1,0,15]), function (require, exports, instantiation_1) {
+define(__m[84], __M([0,1,15]), function (require, exports, instantiation_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -55435,7 +57262,7 @@ define(__m[135], __M([1,0,15]), function (require, exports, instantiation_1) {
 
 
 
-define(__m[100], __M([1,0,37,63,15]), function (require, exports, paths, events, instantiation_1) {
+define(__m[139], __M([0,1,38,60,15]), function (require, exports, paths, events, instantiation_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -55810,7 +57637,7 @@ define(__m[100], __M([1,0,37,63,15]), function (require, exports, paths, events,
 
 
 
-define(__m[394], __M([1,0,314,35,51,29,2,100,58,6,24]), function (require, exports, nls, arrays_1, collections_1, uri_1, winjs_base_1, files_1, editOperation_1, range_1, selection_1) {
+define(__m[394], __M([0,1,318,37,48,29,2,139,62,4,24]), function (require, exports, nls, arrays_1, collections_1, uri_1, winjs_base_1, files_1, editOperation_1, range_1, selection_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -55905,7 +57732,9 @@ define(__m[394], __M([1,0,314,35,51,29,2,100,58,6,24]), function (require, expor
         return SourceModelEditTask;
     }(EditTask));
     var BulkEditModel = (function () {
-        function BulkEditModel(editorService, sourceModel, sourceSelections, edits) {
+        function BulkEditModel(editorService, sourceModel, sourceSelections, edits, progress) {
+            if (progress === void 0) { progress = null; }
+            this.progress = progress;
             this._numberOfResourcesToModify = 0;
             this._numberOfChanges = 0;
             this._edits = Object.create(null);
@@ -55940,6 +57769,9 @@ define(__m[394], __M([1,0,314,35,51,29,2,100,58,6,24]), function (require, expor
             }
             this._tasks = [];
             var promises = [];
+            if (this.progress) {
+                this.progress.total(this._numberOfResourcesToModify * 2);
+            }
             collections_1.forEach(this._edits, function (entry) {
                 var promise = _this._editorService.resolveEditorModel({ resource: uri_1.default.parse(entry.key) }).then(function (model) {
                     if (!model || !model.textEditorModel) {
@@ -55955,30 +57787,46 @@ define(__m[394], __M([1,0,314,35,51,29,2,100,58,6,24]), function (require, expor
                     }
                     entry.value.forEach(function (edit) { return task.addEdit(edit); });
                     _this._tasks.push(task);
+                    if (_this.progress) {
+                        _this.progress.worked(1);
+                    }
                 });
                 promises.push(promise);
             });
             return winjs_base_1.TPromise.join(promises).then(function (_) { return _this; });
         };
         BulkEditModel.prototype.apply = function () {
-            this._tasks.forEach(function (task) { return task.apply(); });
+            var _this = this;
+            this._tasks.forEach(function (task) { return _this.applyTask(task); });
             var r = null;
             if (this._sourceModelTask) {
                 r = this._sourceModelTask.getEndCursorSelection();
             }
             return r;
         };
+        BulkEditModel.prototype.applyTask = function (task) {
+            task.apply();
+            if (this.progress) {
+                this.progress.worked(1);
+            }
+        };
         return BulkEditModel;
     }());
-    function bulkEdit(eventService, editorService, editor, edits) {
+    function bulkEdit(eventService, editorService, editor, edits, progress) {
+        if (progress === void 0) { progress = null; }
         var bulk = createBulkEdit(eventService, editorService, editor);
         bulk.add(edits);
+        bulk.progress(progress);
         return bulk.finish();
     }
     exports.bulkEdit = bulkEdit;
     function createBulkEdit(eventService, editorService, editor) {
         var all = [];
         var recording = new ChangeRecorder(eventService).start();
+        var progressRunner;
+        function progress(progress) {
+            progressRunner = progress;
+        }
         function add(edits) {
             all.push.apply(all, edits);
         }
@@ -56011,7 +57859,7 @@ define(__m[394], __M([1,0,314,35,51,29,2,100,58,6,24]), function (require, expor
                 uri = editor.getModel().uri;
                 selections = editor.getSelections();
             }
-            var model = new BulkEditModel(editorService, uri, selections, all);
+            var model = new BulkEditModel(editorService, uri, selections, all, progressRunner);
             return model.prepare().then(function (_) {
                 var concurrentEdits = getConcurrentEdits();
                 if (concurrentEdits) {
@@ -56022,6 +57870,7 @@ define(__m[394], __M([1,0,314,35,51,29,2,100,58,6,24]), function (require, expor
             });
         }
         return {
+            progress: progress,
             add: add,
             finish: finish
         };
@@ -56029,7 +57878,7 @@ define(__m[394], __M([1,0,314,35,51,29,2,100,58,6,24]), function (require, expor
     exports.createBulkEdit = createBulkEdit;
 });
 
-define(__m[72], __M([1,0,35]), function (require, exports, arrays_1) {
+define(__m[67], __M([0,1,37]), function (require, exports, arrays_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -56099,7 +57948,7 @@ define(__m[72], __M([1,0,35]), function (require, exports, arrays_1) {
     exports.ServiceCollection = ServiceCollection;
 });
 
-define(__m[138], __M([1,0,2,8,26,56,256,68,15,72]), function (require, exports, winjs_base_1, errors_1, types_1, assert, graph_1, descriptors_1, instantiation_1, serviceCollection_1) {
+define(__m[141], __M([0,1,2,8,26,47,255,68,15,67]), function (require, exports, winjs_base_1, errors_1, types_1, assert, graph_1, descriptors_1, instantiation_1, serviceCollection_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -56114,10 +57963,17 @@ define(__m[138], __M([1,0,2,8,26,56,256,68,15,72]), function (require, exports, 
             this._services.set(instantiation_1.IInstantiationService, this);
         }
         InstantiationService.prototype.createChild = function (services) {
+            var _this = this;
             this._services.forEach(function (id, thing) {
-                if (!services.has(id)) {
-                    services.set(id, thing);
+                if (services.has(id)) {
+                    return;
                 }
+                // If we copy descriptors we might end up with
+                // multiple instances of the same service
+                if (thing instanceof descriptors_1.SyncDescriptor) {
+                    thing = _this._createAndCacheServiceInstance(id, thing);
+                }
+                services.set(id, thing);
             });
             return new InstantiationService(services, this._strict);
         };
@@ -56303,7 +58159,7 @@ define(__m[138], __M([1,0,2,8,26,56,256,68,15,72]), function (require, exports, 
     exports.InstantiationService = InstantiationService;
 });
 
-define(__m[21], __M([1,0,15]), function (require, exports, instantiation_1) {
+define(__m[19], __M([0,1,15]), function (require, exports, instantiation_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -56640,7 +58496,7 @@ define(__m[21], __M([1,0,15]), function (require, exports, instantiation_1) {
 
 
 
-define(__m[398], __M([1,0,50,8,22,3,55,2,72,21,57,303,123,305,20,6,24,19,7,419,136,220,258]), function (require, exports, actions_1, errors_1, eventEmitter_1, lifecycle_1, timer, winjs_base_1, serviceCollection_1, keybindingService_1, defaultConfig_1, cursor_1, cursorMoveHelper_1, editorState_1, position_1, range_1, selection_1, editorAction_1, editorCommon, characterHardWrappingLineMapper_1, splitLinesCollection_1, viewModelImpl_1, hash_1) {
+define(__m[398], __M([0,1,50,8,23,3,59,2,67,19,55,308,97,297,21,4,24,20,7,421,146,222,264]), function (require, exports, actions_1, errors_1, eventEmitter_1, lifecycle_1, timer, winjs_base_1, serviceCollection_1, keybindingService_1, defaultConfig_1, cursor_1, cursorMoveHelper_1, editorState_1, position_1, range_1, selection_1, editorAction_1, editorCommon, characterHardWrappingLineMapper_1, splitLinesCollection_1, viewModelImpl_1, hash_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -57153,7 +59009,7 @@ define(__m[398], __M([1,0,50,8,22,3,55,2,72,21,57,303,123,305,20,6,24,19,7,419,1
                 }
                 var opts = this._codeEditorService.resolveDecorationOptions(typeKey, !!decorationOption.hoverMessage);
                 if (decorationOption.hoverMessage) {
-                    opts.htmlMessage = decorationOption.hoverMessage;
+                    opts.hoverMessage = decorationOption.hoverMessage;
                 }
                 newModelDecorations.push({ range: decorationOption.range, options: opts });
             }
@@ -57398,7 +59254,672 @@ define(__m[398], __M([1,0,50,8,22,3,55,2,72,21,57,303,123,305,20,6,24,19,7,419,1
     exports.CommonCodeEditor = CommonCodeEditor;
 });
 
-define(__m[103], __M([1,0,13,17,21]), function (require, exports, keyCodes_1, platform, keybindingService_1) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+define(__m[79], __M([0,1,50,2,47,68,19,15]), function (require, exports, Actions, WinJS, Assert, Descriptors, keybindingService_1, instantiation_1) {
+    /*---------------------------------------------------------------------------------------------
+     *  Copyright (c) Microsoft Corporation. All rights reserved.
+     *  Licensed under the MIT License. See License.txt in the project root for license information.
+     *--------------------------------------------------------------------------------------------*/
+    'use strict';
+    (function (MenuId) {
+        MenuId[MenuId["EditorTitle"] = 1] = "EditorTitle";
+        MenuId[MenuId["EditorContext"] = 2] = "EditorContext";
+        MenuId[MenuId["ExplorerContext"] = 3] = "ExplorerContext";
+    })(exports.MenuId || (exports.MenuId = {}));
+    var MenuId = exports.MenuId;
+    exports.IMenuService = instantiation_1.createDecorator('menuService');
+    var MenuItemAction = (function (_super) {
+        __extends(MenuItemAction, _super);
+        function MenuItemAction(_item, _resource, _keybindingService) {
+            _super.call(this, MenuItemAction._getMenuItemId(_item), _item.command.title);
+            this._item = _item;
+            this._resource = _resource;
+            this._keybindingService = _keybindingService;
+            this.order = 100000; //TODO@Ben order is menu item property, not an action property
+        }
+        MenuItemAction._getMenuItemId = function (item) {
+            var result = item.command.id;
+            if (item.alt) {
+                result += "||" + item.alt.id;
+            }
+            return result;
+        };
+        Object.defineProperty(MenuItemAction.prototype, "command", {
+            get: function () {
+                return this._item.command;
+            },
+            enumerable: true,
+            configurable: true
+        });
+        Object.defineProperty(MenuItemAction.prototype, "altCommand", {
+            get: function () {
+                return this._item.alt;
+            },
+            enumerable: true,
+            configurable: true
+        });
+        Object.defineProperty(MenuItemAction.prototype, "selectedCommand", {
+            get: function () {
+                return this.command;
+            },
+            enumerable: true,
+            configurable: true
+        });
+        MenuItemAction.prototype.run = function (alt) {
+            var id = (alt && this._item.alt || this._item.command).id;
+            return this._keybindingService.executeCommand(id, this._resource);
+        };
+        MenuItemAction = __decorate([
+            __param(2, keybindingService_1.IKeybindingService)
+        ], MenuItemAction);
+        return MenuItemAction;
+    }(Actions.Action));
+    exports.MenuItemAction = MenuItemAction;
+    var ExecuteCommandAction = (function (_super) {
+        __extends(ExecuteCommandAction, _super);
+        function ExecuteCommandAction(id, label, _keybindingService) {
+            _super.call(this, id, label);
+            this._keybindingService = _keybindingService;
+        }
+        ExecuteCommandAction.prototype.run = function () {
+            var args = [];
+            for (var _i = 0; _i < arguments.length; _i++) {
+                args[_i - 0] = arguments[_i];
+            }
+            return (_a = this._keybindingService).executeCommand.apply(_a, [this.id].concat(args));
+            var _a;
+        };
+        ExecuteCommandAction = __decorate([
+            __param(2, keybindingService_1.IKeybindingService)
+        ], ExecuteCommandAction);
+        return ExecuteCommandAction;
+    }(Actions.Action));
+    exports.ExecuteCommandAction = ExecuteCommandAction;
+    var SyncActionDescriptor = (function () {
+        function SyncActionDescriptor(ctor, id, label, keybindings, keybindingContext, keybindingWeight) {
+            this._id = id;
+            this._label = label;
+            this._keybindings = keybindings;
+            this._keybindingContext = keybindingContext;
+            this._keybindingWeight = keybindingWeight;
+            this._descriptor = Descriptors.createSyncDescriptor(ctor, this._id, this._label);
+        }
+        Object.defineProperty(SyncActionDescriptor.prototype, "syncDescriptor", {
+            get: function () {
+                return this._descriptor;
+            },
+            enumerable: true,
+            configurable: true
+        });
+        Object.defineProperty(SyncActionDescriptor.prototype, "id", {
+            get: function () {
+                return this._id;
+            },
+            enumerable: true,
+            configurable: true
+        });
+        Object.defineProperty(SyncActionDescriptor.prototype, "label", {
+            get: function () {
+                return this._label;
+            },
+            enumerable: true,
+            configurable: true
+        });
+        Object.defineProperty(SyncActionDescriptor.prototype, "keybindings", {
+            get: function () {
+                return this._keybindings;
+            },
+            enumerable: true,
+            configurable: true
+        });
+        Object.defineProperty(SyncActionDescriptor.prototype, "keybindingContext", {
+            get: function () {
+                return this._keybindingContext;
+            },
+            enumerable: true,
+            configurable: true
+        });
+        Object.defineProperty(SyncActionDescriptor.prototype, "keybindingWeight", {
+            get: function () {
+                return this._keybindingWeight;
+            },
+            enumerable: true,
+            configurable: true
+        });
+        return SyncActionDescriptor;
+    }());
+    exports.SyncActionDescriptor = SyncActionDescriptor;
+    /**
+     * A proxy for an action that needs to load code in order to confunction. Can be used from contributions to defer
+     * module loading up to the point until the run method is being executed.
+     */
+    var DeferredAction = (function (_super) {
+        __extends(DeferredAction, _super);
+        function DeferredAction(_instantiationService, _descriptor, id, label, cssClass, enabled) {
+            if (label === void 0) { label = ''; }
+            if (cssClass === void 0) { cssClass = ''; }
+            if (enabled === void 0) { enabled = true; }
+            _super.call(this, id, label, cssClass, enabled);
+            this._instantiationService = _instantiationService;
+            this._descriptor = _descriptor;
+        }
+        Object.defineProperty(DeferredAction.prototype, "cachedAction", {
+            get: function () {
+                return this._cachedAction;
+            },
+            set: function (action) {
+                this._cachedAction = action;
+            },
+            enumerable: true,
+            configurable: true
+        });
+        Object.defineProperty(DeferredAction.prototype, "id", {
+            get: function () {
+                if (this._cachedAction instanceof Actions.Action) {
+                    return this._cachedAction.id;
+                }
+                return this._id;
+            },
+            enumerable: true,
+            configurable: true
+        });
+        Object.defineProperty(DeferredAction.prototype, "label", {
+            get: function () {
+                if (this._cachedAction instanceof Actions.Action) {
+                    return this._cachedAction.label;
+                }
+                return this._label;
+            },
+            set: function (value) {
+                if (this._cachedAction instanceof Actions.Action) {
+                    this._cachedAction.label = value;
+                }
+                else {
+                    this._setLabel(value);
+                }
+            },
+            enumerable: true,
+            configurable: true
+        });
+        Object.defineProperty(DeferredAction.prototype, "class", {
+            get: function () {
+                if (this._cachedAction instanceof Actions.Action) {
+                    return this._cachedAction.class;
+                }
+                return this._cssClass;
+            },
+            set: function (value) {
+                if (this._cachedAction instanceof Actions.Action) {
+                    this._cachedAction.class = value;
+                }
+                else {
+                    this._setClass(value);
+                }
+            },
+            enumerable: true,
+            configurable: true
+        });
+        Object.defineProperty(DeferredAction.prototype, "enabled", {
+            get: function () {
+                if (this._cachedAction instanceof Actions.Action) {
+                    return this._cachedAction.enabled;
+                }
+                return this._enabled;
+            },
+            set: function (value) {
+                if (this._cachedAction instanceof Actions.Action) {
+                    this._cachedAction.enabled = value;
+                }
+                else {
+                    this._setEnabled(value);
+                }
+            },
+            enumerable: true,
+            configurable: true
+        });
+        Object.defineProperty(DeferredAction.prototype, "order", {
+            get: function () {
+                if (this._cachedAction instanceof Actions.Action) {
+                    return this._cachedAction.order;
+                }
+                return this._order;
+            },
+            set: function (order) {
+                if (this._cachedAction instanceof Actions.Action) {
+                    this._cachedAction.order = order;
+                }
+                else {
+                    this._order = order;
+                }
+            },
+            enumerable: true,
+            configurable: true
+        });
+        DeferredAction.prototype.run = function (event) {
+            if (this._cachedAction) {
+                return this._cachedAction.run(event);
+            }
+            return this._createAction().then(function (action) {
+                return action.run(event);
+            });
+        };
+        DeferredAction.prototype._createAction = function () {
+            var _this = this;
+            var promise = WinJS.TPromise.as(undefined);
+            return promise.then(function () {
+                return _this._instantiationService.createInstance(_this._descriptor);
+            }).then(function (action) {
+                Assert.ok(action instanceof Actions.Action, 'Action must be an instanceof Base Action');
+                _this._cachedAction = action;
+                // Pipe events from the instantated action through this deferred action
+                _this._emitterUnbind = _this.addEmitter2(_this._cachedAction);
+                return action;
+            });
+        };
+        DeferredAction.prototype.dispose = function () {
+            if (this._emitterUnbind) {
+                this._emitterUnbind.dispose();
+            }
+            if (this._cachedAction) {
+                this._cachedAction.dispose();
+            }
+            _super.prototype.dispose.call(this);
+        };
+        return DeferredAction;
+    }(Actions.Action));
+    exports.DeferredAction = DeferredAction;
+});
+
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+define(__m[400], __M([0,1,367,19,79,3,58,137,16]), function (require, exports, nls_1, keybindingService_1, actions_1, lifecycle_1, actionbar_1, event_1, event_2) {
+    'use strict';
+    function fillInActions(menu, target) {
+        var actions = menu.getActions();
+        if (actions.length === 0) {
+            return;
+        }
+        for (var _i = 0, actions_2 = actions; _i < actions_2.length; _i++) {
+            var tuple = actions_2[_i];
+            var group = tuple[0], actions_3 = tuple[1];
+            if (group === 'navigation') {
+                if (Array.isArray(target)) {
+                    target.unshift.apply(target, actions_3);
+                }
+                else {
+                    (_a = target.primary).unshift.apply(_a, actions_3);
+                }
+            }
+            else {
+                if (Array.isArray(target)) {
+                    target.push.apply(target, [new actionbar_1.Separator()].concat(actions_3));
+                }
+                else {
+                    (_b = target.secondary).push.apply(_b, [new actionbar_1.Separator()].concat(actions_3));
+                }
+            }
+        }
+        var _a, _b;
+    }
+    exports.fillInActions = fillInActions;
+    function createActionItem(action, keybindingService) {
+        if (action instanceof actions_1.MenuItemAction) {
+            return new MenuItemActionItem(action, keybindingService);
+        }
+    }
+    exports.createActionItem = createActionItem;
+    var _altKey = new (function (_super) {
+        __extends(class_1, _super);
+        function class_1() {
+            var _this = this;
+            _super.call(this, {
+                onFirstListenerAdd: function () {
+                    event_1.domEvent(document.body, 'keydown')(_this._key, _this, _this._subscriptions);
+                    event_1.domEvent(document.body, 'keyup')(_this._key, _this, _this._subscriptions);
+                },
+                onLastListenerRemove: function () {
+                    _this._subscriptions = lifecycle_1.dispose(_this._subscriptions);
+                }
+            });
+            this._subscriptions = [];
+        }
+        class_1.prototype._key = function (e) {
+            this.fire(e.type === 'keydown' && e.altKey);
+        };
+        return class_1;
+    }(event_2.Emitter));
+    var MenuItemActionItem = (function (_super) {
+        __extends(MenuItemActionItem, _super);
+        function MenuItemActionItem(action, _keybindingService) {
+            _super.call(this, undefined, action, { icon: !!action.command.iconClass, label: !action.command.iconClass });
+            this._keybindingService = _keybindingService;
+            this._altKeyDown = false;
+        }
+        Object.defineProperty(MenuItemActionItem.prototype, "_command", {
+            get: function () {
+                var _a = this._action, command = _a.command, altCommand = _a.altCommand;
+                return this._altKeyDown && altCommand || command;
+            },
+            enumerable: true,
+            configurable: true
+        });
+        MenuItemActionItem.prototype.onClick = function (event) {
+            event.preventDefault();
+            event.stopPropagation();
+            this._action.run(this._altKeyDown).done(undefined, console.error);
+        };
+        MenuItemActionItem.prototype.render = function (container) {
+            var _this = this;
+            _super.prototype.render.call(this, container);
+            var altSubscription;
+            var mouseOver;
+            this._callOnDispose.push(event_1.domEvent(container, 'mouseleave')(function (_) {
+                if (!_this._altKeyDown) {
+                    lifecycle_1.dispose(altSubscription);
+                }
+                mouseOver = false;
+            }));
+            this._callOnDispose.push(event_1.domEvent(container, 'mouseenter')(function (e) {
+                mouseOver = true;
+                altSubscription = _altKey.event(function (value) {
+                    if (!mouseOver) {
+                        lifecycle_1.dispose(altSubscription);
+                    }
+                    _this._altKeyDown = value;
+                    _this._updateLabel();
+                    _this._updateTooltip();
+                    _this._updateClass();
+                });
+            }));
+        };
+        MenuItemActionItem.prototype._updateLabel = function () {
+            if (this.options.label) {
+                this.$e.text(this._command.title);
+            }
+        };
+        MenuItemActionItem.prototype._updateTooltip = function () {
+            var element = this.$e.getHTMLElement();
+            var keybinding = this._keybindingService.lookupKeybindings(this._command.id)[0];
+            var keybindingLabel = keybinding && this._keybindingService.getLabelFor(keybinding);
+            element.title = keybindingLabel
+                ? nls_1.localize(0, null, this._command.title, keybindingLabel)
+                : this._command.title;
+        };
+        MenuItemActionItem.prototype._updateClass = function () {
+            if (this.options.icon) {
+                var element = this.$e.getHTMLElement();
+                var _a = this._action, command = _a.command, altCommand = _a.altCommand;
+                if (this._command !== command) {
+                    element.classList.remove(command.iconClass);
+                }
+                else if (altCommand) {
+                    element.classList.remove(altCommand.iconClass);
+                }
+                element.classList.add('icon', this._command.iconClass);
+            }
+        };
+        MenuItemActionItem = __decorate([
+            __param(1, keybindingService_1.IKeybindingService)
+        ], MenuItemActionItem);
+        return MenuItemActionItem;
+    }(actionbar_1.ActionItem));
+});
+
+
+
+
+
+
+
+
+
+
+define(__m[401], __M([0,1,19,72]), function (require, exports, keybindingService_1, modeService_1) {
+    /*---------------------------------------------------------------------------------------------
+     *  Copyright (c) Microsoft Corporation. All rights reserved.
+     *  Licensed under the MIT License. See License.txt in the project root for license information.
+     *--------------------------------------------------------------------------------------------*/
+    'use strict';
+    var ResourceContextKey = (function () {
+        function ResourceContextKey(keybindingService, _modeService) {
+            this._modeService = _modeService;
+            this._schemeKey = keybindingService.createKey(ResourceContextKey.Scheme, undefined);
+            this._langIdKey = keybindingService.createKey(ResourceContextKey.LangId, undefined);
+            this._resourceKey = keybindingService.createKey(ResourceContextKey.Resource, undefined);
+        }
+        ResourceContextKey.prototype.set = function (value) {
+            this._resourceKey.set(value);
+            this._schemeKey.set(value && value.scheme);
+            this._langIdKey.set(value && this._modeService.getModeIdByFilenameOrFirstLine(value.fsPath));
+        };
+        ResourceContextKey.prototype.reset = function () {
+            this._schemeKey.reset();
+            this._langIdKey.reset();
+            this._resourceKey.reset();
+        };
+        ResourceContextKey.Scheme = 'resourceScheme';
+        ResourceContextKey.LangId = 'resourceLangId';
+        ResourceContextKey.Resource = 'resource';
+        ResourceContextKey = __decorate([
+            __param(0, keybindingService_1.IKeybindingService),
+            __param(1, modeService_1.IModeService)
+        ], ResourceContextKey);
+        return ResourceContextKey;
+    }());
+    exports.ResourceContextKey = ResourceContextKey;
+});
+
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+define(__m[402], __M([0,1,16,3,48,19,79,84,401]), function (require, exports, event_1, lifecycle_1, collections_1, keybindingService_1, actions_1, extensions_1, resourceContextKey_1) {
+    'use strict';
+    var _registry = new (function () {
+        function class_1() {
+            this.commands = Object.create(null);
+            this.menuItems = Object.create(null);
+        }
+        class_1.prototype.registerCommand = function (command) {
+            var old = this.commands[command.id];
+            this.commands[command.id] = command;
+            return old !== void 0;
+        };
+        class_1.prototype.registerMenuItems = function (loc, items) {
+            var array = this.menuItems[loc];
+            if (!array) {
+                this.menuItems[loc] = items;
+            }
+            else {
+                array.push.apply(array, items);
+            }
+        };
+        class_1.prototype.getMenuItems = function (loc) {
+            var result = [];
+            var menuItems = this.menuItems[loc];
+            if (menuItems) {
+                for (var _i = 0, menuItems_1 = menuItems; _i < menuItems_1.length; _i++) {
+                    var item = menuItems_1[_i];
+                    var command = this.commands[item.command];
+                    if (!command) {
+                        // warn?
+                        continue;
+                    }
+                    var when = keybindingService_1.KbExpr.deserialize(item.when);
+                    var alt = this.commands[item.alt];
+                    result.push({ when: when, command: command, alt: alt, group: item.group });
+                }
+            }
+            return result;
+        };
+        return class_1;
+    }());
+    exports.MenuRegistry = _registry;
+    var MenuService = (function () {
+        function MenuService(_extensionService) {
+            this._extensionService = _extensionService;
+            this.serviceId = actions_1.IMenuService;
+            //
+        }
+        MenuService.prototype.createMenu = function (id, keybindingService) {
+            return new Menu(id, keybindingService, this._extensionService);
+        };
+        MenuService.prototype.getCommandActions = function () {
+            return collections_1.values(_registry.commands);
+        };
+        MenuService = __decorate([
+            __param(0, extensions_1.IExtensionService)
+        ], MenuService);
+        return MenuService;
+    }());
+    exports.MenuService = MenuService;
+    var Menu = (function () {
+        function Menu(id, _keybindingService, _extensionService) {
+            var _this = this;
+            this._keybindingService = _keybindingService;
+            this._extensionService = _extensionService;
+            this._menuGroups = [];
+            this._disposables = [];
+            this._onDidChange = new event_1.Emitter();
+            this._extensionService.onReady().then(function (_) {
+                var menuItems = _registry.getMenuItems(id);
+                var keysFilter = Object.create(null);
+                var group;
+                menuItems.sort(Menu._compareMenuItems);
+                for (var _i = 0, menuItems_2 = menuItems; _i < menuItems_2.length; _i++) {
+                    var item = menuItems_2[_i];
+                    // group by groupId
+                    var groupName = Menu._group(item.group);
+                    if (!group || group[0] !== groupName) {
+                        group = [groupName, []];
+                        _this._menuGroups.push(group);
+                    }
+                    group[1].push(item);
+                    // keep keys for eventing
+                    Menu._fillInKbExprKeys(item.when, keysFilter);
+                }
+                // subscribe to context changes
+                _this._disposables.push(_this._keybindingService.onDidChangeContext(function (keys) {
+                    for (var _i = 0, keys_1 = keys; _i < keys_1.length; _i++) {
+                        var k = keys_1[_i];
+                        if (keysFilter[k]) {
+                            _this._onDidChange.fire();
+                            return;
+                        }
+                    }
+                }));
+                _this._onDidChange.fire(_this);
+            });
+        }
+        Menu.prototype.dispose = function () {
+            this._disposables = lifecycle_1.dispose(this._disposables);
+            this._onDidChange.dispose();
+        };
+        Object.defineProperty(Menu.prototype, "onDidChange", {
+            get: function () {
+                return this._onDidChange.event;
+            },
+            enumerable: true,
+            configurable: true
+        });
+        Menu.prototype.getActions = function () {
+            var result = [];
+            for (var _i = 0, _a = this._menuGroups; _i < _a.length; _i++) {
+                var group = _a[_i];
+                var id = group[0], items = group[1];
+                var actions = [];
+                for (var _b = 0, items_1 = items; _b < items_1.length; _b++) {
+                    var item = items_1[_b];
+                    if (this._keybindingService.contextMatchesRules(item.when)) {
+                        actions.push(new actions_1.MenuItemAction(item, this._keybindingService.getContextValue(resourceContextKey_1.ResourceContextKey.Resource), this._keybindingService));
+                    }
+                }
+                if (actions.length > 0) {
+                    result.push([id, actions]);
+                }
+            }
+            return result;
+        };
+        Menu._fillInKbExprKeys = function (exp, set) {
+            if (exp) {
+                var parts = exp.serialize().split(' && ');
+                for (var _i = 0, parts_1 = parts; _i < parts_1.length; _i++) {
+                    var part = parts_1[_i];
+                    var m = /^\S+/.exec(part);
+                    if (m) {
+                        set[m[0]] = true;
+                    }
+                }
+            }
+        };
+        Menu._compareMenuItems = function (a, b) {
+            var ret;
+            if (a.group && b.group) {
+                ret = Menu._compareGroupId(a.group, b.group);
+            }
+            if (!ret) {
+                ret = a.command.title.localeCompare(b.command.title);
+            }
+            return ret;
+        };
+        Menu._compareGroupId = function (a, b) {
+            var a_boost = Number(a.substr(a.lastIndexOf('@') + 1));
+            var b_boost = Number(b.substr(b.lastIndexOf('@') + 1));
+            if (a_boost !== b_boost && !isNaN(a_boost) && !isNaN(b_boost)) {
+                return a_boost < b_boost ? -1 : 1;
+            }
+            return a.localeCompare(b);
+        };
+        Menu._group = function (a) {
+            return a && (a.substr(0, a.lastIndexOf('@')) || a);
+        };
+        Menu = __decorate([
+            __param(1, keybindingService_1.IKeybindingService),
+            __param(2, extensions_1.IExtensionService)
+        ], Menu);
+        return Menu;
+    }());
+});
+
+define(__m[101], __M([0,1,12,18,19]), function (require, exports, keyCodes_1, platform, keybindingService_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -57742,7 +60263,7 @@ define(__m[103], __M([1,0,13,17,21]), function (require, exports, keyCodes_1, pl
     exports.IOSupport = IOSupport;
 });
 
-define(__m[76], __M([1,0,15]), function (require, exports, instantiation_1) {
+define(__m[73], __M([0,1,15]), function (require, exports, instantiation_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -57756,7 +60277,257 @@ define(__m[76], __M([1,0,15]), function (require, exports, instantiation_1) {
     var MarkerType = exports.MarkerType;
 });
 
-define(__m[44], __M([1,0,373,2,33,15,50]), function (require, exports, nls, winjs_base_1, severity_1, instantiation_1, actions_1) {
+define(__m[405], __M([0,1,37,78,10,48,29,16,32,73]), function (require, exports, arrays, network, strings, collections, uri_1, event_1, severity_1, markers_1) {
+    /*---------------------------------------------------------------------------------------------
+     *  Copyright (c) Microsoft Corporation. All rights reserved.
+     *  Licensed under the MIT License. See License.txt in the project root for license information.
+     *--------------------------------------------------------------------------------------------*/
+    'use strict';
+    var Key;
+    (function (Key) {
+        function fromValue(value) {
+            var regexp = /^(.*)→(.*)$/.exec(value);
+            return {
+                owner: regexp[1],
+                resource: uri_1.default.parse(regexp[2])
+            };
+        }
+        Key.fromValue = fromValue;
+        function valueOf(k) {
+            return k.owner + '→' + k.resource;
+        }
+        Key.valueOf = valueOf;
+        var _selectorPattern = '^({0})→({1})$';
+        function selector(owner, resource) {
+            return new RegExp(strings.format(_selectorPattern, owner ? strings.escapeRegExpCharacters(owner) : '.*', resource ? strings.escapeRegExpCharacters(resource.toString()) : '.*'));
+        }
+        Key.selector = selector;
+        function raw(owner, resource) {
+            return owner + '→' + resource;
+        }
+        Key.raw = raw;
+    })(Key || (Key = {}));
+    var MarkerService = (function () {
+        function MarkerService() {
+            this.serviceId = markers_1.IMarkerService;
+            this._data = Object.create(null);
+            this._stats = this._emptyStats();
+            this._onMarkerChanged = new event_1.Emitter();
+        }
+        MarkerService.prototype.getStatistics = function () {
+            return this._stats;
+        };
+        Object.defineProperty(MarkerService.prototype, "onMarkerChanged", {
+            // ---- IMarkerService ------------------------------------------
+            get: function () {
+                return this._onMarkerChanged ? this._onMarkerChanged.event : null;
+            },
+            enumerable: true,
+            configurable: true
+        });
+        MarkerService.prototype.changeOne = function (owner, resource, markers) {
+            if (this._doChangeOne(owner, resource, markers)) {
+                this._onMarkerChanged.fire([resource]);
+            }
+        };
+        MarkerService.prototype.remove = function (owner, resources) {
+            if (arrays.isFalsyOrEmpty(resources)) {
+                return;
+            }
+            var changedResources;
+            for (var _i = 0, resources_1 = resources; _i < resources_1.length; _i++) {
+                var resource = resources_1[_i];
+                if (this._doChangeOne(owner, resource, undefined)) {
+                    if (!changedResources) {
+                        changedResources = [];
+                    }
+                    changedResources.push(resource);
+                }
+            }
+            if (changedResources) {
+                this._onMarkerChanged.fire(changedResources);
+            }
+        };
+        MarkerService.prototype._doChangeOne = function (owner, resource, markers) {
+            var key = Key.raw(owner, resource), oldMarkers = this._data[key], hasOldMarkers = !arrays.isFalsyOrEmpty(oldMarkers), getsNewMarkers = !arrays.isFalsyOrEmpty(markers), oldStats = this._computeStats(oldMarkers), newStats = this._computeStats(markers);
+            if (!hasOldMarkers && !getsNewMarkers) {
+                return;
+            }
+            if (getsNewMarkers) {
+                this._data[key] = markers;
+            }
+            else if (hasOldMarkers) {
+                delete this._data[key];
+            }
+            if (this._isStatRelevant(resource)) {
+                this._updateStatsMinus(oldStats);
+                this._updateStatsPlus(newStats);
+            }
+            return true;
+        };
+        MarkerService.prototype.changeAll = function (owner, data) {
+            var _this = this;
+            var changedResources = Object.create(null);
+            // remove and record old markers
+            var oldStats = this._emptyStats();
+            this._forEach(owner, undefined, undefined, -1, function (e, r) {
+                var resource = Key.fromValue(e.key).resource;
+                if (_this._isStatRelevant(resource)) {
+                    _this._updateStatsPlus(oldStats, _this._computeStats(e.value));
+                }
+                changedResources[resource.toString()] = resource;
+                r();
+            });
+            this._updateStatsMinus(oldStats);
+            // add and record new markers
+            if (!arrays.isFalsyOrEmpty(data)) {
+                var newStats_1 = this._emptyStats();
+                data.forEach(function (d) {
+                    changedResources[d.resource.toString()] = d.resource;
+                    collections.lookupOrInsert(_this._data, Key.raw(owner, d.resource), []).push(d.marker);
+                    if (_this._isStatRelevant(d.resource)) {
+                        _this._updateStatsMarker(newStats_1, d.marker);
+                    }
+                });
+                this._updateStatsPlus(newStats_1);
+            }
+            this._onMarkerChanged.fire(collections.values(changedResources));
+        };
+        MarkerService.prototype.read = function (filter) {
+            var _this = this;
+            if (filter === void 0) { filter = Object.create(null); }
+            var ret = [];
+            this._forEach(filter.owner, filter.resource, filter.selector, filter.take, function (entry) { return _this._fromEntry(entry, ret); });
+            return ret;
+        };
+        MarkerService.prototype._isStatRelevant = function (resource) {
+            //TODO@Dirk this is a hack
+            return resource.scheme !== network.Schemas.inMemory;
+        };
+        MarkerService.prototype._forEach = function (owner, resource, regexp, take, callback) {
+            //TODO@Joh: be smart and use an index
+            var selector = regexp || Key.selector(owner, resource), took = 0;
+            collections.forEach(this._data, function (entry, remove) {
+                if (selector.test(entry.key)) {
+                    callback(entry, remove);
+                    if (take > 0 && took++ >= take) {
+                        return false;
+                    }
+                }
+            });
+        };
+        MarkerService.prototype._fromEntry = function (entry, bucket) {
+            var key = Key.fromValue(entry.key);
+            entry.value.forEach(function (data) {
+                // before reading, we sanitize the data
+                // skip entry if not sanitizable
+                var ok = MarkerService._sanitize(data);
+                if (!ok) {
+                    return;
+                }
+                bucket.push({
+                    owner: key.owner,
+                    resource: key.resource,
+                    code: data.code,
+                    message: data.message,
+                    source: data.source,
+                    severity: data.severity,
+                    startLineNumber: data.startLineNumber,
+                    startColumn: data.startColumn,
+                    endLineNumber: data.endLineNumber,
+                    endColumn: data.endColumn
+                });
+            });
+        };
+        MarkerService.prototype._computeStats = function (markers) {
+            var errors = 0, warnings = 0, infos = 0, unknwons = 0;
+            if (markers) {
+                for (var i = 0; i < markers.length; i++) {
+                    var marker = markers[i];
+                    if (marker.severity) {
+                        switch (marker.severity) {
+                            case severity_1.default.Error:
+                                errors++;
+                                break;
+                            case severity_1.default.Warning:
+                                warnings++;
+                                break;
+                            case severity_1.default.Info:
+                                infos++;
+                                break;
+                            default:
+                                unknwons++;
+                                break;
+                        }
+                    }
+                    else {
+                        unknwons++;
+                    }
+                }
+            }
+            return {
+                errors: errors,
+                warnings: warnings,
+                infos: infos,
+                unknwons: unknwons
+            };
+        };
+        MarkerService.prototype._emptyStats = function () {
+            return { errors: 0, warnings: 0, infos: 0, unknwons: 0 };
+        };
+        MarkerService.prototype._updateStatsPlus = function (toUpdate, toAdd) {
+            if (!toAdd) {
+                toAdd = toUpdate;
+                toUpdate = this._stats;
+            }
+            toUpdate.errors += toAdd.errors;
+            toUpdate.warnings += toAdd.warnings;
+            toUpdate.infos += toAdd.infos;
+            toUpdate.unknwons += toAdd.unknwons;
+        };
+        MarkerService.prototype._updateStatsMinus = function (toUpdate, toSubtract) {
+            if (!toSubtract) {
+                toSubtract = toUpdate;
+                toUpdate = this._stats;
+            }
+            toUpdate.errors -= toSubtract.errors;
+            toUpdate.warnings -= toSubtract.warnings;
+            toUpdate.infos -= toSubtract.infos;
+            toUpdate.unknwons -= toSubtract.unknwons;
+        };
+        MarkerService.prototype._updateStatsMarker = function (toUpdate, marker) {
+            switch (marker.severity) {
+                case severity_1.default.Error:
+                    toUpdate.errors++;
+                    break;
+                case severity_1.default.Warning:
+                    toUpdate.warnings++;
+                    break;
+                case severity_1.default.Info:
+                    toUpdate.infos++;
+                    break;
+                default:
+                    toUpdate.unknwons++;
+                    break;
+            }
+        };
+        MarkerService._sanitize = function (data) {
+            if (!data.message) {
+                return false;
+            }
+            data.code = data.code || null;
+            data.startLineNumber = data.startLineNumber > 0 ? data.startLineNumber : 1;
+            data.startColumn = data.startColumn > 0 ? data.startColumn : 1;
+            data.endLineNumber = data.endLineNumber >= data.startLineNumber ? data.endLineNumber : data.startLineNumber;
+            data.endColumn = data.endColumn > 0 ? data.endColumn : data.startColumn;
+            return true;
+        };
+        return MarkerService;
+    }());
+    exports.MarkerService = MarkerService;
+});
+
+define(__m[42], __M([0,1,373,2,32,15,50]), function (require, exports, nls, winjs_base_1, severity_1, instantiation_1, actions_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -57768,7 +60539,7 @@ define(__m[44], __M([1,0,373,2,33,15,50]), function (require, exports, nls, winj
     exports.Severity = severity_1.default;
 });
 
-define(__m[143], __M([1,0,2,15]), function (require, exports, winjs_base_1, instantiation_1) {
+define(__m[147], __M([0,1,2,15]), function (require, exports, winjs_base_1, instantiation_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -57781,7 +60552,7 @@ define(__m[143], __M([1,0,2,15]), function (require, exports, winjs_base_1, inst
     });
 });
 
-define(__m[31], __M([1,0,26,56]), function (require, exports, Types, Assert) {
+define(__m[33], __M([0,1,26,47]), function (require, exports, Types, Assert) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -57844,7 +60615,7 @@ define(__m[31], __M([1,0,26,56]), function (require, exports, Types, Assert) {
     exports.BaseRegistry = BaseRegistry;
 });
 
-define(__m[30], __M([1,0,31]), function (require, exports, platform_1) {
+define(__m[30], __M([0,1,33]), function (require, exports, platform_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -57891,7 +60662,7 @@ define(__m[30], __M([1,0,31]), function (require, exports, platform_1) {
     platform_1.Registry.add(Extensions.EditorContributions, new EditorContributionRegistry());
 });
 
-define(__m[39], __M([1,0,312,18,31]), function (require, exports, nls, event_1, platform_1) {
+define(__m[45], __M([0,1,316,16,33]), function (require, exports, nls, event_1, platform_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -57947,7 +60718,7 @@ define(__m[39], __M([1,0,312,18,31]), function (require, exports, nls, event_1, 
     });
 });
 
-define(__m[406], __M([1,0,8,18,175,10,39]), function (require, exports, errors_1, event_1, mime, strings, modesRegistry_1) {
+define(__m[411], __M([0,1,8,16,144,10,45]), function (require, exports, errors_1, event_1, mime, strings, modesRegistry_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -57989,7 +60760,8 @@ define(__m[406], __M([1,0,8,18,175,10,39]), function (require, exports, errors_1
                 });
                 this.compatModes[def.id] = {
                     moduleId: def.moduleId,
-                    ctorName: def.ctorName
+                    ctorName: def.ctorName,
+                    deps: def.deps
                 };
                 addedModes.push(def.id);
             }
@@ -58170,7 +60942,7 @@ define(__m[406], __M([1,0,8,18,175,10,39]), function (require, exports, errors_1
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
-define(__m[407], __M([1,0,3,27,11,23,30,221]), function (require, exports, lifecycle_1, browser, dom, editorBrowser_1, editorBrowserExtensions_1) {
+define(__m[412], __M([0,1,3,28,11,22,30,221]), function (require, exports, lifecycle_1, browser, dom, editorBrowser_1, editorBrowserExtensions_1) {
     'use strict';
     var IPadShowKeyboard = (function () {
         function IPadShowKeyboard(editor) {
@@ -58249,7 +61021,7 @@ define(__m[407], __M([1,0,3,27,11,23,30,221]), function (require, exports, lifec
 
 
 
-define(__m[109], __M([1,0,2,19,25,30,295]), function (require, exports, winjs_base_1, editorAction_1, editorActionEnablement_1, editorBrowserExtensions_1, quickOpenEditorWidget_1) {
+define(__m[107], __M([0,1,2,20,25,30,300]), function (require, exports, winjs_base_1, editorAction_1, editorActionEnablement_1, editorBrowserExtensions_1, quickOpenEditorWidget_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -58410,7 +61182,7 @@ define(__m[109], __M([1,0,2,19,25,30,295]), function (require, exports, winjs_ba
 
 
 
-define(__m[409], __M([1,0,341,114,77,7,109,235]), function (require, exports, nls, quickOpenModel_1, quickOpen_1, editorCommon, editorQuickOpen_1) {
+define(__m[414], __M([0,1,346,105,91,7,107,234]), function (require, exports, nls, quickOpenModel_1, quickOpen_1, editorCommon, editorQuickOpen_1) {
     'use strict';
     var GotoLineEntry = (function (_super) {
         __extends(GotoLineEntry, _super);
@@ -58547,7 +61319,7 @@ define(__m[409], __M([1,0,341,114,77,7,109,235]), function (require, exports, nl
 
 
 
-define(__m[410], __M([1,0,343,8,67,10,2,114,77,21,25,109]), function (require, exports, nls, errors_1, filters_1, strings, winjs_base_1, quickOpenModel_1, quickOpen_1, keybindingService_1, editorActionEnablement_1, editorQuickOpen_1) {
+define(__m[415], __M([0,1,348,8,65,10,2,105,91,19,25,107]), function (require, exports, nls, errors_1, filters_1, strings, winjs_base_1, quickOpenModel_1, quickOpen_1, keybindingService_1, editorActionEnablement_1, editorQuickOpen_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -58651,7 +61423,7 @@ define(__m[410], __M([1,0,343,8,67,10,2,114,77,21,25,109]), function (require, e
     exports.QuickCommandAction = QuickCommandAction;
 });
 
-define(__m[411], __M([1,0,39]), function (require, exports, modesRegistry_1) {
+define(__m[416], __M([0,1,45]), function (require, exports, modesRegistry_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -58667,26 +61439,7 @@ define(__m[411], __M([1,0,39]), function (require, exports, modesRegistry_1) {
     });
 });
 
-define(__m[412], __M([1,0,39]), function (require, exports, modesRegistry_1) {
-    /*---------------------------------------------------------------------------------------------
-     *  Copyright (c) Microsoft Corporation. All rights reserved.
-     *  Licensed under the MIT License. See License.txt in the project root for license information.
-     *--------------------------------------------------------------------------------------------*/
-    'use strict';
-    var register = false;
-    if (register) {
-        modesRegistry_1.ModesRegistry.registerCompatMode({
-            id: 'markdown',
-            extensions: ['.md', '.markdown', '.mdown', '.mkdn', '.mkd', '.mdwn', '.mdtxt', '.mdtext'],
-            aliases: ['Markdown', 'markdown'],
-            mimetypes: ['text/x-web-markdown'],
-            moduleId: 'vs/languages/markdown/common/markdown',
-            ctorName: 'MarkdownMode'
-        });
-    }
-});
-
-define(__m[413], __M([1,0,39]), function (require, exports, modesRegistry_1) {
+define(__m[417], __M([0,1,45]), function (require, exports, modesRegistry_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -58698,11 +61451,12 @@ define(__m[413], __M([1,0,39]), function (require, exports, modesRegistry_1) {
         aliases: ['PHP', 'php'],
         mimetypes: ['application/x-php'],
         moduleId: 'vs/languages/php/common/php',
-        ctorName: 'PHPMode'
+        ctorName: 'PHPMode',
+        deps: ['text/html']
     });
 });
 
-define(__m[414], __M([1,0,39]), function (require, exports, modesRegistry_1) {
+define(__m[418], __M([0,1,45]), function (require, exports, modesRegistry_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -58718,7 +61472,7 @@ define(__m[414], __M([1,0,39]), function (require, exports, modesRegistry_1) {
     });
 });
 
-define(__m[81], __M([1,0,371,31,22]), function (require, exports, nls, platform, eventEmitter_1) {
+define(__m[85], __M([0,1,371,33,23]), function (require, exports, nls, platform, eventEmitter_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -58996,7 +61750,7 @@ define(__m[81], __M([1,0,371,31,22]), function (require, exports, nls, platform,
     });
 });
 
-define(__m[82], __M([1,0,370,8,37,33,81,31]), function (require, exports, nls, errors_1, paths, severity_1, jsonContributionRegistry_1, platform_1) {
+define(__m[86], __M([0,1,370,8,38,32,85,33]), function (require, exports, nls, errors_1, paths, severity_1, jsonContributionRegistry_1, platform_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -59336,7 +62090,7 @@ define(__m[82], __M([1,0,370,8,37,33,81,31]), function (require, exports, nls, e
     schemaRegistry.registerSchema(schemaId, schema);
 });
 
-define(__m[43], __M([1,0,368,18,31,32,82,81]), function (require, exports, nls, event_1, platform, objects, extensionsRegistry_1, JSONContributionRegistry) {
+define(__m[77], __M([0,1,368,16,33,31,86,85]), function (require, exports, nls, event_1, platform, objects, extensionsRegistry_1, JSONContributionRegistry) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -59425,7 +62179,7 @@ define(__m[43], __M([1,0,368,18,31,32,82,81]), function (require, exports, nls, 
 
 
 
-define(__m[113], __M([1,0,298,18,3,32,17,43,31,57,7,402,42]), function (require, exports, nls, event_1, lifecycle_1, objects, platform, configurationRegistry_1, platform_1, defaultConfig_1, editorCommon, editorLayoutProvider_1, scrollableElementOptions_1) {
+define(__m[111], __M([0,1,303,16,3,31,18,77,33,55,7,403,41]), function (require, exports, nls, event_1, lifecycle_1, objects, platform, configurationRegistry_1, platform_1, defaultConfig_1, editorCommon, editorLayoutProvider_1, scrollableElementOptions_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -60035,7 +62789,7 @@ define(__m[113], __M([1,0,298,18,3,32,17,43,31,57,7,402,42]), function (require,
 
 
 
-define(__m[61], __M([1,0,18,3,17,27,113,7,253]), function (require, exports, event_1, lifecycle_1, platform, browser, commonEditorConfig_1, editorCommon_1, elementSizeObserver_1) {
+define(__m[66], __M([0,1,16,3,18,28,111,7,247]), function (require, exports, event_1, lifecycle_1, platform, browser, commonEditorConfig_1, editorCommon_1, elementSizeObserver_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -60287,7 +63041,7 @@ define(__m[61], __M([1,0,18,3,17,27,113,7,253]), function (require, exports, eve
 
 
 
-define(__m[420], __M([1,0,18,3,27,11,28,113,280,134,6,7,52,61]), function (require, exports, event_1, lifecycle_1, browser, dom, styleMutator_1, commonEditorConfig_1, textAreaHandler_1, textAreaState_1, range_1, editorCommon, viewEventHandler_1, configuration_1) {
+define(__m[424], __M([0,1,16,3,28,11,27,111,284,148,4,7,53,66]), function (require, exports, event_1, lifecycle_1, browser, dom, styleMutator_1, commonEditorConfig_1, textAreaHandler_1, textAreaState_1, range_1, editorCommon, viewEventHandler_1, configuration_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -60579,7 +63333,7 @@ define(__m[420], __M([1,0,18,3,27,11,28,113,280,134,6,7,52,61]), function (requi
 
 
 
-define(__m[421], __M([1,0,28,23,149,61]), function (require, exports, styleMutator_1, editorBrowser, viewLayer_1, configuration_1) {
+define(__m[425], __M([0,1,27,22,159,66]), function (require, exports, styleMutator_1, editorBrowser, viewLayer_1, configuration_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -60822,7 +63576,7 @@ define(__m[421], __M([1,0,28,23,149,61]), function (require, exports, styleMutat
 
 
 
-define(__m[422], __M([1,0,14,28,6,7,23,149,273,61,125,185]), function (require, exports, async_1, styleMutator_1, range_1, editorCommon, editorBrowser_1, viewLayer_1, viewLine_1, configuration_1, renderingContext_1) {
+define(__m[426], __M([0,1,14,27,4,7,22,159,277,66,102,189]), function (require, exports, async_1, styleMutator_1, range_1, editorCommon, editorBrowser_1, viewLayer_1, viewLine_1, configuration_1, renderingContext_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -61240,7 +63994,7 @@ define(__m[422], __M([1,0,14,28,6,7,23,149,273,61,125,185]), function (require, 
     exports.ViewLines = ViewLines;
 });
 
-define(__m[423], __M([1,0,28,7,61]), function (require, exports, styleMutator_1, editorCommon_1, configuration_1) {
+define(__m[427], __M([0,1,27,7,66]), function (require, exports, styleMutator_1, editorCommon_1, configuration_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -61381,7 +64135,7 @@ define(__m[423], __M([1,0,28,7,61]), function (require, exports, styleMutator_1,
 
 
 
-define(__m[424], __M([1,0,7,23,48,423,28,191]), function (require, exports, editorCommon, editorBrowser_1, viewPart_1, viewCursor_1, styleMutator_1) {
+define(__m[428], __M([0,1,7,22,46,427,27,196]), function (require, exports, editorCommon, editorBrowser_1, viewPart_1, viewCursor_1, styleMutator_1) {
     'use strict';
     var RenderType;
     (function (RenderType) {
@@ -61630,7 +64384,7 @@ define(__m[424], __M([1,0,7,23,48,423,28,191]), function (require, exports, edit
     exports.ViewCursors = ViewCursors;
 });
 
-define(__m[153], __M([1,0,67,43,31,313,14]), function (require, exports, filters_1, configurationRegistry_1, platform_1, nls_1, async_1) {
+define(__m[157], __M([0,1,65,77,33,317,14]), function (require, exports, filters_1, configurationRegistry_1, platform_1, nls_1, async_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -61715,7 +64469,7 @@ define(__m[153], __M([1,0,67,43,31,313,14]), function (require, exports, filters
 
 
 
-define(__m[154], __M([1,0,22,2,68,15,69,16,153,64,79]), function (require, exports, eventEmitter_1, winjs_base_1, descriptors_1, instantiation_1, configuration_1, modes, suggestSupport_1, editorWorkerService_1, wordHelper) {
+define(__m[158], __M([0,1,23,2,68,15,57,17,157,52,76]), function (require, exports, eventEmitter_1, winjs_base_1, descriptors_1, instantiation_1, configuration_1, modes, suggestSupport_1, editorWorkerService_1, wordHelper) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -61799,6 +64553,18 @@ define(__m[154], __M([1,0,22,2,68,15,69,16,153,64,79]), function (require, expor
         return AbstractMode;
     }());
     exports.AbstractMode = AbstractMode;
+    var CompatMode = (function (_super) {
+        __extends(CompatMode, _super);
+        function CompatMode(modeId, compatWorkerService) {
+            _super.call(this, modeId);
+            this.compatWorkerService = compatWorkerService;
+            if (this.compatWorkerService) {
+                this.compatWorkerService.registerCompatMode(this);
+            }
+        }
+        return CompatMode;
+    }(AbstractMode));
+    exports.CompatMode = CompatMode;
     var SimplifiedMode = (function () {
         function SimplifiedMode(sourceMode) {
             var _this = this;
@@ -61886,7 +64652,517 @@ define(__m[154], __M([1,0,22,2,68,15,69,16,153,64,79]), function (require, expor
     }
 });
 
-define(__m[427], __M([1,0,39,364,31,43]), function (require, exports, modesRegistry_1, nls, platform, ConfigurationRegistry) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+define(__m[431], __M([0,1,319,8,16,3,31,38,2,144,68,84,86,15,158,45,411,72,57,114,49]), function (require, exports, nls, errors_1, event_1, lifecycle_1, objects, paths, winjs_base_1, mime, descriptors_1, extensions_1, extensionsRegistry_1, instantiation_1, abstractMode_1, modesRegistry_1, languagesRegistry_1, modeService_1, configuration_1, abstractState_1, supports_1) {
+    /*---------------------------------------------------------------------------------------------
+     *  Copyright (c) Microsoft Corporation. All rights reserved.
+     *  Licensed under the MIT License. See License.txt in the project root for license information.
+     *--------------------------------------------------------------------------------------------*/
+    'use strict';
+    var languagesExtPoint = extensionsRegistry_1.ExtensionsRegistry.registerExtensionPoint('languages', {
+        description: nls.localize(0, null),
+        type: 'array',
+        defaultSnippets: [{ body: [{ id: '', aliases: [], extensions: [] }] }],
+        items: {
+            type: 'object',
+            defaultSnippets: [{ body: { id: '', extensions: [] } }],
+            properties: {
+                id: {
+                    description: nls.localize(1, null),
+                    type: 'string'
+                },
+                aliases: {
+                    description: nls.localize(2, null),
+                    type: 'array',
+                    items: {
+                        type: 'string'
+                    }
+                },
+                extensions: {
+                    description: nls.localize(3, null),
+                    default: ['.foo'],
+                    type: 'array',
+                    items: {
+                        type: 'string'
+                    }
+                },
+                filenames: {
+                    description: nls.localize(4, null),
+                    type: 'array',
+                    items: {
+                        type: 'string'
+                    }
+                },
+                filenamePatterns: {
+                    description: nls.localize(5, null),
+                    type: 'array',
+                    items: {
+                        type: 'string'
+                    }
+                },
+                mimetypes: {
+                    description: nls.localize(6, null),
+                    type: 'array',
+                    items: {
+                        type: 'string'
+                    }
+                },
+                firstLine: {
+                    description: nls.localize(7, null),
+                    type: 'string'
+                },
+                configuration: {
+                    description: nls.localize(8, null),
+                    type: 'string'
+                }
+            }
+        }
+    });
+    function isUndefinedOrStringArray(value) {
+        if (typeof value === 'undefined') {
+            return true;
+        }
+        if (!Array.isArray(value)) {
+            return false;
+        }
+        return value.every(function (item) { return typeof item === 'string'; });
+    }
+    function isValidLanguageExtensionPoint(value, collector) {
+        if (!value) {
+            collector.error(nls.localize(9, null, languagesExtPoint.name));
+            return false;
+        }
+        if (typeof value.id !== 'string') {
+            collector.error(nls.localize(10, null, 'id'));
+            return false;
+        }
+        if (!isUndefinedOrStringArray(value.extensions)) {
+            collector.error(nls.localize(11, null, 'extensions'));
+            return false;
+        }
+        if (!isUndefinedOrStringArray(value.filenames)) {
+            collector.error(nls.localize(12, null, 'filenames'));
+            return false;
+        }
+        if (typeof value.firstLine !== 'undefined' && typeof value.firstLine !== 'string') {
+            collector.error(nls.localize(13, null, 'firstLine'));
+            return false;
+        }
+        if (typeof value.configuration !== 'undefined' && typeof value.configuration !== 'string') {
+            collector.error(nls.localize(14, null, 'configuration'));
+            return false;
+        }
+        if (!isUndefinedOrStringArray(value.aliases)) {
+            collector.error(nls.localize(15, null, 'aliases'));
+            return false;
+        }
+        if (!isUndefinedOrStringArray(value.mimetypes)) {
+            collector.error(nls.localize(16, null, 'mimetypes'));
+            return false;
+        }
+        return true;
+    }
+    var ModeServiceImpl = (function () {
+        function ModeServiceImpl(instantiationService, extensionService) {
+            var _this = this;
+            this.serviceId = modeService_1.IModeService;
+            this._onDidAddModes = new event_1.Emitter();
+            this.onDidAddModes = this._onDidAddModes.event;
+            this._onDidCreateMode = new event_1.Emitter();
+            this.onDidCreateMode = this._onDidCreateMode.event;
+            this._instantiationService = instantiationService;
+            this._extensionService = extensionService;
+            this._activationPromises = {};
+            this._instantiatedModes = {};
+            this._config = {};
+            this._registry = new languagesRegistry_1.LanguagesRegistry();
+            this._registry.onDidAddModes(function (modes) { return _this._onDidAddModes.fire(modes); });
+        }
+        ModeServiceImpl.prototype.getConfigurationForMode = function (modeId) {
+            return this._config[modeId] || {};
+        };
+        ModeServiceImpl.prototype.configureMode = function (mimetype, options) {
+            var modeId = this.getModeId(mimetype);
+            if (modeId) {
+                this.configureModeById(modeId, options);
+            }
+        };
+        ModeServiceImpl.prototype.configureModeById = function (modeId, options) {
+            var previousOptions = this._config[modeId] || {};
+            var newOptions = objects.mixin(objects.clone(previousOptions), options);
+            if (objects.equals(previousOptions, newOptions)) {
+                // This configure call is a no-op
+                return;
+            }
+            this._config[modeId] = newOptions;
+            var mode = this.getMode(modeId);
+            if (mode && mode.configSupport) {
+                mode.configSupport.configure(this.getConfigurationForMode(modeId));
+            }
+        };
+        ModeServiceImpl.prototype.configureAllModes = function (config) {
+            var _this = this;
+            if (!config) {
+                return;
+            }
+            var modes = this._registry.getRegisteredModes();
+            modes.forEach(function (modeIdentifier) {
+                var configuration = config[modeIdentifier];
+                _this.configureModeById(modeIdentifier, configuration);
+            });
+        };
+        ModeServiceImpl.prototype.isRegisteredMode = function (mimetypeOrModeId) {
+            return this._registry.isRegisteredMode(mimetypeOrModeId);
+        };
+        ModeServiceImpl.prototype.isCompatMode = function (modeId) {
+            var compatModeData = this._registry.getCompatMode(modeId);
+            return (compatModeData ? true : false);
+        };
+        ModeServiceImpl.prototype.getRegisteredModes = function () {
+            return this._registry.getRegisteredModes();
+        };
+        ModeServiceImpl.prototype.getRegisteredLanguageNames = function () {
+            return this._registry.getRegisteredLanguageNames();
+        };
+        ModeServiceImpl.prototype.getExtensions = function (alias) {
+            return this._registry.getExtensions(alias);
+        };
+        ModeServiceImpl.prototype.getMimeForMode = function (modeId) {
+            return this._registry.getMimeForMode(modeId);
+        };
+        ModeServiceImpl.prototype.getLanguageName = function (modeId) {
+            return this._registry.getLanguageName(modeId);
+        };
+        ModeServiceImpl.prototype.getModeIdForLanguageName = function (alias) {
+            return this._registry.getModeIdForLanguageNameLowercase(alias);
+        };
+        ModeServiceImpl.prototype.getModeId = function (commaSeparatedMimetypesOrCommaSeparatedIds) {
+            var modeIds = this._registry.extractModeIds(commaSeparatedMimetypesOrCommaSeparatedIds);
+            if (modeIds.length > 0) {
+                return modeIds[0];
+            }
+            return null;
+        };
+        ModeServiceImpl.prototype.getConfigurationFiles = function (modeId) {
+            return this._registry.getConfigurationFiles(modeId);
+        };
+        // --- instantiation
+        ModeServiceImpl.prototype.lookup = function (commaSeparatedMimetypesOrCommaSeparatedIds) {
+            var r = [];
+            var modeIds = this._registry.extractModeIds(commaSeparatedMimetypesOrCommaSeparatedIds);
+            for (var i = 0; i < modeIds.length; i++) {
+                var modeId = modeIds[i];
+                r.push({
+                    modeId: modeId,
+                    isInstantiated: this._instantiatedModes.hasOwnProperty(modeId)
+                });
+            }
+            return r;
+        };
+        ModeServiceImpl.prototype.getMode = function (commaSeparatedMimetypesOrCommaSeparatedIds) {
+            var modeIds = this._registry.extractModeIds(commaSeparatedMimetypesOrCommaSeparatedIds);
+            var isPlainText = false;
+            for (var i = 0; i < modeIds.length; i++) {
+                if (this._instantiatedModes.hasOwnProperty(modeIds[i])) {
+                    return this._instantiatedModes[modeIds[i]];
+                }
+                isPlainText = isPlainText || (modeIds[i] === 'plaintext');
+            }
+            if (isPlainText) {
+                // Try to do it synchronously
+                var r = null;
+                this.getOrCreateMode(commaSeparatedMimetypesOrCommaSeparatedIds).then(function (mode) {
+                    r = mode;
+                }).done(null, errors_1.onUnexpectedError);
+                return r;
+            }
+        };
+        ModeServiceImpl.prototype.getModeIdByLanguageName = function (languageName) {
+            var modeIds = this._registry.getModeIdsFromLanguageName(languageName);
+            if (modeIds.length > 0) {
+                return modeIds[0];
+            }
+            return null;
+        };
+        ModeServiceImpl.prototype.getModeIdByFilenameOrFirstLine = function (filename, firstLine) {
+            var modeIds = this._registry.getModeIdsFromFilenameOrFirstLine(filename, firstLine);
+            if (modeIds.length > 0) {
+                return modeIds[0];
+            }
+            return null;
+        };
+        ModeServiceImpl.prototype.onReady = function () {
+            return this._extensionService.onReady();
+        };
+        ModeServiceImpl.prototype.getOrCreateMode = function (commaSeparatedMimetypesOrCommaSeparatedIds) {
+            var _this = this;
+            return this.onReady().then(function () {
+                var modeId = _this.getModeId(commaSeparatedMimetypesOrCommaSeparatedIds);
+                // Fall back to plain text if no mode was found
+                return _this._getOrCreateMode(modeId || 'plaintext');
+            });
+        };
+        ModeServiceImpl.prototype.getOrCreateModeByLanguageName = function (languageName) {
+            var _this = this;
+            return this.onReady().then(function () {
+                var modeId = _this.getModeIdByLanguageName(languageName);
+                // Fall back to plain text if no mode was found
+                return _this._getOrCreateMode(modeId || 'plaintext');
+            });
+        };
+        ModeServiceImpl.prototype.getOrCreateModeByFilenameOrFirstLine = function (filename, firstLine) {
+            var _this = this;
+            return this.onReady().then(function () {
+                var modeId = _this.getModeIdByFilenameOrFirstLine(filename, firstLine);
+                // Fall back to plain text if no mode was found
+                return _this._getOrCreateMode(modeId || 'plaintext');
+            });
+        };
+        ModeServiceImpl.prototype._getOrCreateMode = function (modeId) {
+            var _this = this;
+            if (this._instantiatedModes.hasOwnProperty(modeId)) {
+                return winjs_base_1.TPromise.as(this._instantiatedModes[modeId]);
+            }
+            if (this._activationPromises.hasOwnProperty(modeId)) {
+                return this._activationPromises[modeId];
+            }
+            var c, e;
+            var promise = new winjs_base_1.TPromise(function (cc, ee, pp) { c = cc; e = ee; });
+            this._activationPromises[modeId] = promise;
+            this._createMode(modeId).then(function (mode) {
+                _this._instantiatedModes[modeId] = mode;
+                delete _this._activationPromises[modeId];
+                _this._onDidCreateMode.fire(mode);
+                _this._extensionService.activateByEvent("onLanguage:" + modeId).done(null, errors_1.onUnexpectedError);
+                return _this._instantiatedModes[modeId];
+            }).then(c, e);
+            return promise;
+        };
+        ModeServiceImpl.prototype._createMode = function (modeId) {
+            var _this = this;
+            var modeDescriptor = this._createModeDescriptor(modeId);
+            var compatModeData = this._registry.getCompatMode(modeId);
+            if (compatModeData) {
+                // This is a compatibility mode
+                var resolvedDeps = null;
+                if (Array.isArray(compatModeData.deps)) {
+                    resolvedDeps = winjs_base_1.TPromise.join(compatModeData.deps.map(function (dep) { return _this.getOrCreateMode(dep); }));
+                }
+                else {
+                    resolvedDeps = winjs_base_1.TPromise.as(null);
+                }
+                return resolvedDeps.then(function (_) {
+                    var compatModeAsyncDescriptor = descriptors_1.createAsyncDescriptor1(compatModeData.moduleId, compatModeData.ctorName);
+                    return _this._instantiationService.createInstance(compatModeAsyncDescriptor, modeDescriptor).then(function (compatMode) {
+                        if (compatMode.configSupport) {
+                            compatMode.configSupport.configure(_this.getConfigurationForMode(modeId));
+                        }
+                        return compatMode;
+                    });
+                });
+            }
+            return winjs_base_1.TPromise.as(this._instantiationService.createInstance(abstractMode_1.FrankensteinMode, modeDescriptor));
+        };
+        ModeServiceImpl.prototype._createModeDescriptor = function (modeId) {
+            return {
+                id: modeId
+            };
+        };
+        ModeServiceImpl.prototype._registerTokenizationSupport = function (mode, callback) {
+            if (mode.setTokenizationSupport) {
+                return mode.setTokenizationSupport(callback);
+            }
+            else {
+                console.warn('Cannot register tokenizationSupport on mode ' + mode.getId() + ' because it does not support it.');
+                return lifecycle_1.empty;
+            }
+        };
+        ModeServiceImpl.prototype.registerModeSupport = function (modeId, callback) {
+            var _this = this;
+            if (this._instantiatedModes.hasOwnProperty(modeId)) {
+                return this._registerTokenizationSupport(this._instantiatedModes[modeId], callback);
+            }
+            var cc;
+            var promise = new winjs_base_1.TPromise(function (c, e) { cc = c; });
+            var disposable = this.onDidCreateMode(function (mode) {
+                if (mode.getId() !== modeId) {
+                    return;
+                }
+                cc(_this._registerTokenizationSupport(mode, callback));
+                disposable.dispose();
+            });
+            return {
+                dispose: function () {
+                    promise.done(function (disposable) { return disposable.dispose(); }, null);
+                }
+            };
+        };
+        ModeServiceImpl.prototype.registerTokenizationSupport = function (modeId, callback) {
+            return this.registerModeSupport(modeId, callback);
+        };
+        ModeServiceImpl.prototype.registerTokenizationSupport2 = function (modeId, support) {
+            return this.registerModeSupport(modeId, function (mode) {
+                return new TokenizationSupport2Adapter(mode, support);
+            });
+        };
+        return ModeServiceImpl;
+    }());
+    exports.ModeServiceImpl = ModeServiceImpl;
+    var TokenizationState2Adapter = (function () {
+        function TokenizationState2Adapter(mode, actual, stateData) {
+            this._mode = mode;
+            this._actual = actual;
+            this._stateData = stateData;
+        }
+        Object.defineProperty(TokenizationState2Adapter.prototype, "actual", {
+            get: function () { return this._actual; },
+            enumerable: true,
+            configurable: true
+        });
+        TokenizationState2Adapter.prototype.clone = function () {
+            return new TokenizationState2Adapter(this._mode, this._actual.clone(), abstractState_1.AbstractState.safeClone(this._stateData));
+        };
+        TokenizationState2Adapter.prototype.equals = function (other) {
+            if (other instanceof TokenizationState2Adapter) {
+                if (!this._actual.equals(other._actual)) {
+                    return false;
+                }
+                return abstractState_1.AbstractState.safeEquals(this._stateData, other._stateData);
+            }
+            return false;
+        };
+        TokenizationState2Adapter.prototype.getMode = function () {
+            return this._mode;
+        };
+        TokenizationState2Adapter.prototype.tokenize = function (stream) {
+            throw new Error('Unexpected tokenize call!');
+        };
+        TokenizationState2Adapter.prototype.getStateData = function () {
+            return this._stateData;
+        };
+        TokenizationState2Adapter.prototype.setStateData = function (stateData) {
+            this._stateData = stateData;
+        };
+        return TokenizationState2Adapter;
+    }());
+    exports.TokenizationState2Adapter = TokenizationState2Adapter;
+    var TokenizationSupport2Adapter = (function () {
+        function TokenizationSupport2Adapter(mode, actual) {
+            this._mode = mode;
+            this._actual = actual;
+        }
+        TokenizationSupport2Adapter.prototype.getInitialState = function () {
+            return new TokenizationState2Adapter(this._mode, this._actual.getInitialState(), null);
+        };
+        TokenizationSupport2Adapter.prototype.tokenize = function (line, state, offsetDelta, stopAtOffset) {
+            if (offsetDelta === void 0) { offsetDelta = 0; }
+            if (state instanceof TokenizationState2Adapter) {
+                var actualResult = this._actual.tokenize(line, state.actual);
+                var tokens_1 = [];
+                actualResult.tokens.forEach(function (t) {
+                    if (typeof t.scopes === 'string') {
+                        tokens_1.push(new supports_1.Token(t.startIndex + offsetDelta, t.scopes));
+                    }
+                    else if (Array.isArray(t.scopes) && t.scopes.length === 1) {
+                        tokens_1.push(new supports_1.Token(t.startIndex + offsetDelta, t.scopes[0]));
+                    }
+                    else {
+                        throw new Error('Only token scopes as strings or of precisely 1 length are supported at this time!');
+                    }
+                });
+                return {
+                    tokens: tokens_1,
+                    actualStopOffset: offsetDelta + line.length,
+                    endState: new TokenizationState2Adapter(state.getMode(), actualResult.endState, state.getStateData()),
+                    modeTransitions: [{ startIndex: offsetDelta, mode: state.getMode() }],
+                };
+            }
+            throw new Error('Unexpected state to tokenize with!');
+        };
+        return TokenizationSupport2Adapter;
+    }());
+    exports.TokenizationSupport2Adapter = TokenizationSupport2Adapter;
+    var MainThreadModeServiceImpl = (function (_super) {
+        __extends(MainThreadModeServiceImpl, _super);
+        function MainThreadModeServiceImpl(instantiationService, extensionService, configurationService) {
+            var _this = this;
+            _super.call(this, instantiationService, extensionService);
+            this._configurationService = configurationService;
+            languagesExtPoint.setHandler(function (extensions) {
+                var allValidLanguages = [];
+                for (var i = 0, len = extensions.length; i < len; i++) {
+                    var extension = extensions[i];
+                    if (!Array.isArray(extension.value)) {
+                        extension.collector.error(nls.localize(17, null, languagesExtPoint.name));
+                        continue;
+                    }
+                    for (var j = 0, lenJ = extension.value.length; j < lenJ; j++) {
+                        var ext = extension.value[j];
+                        if (isValidLanguageExtensionPoint(ext, extension.collector)) {
+                            var configuration = (ext.configuration ? paths.join(extension.description.extensionFolderPath, ext.configuration) : ext.configuration);
+                            allValidLanguages.push({
+                                id: ext.id,
+                                extensions: ext.extensions,
+                                filenames: ext.filenames,
+                                filenamePatterns: ext.filenamePatterns,
+                                firstLine: ext.firstLine,
+                                aliases: ext.aliases,
+                                mimetypes: ext.mimetypes,
+                                configuration: configuration
+                            });
+                        }
+                    }
+                }
+                modesRegistry_1.ModesRegistry.registerLanguages(allValidLanguages);
+            });
+            this._configurationService.onDidUpdateConfiguration(function (e) { return _this.onConfigurationChange(e.config); });
+        }
+        MainThreadModeServiceImpl.prototype.onReady = function () {
+            var _this = this;
+            if (!this._onReadyPromise) {
+                var configuration_2 = this._configurationService.getConfiguration();
+                this._onReadyPromise = this._extensionService.onReady().then(function () {
+                    _this.onConfigurationChange(configuration_2);
+                    return true;
+                });
+            }
+            return this._onReadyPromise;
+        };
+        MainThreadModeServiceImpl.prototype.onConfigurationChange = function (configuration) {
+            var _this = this;
+            // Clear user configured mime associations
+            mime.clearTextMimes(true /* user configured */);
+            // Register based on settings
+            if (configuration.files && configuration.files.associations) {
+                Object.keys(configuration.files.associations).forEach(function (pattern) {
+                    mime.registerTextMime({ mime: _this.getMimeForMode(configuration.files.associations[pattern]), filepattern: pattern, userConfigured: true });
+                });
+            }
+        };
+        MainThreadModeServiceImpl = __decorate([
+            __param(0, instantiation_1.IInstantiationService),
+            __param(1, extensions_1.IExtensionService),
+            __param(2, configuration_1.IConfigurationService)
+        ], MainThreadModeServiceImpl);
+        return MainThreadModeServiceImpl;
+    }(ModeServiceImpl));
+    exports.MainThreadModeServiceImpl = MainThreadModeServiceImpl;
+});
+
+define(__m[432], __M([0,1,45,366,33,77]), function (require, exports, modesRegistry_1, nls, platform, ConfigurationRegistry) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -61898,7 +65174,8 @@ define(__m[427], __M([1,0,39,364,31,43]), function (require, exports, modesRegis
         aliases: ['HTML', 'htm', 'html', 'xhtml'],
         mimetypes: ['text/html', 'text/x-jshtm', 'text/template', 'text/ng-template'],
         moduleId: 'vs/languages/html/common/html',
-        ctorName: 'HTMLMode'
+        ctorName: 'HTMLMode',
+        deps: ['text/css', 'text/javascript']
     });
     var configurationRegistry = platform.Registry.as(ConfigurationRegistry.Extensions.Configuration);
     configurationRegistry.registerConfiguration({
@@ -61951,122 +65228,15 @@ define(__m[427], __M([1,0,39,364,31,43]), function (require, exports, modesRegis
     });
 });
 
-define(__m[428], __M([1,0,365,43,31,39]), function (require, exports, nls, ConfigurationRegistry, Platform, modesRegistry_1) {
-    /*---------------------------------------------------------------------------------------------
-     *  Copyright (c) Microsoft Corporation. All rights reserved.
-     *  Licensed under the MIT License. See License.txt in the project root for license information.
-     *--------------------------------------------------------------------------------------------*/
-    'use strict';
-    modesRegistry_1.ModesRegistry.registerCompatMode({
-        id: 'json',
-        extensions: ['.json', '.bowerrc', '.jshintrc', '.jscsrc', '.eslintrc', '.babelrc'],
-        aliases: ['JSON', 'json'],
-        mimetypes: ['application/json'],
-        moduleId: 'vs/languages/json/common/json',
-        ctorName: 'JSONMode'
-    });
-    var configurationRegistry = Platform.Registry.as(ConfigurationRegistry.Extensions.Configuration);
-    configurationRegistry.registerConfiguration({
-        'id': 'json',
-        'order': 20,
-        'type': 'object',
-        'title': nls.localize(0, null),
-        'properties': {
-            'json.schemas': {
-                'type': 'array',
-                'description': nls.localize(1, null),
-                'items': {
-                    'type': 'object',
-                    'defaultSnippets': [{ body: { fileMatch: ['{{/myfile}}'], url: '{{schemaURL}}' } }],
-                    'properties': {
-                        'url': {
-                            'type': 'string',
-                            'default': '/user.schema.json',
-                            'description': nls.localize(2, null),
-                        },
-                        'fileMatch': {
-                            'type': 'array',
-                            'items': {
-                                'type': 'string',
-                                'default': 'MyFile.json',
-                                'description': nls.localize(3, null),
-                            },
-                            'minItems': 1,
-                            'description': nls.localize(4, null),
-                        },
-                        'schema': {
-                            'type': 'object',
-                            'description': nls.localize(5, null),
-                        },
-                    }
-                }
-            }
-        }
-    });
-});
-
 /*---------------------------------------------------------------------------------------------
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
-define(__m[429], __M([1,0,411,427,412,414]), function (require, exports) {
+define(__m[433], __M([0,1,416,432,418]), function (require, exports) {
     'use strict';
 });
 
-define(__m[430], __M([1,0,31,366,119,39,43,98]), function (require, exports, platform, nls, lintRules, modesRegistry_1, ConfigurationRegistry) {
-    /*---------------------------------------------------------------------------------------------
-     *  Copyright (c) Microsoft Corporation. All rights reserved.
-     *  Licensed under the MIT License. See License.txt in the project root for license information.
-     *--------------------------------------------------------------------------------------------*/
-    'use strict';
-    modesRegistry_1.ModesRegistry.registerCompatMode({
-        id: 'less',
-        extensions: ['.less'],
-        aliases: ['Less', 'less'],
-        mimetypes: ['text/x-less', 'text/less'],
-        moduleId: 'vs/languages/less/common/less',
-        ctorName: 'LESSMode'
-    });
-    var configurationRegistry = platform.Registry.as(ConfigurationRegistry.Extensions.Configuration);
-    configurationRegistry.registerConfiguration({
-        'id': 'less',
-        'order': 22,
-        'type': 'object',
-        'title': nls.localize(0, null),
-        'allOf': [{
-                'title': nls.localize(1, null),
-                'properties': lintRules.getConfigurationProperties('less')
-            }]
-    });
-});
-
-define(__m[431], __M([1,0,39,31,367,119,43,98]), function (require, exports, modesRegistry_1, Platform, nls, LintRules, ConfigurationRegistry) {
-    /*---------------------------------------------------------------------------------------------
-     *  Copyright (c) Microsoft Corporation. All rights reserved.
-     *  Licensed under the MIT License. See License.txt in the project root for license information.
-     *--------------------------------------------------------------------------------------------*/
-    'use strict';
-    modesRegistry_1.ModesRegistry.registerCompatMode({
-        id: 'scss',
-        extensions: ['.scss'],
-        aliases: ['Sass', 'sass', 'scss'],
-        mimetypes: ['text/x-scss', 'text/scss'],
-        moduleId: 'vs/languages/sass/common/sass',
-        ctorName: 'SASSMode'
-    });
-    var configurationRegistry = Platform.Registry.as(ConfigurationRegistry.Extensions.Configuration);
-    configurationRegistry.registerConfiguration({
-        'id': 'scss',
-        'order': 24,
-        'title': nls.localize(0, null),
-        'allOf': [{
-                'title': nls.localize(1, null),
-                'properties': LintRules.getConfigurationProperties('sass')
-            }]
-    });
-});
-
-define(__m[432], __M([1,0,32,31,26,126,43]), function (require, exports, objects, platform, types, json, configurationRegistry) {
+define(__m[434], __M([0,1,31,33,26,124,77]), function (require, exports, objects, platform, types, json, configurationRegistry) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -62166,11 +65336,12 @@ define(__m[432], __M([1,0,32,31,26,126,43]), function (require, exports, objects
     // defaults...
     function processDefaultValues(withConfig) {
         var configurations = platform.Registry.as(configurationRegistry.Extensions.Configuration).getConfigurations();
-        var visit = function (config, isFirst) {
-            withConfig(config, isFirst);
+        var visit = function (config, level) {
+            var handled = withConfig(config, level === 0);
             if (Array.isArray(config.allOf)) {
                 config.allOf.forEach(function (c) {
-                    visit(c, false);
+                    // if the config node only contains an `allOf` we treat the `allOf` children as if they were at the top level
+                    visit(c, (!handled && level === 0) ? level : level + 1);
                 });
             }
         };
@@ -62183,7 +65354,7 @@ define(__m[432], __M([1,0,32,31,26,126,43]), function (require, exports, objects
             }
             return c1.order - c2.order;
         }).forEach(function (config) {
-            visit(config, true);
+            visit(config, 0);
         });
     }
     function getDefaultValues() {
@@ -62198,7 +65369,9 @@ define(__m[432], __M([1,0,32,31,26,126,43]), function (require, exports, objects
                     }
                     setNode(ret, key, value);
                 });
+                return true;
             }
+            return false;
         };
         processDefaultValues(handleConfig);
         return ret;
@@ -62209,7 +65382,9 @@ define(__m[432], __M([1,0,32,31,26,126,43]), function (require, exports, objects
         var result = [];
         result.push('{');
         var handleConfig = function (config, isTop) {
+            var handled = false;
             if (config.title) {
+                handled = true;
                 if (isTop) {
                     result.push('');
                     result.push('//-------- ' + config.title + ' --------');
@@ -62220,6 +65395,7 @@ define(__m[432], __M([1,0,32,31,26,126,43]), function (require, exports, objects
                 result.push('');
             }
             if (config.properties) {
+                handled = true;
                 Object.keys(config.properties).forEach(function (key) {
                     var prop = config.properties[key];
                     var defaultValue = prop.default;
@@ -62241,6 +65417,7 @@ define(__m[432], __M([1,0,32,31,26,126,43]), function (require, exports, objects
                     result.push('');
                 });
             }
+            return handled;
         };
         processDefaultValues(handleConfig);
         result.push('}');
@@ -62269,7 +65446,7 @@ define(__m[432], __M([1,0,32,31,26,126,43]), function (require, exports, objects
     }
 });
 
-define(__m[433], __M([1,0,37,2,32,8,432,14,51,69,100,43,31,18]), function (require, exports, paths, winjs_base_1, objects, errors, model, async_1, collections, configuration_1, files_1, configurationRegistry_1, platform_1, event_1) {
+define(__m[435], __M([0,1,38,2,31,8,434,14,48,57,139,77,33,16]), function (require, exports, paths, winjs_base_1, objects, errors, model, async_1, collections, configuration_1, files_1, configurationRegistry_1, platform_1, event_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -62456,7 +65633,7 @@ define(__m[433], __M([1,0,37,2,32,8,432,14,51,69,100,43,31,18]), function (requi
     exports.ConfigurationService = ConfigurationService;
 });
 
-define(__m[434], __M([1,0,369,33,2,135,82]), function (require, exports, nls, severity_1, winjs_base_1, extensions_1, extensionsRegistry_1) {
+define(__m[436], __M([0,1,369,32,2,84,86]), function (require, exports, nls, severity_1, winjs_base_1, extensions_1, extensionsRegistry_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -62621,7 +65798,7 @@ define(__m[434], __M([1,0,369,33,2,135,82]), function (require, exports, nls, se
     exports.AbstractExtensionService = AbstractExtensionService;
 });
 
-define(__m[53], __M([1,0,13,17,26,31]), function (require, exports, keyCodes_1, platform, types_1, platform_1) {
+define(__m[51], __M([0,1,12,18,26,33]), function (require, exports, keyCodes_1, platform, types_1, platform_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -62748,7 +65925,7 @@ define(__m[53], __M([1,0,13,17,26,31]), function (require, exports, keyCodes_1, 
     platform_1.Registry.add(exports.Extensions.EditorModes, exports.KeybindingsRegistry);
 });
 
-define(__m[86], __M([1,0,13,45,21,53,7,62]), function (require, exports, keyCodes_1, editor_1, keybindingService_1, keybindingsRegistry_1, editorCommon, codeEditorService_1) {
+define(__m[90], __M([0,1,12,43,19,51,7,54]), function (require, exports, keyCodes_1, editor_1, keybindingService_1, keybindingsRegistry_1, editorCommon, codeEditorService_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -62962,10 +66139,14 @@ define(__m[86], __M([1,0,13,45,21,53,7,62]), function (require, exports, keyCode
         mac: { primary: keyCodes_1.KeyMod.WinCtrl | keyCodes_1.KeyCode.PageDown }
     });
     registerCoreCommand(H.ScrollPageUp, {
-        primary: keyCodes_1.KeyMod.CtrlCmd | keyCodes_1.KeyCode.PageUp
+        primary: keyCodes_1.KeyMod.CtrlCmd | keyCodes_1.KeyCode.PageUp,
+        win: { primary: keyCodes_1.KeyMod.Alt | keyCodes_1.KeyCode.PageUp },
+        linux: { primary: keyCodes_1.KeyMod.Alt | keyCodes_1.KeyCode.PageUp }
     });
     registerCoreCommand(H.ScrollPageDown, {
-        primary: keyCodes_1.KeyMod.CtrlCmd | keyCodes_1.KeyCode.PageDown
+        primary: keyCodes_1.KeyMod.CtrlCmd | keyCodes_1.KeyCode.PageDown,
+        win: { primary: keyCodes_1.KeyMod.Alt | keyCodes_1.KeyCode.PageDown },
+        linux: { primary: keyCodes_1.KeyMod.Alt | keyCodes_1.KeyCode.PageDown }
     });
     registerCoreCommand(H.CursorColumnSelectLeft, {
         primary: keyCodes_1.KeyMod.CtrlCmd | keyCodes_1.KeyMod.Shift | keyCodes_1.KeyMod.Alt | keyCodes_1.KeyCode.LeftArrow,
@@ -63112,7 +66293,7 @@ define(__m[86], __M([1,0,13,45,21,53,7,62]), function (require, exports, keyCode
 
 
 
-define(__m[157], __M([1,0,372,13,3,33,35,2,11,54,103,21,53,247]), function (require, exports, nls, keyCodes_1, lifecycle_1, severity_1, arrays_1, winjs_base_1, dom, keyboardEvent_1, keybindingResolver_1, keybindingService_1, keybindingsRegistry_1) {
+define(__m[161], __M([0,1,372,12,3,32,37,2,11,56,101,19,51,16,246]), function (require, exports, nls, keyCodes_1, lifecycle_1, severity_1, arrays_1, winjs_base_1, dom, keyboardEvent_1, keybindingResolver_1, keybindingService_1, keybindingsRegistry_1, event_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -63127,12 +66308,22 @@ define(__m[157], __M([1,0,372,13,3,33,35,2,11,54,103,21,53,247]), function (requ
             this._value['_contextId'] = id;
         }
         KeybindingContext.prototype.setValue = function (key, value) {
-            //		console.log('SET ' + key + ' = ' + value + ' ON ' + this._id);
-            this._value[key] = value;
+            // console.log('SET ' + key + ' = ' + value + ' ON ' + this._id);
+            if (this._value[key] !== value) {
+                this._value[key] = value;
+                return true;
+            }
         };
         KeybindingContext.prototype.removeValue = function (key) {
-            //		console.log('REMOVE ' + key + ' FROM ' + this._id);
-            delete this._value[key];
+            // console.log('REMOVE ' + key + ' FROM ' + this._id);
+            return delete this._value[key];
+        };
+        KeybindingContext.prototype.getValue = function (key) {
+            var ret = this._value[key];
+            if (typeof ret === 'undefined' && this._parent) {
+                return this._parent.getValue(key);
+            }
+            return ret;
         };
         KeybindingContext.prototype.fillInContext = function (bucket) {
             if (this._parent) {
@@ -63145,25 +66336,36 @@ define(__m[157], __M([1,0,372,13,3,33,35,2,11,54,103,21,53,247]), function (requ
         return KeybindingContext;
     }());
     exports.KeybindingContext = KeybindingContext;
-    var ConfigurationContext = (function () {
-        function ConfigurationContext(configurationService) {
+    var ConfigAwareKeybindingContext = (function (_super) {
+        __extends(ConfigAwareKeybindingContext, _super);
+        function ConfigAwareKeybindingContext(id, configurationService, emitter) {
             var _this = this;
+            _super.call(this, id, null);
+            this._emitter = emitter;
             this._subscription = configurationService.onDidUpdateConfiguration(function (e) { return _this._updateConfigurationContext(e.config); });
             this._updateConfigurationContext(configurationService.getConfiguration());
         }
-        ConfigurationContext.prototype.dispose = function () {
+        ConfigAwareKeybindingContext.prototype.dispose = function () {
             this._subscription.dispose();
         };
-        ConfigurationContext.prototype._updateConfigurationContext = function (config) {
+        ConfigAwareKeybindingContext.prototype._updateConfigurationContext = function (config) {
             var _this = this;
-            this._values = Object.create(null);
+            // remove old config.xyz values
+            for (var key in this._value) {
+                if (key.indexOf('config.') === 0) {
+                    delete this._value[key];
+                }
+            }
+            // add new value from config
             var walk = function (obj, keys) {
                 for (var key in obj) {
                     if (Object.prototype.hasOwnProperty.call(obj, key)) {
                         keys.push(key);
                         var value = obj[key];
                         if (typeof value === 'boolean') {
-                            _this._values[keys.join('.')] = value;
+                            var configKey = keys.join('.');
+                            _this._value[configKey] = value;
+                            _this._emitter.fire(configKey);
                         }
                         else if (typeof value === 'object') {
                             walk(value, keys);
@@ -63174,16 +66376,8 @@ define(__m[157], __M([1,0,372,13,3,33,35,2,11,54,103,21,53,247]), function (requ
             };
             walk(config, ['config']);
         };
-        ConfigurationContext.prototype.fillInContext = function (bucket) {
-            if (this._values) {
-                for (var key in this._values) {
-                    bucket[key] = this._values[key];
-                }
-            }
-        };
-        return ConfigurationContext;
-    }());
-    exports.ConfigurationContext = ConfigurationContext;
+        return ConfigAwareKeybindingContext;
+    }(KeybindingContext));
     var KeybindingContextKey = (function () {
         function KeybindingContextKey(parent, key, defaultValue) {
             this._parent = parent;
@@ -63210,22 +66404,54 @@ define(__m[157], __M([1,0,372,13,3,33,35,2,11,54,103,21,53,247]), function (requ
         function AbstractKeybindingService(myContextId) {
             this.serviceId = keybindingService_1.IKeybindingService;
             this._myContextId = myContextId;
+            this._onDidChangeContextKey = new event_1.Emitter();
             this._instantiationService = null;
         }
         AbstractKeybindingService.prototype.createKey = function (key, defaultValue) {
             return new KeybindingContextKey(this, key, defaultValue);
         };
+        Object.defineProperty(AbstractKeybindingService.prototype, "onDidChangeContext", {
+            get: function () {
+                if (!this._onDidChangeContext) {
+                    this._onDidChangeContext = event_1.debounceEvent(this._onDidChangeContextKey.event, function (prev, cur) {
+                        if (!prev) {
+                            prev = [cur];
+                        }
+                        else if (prev.indexOf(cur) < 0) {
+                            prev.push(cur);
+                        }
+                        return prev;
+                    }, 25);
+                }
+                return this._onDidChangeContext;
+            },
+            enumerable: true,
+            configurable: true
+        });
         AbstractKeybindingService.prototype.setInstantiationService = function (instantiationService) {
             this._instantiationService = instantiationService;
         };
         AbstractKeybindingService.prototype.createScoped = function (domNode) {
-            return new ScopedKeybindingService(this, domNode);
+            return new ScopedKeybindingService(this, this._onDidChangeContextKey, domNode);
+        };
+        AbstractKeybindingService.prototype.contextMatchesRules = function (rules) {
+            var ctx = Object.create(null);
+            this.getContext(this._myContextId).fillInContext(ctx);
+            // console.log(JSON.stringify(ctx, null, '\t'));
+            return keybindingResolver_1.KeybindingResolver.contextMatchesRules(ctx, rules);
+        };
+        AbstractKeybindingService.prototype.getContextValue = function (key) {
+            return this.getContext(this._myContextId).getValue(key);
         };
         AbstractKeybindingService.prototype.setContext = function (key, value) {
-            this.getContext(this._myContextId).setValue(key, value);
+            if (this.getContext(this._myContextId).setValue(key, value)) {
+                this._onDidChangeContextKey.fire(key);
+            }
         };
         AbstractKeybindingService.prototype.removeContext = function (key) {
-            this.getContext(this._myContextId).removeValue(key);
+            if (this.getContext(this._myContextId).removeValue(key)) {
+                this._onDidChangeContextKey.fire(key);
+            }
         };
         AbstractKeybindingService.prototype.hasCommand = function (commandId) {
             return !!keybindingsRegistry_1.KeybindingsRegistry.getCommands()[commandId];
@@ -63240,13 +66466,13 @@ define(__m[157], __M([1,0,372,13,3,33,35,2,11,54,103,21,53,247]), function (requ
             this._toDispose = [];
             this._lastContextId = 0;
             this._contexts = Object.create(null);
-            this._contexts[String(this._myContextId)] = new KeybindingContext(this._myContextId, null);
+            var myContext = new ConfigAwareKeybindingContext(this._myContextId, configurationService, this._onDidChangeContextKey);
+            this._contexts[String(this._myContextId)] = myContext;
+            this._toDispose.push(myContext);
             this._cachedResolver = null;
             this._firstTimeComputingResolver = true;
             this._currentChord = 0;
             this._currentChordStatusMessage = null;
-            this._configurationContext = new ConfigurationContext(configurationService);
-            this._toDispose.push(this._configurationContext);
             this._statusService = statusService;
             this._messageService = messageService;
         }
@@ -63325,7 +66551,6 @@ define(__m[157], __M([1,0,372,13,3,33,35,2,11,54,103,21,53,247]), function (requ
             }
             var contextValue = Object.create(null);
             this.getContext(this._findContextAttr(e.target)).fillInContext(contextValue);
-            this._configurationContext.fillInContext(contextValue);
             // console.log(JSON.stringify(contextValue, null, '\t'));
             var resolveResult = this._getResolver().resolve(contextValue, this._currentChord, e.asKeybinding());
             if (resolveResult && resolveResult.enterChord) {
@@ -63415,9 +66640,10 @@ define(__m[157], __M([1,0,372,13,3,33,35,2,11,54,103,21,53,247]), function (requ
     });
     var ScopedKeybindingService = (function (_super) {
         __extends(ScopedKeybindingService, _super);
-        function ScopedKeybindingService(parent, domNode) {
+        function ScopedKeybindingService(parent, emitter, domNode) {
             _super.call(this, parent.createChildContext());
             this._parent = parent;
+            this._onDidChangeContextKey = emitter;
             this._domNode = domNode;
             this._domNode.setAttribute(KEYBINDING_CONTEXT_ATTR, String(this._myContextId));
         }
@@ -63425,6 +66651,13 @@ define(__m[157], __M([1,0,372,13,3,33,35,2,11,54,103,21,53,247]), function (requ
             this._parent.disposeContext(this._myContextId);
             this._domNode.removeAttribute(KEYBINDING_CONTEXT_ATTR);
         };
+        Object.defineProperty(ScopedKeybindingService.prototype, "onDidChangeContext", {
+            get: function () {
+                return this._parent.onDidChangeContext;
+            },
+            enumerable: true,
+            configurable: true
+        });
         ScopedKeybindingService.prototype.getLabelFor = function (keybinding) {
             return this._parent.getLabelFor(keybinding);
         };
@@ -63463,7 +66696,7 @@ define(__m[157], __M([1,0,372,13,3,33,35,2,11,54,103,21,53,247]), function (requ
     }(AbstractKeybindingService));
 });
 
-define(__m[158], __M([1,0,15]), function (require, exports, instantiation_1) {
+define(__m[115], __M([0,1,15]), function (require, exports, instantiation_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -63472,7 +66705,7 @@ define(__m[158], __M([1,0,15]), function (require, exports, instantiation_1) {
     exports.IRequestService = instantiation_1.createDecorator('requestService');
 });
 
-define(__m[159], __M([1,0,15]), function (require, exports, instantiation_1) {
+define(__m[163], __M([0,1,15]), function (require, exports, instantiation_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -63502,7 +66735,7 @@ define(__m[159], __M([1,0,15]), function (require, exports, instantiation_1) {
     };
 });
 
-define(__m[34], __M([1,0,2,55,15]), function (require, exports, winjs_base_1, timer_1, instantiation_1) {
+define(__m[36], __M([0,1,2,59,15]), function (require, exports, winjs_base_1, timer_1, instantiation_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -63558,7 +66791,7 @@ define(__m[34], __M([1,0,2,55,15]), function (require, exports, winjs_base_1, ti
     exports.anonymize = anonymize;
 });
 
-define(__m[12], __M([1,0,8,29,68,21,53,31,34,86,20,7,40]), function (require, exports, errors_1, uri_1, descriptors_1, keybindingService_1, keybindingsRegistry_1, platform_1, telemetry_1, config_1, position_1, editorCommon, modelService_1) {
+define(__m[13], __M([0,1,8,29,68,19,51,33,36,90,21,7,34]), function (require, exports, errors_1, uri_1, descriptors_1, keybindingService_1, keybindingsRegistry_1, platform_1, telemetry_1, config_1, position_1, editorCommon, modelService_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -63764,6 +66997,429 @@ define(__m[12], __M([1,0,8,29,68,21,53,31,34,86,20,7,40]), function (require, ex
     }
 });
 
+
+
+
+
+
+
+
+
+
+define(__m[444], __M([0,1,320,16,92,32,73,36,4,7,125,34,18,57,55,42]), function (require, exports, nls, event_1, htmlContent_1, severity_1, markers_1, telemetry_1, range_1, editorCommon, model_1, modelService_1, platform, configuration_1, defaultConfig_1, message_1) {
+    /*---------------------------------------------------------------------------------------------
+     *  Copyright (c) Microsoft Corporation. All rights reserved.
+     *  Licensed under the MIT License. See License.txt in the project root for license information.
+     *--------------------------------------------------------------------------------------------*/
+    'use strict';
+    function MODEL_ID(resource) {
+        return resource.toString();
+    }
+    var ModelData = (function () {
+        function ModelData(model, eventsHandler) {
+            var _this = this;
+            this.model = model;
+            this._markerDecorations = [];
+            this._modelEventsListener = model.addBulkListener(function (events) { return eventsHandler(_this, events); });
+        }
+        ModelData.prototype.dispose = function () {
+            this._markerDecorations = this.model.deltaDecorations(this._markerDecorations, []);
+            this._modelEventsListener.dispose();
+            this._modelEventsListener = null;
+            this.model = null;
+        };
+        ModelData.prototype.getModelId = function () {
+            return MODEL_ID(this.model.uri);
+        };
+        ModelData.prototype.acceptMarkerDecorations = function (newDecorations) {
+            this._markerDecorations = this.model.deltaDecorations(this._markerDecorations, newDecorations);
+        };
+        return ModelData;
+    }());
+    var ModelMarkerHandler = (function () {
+        function ModelMarkerHandler() {
+        }
+        ModelMarkerHandler.setMarkers = function (modelData, markers) {
+            var _this = this;
+            // Limit to the first 500 errors/warnings
+            markers = markers.slice(0, 500);
+            var newModelDecorations = markers.map(function (marker) {
+                return {
+                    range: _this._createDecorationRange(modelData.model, marker),
+                    options: _this._createDecorationOption(marker)
+                };
+            });
+            modelData.acceptMarkerDecorations(newModelDecorations);
+        };
+        ModelMarkerHandler._createDecorationRange = function (model, rawMarker) {
+            var marker = model.validateRange(new range_1.Range(rawMarker.startLineNumber, rawMarker.startColumn, rawMarker.endLineNumber, rawMarker.endColumn));
+            var ret = new range_1.Range(marker.startLineNumber, marker.startColumn, marker.endLineNumber, marker.endColumn);
+            if (ret.isEmpty()) {
+                var word = model.getWordAtPosition(ret.getStartPosition());
+                if (word) {
+                    ret.startColumn = word.startColumn;
+                    ret.endColumn = word.endColumn;
+                }
+                else {
+                    var maxColumn = model.getLineLastNonWhitespaceColumn(marker.startLineNumber) ||
+                        model.getLineMaxColumn(marker.startLineNumber);
+                    if (maxColumn === 1) {
+                    }
+                    else if (ret.endColumn >= maxColumn) {
+                        // behind eol
+                        ret.endColumn = maxColumn;
+                        ret.startColumn = maxColumn - 1;
+                    }
+                    else {
+                        // extend marker to width = 1
+                        ret.endColumn += 1;
+                    }
+                }
+            }
+            else if (rawMarker.endColumn === Number.MAX_VALUE && rawMarker.startColumn === 1 && ret.startLineNumber === ret.endLineNumber) {
+                var minColumn = model.getLineFirstNonWhitespaceColumn(rawMarker.startLineNumber);
+                if (minColumn < ret.endColumn) {
+                    ret.startColumn = minColumn;
+                    rawMarker.startColumn = minColumn;
+                }
+            }
+            return ret;
+        };
+        ModelMarkerHandler._createDecorationOption = function (marker) {
+            var className;
+            var color;
+            var darkColor;
+            var htmlMessage = null;
+            switch (marker.severity) {
+                case severity_1.default.Ignore:
+                    // do something
+                    break;
+                case severity_1.default.Warning:
+                case severity_1.default.Info:
+                    className = editorCommon.ClassName.EditorWarningDecoration;
+                    color = 'rgba(18,136,18,0.7)';
+                    darkColor = 'rgba(18,136,18,0.7)';
+                    break;
+                case severity_1.default.Error:
+                default:
+                    className = editorCommon.ClassName.EditorErrorDecoration;
+                    color = 'rgba(255,18,18,0.7)';
+                    darkColor = 'rgba(255,18,18,0.7)';
+                    break;
+            }
+            if (typeof marker.message === 'string') {
+                htmlMessage = [htmlContent_1.textToMarkedString(marker.message)];
+            }
+            else if (Array.isArray(marker.message)) {
+                htmlMessage = marker.message;
+            }
+            else if (marker.message) {
+                htmlMessage = [marker.message];
+            }
+            if (htmlMessage && marker.source) {
+                htmlMessage.unshift("[" + marker.source + "] ");
+            }
+            return {
+                stickiness: editorCommon.TrackedRangeStickiness.NeverGrowsWhenTypingAtEdges,
+                className: className,
+                hoverMessage: htmlMessage,
+                overviewRuler: {
+                    color: color,
+                    darkColor: darkColor,
+                    position: editorCommon.OverviewRulerLane.Right
+                }
+            };
+        };
+        return ModelMarkerHandler;
+    }());
+    var ModelServiceImpl = (function () {
+        function ModelServiceImpl(markerService, configurationService, messageService) {
+            var _this = this;
+            this.serviceId = modelService_1.IModelService;
+            this._modelCreationOptions = {
+                tabSize: defaultConfig_1.DEFAULT_INDENTATION.tabSize,
+                insertSpaces: defaultConfig_1.DEFAULT_INDENTATION.insertSpaces,
+                detectIndentation: defaultConfig_1.DEFAULT_INDENTATION.detectIndentation,
+                defaultEOL: (platform.isLinux || platform.isMacintosh) ? editorCommon.DefaultEndOfLine.LF : editorCommon.DefaultEndOfLine.CRLF,
+                trimAutoWhitespace: defaultConfig_1.DEFAULT_TRIM_AUTO_WHITESPACE
+            };
+            this._markerService = markerService;
+            this._configurationService = configurationService;
+            this._messageService = messageService;
+            this._hasShownMigrationMessage = false;
+            this._models = {};
+            this._onModelAdded = new event_1.Emitter();
+            this._onModelRemoved = new event_1.Emitter();
+            this._onModelModeChanged = new event_1.Emitter();
+            if (this._markerService) {
+                this._markerServiceSubscription = this._markerService.onMarkerChanged(this._handleMarkerChange, this);
+            }
+            var readConfig = function (config) {
+                var shouldShowMigrationMessage = false;
+                var tabSize = defaultConfig_1.DEFAULT_INDENTATION.tabSize;
+                if (config.editor && typeof config.editor.tabSize !== 'undefined') {
+                    var parsedTabSize = parseInt(config.editor.tabSize, 10);
+                    if (!isNaN(parsedTabSize)) {
+                        tabSize = parsedTabSize;
+                    }
+                    shouldShowMigrationMessage = shouldShowMigrationMessage || (config.editor.tabSize === 'auto');
+                }
+                var insertSpaces = defaultConfig_1.DEFAULT_INDENTATION.insertSpaces;
+                if (config.editor && typeof config.editor.insertSpaces !== 'undefined') {
+                    insertSpaces = (config.editor.insertSpaces === 'false' ? false : Boolean(config.editor.insertSpaces));
+                    shouldShowMigrationMessage = shouldShowMigrationMessage || (config.editor.insertSpaces === 'auto');
+                }
+                var newDefaultEOL = _this._modelCreationOptions.defaultEOL;
+                var eol = config.files && config.files.eol;
+                if (eol === '\r\n') {
+                    newDefaultEOL = editorCommon.DefaultEndOfLine.CRLF;
+                }
+                else if (eol === '\n') {
+                    newDefaultEOL = editorCommon.DefaultEndOfLine.LF;
+                }
+                var trimAutoWhitespace = _this._modelCreationOptions.trimAutoWhitespace;
+                if (config.editor && typeof config.editor.trimAutoWhitespace !== 'undefined') {
+                    trimAutoWhitespace = (config.editor.trimAutoWhitespace === 'false' ? false : Boolean(config.editor.trimAutoWhitespace));
+                }
+                var detectIndentation = defaultConfig_1.DEFAULT_INDENTATION.detectIndentation;
+                if (config.editor && typeof config.editor.detectIndentation !== 'undefined') {
+                    detectIndentation = (config.editor.detectIndentation === 'false' ? false : Boolean(config.editor.detectIndentation));
+                }
+                _this._setModelOptions({
+                    tabSize: tabSize,
+                    insertSpaces: insertSpaces,
+                    detectIndentation: detectIndentation,
+                    defaultEOL: newDefaultEOL,
+                    trimAutoWhitespace: trimAutoWhitespace
+                });
+                if (shouldShowMigrationMessage && !_this._hasShownMigrationMessage) {
+                    _this._hasShownMigrationMessage = true;
+                    _this._messageService.show(severity_1.default.Info, nls.localize(0, null));
+                }
+            };
+            this._configurationServiceSubscription = this._configurationService.onDidUpdateConfiguration(function (e) {
+                readConfig(e.config);
+            });
+            readConfig(this._configurationService.getConfiguration());
+        }
+        ModelServiceImpl.prototype.getCreationOptions = function () {
+            return this._modelCreationOptions;
+        };
+        ModelServiceImpl.prototype._setModelOptions = function (newOpts) {
+            if ((this._modelCreationOptions.detectIndentation === newOpts.detectIndentation)
+                && (this._modelCreationOptions.insertSpaces === newOpts.insertSpaces)
+                && (this._modelCreationOptions.tabSize === newOpts.tabSize)
+                && (this._modelCreationOptions.trimAutoWhitespace === newOpts.trimAutoWhitespace)) {
+                // Same indent opts, no need to touch created models
+                this._modelCreationOptions = newOpts;
+                return;
+            }
+            this._modelCreationOptions = newOpts;
+            // Update options on all models
+            var keys = Object.keys(this._models);
+            for (var i = 0, len = keys.length; i < len; i++) {
+                var modelId = keys[i];
+                var modelData = this._models[modelId];
+                if (this._modelCreationOptions.detectIndentation) {
+                    modelData.model.detectIndentation(this._modelCreationOptions.insertSpaces, this._modelCreationOptions.tabSize);
+                    modelData.model.updateOptions({
+                        trimAutoWhitespace: this._modelCreationOptions.trimAutoWhitespace
+                    });
+                }
+                else {
+                    modelData.model.updateOptions({
+                        insertSpaces: this._modelCreationOptions.insertSpaces,
+                        tabSize: this._modelCreationOptions.tabSize,
+                        trimAutoWhitespace: this._modelCreationOptions.trimAutoWhitespace
+                    });
+                }
+            }
+        };
+        ModelServiceImpl.prototype.dispose = function () {
+            if (this._markerServiceSubscription) {
+                this._markerServiceSubscription.dispose();
+            }
+            this._configurationServiceSubscription.dispose();
+        };
+        ModelServiceImpl.prototype._handleMarkerChange = function (changedResources) {
+            var _this = this;
+            changedResources.forEach(function (resource) {
+                var modelId = MODEL_ID(resource);
+                var modelData = _this._models[modelId];
+                if (!modelData) {
+                    return;
+                }
+                ModelMarkerHandler.setMarkers(modelData, _this._markerService.read({ resource: resource, take: 500 }));
+            });
+        };
+        // --- begin IModelService
+        ModelServiceImpl.prototype._createModelData = function (value, modeOrPromise, resource) {
+            var _this = this;
+            // create & save the model
+            var model;
+            if (typeof value === 'string') {
+                model = model_1.Model.createFromString(value, this._modelCreationOptions, modeOrPromise, resource);
+            }
+            else {
+                model = new model_1.Model(value, modeOrPromise, resource);
+            }
+            var modelId = MODEL_ID(model.uri);
+            if (this._models[modelId]) {
+                // There already exists a model with this id => this is a programmer error
+                throw new Error('ModelService: Cannot add model ' + telemetry_1.anonymize(modelId) + ' because it already exists!');
+            }
+            var modelData = new ModelData(model, function (modelData, events) { return _this._onModelEvents(modelData, events); });
+            this._models[modelId] = modelData;
+            return modelData;
+        };
+        ModelServiceImpl.prototype.createModel = function (value, modeOrPromise, resource) {
+            var modelData = this._createModelData(value, modeOrPromise, resource);
+            // handle markers (marker service => model)
+            if (this._markerService) {
+                ModelMarkerHandler.setMarkers(modelData, this._markerService.read({ resource: modelData.model.uri }));
+            }
+            this._onModelAdded.fire(modelData.model);
+            return modelData.model;
+        };
+        ModelServiceImpl.prototype.destroyModel = function (resource) {
+            // We need to support that not all models get disposed through this service (i.e. model.dispose() should work!)
+            var modelData = this._models[MODEL_ID(resource)];
+            if (!modelData) {
+                return;
+            }
+            modelData.model.dispose();
+        };
+        ModelServiceImpl.prototype.getModels = function () {
+            var ret = [];
+            var keys = Object.keys(this._models);
+            for (var i = 0, len = keys.length; i < len; i++) {
+                var modelId = keys[i];
+                ret.push(this._models[modelId].model);
+            }
+            return ret;
+        };
+        ModelServiceImpl.prototype.getModel = function (resource) {
+            var modelId = MODEL_ID(resource);
+            var modelData = this._models[modelId];
+            if (!modelData) {
+                return null;
+            }
+            return modelData.model;
+        };
+        Object.defineProperty(ModelServiceImpl.prototype, "onModelAdded", {
+            get: function () {
+                return this._onModelAdded ? this._onModelAdded.event : null;
+            },
+            enumerable: true,
+            configurable: true
+        });
+        Object.defineProperty(ModelServiceImpl.prototype, "onModelRemoved", {
+            get: function () {
+                return this._onModelRemoved ? this._onModelRemoved.event : null;
+            },
+            enumerable: true,
+            configurable: true
+        });
+        Object.defineProperty(ModelServiceImpl.prototype, "onModelModeChanged", {
+            get: function () {
+                return this._onModelModeChanged ? this._onModelModeChanged.event : null;
+            },
+            enumerable: true,
+            configurable: true
+        });
+        // --- end IModelService
+        ModelServiceImpl.prototype._onModelDisposing = function (model) {
+            var modelId = MODEL_ID(model.uri);
+            var modelData = this._models[modelId];
+            delete this._models[modelId];
+            modelData.dispose();
+            this._onModelRemoved.fire(model);
+        };
+        ModelServiceImpl.prototype._onModelEvents = function (modelData, events) {
+            // First look for dispose
+            for (var i = 0, len = events.length; i < len; i++) {
+                var e = events[i];
+                if (e.getType() === editorCommon.EventType.ModelDispose) {
+                    this._onModelDisposing(modelData.model);
+                    // no more processing since model got disposed
+                    return;
+                }
+            }
+            // Second, look for mode change
+            for (var i = 0, len = events.length; i < len; i++) {
+                var e = events[i];
+                if (e.getType() === editorCommon.EventType.ModelModeChanged) {
+                    this._onModelModeChanged.fire({
+                        model: modelData.model,
+                        oldModeId: e.getData().oldMode.getId()
+                    });
+                }
+            }
+        };
+        ModelServiceImpl = __decorate([
+            __param(0, markers_1.IMarkerService),
+            __param(1, configuration_1.IConfigurationService),
+            __param(2, message_1.IMessageService)
+        ], ModelServiceImpl);
+        return ModelServiceImpl;
+    }());
+    exports.ModelServiceImpl = ModelServiceImpl;
+});
+
+
+
+
+
+
+define(__m[445], __M([0,1,322,2,20,13,473]), function (require, exports, nls, winjs_base_1, editorAction_1, editorCommonExtensions_1, moveCarretCommand_1) {
+    /*---------------------------------------------------------------------------------------------
+     *  Copyright (c) Microsoft Corporation. All rights reserved.
+     *  Licensed under the MIT License. See License.txt in the project root for license information.
+     *--------------------------------------------------------------------------------------------*/
+    'use strict';
+    var MoveCarretAction = (function (_super) {
+        __extends(MoveCarretAction, _super);
+        function MoveCarretAction(descriptor, editor, left) {
+            _super.call(this, descriptor, editor);
+            this.left = left;
+        }
+        MoveCarretAction.prototype.run = function () {
+            var commands = [];
+            var selections = this.editor.getSelections();
+            for (var i = 0; i < selections.length; i++) {
+                commands.push(new moveCarretCommand_1.MoveCarretCommand(selections[i], this.left));
+            }
+            this.editor.executeCommands(this.id, commands);
+            return winjs_base_1.TPromise.as(true);
+        };
+        return MoveCarretAction;
+    }(editorAction_1.EditorAction));
+    var MoveCarretLeftAction = (function (_super) {
+        __extends(MoveCarretLeftAction, _super);
+        function MoveCarretLeftAction(descriptor, editor) {
+            _super.call(this, descriptor, editor, true);
+        }
+        MoveCarretLeftAction.ID = 'editor.action.moveCarretLeftAction';
+        return MoveCarretLeftAction;
+    }(MoveCarretAction));
+    var MoveCarretRightAction = (function (_super) {
+        __extends(MoveCarretRightAction, _super);
+        function MoveCarretRightAction(descriptor, editor) {
+            _super.call(this, descriptor, editor, false);
+        }
+        MoveCarretRightAction.ID = 'editor.action.moveCarretRightAction';
+        return MoveCarretRightAction;
+    }(MoveCarretAction));
+    editorCommonExtensions_1.CommonEditorRegistry.registerEditorAction(new editorCommonExtensions_1.EditorActionDescriptor(MoveCarretLeftAction, MoveCarretLeftAction.ID, nls.localize(0, null), {
+        context: editorCommonExtensions_1.ContextKey.EditorTextFocus,
+        primary: 0
+    }, 'Move Carret Left'));
+    editorCommonExtensions_1.CommonEditorRegistry.registerEditorAction(new editorCommonExtensions_1.EditorActionDescriptor(MoveCarretRightAction, MoveCarretRightAction.ID, nls.localize(1, null), {
+        context: editorCommonExtensions_1.ContextKey.EditorTextFocus,
+        primary: 0
+    }, 'Move Carret Right'));
+});
+
 /*---------------------------------------------------------------------------------------------
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -63773,7 +67429,7 @@ define(__m[12], __M([1,0,8,29,68,21,53,31,34,86,20,7,40]), function (require, ex
 
 
 
-define(__m[442], __M([1,0,318,13,3,2,27,86,19,25,12,199]), function (require, exports, nls, keyCodes_1, lifecycle_1, winjs_base_1, browser, config_1, editorAction_1, editorActionEnablement_1, editorCommonExtensions_1) {
+define(__m[446], __M([0,1,323,12,3,2,28,90,20,25,13,204]), function (require, exports, nls, keyCodes_1, lifecycle_1, winjs_base_1, browser, config_1, editorAction_1, editorActionEnablement_1, editorCommonExtensions_1) {
     'use strict';
     var ClipboardWritingAction = (function (_super) {
         __extends(ClipboardWritingAction, _super);
@@ -63916,7 +67572,7 @@ define(__m[442], __M([1,0,318,13,3,2,27,86,19,25,12,199]), function (require, ex
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
-define(__m[443], __M([1,0,8,29,2,12,16,40,14]), function (require, exports, errors_1, uri_1, winjs_base_1, editorCommonExtensions_1, modes_1, modelService_1, async_1) {
+define(__m[447], __M([0,1,8,29,2,13,17,34,14]), function (require, exports, errors_1, uri_1, winjs_base_1, editorCommonExtensions_1, modes_1, modelService_1, async_1) {
     'use strict';
     function getCodeLensData(model) {
         var symbols = [];
@@ -63966,7 +67622,7 @@ define(__m[443], __M([1,0,8,29,2,12,16,40,14]), function (require, exports, erro
 
 
 
-define(__m[444], __M([1,0,14,8,3,33,10,2,11,21,44,6,7,16,40,23,30,443,206]), function (require, exports, async_1, errors_1, lifecycle_1, severity_1, strings_1, winjs_base_1, dom, keybindingService_1, message_1, range_1, editorCommon, modes_1, modelService_1, editorBrowser, editorBrowserExtensions_1, codelens_1) {
+define(__m[448], __M([0,1,14,8,3,32,10,2,11,19,42,4,7,17,34,22,30,447,208]), function (require, exports, async_1, errors_1, lifecycle_1, severity_1, strings_1, winjs_base_1, dom, keybindingService_1, message_1, range_1, editorCommon, modes_1, modelService_1, editorBrowser, editorBrowserExtensions_1, codelens_1) {
     'use strict';
     var CodeLensViewZone = (function () {
         function CodeLensViewZone(afterLineNumber) {
@@ -64468,252 +68124,12 @@ define(__m[444], __M([1,0,14,8,3,33,10,2,11,21,44,6,7,16,40,23,30,443,206]), fun
     editorBrowserExtensions_1.EditorBrowserRegistry.registerEditorContribution(CodeLensContribution);
 });
 
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
-define(__m[445], __M([1,0,14,8,3,10,11,7,12,208]), function (require, exports, async_1, errors_1, lifecycle_1, strings, dom, editorCommon, editorCommonExtensions_1) {
-    'use strict';
-    var ColorDecoration = (function () {
-        function ColorDecoration(renderingDecorationId, trackingDecorationId) {
-            this.renderingDecorationId = renderingDecorationId;
-            this.trackingDecorationId = trackingDecorationId;
-        }
-        ColorDecoration.createRenderingDecoration = function (range, inlineClassName) {
-            return {
-                range: {
-                    startLineNumber: range.startLineNumber,
-                    startColumn: range.startColumn,
-                    endLineNumber: range.startLineNumber,
-                    endColumn: range.startColumn + 1
-                },
-                options: {
-                    inlineClassName: 'inline-color-decoration ' + inlineClassName,
-                    stickiness: editorCommon.TrackedRangeStickiness.NeverGrowsWhenTypingAtEdges
-                }
-            };
-        };
-        ColorDecoration.createTrackingDecoration = function (range) {
-            return {
-                range: range,
-                options: {
-                    stickiness: editorCommon.TrackedRangeStickiness.NeverGrowsWhenTypingAtEdges
-                }
-            };
-        };
-        ColorDecoration.prototype.getColorValue = function (model) {
-            var range = model.getDecorationRange(this.trackingDecorationId);
-            if (range) {
-                return model.getValueInRange(range);
-            }
-            return '';
-        };
-        return ColorDecoration;
-    }());
-    var ColorContribution = (function () {
-        function ColorContribution(editor) {
-            var _this = this;
-            this._instanceCount = (++ColorContribution.INSTANCE_COUNT);
-            this._editor = editor;
-            this._callOnDispose = [];
-            this._callOnModelChange = [];
-            this._currentDecorations = [];
-            this._currentDynamicColors = [];
-            this._contentChangedScheduler = new async_1.RunOnceScheduler(null, 250);
-            this._decorationsChangedScheduler = new async_1.RunOnceScheduler(function () { return _this.onDecorationsChanged(); }, 250);
-            this._currentFindColorDeclarationsPromise = null;
-            this._callOnDispose.push(this._contentChangedScheduler);
-            this._callOnDispose.push(this._decorationsChangedScheduler);
-            this._callOnDispose.push(this._editor.onDidChangeModel(function () { return _this.onModelChange(); }));
-            this._callOnDispose.push(this._editor.onDidChangeModelMode(function () { return _this.onModelChange(); }));
-            this._callOnDispose.push(this._editor.onDidChangeModelModeSupport(function (e) {
-                _this.onModelChange();
-            }));
-            this._style = dom.createStyleSheet();
-            this.onModelChange();
-        }
-        ColorContribution.prototype.dispose = function () {
-            var _this = this;
-            if (this._currentDecorations.length > 0) {
-                this._editor.changeDecorations(function (changeAccessor) {
-                    var oldDecorations = [];
-                    for (var i = 0, len = _this._currentDecorations.length; i < len; i++) {
-                        oldDecorations.push(_this._currentDecorations[i].renderingDecorationId);
-                        oldDecorations.push(_this._currentDecorations[i].trackingDecorationId);
-                    }
-                    changeAccessor.deltaDecorations(oldDecorations, []);
-                    _this._currentDecorations = null;
-                });
-            }
-            this._style.parentNode.removeChild(this._style);
-            this._style = null;
-            this._callOnDispose = lifecycle_1.dispose(this._callOnDispose);
-        };
-        ColorContribution.prototype.getId = function () {
-            return ColorContribution.ID;
-        };
-        ColorContribution.prototype.onModelChange = function () {
-            var _this = this;
-            this._callOnModelChange = lifecycle_1.dispose(this._callOnModelChange);
-            var model = this._editor.getModel();
-            if (!model) {
-                return;
-            }
-            var rawMode = model.getMode();
-            if (typeof rawMode['findColorDeclarations'] !== 'function') {
-                return;
-            }
-            this._contentChangedScheduler.setRunner(function () {
-                if (_this._currentFindColorDeclarationsPromise) {
-                    _this._currentFindColorDeclarationsPromise.cancel();
-                }
-                _this._currentFindColorDeclarationsPromise = rawMode['findColorDeclarations'](model.uri);
-                var myModelVersion = _this._editor.getModel().getVersionId();
-                _this._currentFindColorDeclarationsPromise.then(function (result) {
-                    if (myModelVersion !== _this._editor.getModel().getVersionId()) {
-                        return;
-                    }
-                    _this.renderAndTrackColors(result);
-                }, function (error) {
-                    errors_1.onUnexpectedError(error);
-                });
-            });
-            this._contentChangedScheduler.schedule();
-            this._callOnModelChange.push({
-                dispose: function () {
-                    _this._contentChangedScheduler.cancel();
-                    _this._decorationsChangedScheduler.cancel();
-                }
-            });
-            this._callOnModelChange.push({
-                dispose: function () {
-                    if (_this._currentFindColorDeclarationsPromise) {
-                        _this._currentFindColorDeclarationsPromise.cancel();
-                    }
-                    _this._currentFindColorDeclarationsPromise = null;
-                }
-            });
-            this._callOnModelChange.push(this._editor.onDidChangeModelContent(function (event) { return _this._contentChangedScheduler.schedule(); }));
-            this._callOnModelChange.push(model.onDidChangeDecorations(function (event) { return _this._decorationsChangedScheduler.schedule(); }));
-        };
-        ColorContribution.prototype.renderAndTrackColors = function (colors) {
-            var _this = this;
-            // Reduce to a maximum of 500 colors
-            colors = colors.slice(0, 500);
-            this._editor.changeDecorations(function (changeAccessor) {
-                var oldDecorations = [];
-                for (var i = 0, len = _this._currentDecorations.length; i < len; i++) {
-                    oldDecorations.push(_this._currentDecorations[i].renderingDecorationId);
-                    oldDecorations.push(_this._currentDecorations[i].trackingDecorationId);
-                }
-                var newDecorations = [];
-                for (var i = 0, len = colors.length; i < len; i++) {
-                    newDecorations.push(ColorDecoration.createRenderingDecoration(colors[i].range, _this.getCSSRuleName(i)));
-                    newDecorations.push(ColorDecoration.createTrackingDecoration(colors[i].range));
-                }
-                var decorations = changeAccessor.deltaDecorations(oldDecorations, newDecorations);
-                _this._currentDecorations = [];
-                for (var i = 0, len = colors.length; i < len; i++) {
-                    _this._currentDecorations.push(new ColorDecoration(decorations[2 * i], decorations[2 * i + 1]));
-                }
-            });
-            this.onDecorationsChanged();
-        };
-        ColorContribution.prototype.onDecorationsChanged = function () {
-            var _this = this;
-            var model = this._editor.getModel(), i, len, range, renderingRange, desiredRenderingRange, decoration, desiredColors = [];
-            this._editor.changeDecorations(function (changeAccessor) {
-                for (i = 0, len = _this._currentDecorations.length; i < len; i++) {
-                    decoration = _this._currentDecorations[i];
-                    range = model.getDecorationRange(decoration.trackingDecorationId);
-                    if (range && !range.isEmpty()) {
-                        // Collect color for this decoration
-                        desiredColors[i] = model.getValueInRange(range).replace(/[^%#a-z0-9.,()]/gi, '');
-                        // Prevent rendering decorations from growing too much
-                        renderingRange = model.getDecorationRange(decoration.renderingDecorationId);
-                        desiredRenderingRange = model.validateRange({
-                            startLineNumber: range.startLineNumber,
-                            startColumn: range.startColumn,
-                            endLineNumber: range.startLineNumber,
-                            endColumn: range.startColumn + 1
-                        });
-                        if (!renderingRange || !renderingRange.equalsRange(desiredRenderingRange)) {
-                            changeAccessor.changeDecoration(decoration.renderingDecorationId, desiredRenderingRange);
-                        }
-                    }
-                    else {
-                        desiredColors[i] = '';
-                    }
-                }
-                _this.ensureColors(desiredColors);
-            });
-        };
-        ColorContribution.prototype.getCSSRuleName = function (index) {
-            if (index < 0) {
-                return '.monaco-css-dynamic-' + this._instanceCount + '-';
-            }
-            return '.monaco-css-dynamic-' + this._instanceCount + '-' + index + ':before';
-        };
-        ColorContribution.prototype._changeCost = function (desiredColors) {
-            if (this._currentDynamicColors.length !== desiredColors.length) {
-                return Number.MAX_VALUE;
-            }
-            var modifiedCnt = 0;
-            for (var i = 0; i < desiredColors.length; i++) {
-                if (desiredColors[i] !== this._currentDynamicColors[i]) {
-                    modifiedCnt++;
-                }
-            }
-            return modifiedCnt;
-        };
-        ColorContribution.prototype.ensureColors = function (desiredColors) {
-            var i, changeCost = this._changeCost(desiredColors);
-            if (changeCost === 0) {
-                // Nothing to change
-                return;
-            }
-            if (changeCost < 10) {
-                // Simply modify up to 10 rules (lengths will match for sure)
-                for (i = 0; i < desiredColors.length; i++) {
-                    if (desiredColors[i] !== this._currentDynamicColors[i]) {
-                        var rule = dom.getCSSRule(this.getCSSRuleName(i), this._style);
-                        if (rule) {
-                            rule.style.backgroundColor = desiredColors[i];
-                        }
-                    }
-                }
-            }
-            else {
-                // .innerHTML is the friend here
-                var result = [];
-                for (i = 0; i < desiredColors.length; i++) {
-                    result.push(this.getCSSRuleName(i));
-                    result.push('{');
-                    result.push(this.getCSSText(desiredColors[i]));
-                    result.push('}');
-                }
-                this._style.innerHTML = result.join('');
-            }
-            this._currentDynamicColors = desiredColors;
-        };
-        ColorContribution.prototype.getCSSText = function (color) {
-            // Variants:
-            return strings.format('background-color:{0};', color);
-        };
-        ColorContribution.ID = 'css.editor.colorContribution';
-        ColorContribution.INSTANCE_COUNT = 0;
-        return ColorContribution;
-    }());
-    exports.ColorContribution = ColorContribution;
-    editorCommonExtensions_1.CommonEditorRegistry.registerEditorContribution(ColorContribution);
-});
 
 
 
 
 
-
-define(__m[446], __M([1,0,319,13,2,19,12,161,222]), function (require, exports, nls, keyCodes_1, winjs_base_1, editorAction_1, editorCommonExtensions_1, blockCommentCommand_1, lineCommentCommand_1) {
+define(__m[449], __M([0,1,324,12,2,20,13,126,224]), function (require, exports, nls, keyCodes_1, winjs_base_1, editorAction_1, editorCommonExtensions_1, blockCommentCommand_1, lineCommentCommand_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -64817,21 +68233,24 @@ define(__m[446], __M([1,0,319,13,2,19,12,161,222]), function (require, exports, 
 
 
 
-define(__m[447], __M([1,0,320,13,3,262,2,11,66,70,21,19,25,7,12,30]), function (require, exports, nls, keyCodes_1, lifecycle_1, sortedList_1, winjs_base_1, dom, actionbar_1, contextView_1, keybindingService_1, editorAction_1, editorActionEnablement_1, editorCommon_1, editorCommonExtensions_1, editorBrowserExtensions_1) {
+define(__m[450], __M([0,1,325,12,3,2,11,58,70,19,79,20,25,7,13,30,400]), function (require, exports, nls, keyCodes_1, lifecycle_1, winjs_base_1, dom, actionbar_1, contextView_1, keybindingService_1, actions_1, editorAction_1, editorActionEnablement_1, editorCommon_1, editorCommonExtensions_1, editorBrowserExtensions_1, menuItemActionItem_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
      *--------------------------------------------------------------------------------------------*/
     'use strict';
     var ContextMenuController = (function () {
-        function ContextMenuController(editor, contextMenuService, contextViewService, keybindingService) {
+        function ContextMenuController(editor, _contextMenuService, _contextViewService, _keybindingService, _menuService) {
             var _this = this;
-            this.contextMenuService = contextMenuService;
-            this.contextViewService = contextViewService;
-            this.keybindingService = keybindingService;
-            this._editor = editor;
+            this._contextMenuService = _contextMenuService;
+            this._contextViewService = _contextViewService;
+            this._keybindingService = _keybindingService;
+            this._menuService = _menuService;
             this._toDispose = [];
             this._contextMenuIsBeingShownCount = 0;
+            this._editor = editor;
+            this._contextMenu = this._menuService.createMenu(actions_1.MenuId.EditorContext, this._keybindingService);
+            this._toDispose.push(this._contextMenu);
             this._toDispose.push(this._editor.onContextMenu(function (e) { return _this._onContextMenu(e); }));
             this._toDispose.push(this._editor.onKeyDown(function (e) {
                 if (e.keyCode === keyCodes_1.KeyCode.ContextMenu) {
@@ -64876,7 +68295,7 @@ define(__m[447], __M([1,0,320,13,3,262,2,11,66,70,21,19,25,7,12,30]), function (
             if (!this._editor.getConfiguration().contribInfo.contextmenu) {
                 return; // Context menu is turned off through configuration
             }
-            if (!this.contextMenuService) {
+            if (!this._contextMenuService) {
                 this._editor.focus();
                 return; // We need the context menu service to function
             }
@@ -64897,35 +68316,45 @@ define(__m[447], __M([1,0,320,13,3,262,2,11,66,70,21,19,25,7,12,30]), function (
             if (!editorModel) {
                 return [];
             }
-            var allActions = this._editor.getActions();
-            var contributedActions = allActions.filter(function (action) { return (typeof action.shouldShowInContextMenu === 'function') && action.shouldShowInContextMenu() && action.isSupported(); });
-            return this._prepareActions(contributedActions);
-        };
-        ContextMenuController.prototype._prepareActions = function (actions) {
-            var list = new sortedList_1.SortedList();
-            actions.forEach(function (action) {
-                var groups = action.getGroupId().split('/');
-                var actionsForGroup = list.getValue(groups[0]);
-                if (!actionsForGroup) {
-                    actionsForGroup = new sortedList_1.SortedList();
-                    list.add(groups[0], actionsForGroup);
+            var contributedActions = this._editor.getActions().filter(function (action) {
+                if (action instanceof editorAction_1.EditorAction) {
+                    return action.shouldShowInContextMenu() && action.isSupported();
                 }
-                actionsForGroup.add(groups[1] || groups[0], action);
             });
-            var sortedAndGroupedActions = [];
-            var groupIterator = list.getIterator();
-            while (groupIterator.moveNext()) {
-                var group = groupIterator.current.value;
-                var actionsIterator = group.getIterator();
-                while (actionsIterator.moveNext()) {
-                    var action = actionsIterator.current.value;
-                    sortedAndGroupedActions.push(action);
+            var actions = ContextMenuController._prepareActions(contributedActions);
+            menuItemActionItem_1.fillInActions(this._contextMenu, actions);
+            return actions;
+        };
+        ContextMenuController._prepareActions = function (actions) {
+            var data = actions.map(function (action) {
+                var groupId = action.getGroupId();
+                var idx = groupId.indexOf('/');
+                var group = idx > 0
+                    ? groupId.substr(0, idx)
+                    : groupId;
+                return { action: action, group: group };
+            });
+            data.sort(function (a, b) {
+                if (a.group < b.group) {
+                    return -1;
                 }
-                if (groupIterator.hasNext()) {
-                    sortedAndGroupedActions.push(new actionbar_1.Separator());
+                else if (a.group > b.group) {
+                    return 1;
                 }
-            }
-            return sortedAndGroupedActions;
+                else {
+                    return 0;
+                }
+            });
+            var result = [];
+            var lastGroup;
+            data.forEach(function (value, idx) {
+                if (lastGroup && lastGroup !== value.group) {
+                    result.push(new actionbar_1.Separator());
+                }
+                result.push(value.action);
+                lastGroup = value.group;
+            });
+            return result;
         };
         ContextMenuController.prototype._doShowContextMenu = function (actions, forcedPosition) {
             var _this = this;
@@ -64944,13 +68373,13 @@ define(__m[447], __M([1,0,320,13,3,262,2,11,66,70,21,19,25,7,12,30]), function (
                 this._editor.render();
                 var cursorCoords = this._editor.getScrolledVisiblePosition(this._editor.getPosition());
                 // Translate to absolute editor position
-                var editorCoords = dom.getDomNodePosition(this._editor.getDomNode());
+                var editorCoords = dom.getDomNodePagePosition(this._editor.getDomNode());
                 var posx = editorCoords.left + cursorCoords.left;
                 var posy = editorCoords.top + cursorCoords.top + cursorCoords.height;
                 menuPosition = { x: posx, y: posy };
             }
             // Show menu
-            this.contextMenuService.showContextMenu({
+            this._contextMenuService.showContextMenu({
                 getAnchor: function () { return menuPosition; },
                 getActions: function () {
                     return winjs_base_1.TPromise.as(actions);
@@ -64958,7 +68387,7 @@ define(__m[447], __M([1,0,320,13,3,262,2,11,66,70,21,19,25,7,12,30]), function (
                 getActionItem: function (action) {
                     var keybinding = _this._keybindingFor(action);
                     if (keybinding) {
-                        return new actionbar_1.ActionItem(action, action, { label: true, keybinding: _this.keybindingService.getLabelFor(keybinding) });
+                        return new actionbar_1.ActionItem(action, action, { label: true, keybinding: _this._keybindingService.getLabelFor(keybinding) });
                     }
                     var customActionItem = action;
                     if (typeof customActionItem.getActionItem === 'function') {
@@ -64980,7 +68409,7 @@ define(__m[447], __M([1,0,320,13,3,262,2,11,66,70,21,19,25,7,12,30]), function (
             });
         };
         ContextMenuController.prototype._keybindingFor = function (action) {
-            var opts = this.keybindingService.lookupKeybindings(action.id);
+            var opts = this._keybindingService.lookupKeybindings(action.id);
             if (opts.length > 0) {
                 return opts[0]; // only take the first one
             }
@@ -64991,7 +68420,7 @@ define(__m[447], __M([1,0,320,13,3,262,2,11,66,70,21,19,25,7,12,30]), function (
         };
         ContextMenuController.prototype.dispose = function () {
             if (this._contextMenuIsBeingShownCount > 0) {
-                this.contextViewService.hideContextView();
+                this._contextViewService.hideContextView();
             }
             this._toDispose = lifecycle_1.dispose(this._toDispose);
         };
@@ -64999,7 +68428,8 @@ define(__m[447], __M([1,0,320,13,3,262,2,11,66,70,21,19,25,7,12,30]), function (
         ContextMenuController = __decorate([
             __param(1, contextView_1.IContextMenuService),
             __param(2, contextView_1.IContextViewService),
-            __param(3, keybindingService_1.IKeybindingService)
+            __param(3, keybindingService_1.IKeybindingService),
+            __param(4, actions_1.IMenuService)
         ], ContextMenuController);
         return ContextMenuController;
     }());
@@ -65040,7 +68470,7 @@ define(__m[447], __M([1,0,320,13,3,262,2,11,66,70,21,19,25,7,12,30]), function (
 
 
 
-define(__m[448], __M([1,0,324,13,3,2,21,6,24,19,25,10,7,12,166,225,16,14]), function (require, exports, nls, keyCodes_1, lifecycle_1, winjs_base_1, keybindingService_1, range_1, selection_1, editorAction_1, editorActionEnablement_1, strings, editorCommon, editorCommonExtensions_1, findModel_1, findState_1, modes_1, async_1) {
+define(__m[451], __M([0,1,329,12,3,2,19,4,24,20,25,10,7,13,128,227,17,14]), function (require, exports, nls, keyCodes_1, lifecycle_1, winjs_base_1, keybindingService_1, range_1, selection_1, editorAction_1, editorActionEnablement_1, strings, editorCommon, editorCommonExtensions_1, findModel_1, findState_1, modes_1, async_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -65718,7 +69148,7 @@ define(__m[448], __M([1,0,324,13,3,2,21,6,24,19,25,10,7,12,166,225,16,14]), func
 
 
 
-define(__m[449], __M([1,0,70,21,30,323,448]), function (require, exports, contextView_1, keybindingService_1, editorBrowserExtensions_1, findWidget_1, findController_1) {
+define(__m[452], __M([0,1,70,19,30,328,451]), function (require, exports, contextView_1, keybindingService_1, editorBrowserExtensions_1, findWidget_1, findController_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -65759,7 +69189,7 @@ define(__m[449], __M([1,0,70,21,30,323,448]), function (require, exports, contex
 
 
 
-define(__m[450], __M([1,0,325,14,13,3,2,19,25,7,6,12,30,492,213]), function (require, exports, nls, async_1, keyCodes_1, lifecycle_1, winjs_base_1, editorAction_1, editorActionEnablement_1, editorCommon, range_1, editorCommonExtensions_1, editorBrowserExtensions_1, indentFoldStrategy_1) {
+define(__m[453], __M([0,1,330,14,12,3,2,20,25,7,4,13,30,488,213]), function (require, exports, nls, async_1, keyCodes_1, lifecycle_1, winjs_base_1, editorAction_1, editorActionEnablement_1, editorCommon, range_1, editorCommonExtensions_1, editorBrowserExtensions_1, indentFoldStrategy_1) {
     'use strict';
     var CollapsibleRegion = (function () {
         function CollapsibleRegion(range, model, changeAccessor) {
@@ -66500,7 +69930,7 @@ define(__m[450], __M([1,0,325,14,13,3,2,19,25,7,6,12,30,492,213]), function (req
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
-define(__m[451], __M([1,0,8,29,2,6,12,16,40,14]), function (require, exports, errors_1, uri_1, winjs_base_1, range_1, editorCommonExtensions_1, modes_1, modelService_1, async_1) {
+define(__m[454], __M([0,1,8,29,2,4,13,17,34,14]), function (require, exports, errors_1, uri_1, winjs_base_1, range_1, editorCommonExtensions_1, modes_1, modelService_1, async_1) {
     'use strict';
     function getDocumentRangeFormattingEdits(model, range, options) {
         var support = modes_1.DocumentRangeFormattingEditProviderRegistry.ordered(model)[0];
@@ -66571,7 +70001,7 @@ define(__m[451], __M([1,0,8,29,2,6,12,16,40,14]), function (require, exports, er
 
 
 
-define(__m[452], __M([1,0,326,35,13,3,2,19,25,7,12,16,451,496]), function (require, exports, nls, arrays, keyCodes_1, lifecycle_1, winjs_base_1, editorAction_1, editorActionEnablement_1, editorCommon, editorCommonExtensions_1, modes_1, format_1, formatCommand_1) {
+define(__m[455], __M([0,1,331,37,12,3,2,20,25,7,13,17,454,494]), function (require, exports, nls, arrays, keyCodes_1, lifecycle_1, winjs_base_1, editorAction_1, editorActionEnablement_1, editorCommon, editorCommonExtensions_1, modes_1, format_1, formatCommand_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -66748,7 +70178,7 @@ define(__m[452], __M([1,0,326,35,13,3,2,19,25,7,12,16,451,496]), function (requi
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
-define(__m[453], __M([1,0,8,2,12,16,14]), function (require, exports, errors_1, winjs_base_1, editorCommonExtensions_1, modes_1, async_1) {
+define(__m[456], __M([0,1,8,2,13,17,14]), function (require, exports, errors_1, winjs_base_1, editorCommonExtensions_1, modes_1, async_1) {
     'use strict';
     function getDeclarationsAtPosition(model, position) {
         var provider = modes_1.DefinitionProviderRegistry.ordered(model);
@@ -66784,7 +70214,7 @@ define(__m[453], __M([1,0,8,2,12,16,14]), function (require, exports, errors_1, 
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
-define(__m[454], __M([1,0,35,8,2,12,16,14]), function (require, exports, arrays_1, errors_1, winjs_base_1, editorCommonExtensions_1, modes_1, async_1) {
+define(__m[457], __M([0,1,37,8,2,13,17,14]), function (require, exports, arrays_1, errors_1, winjs_base_1, editorCommonExtensions_1, modes_1, async_1) {
     'use strict';
     function getHover(model, position) {
         var supports = modes_1.HoverProviderRegistry.ordered(model);
@@ -66795,7 +70225,7 @@ define(__m[454], __M([1,0,35,8,2,12,16,14]), function (require, exports, arrays_
             }).then(function (result) {
                 if (result) {
                     var hasRange = (typeof result.range !== 'undefined');
-                    var hasHtmlContent = (typeof result.htmlContent !== 'undefined' && result.htmlContent && result.htmlContent.length > 0);
+                    var hasHtmlContent = (typeof result.contents !== 'undefined' && result.contents && result.contents.length > 0);
                     if (hasRange && hasHtmlContent) {
                         values[idx] = result;
                     }
@@ -66815,7 +70245,7 @@ define(__m[454], __M([1,0,35,8,2,12,16,14]), function (require, exports, arrays_
 
 
 
-define(__m[455], __M([1,0,330,29,2,74,143,6,20,16,131,454,168,151,147]), function (require, exports, nls, uri_1, winjs_base_1, htmlContentRenderer_1, opener_1, range_1, position_1, modes_1, textToHtmlTokenizer_1, hover_1, hoverOperation_1, hoverWidgets_1) {
+define(__m[458], __M([0,1,335,29,2,71,147,4,21,17,393,457,129,162,92,136]), function (require, exports, nls, uri_1, winjs_base_1, htmlContentRenderer_1, opener_1, range_1, position_1, modes_1, textToHtmlTokenizer_1, hover_1, hoverOperation_1, hoverWidgets_1, htmlContent_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -66848,21 +70278,26 @@ define(__m[455], __M([1,0,330,29,2,74,143,6,20,16,131,454,168,151,147]), functio
                 // Illegal line number => no results
                 return result;
             }
+            var hasHoverContent = function (contents) {
+                return contents && (!Array.isArray(contents) || contents.length > 0);
+            };
             var lineDecorations = this._editor.getLineDecorations(lineNumber);
             var maxColumn = this._editor.getModel().getLineMaxColumn(lineNumber);
             lineDecorations.forEach(function (d) {
                 var startColumn = (d.range.startLineNumber === lineNumber) ? d.range.startColumn : 1;
                 var endColumn = (d.range.endLineNumber === lineNumber) ? d.range.endColumn : maxColumn;
-                if (startColumn <= _this._range.startColumn && _this._range.endColumn <= endColumn && (d.options.hoverMessage || (d.options.htmlMessage && d.options.htmlMessage.length > 0))) {
+                if (startColumn <= _this._range.startColumn && _this._range.endColumn <= endColumn && hasHoverContent(d.options.hoverMessage)) {
                     var obj = {
-                        htmlContent: [],
+                        contents: [],
                         range: new range_1.Range(_this._range.startLineNumber, startColumn, _this._range.startLineNumber, endColumn)
                     };
                     if (d.options.hoverMessage) {
-                        obj.htmlContent.push({ text: d.options.hoverMessage });
-                    }
-                    if (d.options.htmlMessage) {
-                        obj.htmlContent = obj.htmlContent.concat(d.options.htmlMessage);
+                        if (Array.isArray(d.options.hoverMessage)) {
+                            obj.contents = obj.contents.concat(d.options.hoverMessage);
+                        }
+                        else {
+                            obj.contents.push(d.options.hoverMessage);
+                        }
                     }
                     result.push(obj);
                 }
@@ -66887,13 +70322,7 @@ define(__m[455], __M([1,0,330,29,2,74,143,6,20,16,131,454,168,151,147]), functio
         ModesContentComputer.prototype._getLoadingMessage = function () {
             return {
                 range: this._range,
-                htmlContent: [{
-                        tagName: 'div',
-                        className: '',
-                        children: [{
-                                text: nls.localize(0, null)
-                            }]
-                    }]
+                contents: [htmlContent_1.textToMarkedString(nls.localize(0, null))]
             };
         };
         return ModesContentComputer;
@@ -66992,21 +70421,19 @@ define(__m[455], __M([1,0,330,29,2,74,143,6,20,16,131,454,168,151,147]), functio
                 highlightRange = range_1.Range.plusRange(highlightRange, msg.range);
                 var row = document.createElement('div');
                 var container = row;
-                if (msg.htmlContent && msg.htmlContent.length > 0) {
-                    msg.htmlContent.forEach(function (content) {
-                        container.appendChild(htmlContentRenderer_1.renderHtml(content, {
-                            actionCallback: function (content) {
-                                _this._openerService.open(uri_1.default.parse(content));
-                            },
-                            codeBlockRenderer: function (modeId, value) {
-                                var mode = _this._modeService.getMode(modeId);
-                                if (mode) {
-                                    return textToHtmlTokenizer_1.tokenizeToString(value, mode);
-                                }
-                                return _this._modeService.getOrCreateMode(modeId).then(function (mode) { return textToHtmlTokenizer_1.tokenizeToString(value, mode); }, function (err) { return textToHtmlTokenizer_1.tokenizeToString(value, null); });
+                if (msg.contents && msg.contents.length > 0) {
+                    container.appendChild(htmlContentRenderer_1.renderMarkedString(msg.contents, {
+                        actionCallback: function (content) {
+                            _this._openerService.open(uri_1.default.parse(content));
+                        },
+                        codeBlockRenderer: function (modeId, value) {
+                            var mode = _this._modeService.getMode(modeId);
+                            if (mode) {
+                                return textToHtmlTokenizer_1.tokenizeToString(value, mode);
                             }
-                        }));
-                    });
+                            return _this._modeService.getOrCreateMode(modeId).then(function (mode) { return textToHtmlTokenizer_1.tokenizeToString(value, mode); }, function (err) { return textToHtmlTokenizer_1.tokenizeToString(value, null); });
+                        }
+                    }));
                 }
                 fragment.appendChild(row);
             });
@@ -67050,7 +70477,7 @@ define(__m[455], __M([1,0,330,29,2,74,143,6,20,16,131,454,168,151,147]), functio
 
 
 
-define(__m[456], __M([1,0,329,13,17,2,143,83,21,6,19,25,7,12,30,455,282,3,219]), function (require, exports, nls, keyCodes_1, platform, winjs_base_1, opener_1, modeService_1, keybindingService_1, range_1, editorAction_1, editorActionEnablement_1, editorCommon, editorCommonExtensions_1, editorBrowserExtensions_1, modesContentHover_1, modesGlyphHover_1, lifecycle_1) {
+define(__m[459], __M([0,1,334,12,18,2,147,72,19,4,20,25,7,13,30,458,286,3,219]), function (require, exports, nls, keyCodes_1, platform, winjs_base_1, opener_1, modeService_1, keybindingService_1, range_1, editorAction_1, editorActionEnablement_1, editorCommon, editorCommonExtensions_1, editorBrowserExtensions_1, modesContentHover_1, modesGlyphHover_1, lifecycle_1) {
     'use strict';
     var ModesHoverController = (function () {
         function ModesHoverController(editor, openerService, modeService) {
@@ -67186,7 +70613,7 @@ define(__m[456], __M([1,0,329,13,17,2,143,83,21,6,19,25,7,12,30,455,282,3,219]),
 
 
 
-define(__m[457], __M([1,0,331,13,2,6,19,7,12,64,497]), function (require, exports, nls, keyCodes_1, winjs_base_1, range_1, editorAction_1, editorCommon_1, editorCommonExtensions_1, editorWorkerService_1, inPlaceReplaceCommand_1) {
+define(__m[460], __M([0,1,336,12,2,4,20,7,13,52,498]), function (require, exports, nls, keyCodes_1, winjs_base_1, range_1, editorAction_1, editorCommon_1, editorCommonExtensions_1, editorWorkerService_1, inPlaceReplaceCommand_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -67302,7 +70729,7 @@ define(__m[457], __M([1,0,331,13,2,6,19,7,12,64,497]), function (require, export
 
 
 
-define(__m[458], __M([1,0,333,13,2,508,266,19,7,12,499,500,505]), function (require, exports, nls, keyCodes_1, winjs_base_1, sortLinesCommand_1, trimTrailingWhitespaceCommand_1, editorAction_1, editorCommon_1, editorCommonExtensions_1, copyLinesCommand_1, deleteLinesCommand_1, moveLinesCommand_1) {
+define(__m[461], __M([0,1,338,12,2,505,261,20,7,13,500,501,502]), function (require, exports, nls, keyCodes_1, winjs_base_1, sortLinesCommand_1, trimTrailingWhitespaceCommand_1, editorAction_1, editorCommon_1, editorCommonExtensions_1, copyLinesCommand_1, deleteLinesCommand_1, moveLinesCommand_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -67525,7 +70952,7 @@ define(__m[458], __M([1,0,333,13,2,508,266,19,7,12,499,500,505]), function (requ
     }, 'Sort Lines Descending'));
     editorCommonExtensions_1.CommonEditorRegistry.registerEditorAction(new editorCommonExtensions_1.EditorActionDescriptor(TrimTrailingWhitespaceAction, TrimTrailingWhitespaceAction.ID, nls.localize(3, null), {
         context: editorCommonExtensions_1.ContextKey.EditorTextFocus,
-        primary: keyCodes_1.KeyMod.CtrlCmd | keyCodes_1.KeyMod.Shift | keyCodes_1.KeyCode.KEY_X
+        primary: keyCodes_1.KeyMod.chord(keyCodes_1.KeyMod.CtrlCmd | keyCodes_1.KeyCode.KEY_K, keyCodes_1.KeyMod.CtrlCmd | keyCodes_1.KeyCode.KEY_X)
     }, 'Trim Trailing Whitespace'));
     editorCommonExtensions_1.CommonEditorRegistry.registerEditorAction(new editorCommonExtensions_1.EditorActionDescriptor(MoveLinesDownAction, MoveLinesDownAction.ID, nls.localize(4, null), {
         context: editorCommonExtensions_1.ContextKey.EditorTextFocus,
@@ -67583,7 +71010,7 @@ define(__m[458], __M([1,0,333,13,2,508,266,19,7,12,499,500,505]), function (requ
 
 
 
-define(__m[459], __M([1,0,334,8,13,17,33,29,2,45,44,6,19,25,7,12,16,64,227,3,30,224]), function (require, exports, nls, errors_1, keyCodes_1, platform, severity_1, uri_1, winjs_base_1, editor_1, message_1, range_1, editorAction_1, editorActionEnablement_1, editorCommon, editorCommonExtensions_1, modes_1, editorWorkerService_1, links_1, lifecycle_1, editorBrowserExtensions_1) {
+define(__m[462], __M([0,1,339,8,12,18,32,29,2,43,42,4,20,25,7,13,17,52,229,3,30,225]), function (require, exports, nls, errors_1, keyCodes_1, platform, severity_1, uri_1, winjs_base_1, editor_1, message_1, range_1, editorAction_1, editorActionEnablement_1, editorCommon, editorCommonExtensions_1, modes_1, editorWorkerService_1, links_1, lifecycle_1, editorBrowserExtensions_1) {
     'use strict';
     var LinkOccurence = (function () {
         function LinkOccurence(link, decorationId /*, changeAccessor:editorCommon.IModelDecorationsChangeAccessor*/) {
@@ -67935,7 +71362,7 @@ define(__m[459], __M([1,0,334,8,13,17,33,29,2,45,44,6,19,25,7,12,16,64,227,3,30,
 
 
 
-define(__m[460], __M([1,0,335,13,2,19,7,12]), function (require, exports, nls, keyCodes_1, winjs_base_1, editorAction_1, editorCommon_1, editorCommonExtensions_1) {
+define(__m[463], __M([0,1,340,12,2,20,7,13]), function (require, exports, nls, keyCodes_1, winjs_base_1, editorAction_1, editorCommon_1, editorCommonExtensions_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -68022,7 +71449,7 @@ define(__m[460], __M([1,0,335,13,2,19,7,12]), function (require, exports, nls, k
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
-define(__m[162], __M([1,0,2,12,16,14]), function (require, exports, winjs_base_1, editorCommonExtensions_1, modes_1, async_1) {
+define(__m[166], __M([0,1,2,13,17,14]), function (require, exports, winjs_base_1, editorCommonExtensions_1, modes_1, async_1) {
     'use strict';
     exports.Context = {
         Visible: 'parameterHintsVisible',
@@ -68057,7 +71484,7 @@ define(__m[162], __M([1,0,2,12,16,14]), function (require, exports, winjs_base_1
 
 
 
-define(__m[462], __M([1,0,337,3,2,11,80,16,23,14,8,18,21,162,228]), function (require, exports, nls, lifecycle_1, winjs_base_1, dom, aria, modes_1, editorBrowser_1, async_1, errors_1, event_1, keybindingService_1, parameterHints_1) {
+define(__m[465], __M([0,1,342,3,2,11,81,17,22,14,8,16,19,166,228]), function (require, exports, nls, lifecycle_1, winjs_base_1, dom, aria, modes_1, editorBrowser_1, async_1, errors_1, event_1, keybindingService_1, parameterHints_1) {
     'use strict';
     var $ = dom.emmet;
     var ParameterHintsModel = (function (_super) {
@@ -68410,7 +71837,7 @@ define(__m[462], __M([1,0,337,3,2,11,80,16,23,14,8,18,21,162,228]), function (re
 
 
 
-define(__m[463], __M([1,0,336,13,2,3,15,19,7,21,53,86,12,30,16,462,162]), function (require, exports, nls, keyCodes_1, winjs_base_1, lifecycle_1, instantiation_1, editorAction_1, editorCommon_1, keybindingService_1, keybindingsRegistry_1, config_1, editorCommonExtensions_1, editorBrowserExtensions_1, modes_1, parameterHintsWidget_1, parameterHints_1) {
+define(__m[466], __M([0,1,341,12,2,3,15,20,7,19,51,90,13,30,17,465,166]), function (require, exports, nls, keyCodes_1, winjs_base_1, lifecycle_1, instantiation_1, editorAction_1, editorCommon_1, keybindingService_1, keybindingsRegistry_1, config_1, editorCommonExtensions_1, editorBrowserExtensions_1, modes_1, parameterHintsWidget_1, parameterHints_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -68502,7 +71929,7 @@ define(__m[463], __M([1,0,336,13,2,3,15,19,7,21,53,86,12,30,16,462,162]), functi
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
-define(__m[163], __M([1,0,8,29,2,59,6,12,16,40,14]), function (require, exports, errors_1, uri_1, winjs_base_1, idGenerator_1, range_1, editorCommonExtensions_1, modes_1, modelService_1, async_1) {
+define(__m[167], __M([0,1,8,29,2,63,4,13,17,34,14]), function (require, exports, errors_1, uri_1, winjs_base_1, idGenerator_1, range_1, editorCommonExtensions_1, modes_1, modelService_1, async_1) {
     'use strict';
     function getCodeActions(model, range) {
         var quickFixes = [];
@@ -68562,7 +71989,7 @@ define(__m[163], __M([1,0,8,29,2,59,6,12,16,40,14]), function (require, exports,
 
 
 
-define(__m[465], __M([1,0,328,8,18,13,3,33,10,2,11,74,21,76,34,20,6,19,25,12,30,152,163,217]), function (require, exports, nls, errors_1, event_1, keyCodes_1, lifecycle_1, severity_1, strings, winjs_base_1, dom, htmlContentRenderer_1, keybindingService_1, markers_1, telemetry_1, position_1, range_1, editorAction_1, editorActionEnablement_1, editorCommonExtensions_1, editorBrowserExtensions_1, zoneWidget_1, quickFix_1) {
+define(__m[468], __M([0,1,333,8,16,12,3,32,10,2,11,71,19,73,36,21,4,20,25,13,30,164,167,217]), function (require, exports, nls, errors_1, event_1, keyCodes_1, lifecycle_1, severity_1, strings, winjs_base_1, dom, htmlContentRenderer_1, keybindingService_1, markers_1, telemetry_1, position_1, range_1, editorAction_1, editorActionEnablement_1, editorCommonExtensions_1, editorBrowserExtensions_1, zoneWidget_1, quickFix_1) {
     'use strict';
     var MarkerModel = (function () {
         function MarkerModel(editor, markers) {
@@ -69025,7 +72452,7 @@ define(__m[465], __M([1,0,328,8,18,13,3,33,10,2,11,74,21,76,34,20,6,19,25,12,30,
 
 
 
-define(__m[466], __M([1,0,35,14,8,22,3,55,2,6,16,163,283]), function (require, exports, arrays, async_1, errors_1, eventEmitter_1, lifecycle_1, timer, winjs_base_1, range_1, modes_1, quickFix_1, lightBulpWidget_1) {
+define(__m[469], __M([0,1,37,14,8,23,3,59,2,4,17,167,287]), function (require, exports, arrays, async_1, errors_1, eventEmitter_1, lifecycle_1, timer, winjs_base_1, range_1, modes_1, quickFix_1, lightBulpWidget_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -69325,7 +72752,7 @@ define(__m[466], __M([1,0,35,14,8,22,3,55,2,6,16,163,283]), function (require, e
 
 
 
-define(__m[467], __M([1,0,338,8,13,2,45,99,21,76,44,34,19,12,16,30,466,340]), function (require, exports, nls, errors_1, keyCodes_1, winjs_base_1, editor_1, event_1, keybindingService_1, markers_1, message_1, telemetry_1, editorAction_1, editorCommonExtensions_1, modes_1, editorBrowserExtensions_1, quickFixModel_1, quickFixSelectionWidget_1) {
+define(__m[470], __M([0,1,343,8,12,2,43,82,19,73,42,36,20,13,17,30,469,345]), function (require, exports, nls, errors_1, keyCodes_1, winjs_base_1, editor_1, event_1, keybindingService_1, markers_1, message_1, telemetry_1, editorAction_1, editorCommonExtensions_1, modes_1, editorBrowserExtensions_1, quickFixModel_1, quickFixSelectionWidget_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -69468,7 +72895,7 @@ define(__m[467], __M([1,0,338,8,13,2,45,99,21,76,44,34,19,12,16,30,466,340]), fu
     editorBrowserExtensions_1.EditorBrowserRegistry.registerEditorContribution(QuickFixController);
 });
 
-define(__m[468], __M([1,0,342,13,12,409]), function (require, exports, nls, keyCodes_1, editorCommonExtensions_1, gotoLine_1) {
+define(__m[471], __M([0,1,347,12,13,414]), function (require, exports, nls, keyCodes_1, editorCommonExtensions_1, gotoLine_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -69482,7 +72909,7 @@ define(__m[468], __M([1,0,342,13,12,409]), function (require, exports, nls, keyC
     }, 'Go to Line...'));
 });
 
-define(__m[469], __M([1,0,344,13,27,12,410]), function (require, exports, nls, keyCodes_1, browser, editorCommonExtensions_1, quickCommand_1) {
+define(__m[472], __M([0,1,349,12,28,13,415]), function (require, exports, nls, keyCodes_1, browser, editorCommonExtensions_1, quickCommand_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -69499,7 +72926,7 @@ define(__m[469], __M([1,0,344,13,27,12,410]), function (require, exports, nls, k
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
-define(__m[164], __M([1,0,8,29,2,6,12,16,40,14]), function (require, exports, errors_1, uri_1, winjs_base_1, range_1, editorCommonExtensions_1, modes_1, modelService_1, async_1) {
+define(__m[168], __M([0,1,8,29,2,4,13,17,34,14]), function (require, exports, errors_1, uri_1, winjs_base_1, range_1, editorCommonExtensions_1, modes_1, modelService_1, async_1) {
     'use strict';
     function getDocumentSymbols(model) {
         var entries = [];
@@ -69555,7 +72982,7 @@ define(__m[164], __M([1,0,8,29,2,6,12,16,40,14]), function (require, exports, er
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
-define(__m[471], __M([1,0,14,8,3,6,16,30,164,226]), function (require, exports, async_1, errors_1, lifecycle_1, range_1, modes_1, editorBrowserExtensions_1, quickOpen_1) {
+define(__m[474], __M([0,1,14,8,3,4,17,30,168,226]), function (require, exports, async_1, errors_1, lifecycle_1, range_1, modes_1, editorBrowserExtensions_1, quickOpen_1) {
     'use strict';
     var OutlineViewZone = (function () {
         function OutlineViewZone(range, outlineType) {
@@ -69760,7 +73187,7 @@ define(__m[471], __M([1,0,14,8,3,6,16,30,164,226]), function (require, exports, 
 
 
 
-define(__m[472], __M([1,0,345,8,67,10,2,114,77,25,16,109,164,236]), function (require, exports, nls, errors_1, filters_1, strings, winjs_base_1, quickOpenModel_1, quickOpen_1, editorActionEnablement_1, modes_1, editorQuickOpen_1, quickOpen_2) {
+define(__m[475], __M([0,1,350,8,65,10,2,105,91,25,17,107,168,237]), function (require, exports, nls, errors_1, filters_1, strings, winjs_base_1, quickOpenModel_1, quickOpen_1, editorActionEnablement_1, modes_1, editorQuickOpen_1, quickOpen_2) {
     'use strict';
     var SCOPE_PREFIX = ':';
     var SymbolEntry = (function (_super) {
@@ -70004,7 +73431,7 @@ define(__m[472], __M([1,0,345,8,67,10,2,114,77,25,16,109,164,236]), function (re
     exports.QuickOutlineAction = QuickOutlineAction;
 });
 
-define(__m[473], __M([1,0,346,13,12,472]), function (require, exports, nls, keyCodes_1, editorCommonExtensions_1, quickOutline_1) {
+define(__m[476], __M([0,1,351,12,13,475]), function (require, exports, nls, keyCodes_1, editorCommonExtensions_1, quickOutline_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -70021,7 +73448,7 @@ define(__m[473], __M([1,0,346,13,12,472]), function (require, exports, nls, keyC
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
-define(__m[474], __M([1,0,8,2,12,16,14]), function (require, exports, errors_1, winjs_base_1, editorCommonExtensions_1, modes_1, async_1) {
+define(__m[477], __M([0,1,8,2,13,17,14]), function (require, exports, errors_1, winjs_base_1, editorCommonExtensions_1, modes_1, async_1) {
     'use strict';
     function provideReferences(model, position) {
         // collect references from all providers
@@ -70055,7 +73482,7 @@ define(__m[474], __M([1,0,8,2,12,16,14]), function (require, exports, errors_1, 
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
-define(__m[475], __M([1,0,353,14,8,12,16]), function (require, exports, nls_1, async_1, errors_1, editorCommonExtensions_1, modes_1) {
+define(__m[478], __M([0,1,358,14,8,13,17]), function (require, exports, nls_1, async_1, errors_1, editorCommonExtensions_1, modes_1) {
     'use strict';
     function rename(model, position, newName) {
         var supports = modes_1.RenameProviderRegistry.ordered(model);
@@ -70127,7 +73554,7 @@ define(__m[475], __M([1,0,353,14,8,12,16]), function (require, exports, nls_1, a
 
 
 
-define(__m[476], __M([1,0,350,8,13,33,2,45,99,21,44,19,25,12,16,394,475,352]), function (require, exports, nls, errors_1, keyCodes_1, severity_1, winjs_base_1, editor_1, event_1, keybindingService_1, message_1, editorAction_1, editorActionEnablement_1, editorCommonExtensions_1, modes_1, bulkEdit_1, rename_1, renameInputField_1) {
+define(__m[479], __M([0,1,355,8,12,32,2,43,82,19,42,20,25,13,17,394,478,357]), function (require, exports, nls, errors_1, keyCodes_1, severity_1, winjs_base_1, editor_1, event_1, keybindingService_1, message_1, editorAction_1, editorActionEnablement_1, editorCommonExtensions_1, modes_1, bulkEdit_1, rename_1, renameInputField_1) {
     'use strict';
     // ---  register actions and commands
     var CONTEXT_RENAME_INPUT_VISIBLE = 'renameInputVisible';
@@ -70242,7 +73669,7 @@ define(__m[476], __M([1,0,350,8,13,33,2,45,99,21,44,19,25,12,16,394,475,352]), f
 
 
 
-define(__m[477], __M([1,0,354,13,2,19,25,7,12]), function (require, exports, nls, keyCodes_1, winjs_base_1, editorAction_1, editorActionEnablement_1, editorCommon_1, editorCommonExtensions_1) {
+define(__m[480], __M([0,1,359,12,2,20,25,7,13]), function (require, exports, nls, keyCodes_1, winjs_base_1, editorAction_1, editorActionEnablement_1, editorCommon_1, editorCommonExtensions_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -70281,7 +73708,7 @@ define(__m[477], __M([1,0,354,13,2,19,25,7,12]), function (require, exports, nls
 
 
 
-define(__m[478], __M([1,0,355,35,13,2,15,6,19,25,12,385]), function (require, exports, nls, arrays, keyCodes_1, winjs_base_1, instantiation_1, range_1, editorAction_1, editorActionEnablement_1, editorCommonExtensions_1, tokenSelectionSupport_1) {
+define(__m[481], __M([0,1,360,37,12,2,15,4,20,25,13,385]), function (require, exports, nls, arrays, keyCodes_1, winjs_base_1, instantiation_1, range_1, editorAction_1, editorActionEnablement_1, editorCommonExtensions_1, tokenSelectionSupport_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -70426,7 +73853,7 @@ define(__m[478], __M([1,0,355,35,13,2,15,6,19,25,12,385]), function (require, ex
 
 
 
-define(__m[89], __M([1,0,51,13,10,21,58,6,24,7,12,3]), function (require, exports, collections, keyCodes_1, strings, keybindingService_1, editOperation_1, range_1, selection_1, editorCommon, editorCommonExtensions_1, lifecycle_1) {
+define(__m[93], __M([0,1,48,12,10,19,62,4,24,7,13,3]), function (require, exports, collections, keyCodes_1, strings, keybindingService_1, editOperation_1, range_1, selection_1, editorCommon, editorCommonExtensions_1, lifecycle_1) {
     'use strict';
     (function (ExternalSnippetType) {
         ExternalSnippetType[ExternalSnippetType["TextMateSnippet"] = 0] = "TextMateSnippet";
@@ -70988,7 +74415,7 @@ define(__m[89], __M([1,0,51,13,10,21,58,6,24,7,12,3]), function (require, export
         SnippetController.prototype.getId = function () {
             return SnippetController.ID;
         };
-        SnippetController.prototype.run = function (snippet, overwriteBefore, overwriteAfter) {
+        SnippetController.prototype.run = function (snippet, overwriteBefore, overwriteAfter, stripPrefix) {
             var prevController = this._currentController;
             this._currentController = null;
             if (snippet.placeHolders.length === 0) {
@@ -70996,7 +74423,7 @@ define(__m[89], __M([1,0,51,13,10,21,58,6,24,7,12,3]), function (require, export
                 this._runForAllSelections(snippet, overwriteBefore, overwriteAfter);
             }
             else {
-                this._runForPrimarySelection(snippet, overwriteBefore, overwriteAfter);
+                this._runForPrimarySelection(snippet, overwriteBefore, overwriteAfter, stripPrefix);
             }
             if (!this._currentController) {
                 // we didn't end up in snippet mode again => restore previous controller
@@ -71034,11 +74461,11 @@ define(__m[89], __M([1,0,51,13,10,21,58,6,24,7,12,3]), function (require, export
                 out.push(editOperation_1.EditOperation.replaceMove(typeRange, insertText));
             }
         };
-        SnippetController.prototype._runForPrimarySelection = function (snippet, overwriteBefore, overwriteAfter) {
+        SnippetController.prototype._runForPrimarySelection = function (snippet, overwriteBefore, overwriteAfter, stripPrefix) {
             var _this = this;
             var initialAlternativeVersionId = this._editor.getModel().getAlternativeVersionId();
             var edits = [];
-            var prepared = SnippetController._prepareSnippet(this._editor, this._editor.getSelection(), snippet, overwriteBefore, overwriteAfter);
+            var prepared = SnippetController._prepareSnippet(this._editor, this._editor.getSelection(), snippet, overwriteBefore, overwriteAfter, stripPrefix);
             SnippetController._addCommandForSnippet(this._editor.getModel(), prepared.adaptedSnippet, prepared.typeRange, edits);
             if (edits.length > 0) {
                 this._editor.executeEdits('editor.contrib.insertSnippetHelper', edits);
@@ -71064,14 +74491,15 @@ define(__m[89], __M([1,0,51,13,10,21,58,6,24,7,12,3]), function (require, export
                 this._editor.executeEdits('editor.contrib.insertSnippetHelper', edits);
             }
         };
-        SnippetController._prepareSnippet = function (editor, selection, snippet, overwriteBefore, overwriteAfter) {
+        SnippetController._prepareSnippet = function (editor, selection, snippet, overwriteBefore, overwriteAfter, stripPrefix) {
+            if (stripPrefix === void 0) { stripPrefix = true; }
             var model = editor.getModel();
             var typeRange = SnippetController._getTypeRangeForSelection(model, selection, overwriteBefore, overwriteAfter);
             if (snippet.lines.length === 1) {
                 var nextTextOnLine = model.getLineContent(typeRange.endLineNumber).substr(typeRange.endColumn - 1);
                 var nextInSnippet = snippet.lines[0].substr(overwriteBefore);
                 var commonPrefix = strings.commonPrefixLength(nextTextOnLine, nextInSnippet);
-                if (commonPrefix > 0) {
+                if (commonPrefix > 0 && stripPrefix) {
                     typeRange = typeRange.setEndPosition(typeRange.endLineNumber, typeRange.endColumn + commonPrefix);
                 }
             }
@@ -71159,7 +74587,7 @@ define(__m[89], __M([1,0,51,13,10,21,58,6,24,7,12,3]), function (require, export
 
 
 
-define(__m[480], __M([1,0,321,14,13,3,2,11,74,54,28,103,21,6,19,25,7,12,23,30,89,233,210]), function (require, exports, nls, async_1, keyCodes_1, lifecycle_1, winjs_base_1, dom, htmlContentRenderer_1, keyboardEvent_1, styleMutator_1, keybindingResolver_1, keybindingService_1, range_1, editorAction_1, editorActionEnablement_1, editorCommon, editorCommonExtensions_1, editorBrowser_1, editorBrowserExtensions_1, snippet_1, smartSnippetInserter_1) {
+define(__m[483], __M([0,1,326,14,12,3,2,11,71,56,27,101,19,4,20,25,7,13,22,30,93,235,210]), function (require, exports, nls, async_1, keyCodes_1, lifecycle_1, winjs_base_1, dom, htmlContentRenderer_1, keyboardEvent_1, styleMutator_1, keybindingResolver_1, keybindingService_1, range_1, editorAction_1, editorActionEnablement_1, editorCommon, editorCommonExtensions_1, editorBrowser_1, editorBrowserExtensions_1, snippet_1, smartSnippetInserter_1) {
     'use strict';
     var NLS_LAUNCH_MESSAGE = nls.localize(0, null);
     var NLS_DEFINE_MESSAGE = nls.localize(1, null);
@@ -71280,21 +74708,15 @@ define(__m[480], __M([1,0,321,14,13,3,2,11,74,54,28,103,21,6,19,25,7,12,23,30,89
                 var overviewRulerColor;
                 if (!item.label) {
                     // this is the error case
-                    msg = [{
-                            tagName: 'span',
-                            text: NLS_KB_LAYOUT_ERROR_MESSAGE
-                        }];
+                    msg = [NLS_KB_LAYOUT_ERROR_MESSAGE];
                     className = 'keybindingError';
                     inlineClassName = 'inlineKeybindingError';
                     overviewRulerColor = 'rgba(250, 100, 100, 0.6)';
                 }
                 else {
                     // this is the info case
-                    msg = [{
-                            tagName: 'span',
-                            text: NLS_KB_LAYOUT_INFO_MESSAGE
-                        }];
-                    msg = msg.concat(_this._keybindingService.getHTMLLabelFor(item.keybinding));
+                    msg = [NLS_KB_LAYOUT_INFO_MESSAGE];
+                    msg = msg.concat(_this._keybindingService.getLabelFor(item.keybinding));
                     className = 'keybindingInfo';
                     inlineClassName = 'inlineKeybindingInfo';
                     overviewRulerColor = 'rgba(100, 100, 250, 0.6)';
@@ -71313,7 +74735,7 @@ define(__m[480], __M([1,0,321,14,13,3,2,11,74,54,28,103,21,6,19,25,7,12,23,30,89
                     options: {
                         stickiness: editorCommon.TrackedRangeStickiness.NeverGrowsWhenTypingAtEdges,
                         className: className,
-                        htmlMessage: msg,
+                        hoverMessage: msg,
                         overviewRuler: {
                             color: overviewRulerColor,
                             darkColor: overviewRulerColor,
@@ -71533,7 +74955,7 @@ define(__m[480], __M([1,0,321,14,13,3,2,11,74,54,28,103,21,6,19,25,7,12,23,30,89
     }, 'Define Keybinding'));
 });
 
-define(__m[120], __M([1,0,14,35,8,2,12,16,47]), function (require, exports, async_1, arrays_1, errors_1, winjs_base_1, editorCommonExtensions_1, modes_1, supports_1) {
+define(__m[119], __M([0,1,14,37,8,2,13,17,49]), function (require, exports, async_1, arrays_1, errors_1, winjs_base_1, editorCommonExtensions_1, modes_1, supports_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -71592,7 +75014,7 @@ define(__m[120], __M([1,0,14,35,8,2,12,16,47]), function (require, exports, asyn
     });
 });
 
-define(__m[482], __M([1,0,8,18,3,10,2,7,16,89,120,230,20]), function (require, exports, errors_1, event_1, lifecycle_1, strings_1, winjs_base_1, editorCommon_1, modes_1, snippet_1, suggest_1, completionModel_1, position_1) {
+define(__m[485], __M([0,1,8,16,3,10,2,7,17,93,119,232,21]), function (require, exports, errors_1, event_1, lifecycle_1, strings_1, winjs_base_1, editorCommon_1, modes_1, snippet_1, suggest_1, completionModel_1, position_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -71914,7 +75336,7 @@ define(__m[482], __M([1,0,8,18,3,10,2,7,16,89,120,230,20]), function (require, e
 
 
 
-define(__m[483], __M([1,0,357,10,2,8,3,11,102,264,87,15,21,34,23,120,80,240]), function (require, exports, nls, strings, winjs_base_1, errors_1, lifecycle_1, dom_1, highlightedLabel_1, listWidget_1, scrollableElement_1, instantiation_1, keybindingService_1, telemetry_1, editorBrowser_1, suggest_1, aria_1) {
+define(__m[486], __M([0,1,362,10,2,8,3,11,122,266,87,15,19,36,22,119,81,241]), function (require, exports, nls, strings, winjs_base_1, errors_1, lifecycle_1, dom_1, highlightedLabel_1, listWidget_1, scrollableElement_1, instantiation_1, keybindingService_1, telemetry_1, editorBrowser_1, suggest_1, aria_1) {
     'use strict';
     var colorRegExp = /^(#([\da-f]{3}){1,2}|(rgb|hsl)a\(\s*(\d{1,3}%?\s*,\s*){3}(1|0?\.\d+)\)|(rgb|hsl)\(\s*\d{1,3}%?(\s*,\s*\d{1,3}%?){2}\s*\))$/i;
     var Renderer = (function () {
@@ -72015,7 +75437,7 @@ define(__m[483], __M([1,0,357,10,2,8,3,11,102,264,87,15,21,34,23,120,80,240]), f
             this.listProvider = listProvider;
         }
         Delegate.prototype.getHeight = function (element) {
-            var focus = this.listProvider().getFocus()[0];
+            var focus = this.listProvider().getFocusedElements()[0];
             if (element.suggestion.documentationLabel && element === focus) {
                 return FocusHeight;
             }
@@ -72157,7 +75579,9 @@ define(__m[483], __M([1,0,357,10,2,8,3,11,102,264,87,15,21,34,23,120,80,240]), f
             this.details = new SuggestionDetails(this.element, this, this.editor);
             var renderer = instantiationService.createInstance(Renderer, this, this.editor);
             this.delegate = new Delegate(function () { return _this.list; });
-            this.list = new listWidget_1.List(this.listElement, this.delegate, [renderer]);
+            this.list = new listWidget_1.List(this.listElement, this.delegate, [renderer], {
+                useShadows: false
+            });
             this.toDispose = [
                 editor.onDidBlurEditorText(function () { return _this.onEditorBlur(); }),
                 this.list.onSelectionChange(function (e) { return _this.onListSelection(e); }),
@@ -72476,7 +75900,7 @@ define(__m[483], __M([1,0,357,10,2,8,3,11,102,264,87,15,21,34,23,120,80,240]), f
                 case State.Loading:
                     return !this.isAuto;
                 default:
-                    var focus_1 = this.list.getFocus()[0];
+                    var focus_1 = this.list.getFocusedElements()[0];
                     if (focus_1) {
                         this.list.setSelection(this.completionModel.items.indexOf(focus_1));
                     }
@@ -72495,7 +75919,7 @@ define(__m[483], __M([1,0,357,10,2,8,3,11,102,264,87,15,21,34,23,120,80,240]), f
             if (this.state !== State.Open) {
                 return;
             }
-            var item = this.list.getFocus()[0];
+            var item = this.list.getFocusedElements()[0];
             if (!item || !item.suggestion.documentationLabel) {
                 return;
             }
@@ -72551,7 +75975,7 @@ define(__m[483], __M([1,0,357,10,2,8,3,11,102,264,87,15,21,34,23,120,80,240]), f
                 height = 12 * UnfocusedHeight;
             }
             else {
-                var focus_2 = this.list.getFocus()[0];
+                var focus_2 = this.list.getFocusedElements()[0];
                 var focusHeight = focus_2 ? this.delegate.getHeight(focus_2) : UnfocusedHeight;
                 height = focusHeight;
                 var suggestionCount = (this.list.contentHeight - focusHeight) / UnfocusedHeight;
@@ -72567,7 +75991,7 @@ define(__m[483], __M([1,0,357,10,2,8,3,11,102,264,87,15,21,34,23,120,80,240]), f
                 this.details.render(null);
             }
             else {
-                this.details.render(this.list.getFocus()[0]);
+                this.details.render(this.list.getFocusedElements()[0]);
             }
         };
         SuggestWidget.prototype.dispose = function () {
@@ -72627,7 +76051,7 @@ define(__m[483], __M([1,0,357,10,2,8,3,11,102,264,87,15,21,34,23,120,80,240]), f
 
 
 
-define(__m[484], __M([1,0,356,8,13,3,2,15,21,19,7,12,16,30,89,120,53,86,482,483]), function (require, exports, nls, errors_1, keyCodes_1, lifecycle_1, winjs_base_1, instantiation_1, keybindingService_1, editorAction_1, editorCommon_1, editorCommonExtensions_1, modes_1, editorBrowserExtensions_1, snippet_1, suggest_1, keybindingsRegistry_1, config_1, suggestModel_1, suggestWidget_1) {
+define(__m[487], __M([0,1,361,8,12,3,2,15,19,20,7,13,17,30,93,119,51,90,485,486]), function (require, exports, nls, errors_1, keyCodes_1, lifecycle_1, winjs_base_1, instantiation_1, keybindingService_1, editorAction_1, editorCommon_1, editorCommonExtensions_1, modes_1, editorBrowserExtensions_1, snippet_1, suggest_1, keybindingsRegistry_1, config_1, suggestModel_1, suggestWidget_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -72861,7 +76285,7 @@ define(__m[484], __M([1,0,356,8,13,3,2,15,21,19,7,12,16,30,89,120,53,86,482,483]
 
 
 
-define(__m[167], __M([1,0,358,13,2,19,25,12]), function (require, exports, nls, keyCodes_1, winjs_base_1, editorAction_1, editorActionEnablement_1, editorCommonExtensions_1) {
+define(__m[171], __M([0,1,363,12,2,20,25,13]), function (require, exports, nls, keyCodes_1, winjs_base_1, editorAction_1, editorActionEnablement_1, editorCommonExtensions_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -72911,7 +76335,7 @@ define(__m[167], __M([1,0,358,13,2,19,25,12]), function (require, exports, nls, 
 
 
 
-define(__m[486], __M([1,0,317,13,3,10,2,11,74,28,46,21,53,113,19,25,7,12,30,167,197]), function (require, exports, nls, keyCodes_1, lifecycle_1, strings, winjs_base_1, dom_1, htmlContentRenderer_1, styleMutator_1, widget_1, keybindingService_1, keybindingsRegistry_1, commonEditorConfig_1, editorAction_1, editorActionEnablement_1, editorCommon_1, editorCommonExtensions_1, editorBrowserExtensions_1, toggleTabFocusMode_1) {
+define(__m[489], __M([0,1,321,12,3,10,2,11,71,27,44,19,51,111,20,25,7,13,30,171,202]), function (require, exports, nls, keyCodes_1, lifecycle_1, strings, winjs_base_1, dom_1, htmlContentRenderer_1, styleMutator_1, widget_1, keybindingService_1, keybindingsRegistry_1, commonEditorConfig_1, editorAction_1, editorActionEnablement_1, editorCommon_1, editorCommonExtensions_1, editorBrowserExtensions_1, toggleTabFocusMode_1) {
     'use strict';
     var NLS_SHOW_ACCESSIBILITY_HELP_ACTION_LABEL = nls.localize(0, null);
     var CONTEXT_ACCESSIBILITY_WIDGET_VISIBLE = 'accessibilityHelpWidgetVisible';
@@ -73082,7 +76506,7 @@ define(__m[486], __M([1,0,317,13,3,10,2,11,74,28,46,21,53,113,19,25,7,12,30,167,
 
 
 
-define(__m[487], __M([1,0,359,13,2,19,25,12]), function (require, exports, nls, keyCodes_1, winjs_base_1, editorAction_1, editorActionEnablement_1, editorCommonExtensions_1) {
+define(__m[490], __M([0,1,364,12,2,20,25,13]), function (require, exports, nls, keyCodes_1, winjs_base_1, editorAction_1, editorActionEnablement_1, editorCommonExtensions_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -73119,7 +76543,7 @@ define(__m[487], __M([1,0,359,13,2,19,25,12]), function (require, exports, nls, 
     }, 'View: Toggle Word Wrap'));
 });
 
-define(__m[488], __M([1,0,14,8,6,7,12,16,3]), function (require, exports, async_1, errors_1, range_1, editorCommon, editorCommonExtensions_1, modes_1, lifecycle_1) {
+define(__m[491], __M([0,1,14,8,4,7,13,17,3]), function (require, exports, async_1, errors_1, range_1, editorCommon, editorCommonExtensions_1, modes_1, lifecycle_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -73357,35 +76781,6 @@ define(__m[488], __M([1,0,14,8,6,7,12,16,3]), function (require, exports, async_
     editorCommonExtensions_1.CommonEditorRegistry.registerEditorContribution(WordHighlighterContribution);
 });
 
-define(__m[489], __M([1,0,361,31,39,43,119,6,12,92,98]), function (require, exports, nls, Platform, modesRegistry_1, ConfigurationRegistry, lintRules, range_1, editorCommonExtensions_1, replaceCommand_1) {
-    /*---------------------------------------------------------------------------------------------
-     *  Copyright (c) Microsoft Corporation. All rights reserved.
-     *  Licensed under the MIT License. See License.txt in the project root for license information.
-     *--------------------------------------------------------------------------------------------*/
-    'use strict';
-    modesRegistry_1.ModesRegistry.registerCompatMode({
-        id: 'css',
-        extensions: ['.css'],
-        aliases: ['CSS', 'css'],
-        mimetypes: ['text/css'],
-        moduleId: 'vs/languages/css/common/css',
-        ctorName: 'CSSMode'
-    });
-    var configurationRegistry = Platform.Registry.as(ConfigurationRegistry.Extensions.Configuration);
-    configurationRegistry.registerConfiguration({
-        'id': 'css',
-        'order': 20,
-        'title': nls.localize(0, null),
-        'allOf': [{
-                'title': nls.localize(1, null),
-                'properties': lintRules.getConfigurationProperties('css')
-            }]
-    });
-    editorCommonExtensions_1.CommonEditorRegistry.registerEditorCommand('_css.replaceText', -1, { primary: undefined }, true, void 0, function (accessor, editor, args) {
-        var range = args.range, newText = args.newText;
-        editor.executeCommand('_css.replaceText', new replaceCommand_1.ReplaceCommandWithoutChangingPosition(range_1.Range.lift(range), newText));
-    });
-});
 
 
 
@@ -73395,8 +76790,7 @@ define(__m[489], __M([1,0,361,31,39,43,119,6,12,92,98]), function (require, expo
 
 
 
-
-define(__m[490], __M([1,0,70,137,34,44]), function (require, exports, contextView_1, contextview_1, telemetry_1, message_1) {
+define(__m[492], __M([0,1,70,145,36,42]), function (require, exports, contextView_1, contextview_1, telemetry_1, message_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -73432,7 +76826,7 @@ define(__m[490], __M([1,0,70,137,34,44]), function (require, exports, contextVie
     exports.ContextViewService = ContextViewService;
 });
 
-define(__m[491], __M([1,0,29,2,88,10,55,14,32,158,34]), function (require, exports, uri_1, winjs_base_1, network_1, strings, Timer, Async, objects, request_1, telemetry_1) {
+define(__m[493], __M([0,1,29,2,78,10,59,14,31,115,36]), function (require, exports, uri_1, winjs_base_1, network_1, strings, Timer, Async, objects, request_1, telemetry_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -73522,7 +76916,7 @@ define(__m[491], __M([1,0,29,2,88,10,55,14,32,158,34]), function (require, expor
 
 
 
-define(__m[121], __M([1,0,8,22,88,33,2,433,45,434,157,103,44,491,7]), function (require, exports, errors_1, eventEmitter_1, network_1, severity_1, winjs_base_1, configurationService_1, editor_1, abstractExtensionService_1, keybindingServiceImpl_1, keybindingResolver_1, message_1, baseRequestService_1, editorCommon) {
+define(__m[120], __M([0,1,8,23,78,32,2,435,43,436,161,101,42,493,7]), function (require, exports, errors_1, eventEmitter_1, network_1, severity_1, winjs_base_1, configurationService_1, editor_1, abstractExtensionService_1, keybindingServiceImpl_1, keybindingResolver_1, message_1, baseRequestService_1, editorCommon) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -73774,7 +77168,7 @@ define(__m[121], __M([1,0,8,22,88,33,2,433,45,434,157,103,44,491,7]), function (
     exports.SimpleConfigurationService = SimpleConfigurationService;
 });
 
-define(__m[493], __M([1,0]), function (require, exports) {
+define(__m[495], __M([0,1]), function (require, exports) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -73803,7 +77197,7 @@ define(__m[493], __M([1,0]), function (require, exports) {
 
 
 
-define(__m[494], __M([1,0,493,7,48,150]), function (require, exports, themes, editorCommon, viewPart_1, overviewRulerImpl_1) {
+define(__m[496], __M([0,1,495,7,46,160]), function (require, exports, themes, editorCommon, viewPart_1, overviewRulerImpl_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -73959,7 +77353,7 @@ define(__m[494], __M([1,0,493,7,48,150]), function (require, exports, themes, ed
 
 
 
-define(__m[495], __M([1,0,8,22,3,55,27,11,28,6,7,52,420,268,23,300,207,421,271,272,436,437,146,439,422,440,274,494,276,277,278,441,424,279,401]), function (require, exports, errors_1, eventEmitter_1, lifecycle_1, timer, browser, dom, styleMutator_1, range_1, editorCommon, viewEventHandler_1, keyboardHandler_1, pointerHandler_1, editorBrowser, viewController_1, viewEventDispatcher_1, viewOverlays_1, layoutProvider_1, contentWidgets_1, currentLineHighlight_1, decorations_1, glyphMargin_1, lineNumbers_1, viewLines_1, linesDecorations_1, overlayWidgets_1, decorationsOverviewRuler_1, overviewRuler_1, rulers_1, scrollDecoration_1, selections_1, viewCursors_1, viewZones_1, viewContext_1) {
+define(__m[497], __M([0,1,8,23,3,59,28,11,27,4,7,53,424,272,22,291,209,425,275,276,430,437,152,439,426,440,278,496,280,281,282,441,428,283,399]), function (require, exports, errors_1, eventEmitter_1, lifecycle_1, timer, browser, dom, styleMutator_1, range_1, editorCommon, viewEventHandler_1, keyboardHandler_1, pointerHandler_1, editorBrowser, viewController_1, viewEventDispatcher_1, viewOverlays_1, layoutProvider_1, contentWidgets_1, currentLineHighlight_1, decorations_1, glyphMargin_1, lineNumbers_1, viewLines_1, linesDecorations_1, overlayWidgets_1, decorationsOverviewRuler_1, overviewRuler_1, rulers_1, scrollDecoration_1, selections_1, viewCursors_1, viewZones_1, viewContext_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -74716,7 +78110,7 @@ define(__m[495], __M([1,0,8,22,3,55,27,11,28,6,7,52,420,268,23,300,207,421,271,2
 
 
 
-define(__m[90], __M([1,0,8,27,11,15,21,34,398,6,24,7,12,62,61,30,141,495,3,18,194,196]), function (require, exports, errors_1, browser, dom, instantiation_1, keybindingService_1, telemetry_1, commonCodeEditor_1, range_1, selection_1, editorCommon, editorCommonExtensions_1, codeEditorService_1, configuration_1, editorBrowserExtensions_1, colorizer_1, viewImpl_1, lifecycle_1, event_1) {
+define(__m[94], __M([0,1,8,28,11,15,19,36,398,4,24,7,13,54,66,30,151,497,3,16,199,200]), function (require, exports, errors_1, browser, dom, instantiation_1, keybindingService_1, telemetry_1, commonCodeEditor_1, range_1, selection_1, editorCommon, editorCommonExtensions_1, codeEditorService_1, configuration_1, editorBrowserExtensions_1, colorizer_1, viewImpl_1, lifecycle_1, event_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -75276,7 +78670,7 @@ define(__m[90], __M([1,0,8,27,11,15,21,34,398,6,24,7,12,62,61,30,141,495,3,18,19
 
 
 
-define(__m[170], __M([1,0,14,22,3,32,11,28,104,15,57,6,7,64,155,95,90,60,61,105,193]), function (require, exports, async_1, eventEmitter_1, lifecycle_1, objects, dom, styleMutator_1, sash_1, instantiation_1, defaultConfig_1, range_1, editorCommon, editorWorkerService_1, viewLineParts_1, viewLineRenderer_1, codeEditorWidget_1, viewLineToken_1, configuration_1, viewModel_1) {
+define(__m[174], __M([0,1,14,23,3,31,11,27,123,15,55,4,7,52,172,103,94,64,66,116,197]), function (require, exports, async_1, eventEmitter_1, lifecycle_1, objects, dom, styleMutator_1, sash_1, instantiation_1, defaultConfig_1, range_1, editorCommon, editorWorkerService_1, viewLineParts_1, viewLineRenderer_1, codeEditorWidget_1, viewLineToken_1, configuration_1, viewModel_1) {
     'use strict';
     var VisualEditorState = (function () {
         function VisualEditorState() {
@@ -75726,7 +79120,10 @@ define(__m[170], __M([1,0,14,22,3,32,11,28,104,15,57,6,7,64,155,95,90,60,61,105,
         //------------ end IDiffEditor methods
         //------------ begin layouting methods
         DiffEditorWidget.prototype._measureDomElement = function (forceDoLayoutCall, dimensions) {
-            dimensions = dimensions || dom.getDomNodePosition(this._containerDomElement);
+            dimensions = dimensions || {
+                width: this._containerDomElement.clientWidth,
+                height: this._containerDomElement.clientHeight
+            };
             if (dimensions.width <= 0) {
                 this._width = 0;
                 this._height = 0;
@@ -76689,7 +80086,7 @@ define(__m[170], __M([1,0,14,22,3,32,11,28,104,15,57,6,7,64,155,95,90,60,61,105,
 
 
 
-define(__m[171], __M([1,0,32,15,21,34,62,90]), function (require, exports, objects, instantiation_1, keybindingService_1, telemetry_1, codeEditorService_1, codeEditorWidget_1) {
+define(__m[175], __M([0,1,31,15,19,36,54,94]), function (require, exports, objects, instantiation_1, keybindingService_1, telemetry_1, codeEditorService_1, codeEditorWidget_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -76737,7 +80134,7 @@ define(__m[171], __M([1,0,32,15,21,34,62,90]), function (require, exports, objec
 
 
 
-define(__m[91], __M([1,0,360,50,10,36,18,11,66,15,62,152,171,242]), function (require, exports, nls, actions_1, strings, builder_1, event_1, dom, actionbar_1, instantiation_1, codeEditorService_1, zoneWidget_1, embeddedCodeEditorWidget_1) {
+define(__m[95], __M([0,1,365,50,10,35,16,11,58,15,54,164,175,243]), function (require, exports, nls, actions_1, strings, builder_1, event_1, dom, actionbar_1, instantiation_1, codeEditorService_1, zoneWidget_1, embeddedCodeEditorWidget_1) {
     'use strict';
     exports.IPeekViewService = instantiation_1.createDecorator('peekViewService');
     function getOuterEditor(accessor, args) {
@@ -76855,1922 +80252,7 @@ define(__m[91], __M([1,0,360,50,10,36,18,11,66,15,62,152,171,242]), function (re
     exports.PeekViewWidget = PeekViewWidget;
 });
 
-define(__m[49], __M([1,0,15]), function (require, exports, instantiation) {
-    /*---------------------------------------------------------------------------------------------
-     *  Copyright (c) Microsoft Corporation. All rights reserved.
-     *  Licensed under the MIT License. See License.txt in the project root for license information.
-     *--------------------------------------------------------------------------------------------*/
-    'use strict';
-    // --- thread service (web workers)
-    exports.IThreadService = instantiation.createDecorator('threadService');
-    var IRemotableCtorMap = (function () {
-        function IRemotableCtorMap() {
-        }
-        return IRemotableCtorMap;
-    }());
-    exports.IRemotableCtorMap = IRemotableCtorMap;
-    var IRemotableCtorAffinityMap = (function () {
-        function IRemotableCtorAffinityMap() {
-        }
-        return IRemotableCtorAffinityMap;
-    }());
-    exports.IRemotableCtorAffinityMap = IRemotableCtorAffinityMap;
-    var Remotable = (function () {
-        function Remotable() {
-        }
-        Remotable.getId = function (ctor) {
-            return (ctor[Remotable.PROP_NAME] || null);
-        };
-        Remotable.MainContext = function (identifier) {
-            return function (target) {
-                Remotable._ensureUnique(identifier);
-                Remotable.Registry.MainContext[identifier] = target;
-                target[Remotable.PROP_NAME] = identifier;
-            };
-        };
-        Remotable.ExtHostContext = function (identifier) {
-            return function (target) {
-                Remotable._ensureUnique(identifier);
-                Remotable.Registry.ExtHostContext[identifier] = target;
-                target[Remotable.PROP_NAME] = identifier;
-            };
-        };
-        Remotable.WorkerContext = function (identifier, whichWorker) {
-            return function (target) {
-                Remotable._ensureUnique(identifier);
-                Remotable.Registry.WorkerContext[identifier] = {
-                    ctor: target,
-                    affinity: whichWorker
-                };
-                target[Remotable.PROP_NAME] = identifier;
-            };
-        };
-        Remotable._ensureUnique = function (identifier) {
-            if (Remotable.Registry.MainContext[identifier] || Remotable.Registry.ExtHostContext[identifier] || Remotable.Registry.WorkerContext[identifier]) {
-                throw new Error('Duplicate Remotable identifier found');
-            }
-        };
-        Remotable.PROP_NAME = '$__REMOTABLE_ID';
-        Remotable.Registry = {
-            MainContext: Object.create(null),
-            ExtHostContext: Object.create(null),
-            WorkerContext: Object.create(null),
-        };
-        return Remotable;
-    }());
-    exports.Remotable = Remotable;
-    (function (ThreadAffinity) {
-        ThreadAffinity[ThreadAffinity["None"] = 0] = "None";
-        ThreadAffinity[ThreadAffinity["Group1"] = 1] = "Group1";
-        ThreadAffinity[ThreadAffinity["Group2"] = 2] = "Group2";
-        ThreadAffinity[ThreadAffinity["Group3"] = 3] = "Group3";
-        ThreadAffinity[ThreadAffinity["Group4"] = 4] = "Group4";
-        ThreadAffinity[ThreadAffinity["Group5"] = 5] = "Group5";
-        ThreadAffinity[ThreadAffinity["Group6"] = 6] = "Group6";
-        ThreadAffinity[ThreadAffinity["Group7"] = 7] = "Group7";
-        ThreadAffinity[ThreadAffinity["Group8"] = 8] = "Group8";
-        ThreadAffinity[ThreadAffinity["Group9"] = 9] = "Group9";
-        ThreadAffinity[ThreadAffinity["All"] = 10] = "All";
-    })(exports.ThreadAffinity || (exports.ThreadAffinity = {}));
-    var ThreadAffinity = exports.ThreadAffinity;
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-define(__m[501], __M([1,0,315,8,18,3,32,37,2,175,68,135,82,49,154,39,406,83,69,111,47]), function (require, exports, nls, errors_1, event_1, lifecycle_1, objects, paths, winjs_base_1, mime, descriptors_1, extensions_1, extensionsRegistry_1, thread_1, abstractMode_1, modesRegistry_1, languagesRegistry_1, modeService_1, configuration_1, abstractState_1, supports_1) {
-    /*---------------------------------------------------------------------------------------------
-     *  Copyright (c) Microsoft Corporation. All rights reserved.
-     *  Licensed under the MIT License. See License.txt in the project root for license information.
-     *--------------------------------------------------------------------------------------------*/
-    'use strict';
-    var languagesExtPoint = extensionsRegistry_1.ExtensionsRegistry.registerExtensionPoint('languages', {
-        description: nls.localize(0, null),
-        type: 'array',
-        defaultSnippets: [{ body: [{ id: '', aliases: [], extensions: [] }] }],
-        items: {
-            type: 'object',
-            defaultSnippets: [{ body: { id: '', extensions: [] } }],
-            properties: {
-                id: {
-                    description: nls.localize(1, null),
-                    type: 'string'
-                },
-                aliases: {
-                    description: nls.localize(2, null),
-                    type: 'array',
-                    items: {
-                        type: 'string'
-                    }
-                },
-                extensions: {
-                    description: nls.localize(3, null),
-                    default: ['.foo'],
-                    type: 'array',
-                    items: {
-                        type: 'string'
-                    }
-                },
-                filenames: {
-                    description: nls.localize(4, null),
-                    type: 'array',
-                    items: {
-                        type: 'string'
-                    }
-                },
-                filenamePatterns: {
-                    description: nls.localize(5, null),
-                    type: 'array',
-                    items: {
-                        type: 'string'
-                    }
-                },
-                mimetypes: {
-                    description: nls.localize(6, null),
-                    type: 'array',
-                    items: {
-                        type: 'string'
-                    }
-                },
-                firstLine: {
-                    description: nls.localize(7, null),
-                    type: 'string'
-                },
-                configuration: {
-                    description: nls.localize(8, null),
-                    type: 'string'
-                }
-            }
-        }
-    });
-    function isUndefinedOrStringArray(value) {
-        if (typeof value === 'undefined') {
-            return true;
-        }
-        if (!Array.isArray(value)) {
-            return false;
-        }
-        return value.every(function (item) { return typeof item === 'string'; });
-    }
-    function isValidLanguageExtensionPoint(value, collector) {
-        if (!value) {
-            collector.error(nls.localize(9, null, languagesExtPoint.name));
-            return false;
-        }
-        if (typeof value.id !== 'string') {
-            collector.error(nls.localize(10, null, 'id'));
-            return false;
-        }
-        if (!isUndefinedOrStringArray(value.extensions)) {
-            collector.error(nls.localize(11, null, 'extensions'));
-            return false;
-        }
-        if (!isUndefinedOrStringArray(value.filenames)) {
-            collector.error(nls.localize(12, null, 'filenames'));
-            return false;
-        }
-        if (typeof value.firstLine !== 'undefined' && typeof value.firstLine !== 'string') {
-            collector.error(nls.localize(13, null, 'firstLine'));
-            return false;
-        }
-        if (typeof value.configuration !== 'undefined' && typeof value.configuration !== 'string') {
-            collector.error(nls.localize(14, null, 'configuration'));
-            return false;
-        }
-        if (!isUndefinedOrStringArray(value.aliases)) {
-            collector.error(nls.localize(15, null, 'aliases'));
-            return false;
-        }
-        if (!isUndefinedOrStringArray(value.mimetypes)) {
-            collector.error(nls.localize(16, null, 'mimetypes'));
-            return false;
-        }
-        return true;
-    }
-    var ModeServiceImpl = (function () {
-        function ModeServiceImpl(threadService, extensionService) {
-            var _this = this;
-            this.serviceId = modeService_1.IModeService;
-            this._onDidAddModes = new event_1.Emitter();
-            this.onDidAddModes = this._onDidAddModes.event;
-            this._onDidCreateMode = new event_1.Emitter();
-            this.onDidCreateMode = this._onDidCreateMode.event;
-            this._threadService = threadService;
-            this._extensionService = extensionService;
-            this._activationPromises = {};
-            this._instantiatedModes = {};
-            this._config = {};
-            this._registry = new languagesRegistry_1.LanguagesRegistry();
-            this._registry.onDidAddModes(function (modes) { return _this._onDidAddModes.fire(modes); });
-        }
-        ModeServiceImpl.prototype.getConfigurationForMode = function (modeId) {
-            return this._config[modeId] || {};
-        };
-        ModeServiceImpl.prototype.configureMode = function (mimetype, options) {
-            var modeId = this.getModeId(mimetype);
-            if (modeId) {
-                this.configureModeById(modeId, options);
-            }
-        };
-        ModeServiceImpl.prototype.configureModeById = function (modeId, options) {
-            var previousOptions = this._config[modeId] || {};
-            var newOptions = objects.mixin(objects.clone(previousOptions), options);
-            if (objects.equals(previousOptions, newOptions)) {
-                // This configure call is a no-op
-                return;
-            }
-            this._config[modeId] = newOptions;
-            var mode = this.getMode(modeId);
-            if (mode && mode.configSupport) {
-                mode.configSupport.configure(this.getConfigurationForMode(modeId));
-            }
-        };
-        ModeServiceImpl.prototype.configureAllModes = function (config) {
-            var _this = this;
-            if (!config) {
-                return;
-            }
-            var modes = this._registry.getRegisteredModes();
-            modes.forEach(function (modeIdentifier) {
-                var configuration = config[modeIdentifier];
-                _this.configureModeById(modeIdentifier, configuration);
-            });
-        };
-        ModeServiceImpl.prototype.isRegisteredMode = function (mimetypeOrModeId) {
-            return this._registry.isRegisteredMode(mimetypeOrModeId);
-        };
-        ModeServiceImpl.prototype.isCompatMode = function (modeId) {
-            var compatModeData = this._registry.getCompatMode(modeId);
-            return (compatModeData ? true : false);
-        };
-        ModeServiceImpl.prototype.getRegisteredModes = function () {
-            return this._registry.getRegisteredModes();
-        };
-        ModeServiceImpl.prototype.getRegisteredLanguageNames = function () {
-            return this._registry.getRegisteredLanguageNames();
-        };
-        ModeServiceImpl.prototype.getExtensions = function (alias) {
-            return this._registry.getExtensions(alias);
-        };
-        ModeServiceImpl.prototype.getMimeForMode = function (modeId) {
-            return this._registry.getMimeForMode(modeId);
-        };
-        ModeServiceImpl.prototype.getLanguageName = function (modeId) {
-            return this._registry.getLanguageName(modeId);
-        };
-        ModeServiceImpl.prototype.getModeIdForLanguageName = function (alias) {
-            return this._registry.getModeIdForLanguageNameLowercase(alias);
-        };
-        ModeServiceImpl.prototype.getModeId = function (commaSeparatedMimetypesOrCommaSeparatedIds) {
-            var modeIds = this._registry.extractModeIds(commaSeparatedMimetypesOrCommaSeparatedIds);
-            if (modeIds.length > 0) {
-                return modeIds[0];
-            }
-            return null;
-        };
-        ModeServiceImpl.prototype.getConfigurationFiles = function (modeId) {
-            return this._registry.getConfigurationFiles(modeId);
-        };
-        // --- instantiation
-        ModeServiceImpl.prototype.lookup = function (commaSeparatedMimetypesOrCommaSeparatedIds) {
-            var r = [];
-            var modeIds = this._registry.extractModeIds(commaSeparatedMimetypesOrCommaSeparatedIds);
-            for (var i = 0; i < modeIds.length; i++) {
-                var modeId = modeIds[i];
-                r.push({
-                    modeId: modeId,
-                    isInstantiated: this._instantiatedModes.hasOwnProperty(modeId)
-                });
-            }
-            return r;
-        };
-        ModeServiceImpl.prototype.getMode = function (commaSeparatedMimetypesOrCommaSeparatedIds) {
-            var modeIds = this._registry.extractModeIds(commaSeparatedMimetypesOrCommaSeparatedIds);
-            var isPlainText = false;
-            for (var i = 0; i < modeIds.length; i++) {
-                if (this._instantiatedModes.hasOwnProperty(modeIds[i])) {
-                    return this._instantiatedModes[modeIds[i]];
-                }
-                isPlainText = isPlainText || (modeIds[i] === 'plaintext');
-            }
-            if (isPlainText) {
-                // Try to do it synchronously
-                var r = null;
-                this.getOrCreateMode(commaSeparatedMimetypesOrCommaSeparatedIds).then(function (mode) {
-                    r = mode;
-                }).done(null, errors_1.onUnexpectedError);
-                return r;
-            }
-        };
-        ModeServiceImpl.prototype.getModeIdByLanguageName = function (languageName) {
-            var modeIds = this._registry.getModeIdsFromLanguageName(languageName);
-            if (modeIds.length > 0) {
-                return modeIds[0];
-            }
-            return null;
-        };
-        ModeServiceImpl.prototype.getModeIdByFilenameOrFirstLine = function (filename, firstLine) {
-            var modeIds = this._registry.getModeIdsFromFilenameOrFirstLine(filename, firstLine);
-            if (modeIds.length > 0) {
-                return modeIds[0];
-            }
-            return null;
-        };
-        ModeServiceImpl.prototype.onReady = function () {
-            return this._extensionService.onReady();
-        };
-        ModeServiceImpl.prototype.getOrCreateMode = function (commaSeparatedMimetypesOrCommaSeparatedIds) {
-            var _this = this;
-            return this.onReady().then(function () {
-                var modeId = _this.getModeId(commaSeparatedMimetypesOrCommaSeparatedIds);
-                // Fall back to plain text if no mode was found
-                return _this._getOrCreateMode(modeId || 'plaintext');
-            });
-        };
-        ModeServiceImpl.prototype.getOrCreateModeByLanguageName = function (languageName) {
-            var _this = this;
-            return this.onReady().then(function () {
-                var modeId = _this.getModeIdByLanguageName(languageName);
-                // Fall back to plain text if no mode was found
-                return _this._getOrCreateMode(modeId || 'plaintext');
-            });
-        };
-        ModeServiceImpl.prototype.getOrCreateModeByFilenameOrFirstLine = function (filename, firstLine) {
-            var _this = this;
-            return this.onReady().then(function () {
-                var modeId = _this.getModeIdByFilenameOrFirstLine(filename, firstLine);
-                // Fall back to plain text if no mode was found
-                return _this._getOrCreateMode(modeId || 'plaintext');
-            });
-        };
-        ModeServiceImpl.prototype._getOrCreateMode = function (modeId) {
-            var _this = this;
-            if (this._instantiatedModes.hasOwnProperty(modeId)) {
-                return winjs_base_1.TPromise.as(this._instantiatedModes[modeId]);
-            }
-            if (this._activationPromises.hasOwnProperty(modeId)) {
-                return this._activationPromises[modeId];
-            }
-            var c, e;
-            var promise = new winjs_base_1.TPromise(function (cc, ee, pp) { c = cc; e = ee; });
-            this._activationPromises[modeId] = promise;
-            this._createMode(modeId).then(function (mode) {
-                _this._instantiatedModes[modeId] = mode;
-                delete _this._activationPromises[modeId];
-                _this._onDidCreateMode.fire(mode);
-                _this._extensionService.activateByEvent("onLanguage:" + modeId).done(null, errors_1.onUnexpectedError);
-                return _this._instantiatedModes[modeId];
-            }).then(c, e);
-            return promise;
-        };
-        ModeServiceImpl.prototype._createMode = function (modeId) {
-            var _this = this;
-            var modeDescriptor = this._createModeDescriptor(modeId);
-            var compatModeData = this._registry.getCompatMode(modeId);
-            if (compatModeData) {
-                // This is a compatibility mode
-                var compatModeAsyncDescriptor = descriptors_1.createAsyncDescriptor1(compatModeData.moduleId, compatModeData.ctorName);
-                return this._threadService.createInstance(compatModeAsyncDescriptor, modeDescriptor).then(function (compatMode) {
-                    if (compatMode.configSupport) {
-                        compatMode.configSupport.configure(_this.getConfigurationForMode(modeId));
-                    }
-                    return compatMode;
-                });
-            }
-            return winjs_base_1.TPromise.as(this._threadService.createInstance(abstractMode_1.FrankensteinMode, modeDescriptor));
-        };
-        ModeServiceImpl.prototype._createModeDescriptor = function (modeId) {
-            return {
-                id: modeId
-            };
-        };
-        ModeServiceImpl.prototype._registerTokenizationSupport = function (mode, callback) {
-            if (mode.setTokenizationSupport) {
-                return mode.setTokenizationSupport(callback);
-            }
-            else {
-                console.warn('Cannot register tokenizationSupport on mode ' + mode.getId() + ' because it does not support it.');
-                return lifecycle_1.empty;
-            }
-        };
-        ModeServiceImpl.prototype.registerModeSupport = function (modeId, callback) {
-            var _this = this;
-            if (this._instantiatedModes.hasOwnProperty(modeId)) {
-                return this._registerTokenizationSupport(this._instantiatedModes[modeId], callback);
-            }
-            var cc;
-            var promise = new winjs_base_1.TPromise(function (c, e) { cc = c; });
-            var disposable = this.onDidCreateMode(function (mode) {
-                if (mode.getId() !== modeId) {
-                    return;
-                }
-                cc(_this._registerTokenizationSupport(mode, callback));
-                disposable.dispose();
-            });
-            return {
-                dispose: function () {
-                    promise.done(function (disposable) { return disposable.dispose(); }, null);
-                }
-            };
-        };
-        ModeServiceImpl.prototype.registerTokenizationSupport = function (modeId, callback) {
-            return this.registerModeSupport(modeId, callback);
-        };
-        ModeServiceImpl.prototype.registerTokenizationSupport2 = function (modeId, support) {
-            return this.registerModeSupport(modeId, function (mode) {
-                return new TokenizationSupport2Adapter(mode, support);
-            });
-        };
-        return ModeServiceImpl;
-    }());
-    exports.ModeServiceImpl = ModeServiceImpl;
-    var TokenizationState2Adapter = (function () {
-        function TokenizationState2Adapter(mode, actual, stateData) {
-            this._mode = mode;
-            this._actual = actual;
-            this._stateData = stateData;
-        }
-        Object.defineProperty(TokenizationState2Adapter.prototype, "actual", {
-            get: function () { return this._actual; },
-            enumerable: true,
-            configurable: true
-        });
-        TokenizationState2Adapter.prototype.clone = function () {
-            return new TokenizationState2Adapter(this._mode, this._actual.clone(), abstractState_1.AbstractState.safeClone(this._stateData));
-        };
-        TokenizationState2Adapter.prototype.equals = function (other) {
-            if (other instanceof TokenizationState2Adapter) {
-                if (!this._actual.equals(other._actual)) {
-                    return false;
-                }
-                return abstractState_1.AbstractState.safeEquals(this._stateData, other._stateData);
-            }
-            return false;
-        };
-        TokenizationState2Adapter.prototype.getMode = function () {
-            return this._mode;
-        };
-        TokenizationState2Adapter.prototype.tokenize = function (stream) {
-            throw new Error('Unexpected tokenize call!');
-        };
-        TokenizationState2Adapter.prototype.getStateData = function () {
-            return this._stateData;
-        };
-        TokenizationState2Adapter.prototype.setStateData = function (stateData) {
-            this._stateData = stateData;
-        };
-        return TokenizationState2Adapter;
-    }());
-    exports.TokenizationState2Adapter = TokenizationState2Adapter;
-    var TokenizationSupport2Adapter = (function () {
-        function TokenizationSupport2Adapter(mode, actual) {
-            this.shouldGenerateEmbeddedModels = false;
-            this._mode = mode;
-            this._actual = actual;
-        }
-        TokenizationSupport2Adapter.prototype.getInitialState = function () {
-            return new TokenizationState2Adapter(this._mode, this._actual.getInitialState(), null);
-        };
-        TokenizationSupport2Adapter.prototype.tokenize = function (line, state, offsetDelta, stopAtOffset) {
-            if (offsetDelta === void 0) { offsetDelta = 0; }
-            if (state instanceof TokenizationState2Adapter) {
-                var actualResult = this._actual.tokenize(line, state.actual);
-                var tokens_1 = [];
-                actualResult.tokens.forEach(function (t) {
-                    if (typeof t.scopes === 'string') {
-                        tokens_1.push(new supports_1.Token(t.startIndex + offsetDelta, t.scopes));
-                    }
-                    else if (Array.isArray(t.scopes) && t.scopes.length === 1) {
-                        tokens_1.push(new supports_1.Token(t.startIndex + offsetDelta, t.scopes[0]));
-                    }
-                    else {
-                        throw new Error('Only token scopes as strings or of precisely 1 length are supported at this time!');
-                    }
-                });
-                return {
-                    tokens: tokens_1,
-                    actualStopOffset: offsetDelta + line.length,
-                    endState: new TokenizationState2Adapter(state.getMode(), actualResult.endState, state.getStateData()),
-                    modeTransitions: [{ startIndex: offsetDelta, mode: state.getMode() }],
-                };
-            }
-            throw new Error('Unexpected state to tokenize with!');
-        };
-        return TokenizationSupport2Adapter;
-    }());
-    exports.TokenizationSupport2Adapter = TokenizationSupport2Adapter;
-    var MainThreadModeServiceImpl = (function (_super) {
-        __extends(MainThreadModeServiceImpl, _super);
-        function MainThreadModeServiceImpl(threadService, extensionService, configurationService) {
-            var _this = this;
-            _super.call(this, threadService, extensionService);
-            this._configurationService = configurationService;
-            this._hasInitialized = false;
-            languagesExtPoint.setHandler(function (extensions) {
-                var allValidLanguages = [];
-                for (var i = 0, len = extensions.length; i < len; i++) {
-                    var extension = extensions[i];
-                    if (!Array.isArray(extension.value)) {
-                        extension.collector.error(nls.localize(17, null, languagesExtPoint.name));
-                        continue;
-                    }
-                    for (var j = 0, lenJ = extension.value.length; j < lenJ; j++) {
-                        var ext = extension.value[j];
-                        if (isValidLanguageExtensionPoint(ext, extension.collector)) {
-                            var configuration = (ext.configuration ? paths.join(extension.description.extensionFolderPath, ext.configuration) : ext.configuration);
-                            allValidLanguages.push({
-                                id: ext.id,
-                                extensions: ext.extensions,
-                                filenames: ext.filenames,
-                                filenamePatterns: ext.filenamePatterns,
-                                firstLine: ext.firstLine,
-                                aliases: ext.aliases,
-                                mimetypes: ext.mimetypes,
-                                configuration: configuration
-                            });
-                        }
-                    }
-                }
-                modesRegistry_1.ModesRegistry.registerLanguages(allValidLanguages);
-            });
-            this._configurationService.onDidUpdateConfiguration(function (e) { return _this.onConfigurationChange(e.config); });
-        }
-        MainThreadModeServiceImpl.prototype.onReady = function () {
-            var _this = this;
-            if (!this._onReadyPromise) {
-                var configuration_2 = this._configurationService.getConfiguration();
-                this._onReadyPromise = this._extensionService.onReady().then(function () {
-                    _this.onConfigurationChange(configuration_2);
-                    return true;
-                });
-            }
-            return this._onReadyPromise;
-        };
-        MainThreadModeServiceImpl.prototype.onConfigurationChange = function (configuration) {
-            var _this = this;
-            // Clear user configured mime associations
-            mime.clearTextMimes(true /* user configured */);
-            // Register based on settings
-            if (configuration.files && configuration.files.associations) {
-                Object.keys(configuration.files.associations).forEach(function (pattern) {
-                    mime.registerTextMime({ mime: _this.getMimeForMode(configuration.files.associations[pattern]), filepattern: pattern, userConfigured: true });
-                });
-            }
-        };
-        MainThreadModeServiceImpl.prototype._getModeServiceWorkerHelper = function () {
-            var r = this._threadService.getRemotable(ModeServiceWorkerHelper);
-            if (!this._hasInitialized) {
-                this._hasInitialized = true;
-                var initData = {
-                    compatModes: modesRegistry_1.ModesRegistry.getCompatModes(),
-                    languages: modesRegistry_1.ModesRegistry.getLanguages()
-                };
-                r._initialize(initData);
-                modesRegistry_1.ModesRegistry.onDidAddCompatModes(function (m) { return r._acceptCompatModes(m); });
-                modesRegistry_1.ModesRegistry.onDidAddLanguages(function (m) { return r._acceptLanguages(m); });
-            }
-            return r;
-        };
-        MainThreadModeServiceImpl.prototype.configureModeById = function (modeId, options) {
-            this._getModeServiceWorkerHelper().configureModeById(modeId, options);
-            _super.prototype.configureModeById.call(this, modeId, options);
-        };
-        MainThreadModeServiceImpl.prototype._createMode = function (modeId) {
-            // Instantiate mode also in worker
-            this._getModeServiceWorkerHelper().instantiateMode(modeId);
-            return _super.prototype._createMode.call(this, modeId);
-        };
-        MainThreadModeServiceImpl = __decorate([
-            __param(0, thread_1.IThreadService),
-            __param(1, extensions_1.IExtensionService),
-            __param(2, configuration_1.IConfigurationService)
-        ], MainThreadModeServiceImpl);
-        return MainThreadModeServiceImpl;
-    }(ModeServiceImpl));
-    exports.MainThreadModeServiceImpl = MainThreadModeServiceImpl;
-    var ModeServiceWorkerHelper = (function () {
-        function ModeServiceWorkerHelper(modeService) {
-            this._modeService = modeService;
-        }
-        ModeServiceWorkerHelper.prototype._initialize = function (initData) {
-            modesRegistry_1.ModesRegistry.registerCompatModes(initData.compatModes);
-            modesRegistry_1.ModesRegistry.registerLanguages(initData.languages);
-        };
-        ModeServiceWorkerHelper.prototype._acceptCompatModes = function (modes) {
-            modesRegistry_1.ModesRegistry.registerCompatModes(modes);
-        };
-        ModeServiceWorkerHelper.prototype._acceptLanguages = function (languages) {
-            modesRegistry_1.ModesRegistry.registerLanguages(languages);
-        };
-        ModeServiceWorkerHelper.prototype.instantiateMode = function (modeId) {
-            this._modeService.getOrCreateMode(modeId).done(null, errors_1.onUnexpectedError);
-        };
-        ModeServiceWorkerHelper.prototype.configureModeById = function (modeId, options) {
-            this._modeService.configureMode(modeId, options);
-        };
-        ModeServiceWorkerHelper = __decorate([
-            thread_1.Remotable.WorkerContext('ModeServiceWorkerHelper', thread_1.ThreadAffinity.All),
-            __param(0, modeService_1.IModeService)
-        ], ModeServiceWorkerHelper);
-        return ModeServiceWorkerHelper;
-    }());
-    exports.ModeServiceWorkerHelper = ModeServiceWorkerHelper;
-});
-
-
-
-
-
-
-
-
-
-
-define(__m[502], __M([1,0,316,8,18,33,29,76,34,49,6,7,306,169,83,40,384,17,69,57,44]), function (require, exports, nls, errors_1, event_1, severity_1, uri_1, markers_1, telemetry_1, thread_1, range_1, editorCommon, mirrorModel_1, model_1, modeService_1, modelService_1, resourceService_1, platform, configuration_1, defaultConfig_1, message_1) {
-    /*---------------------------------------------------------------------------------------------
-     *  Copyright (c) Microsoft Corporation. All rights reserved.
-     *  Licensed under the MIT License. See License.txt in the project root for license information.
-     *--------------------------------------------------------------------------------------------*/
-    'use strict';
-    function MODEL_ID(resource) {
-        return resource.toString();
-    }
-    var ModelData = (function () {
-        function ModelData(model, eventsHandler) {
-            var _this = this;
-            this.model = model;
-            this.isSyncedToWorkers = false;
-            this._markerDecorations = [];
-            this._modelEventsListener = model.addBulkListener(function (events) { return eventsHandler(_this, events); });
-        }
-        ModelData.prototype.dispose = function () {
-            this._markerDecorations = this.model.deltaDecorations(this._markerDecorations, []);
-            this._modelEventsListener.dispose();
-            this._modelEventsListener = null;
-            this.model = null;
-        };
-        ModelData.prototype.getModelId = function () {
-            return MODEL_ID(this.model.uri);
-        };
-        ModelData.prototype.acceptMarkerDecorations = function (newDecorations) {
-            this._markerDecorations = this.model.deltaDecorations(this._markerDecorations, newDecorations);
-        };
-        return ModelData;
-    }());
-    var ModelMarkerHandler = (function () {
-        function ModelMarkerHandler() {
-        }
-        ModelMarkerHandler.setMarkers = function (modelData, markers) {
-            var _this = this;
-            // Limit to the first 500 errors/warnings
-            markers = markers.slice(0, 500);
-            var newModelDecorations = markers.map(function (marker) {
-                return {
-                    range: _this._createDecorationRange(modelData.model, marker),
-                    options: _this._createDecorationOption(marker)
-                };
-            });
-            modelData.acceptMarkerDecorations(newModelDecorations);
-        };
-        ModelMarkerHandler._createDecorationRange = function (model, rawMarker) {
-            var marker = model.validateRange(new range_1.Range(rawMarker.startLineNumber, rawMarker.startColumn, rawMarker.endLineNumber, rawMarker.endColumn));
-            var ret = new range_1.Range(marker.startLineNumber, marker.startColumn, marker.endLineNumber, marker.endColumn);
-            if (ret.isEmpty()) {
-                var word = model.getWordAtPosition(ret.getStartPosition());
-                if (word) {
-                    ret.startColumn = word.startColumn;
-                    ret.endColumn = word.endColumn;
-                }
-                else {
-                    var maxColumn = model.getLineLastNonWhitespaceColumn(marker.startLineNumber) ||
-                        model.getLineMaxColumn(marker.startLineNumber);
-                    if (maxColumn === 1) {
-                    }
-                    else if (ret.endColumn >= maxColumn) {
-                        // behind eol
-                        ret.endColumn = maxColumn;
-                        ret.startColumn = maxColumn - 1;
-                    }
-                    else {
-                        // extend marker to width = 1
-                        ret.endColumn += 1;
-                    }
-                }
-            }
-            else if (rawMarker.endColumn === Number.MAX_VALUE && rawMarker.startColumn === 1 && ret.startLineNumber === ret.endLineNumber) {
-                var minColumn = model.getLineFirstNonWhitespaceColumn(rawMarker.startLineNumber);
-                if (minColumn < ret.endColumn) {
-                    ret.startColumn = minColumn;
-                    rawMarker.startColumn = minColumn;
-                }
-            }
-            return ret;
-        };
-        ModelMarkerHandler._createDecorationOption = function (marker) {
-            var className;
-            var color;
-            var darkColor;
-            var htmlMessage = null;
-            switch (marker.severity) {
-                case severity_1.default.Ignore:
-                    // do something
-                    break;
-                case severity_1.default.Warning:
-                case severity_1.default.Info:
-                    className = editorCommon.ClassName.EditorWarningDecoration;
-                    color = 'rgba(18,136,18,0.7)';
-                    darkColor = 'rgba(18,136,18,0.7)';
-                    break;
-                case severity_1.default.Error:
-                default:
-                    className = editorCommon.ClassName.EditorErrorDecoration;
-                    color = 'rgba(255,18,18,0.7)';
-                    darkColor = 'rgba(255,18,18,0.7)';
-                    break;
-            }
-            if (typeof marker.message === 'string') {
-                htmlMessage = [{ isText: true, text: marker.message }];
-            }
-            else if (Array.isArray(marker.message)) {
-                htmlMessage = marker.message;
-            }
-            else if (marker.message) {
-                htmlMessage = [marker.message];
-            }
-            if (htmlMessage && marker.source) {
-                htmlMessage.unshift({ isText: true, text: "[" + marker.source + "] " });
-            }
-            return {
-                stickiness: editorCommon.TrackedRangeStickiness.NeverGrowsWhenTypingAtEdges,
-                className: className,
-                htmlMessage: htmlMessage,
-                overviewRuler: {
-                    color: color,
-                    darkColor: darkColor,
-                    position: editorCommon.OverviewRulerLane.Right
-                }
-            };
-        };
-        return ModelMarkerHandler;
-    }());
-    var ModelServiceImpl = (function () {
-        function ModelServiceImpl(threadService, markerService, modeService, configurationService, messageService) {
-            var _this = this;
-            this.serviceId = modelService_1.IModelService;
-            this._modelCreationOptions = {
-                tabSize: defaultConfig_1.DEFAULT_INDENTATION.tabSize,
-                insertSpaces: defaultConfig_1.DEFAULT_INDENTATION.insertSpaces,
-                detectIndentation: defaultConfig_1.DEFAULT_INDENTATION.detectIndentation,
-                defaultEOL: (platform.isLinux || platform.isMacintosh) ? editorCommon.DefaultEndOfLine.LF : editorCommon.DefaultEndOfLine.CRLF,
-                trimAutoWhitespace: defaultConfig_1.DEFAULT_TRIM_AUTO_WHITESPACE
-            };
-            this._threadService = threadService;
-            this._markerService = markerService;
-            this._modeService = modeService;
-            this._workerHelper = this._threadService.getRemotable(ModelServiceWorkerHelper);
-            this._configurationService = configurationService;
-            this._messageService = messageService;
-            this._hasShownMigrationMessage = false;
-            this._models = {};
-            this._onModelAdded = new event_1.Emitter();
-            this._onModelRemoved = new event_1.Emitter();
-            this._onModelModeChanged = new event_1.Emitter();
-            if (this._markerService) {
-                this._markerServiceSubscription = this._markerService.onMarkerChanged(this._handleMarkerChange, this);
-            }
-            var readConfig = function (config) {
-                var shouldShowMigrationMessage = false;
-                var tabSize = defaultConfig_1.DEFAULT_INDENTATION.tabSize;
-                if (config.editor && typeof config.editor.tabSize !== 'undefined') {
-                    var parsedTabSize = parseInt(config.editor.tabSize, 10);
-                    if (!isNaN(parsedTabSize)) {
-                        tabSize = parsedTabSize;
-                    }
-                    shouldShowMigrationMessage = shouldShowMigrationMessage || (config.editor.tabSize === 'auto');
-                }
-                var insertSpaces = defaultConfig_1.DEFAULT_INDENTATION.insertSpaces;
-                if (config.editor && typeof config.editor.insertSpaces !== 'undefined') {
-                    insertSpaces = (config.editor.insertSpaces === 'false' ? false : Boolean(config.editor.insertSpaces));
-                    shouldShowMigrationMessage = shouldShowMigrationMessage || (config.editor.insertSpaces === 'auto');
-                }
-                var newDefaultEOL = _this._modelCreationOptions.defaultEOL;
-                var eol = config.files && config.files.eol;
-                if (eol === '\r\n') {
-                    newDefaultEOL = editorCommon.DefaultEndOfLine.CRLF;
-                }
-                else if (eol === '\n') {
-                    newDefaultEOL = editorCommon.DefaultEndOfLine.LF;
-                }
-                var trimAutoWhitespace = _this._modelCreationOptions.trimAutoWhitespace;
-                if (config.editor && typeof config.editor.trimAutoWhitespace !== 'undefined') {
-                    trimAutoWhitespace = (config.editor.trimAutoWhitespace === 'false' ? false : Boolean(config.editor.trimAutoWhitespace));
-                }
-                var detectIndentation = defaultConfig_1.DEFAULT_INDENTATION.detectIndentation;
-                if (config.editor && typeof config.editor.detectIndentation !== 'undefined') {
-                    detectIndentation = (config.editor.detectIndentation === 'false' ? false : Boolean(config.editor.detectIndentation));
-                }
-                _this._setModelOptions({
-                    tabSize: tabSize,
-                    insertSpaces: insertSpaces,
-                    detectIndentation: detectIndentation,
-                    defaultEOL: newDefaultEOL,
-                    trimAutoWhitespace: trimAutoWhitespace
-                });
-                if (shouldShowMigrationMessage && !_this._hasShownMigrationMessage) {
-                    _this._hasShownMigrationMessage = true;
-                    _this._messageService.show(severity_1.default.Info, nls.localize(0, null));
-                }
-            };
-            this._configurationServiceSubscription = this._configurationService.onDidUpdateConfiguration(function (e) {
-                readConfig(e.config);
-            });
-            readConfig(this._configurationService.getConfiguration());
-        }
-        ModelServiceImpl.prototype.getCreationOptions = function () {
-            return this._modelCreationOptions;
-        };
-        ModelServiceImpl.prototype._setModelOptions = function (newOpts) {
-            if ((this._modelCreationOptions.detectIndentation === newOpts.detectIndentation)
-                && (this._modelCreationOptions.insertSpaces === newOpts.insertSpaces)
-                && (this._modelCreationOptions.tabSize === newOpts.tabSize)
-                && (this._modelCreationOptions.trimAutoWhitespace === newOpts.trimAutoWhitespace)) {
-                // Same indent opts, no need to touch created models
-                this._modelCreationOptions = newOpts;
-                return;
-            }
-            this._modelCreationOptions = newOpts;
-            // Update options on all models
-            var keys = Object.keys(this._models);
-            for (var i = 0, len = keys.length; i < len; i++) {
-                var modelId = keys[i];
-                var modelData = this._models[modelId];
-                if (this._modelCreationOptions.detectIndentation) {
-                    modelData.model.detectIndentation(this._modelCreationOptions.insertSpaces, this._modelCreationOptions.tabSize);
-                    modelData.model.updateOptions({
-                        trimAutoWhitespace: this._modelCreationOptions.trimAutoWhitespace
-                    });
-                }
-                else {
-                    modelData.model.updateOptions({
-                        insertSpaces: this._modelCreationOptions.insertSpaces,
-                        tabSize: this._modelCreationOptions.tabSize,
-                        trimAutoWhitespace: this._modelCreationOptions.trimAutoWhitespace
-                    });
-                }
-            }
-        };
-        ModelServiceImpl.prototype.dispose = function () {
-            if (this._markerServiceSubscription) {
-                this._markerServiceSubscription.dispose();
-            }
-            this._configurationServiceSubscription.dispose();
-        };
-        ModelServiceImpl.prototype._handleMarkerChange = function (changedResources) {
-            var _this = this;
-            changedResources.forEach(function (resource) {
-                var modelId = MODEL_ID(resource);
-                var modelData = _this._models[modelId];
-                if (!modelData) {
-                    return;
-                }
-                ModelMarkerHandler.setMarkers(modelData, _this._markerService.read({ resource: resource, take: 500 }));
-            });
-        };
-        // --- begin IModelService
-        ModelServiceImpl.prototype._shouldSyncModelToWorkers = function (model) {
-            if (model.isTooLargeForHavingARichMode()) {
-                return false;
-            }
-            // Only sync models with compat modes to the workers
-            return this._modeService.isCompatMode(model.getMode().getId());
-        };
-        ModelServiceImpl.prototype._createModelData = function (value, modeOrPromise, resource) {
-            var _this = this;
-            // create & save the model
-            var model = new model_1.Model(value, this._modelCreationOptions, modeOrPromise, resource);
-            var modelId = MODEL_ID(model.uri);
-            if (this._models[modelId]) {
-                // There already exists a model with this id => this is a programmer error
-                throw new Error('ModelService: Cannot add model ' + telemetry_1.anonymize(modelId) + ' because it already exists!');
-            }
-            var modelData = new ModelData(model, function (modelData, events) { return _this._onModelEvents(modelData, events); });
-            this._models[modelId] = modelData;
-            return modelData;
-        };
-        ModelServiceImpl.prototype.createModel = function (value, modeOrPromise, resource) {
-            var modelData = this._createModelData(value, modeOrPromise, resource);
-            // handle markers (marker service => model)
-            if (this._markerService) {
-                ModelMarkerHandler.setMarkers(modelData, this._markerService.read({ resource: modelData.model.uri }));
-            }
-            if (this._shouldSyncModelToWorkers(modelData.model)) {
-                // send this model to the workers
-                this._beginWorkerSync(modelData);
-            }
-            this._onModelAdded.fire(modelData.model);
-            return modelData.model;
-        };
-        ModelServiceImpl.prototype.destroyModel = function (resource) {
-            // We need to support that not all models get disposed through this service (i.e. model.dispose() should work!)
-            var modelData = this._models[MODEL_ID(resource)];
-            if (!modelData) {
-                return;
-            }
-            modelData.model.dispose();
-        };
-        ModelServiceImpl.prototype.getModels = function () {
-            var ret = [];
-            var keys = Object.keys(this._models);
-            for (var i = 0, len = keys.length; i < len; i++) {
-                var modelId = keys[i];
-                ret.push(this._models[modelId].model);
-            }
-            return ret;
-        };
-        ModelServiceImpl.prototype.getModel = function (resource) {
-            var modelId = MODEL_ID(resource);
-            var modelData = this._models[modelId];
-            if (!modelData) {
-                return null;
-            }
-            return modelData.model;
-        };
-        Object.defineProperty(ModelServiceImpl.prototype, "onModelAdded", {
-            get: function () {
-                return this._onModelAdded ? this._onModelAdded.event : null;
-            },
-            enumerable: true,
-            configurable: true
-        });
-        Object.defineProperty(ModelServiceImpl.prototype, "onModelRemoved", {
-            get: function () {
-                return this._onModelRemoved ? this._onModelRemoved.event : null;
-            },
-            enumerable: true,
-            configurable: true
-        });
-        Object.defineProperty(ModelServiceImpl.prototype, "onModelModeChanged", {
-            get: function () {
-                return this._onModelModeChanged ? this._onModelModeChanged.event : null;
-            },
-            enumerable: true,
-            configurable: true
-        });
-        // --- end IModelService
-        ModelServiceImpl.prototype._beginWorkerSync = function (modelData) {
-            if (modelData.isSyncedToWorkers) {
-                throw new Error('Model is already being synced to workers!');
-            }
-            modelData.isSyncedToWorkers = true;
-            this._workerHelper.$_acceptNewModel(ModelServiceImpl._getBoundModelData(modelData.model));
-        };
-        ModelServiceImpl.prototype._stopWorkerSync = function (modelData) {
-            if (!modelData.isSyncedToWorkers) {
-                throw new Error('Model is already not being synced to workers!');
-            }
-            modelData.isSyncedToWorkers = false;
-            this._workerHelper.$_acceptDidDisposeModel(modelData.model.uri);
-        };
-        ModelServiceImpl.prototype._onModelDisposing = function (model) {
-            var modelId = MODEL_ID(model.uri);
-            var modelData = this._models[modelId];
-            if (modelData.isSyncedToWorkers) {
-                // Dispose model in workers
-                this._stopWorkerSync(modelData);
-            }
-            delete this._models[modelId];
-            modelData.dispose();
-            this._onModelRemoved.fire(model);
-        };
-        ModelServiceImpl._getBoundModelData = function (model) {
-            return {
-                url: model.uri,
-                versionId: model.getVersionId(),
-                value: model.toRawText(),
-                modeId: model.getMode().getId()
-            };
-        };
-        ModelServiceImpl.prototype._onModelEvents = function (modelData, events) {
-            // First look for dispose
-            for (var i = 0, len = events.length; i < len; i++) {
-                var e = events[i];
-                if (e.getType() === editorCommon.EventType.ModelDispose) {
-                    this._onModelDisposing(modelData.model);
-                    // no more processing since model got disposed
-                    return;
-                }
-            }
-            // Second, look for mode change
-            for (var i = 0, len = events.length; i < len; i++) {
-                var e = events[i];
-                if (e.getType() === editorCommon.EventType.ModelModeChanged) {
-                    var wasSyncedToWorkers = modelData.isSyncedToWorkers;
-                    var shouldSyncToWorkers = this._shouldSyncModelToWorkers(modelData.model);
-                    this._onModelModeChanged.fire({
-                        model: modelData.model,
-                        oldModeId: e.getData().oldMode.getId()
-                    });
-                    if (wasSyncedToWorkers) {
-                        if (shouldSyncToWorkers) {
-                            // true -> true
-                            // Forward mode change to all the workers
-                            this._workerHelper.$_acceptDidChangeModelMode(modelData.getModelId(), modelData.model.getMode().getId());
-                        }
-                        else {
-                            // true -> false
-                            // Stop worker sync for this model
-                            this._stopWorkerSync(modelData);
-                            // no more processing since we have removed the model from the workers
-                            return;
-                        }
-                    }
-                    else {
-                        if (shouldSyncToWorkers) {
-                            // false -> true
-                            // Begin syncing this model to the workers
-                            this._beginWorkerSync(modelData);
-                            // no more processing since we are sending the latest state
-                            return;
-                        }
-                        else {
-                            // false -> false
-                            // no more processing since this model was not synced and will not be synced
-                            return;
-                        }
-                    }
-                }
-            }
-            if (!modelData.isSyncedToWorkers) {
-                return;
-            }
-            // Finally, look for model content changes
-            var eventsForWorkers = { contentChanged: [] };
-            for (var i = 0, len = events.length; i < len; i++) {
-                var e = events[i];
-                if (e.getType() === editorCommon.EventType.ModelRawContentChanged) {
-                    eventsForWorkers.contentChanged.push(e.getData());
-                }
-            }
-            if (eventsForWorkers.contentChanged.length > 0) {
-                // Forward events to all the workers
-                this._workerHelper.$_acceptModelEvents(modelData.getModelId(), eventsForWorkers);
-            }
-        };
-        ModelServiceImpl = __decorate([
-            __param(0, thread_1.IThreadService),
-            __param(1, markers_1.IMarkerService),
-            __param(2, modeService_1.IModeService),
-            __param(3, configuration_1.IConfigurationService),
-            __param(4, message_1.IMessageService)
-        ], ModelServiceImpl);
-        return ModelServiceImpl;
-    }());
-    exports.ModelServiceImpl = ModelServiceImpl;
-    var ModelServiceWorkerHelper = (function () {
-        function ModelServiceWorkerHelper(resourceService, modeService) {
-            this._resourceService = resourceService;
-            this._modeService = modeService;
-        }
-        ModelServiceWorkerHelper.prototype.$_acceptNewModel = function (data) {
-            var _this = this;
-            // Create & insert the mirror model eagerly in the resource service
-            var mirrorModel = new mirrorModel_1.MirrorModel(this._resourceService, data.versionId, data.value, null, data.url);
-            this._resourceService.insert(mirrorModel.uri, mirrorModel);
-            // Block worker execution until the mode is instantiated
-            return this._modeService.getOrCreateMode(data.modeId).then(function (mode) {
-                // Changing mode should trigger a remove & an add, therefore:
-                // (1) Remove from resource service
-                _this._resourceService.remove(mirrorModel.uri);
-                // (2) Change mode
-                mirrorModel.setMode(mode);
-                // (3) Insert again to resource service (it will have the new mode)
-                _this._resourceService.insert(mirrorModel.uri, mirrorModel);
-            });
-        };
-        ModelServiceWorkerHelper.prototype.$_acceptDidChangeModelMode = function (modelId, newModeId) {
-            var _this = this;
-            var mirrorModel = this._resourceService.get(uri_1.default.parse(modelId));
-            // Block worker execution until the mode is instantiated
-            return this._modeService.getOrCreateMode(newModeId).then(function (mode) {
-                // Changing mode should trigger a remove & an add, therefore:
-                // (1) Remove from resource service
-                _this._resourceService.remove(mirrorModel.uri);
-                // (2) Change mode
-                mirrorModel.setMode(mode);
-                // (3) Insert again to resource service (it will have the new mode)
-                _this._resourceService.insert(mirrorModel.uri, mirrorModel);
-            });
-        };
-        ModelServiceWorkerHelper.prototype.$_acceptDidDisposeModel = function (url) {
-            var model = this._resourceService.get(url);
-            this._resourceService.remove(url);
-            if (model) {
-                model.dispose();
-            }
-        };
-        ModelServiceWorkerHelper.prototype.$_acceptModelEvents = function (modelId, events) {
-            var model = this._resourceService.get(uri_1.default.parse(modelId));
-            if (!model) {
-                throw new Error('Received model events for missing model ' + telemetry_1.anonymize(modelId));
-            }
-            try {
-                model.onEvents(events);
-            }
-            catch (err) {
-                errors_1.onUnexpectedError(err);
-            }
-        };
-        ModelServiceWorkerHelper = __decorate([
-            thread_1.Remotable.WorkerContext('ModelServiceWorkerHelper', thread_1.ThreadAffinity.All),
-            __param(0, resourceService_1.IResourceService),
-            __param(1, modeService_1.IModeService)
-        ], ModelServiceWorkerHelper);
-        return ModelServiceWorkerHelper;
-    }());
-    exports.ModelServiceWorkerHelper = ModelServiceWorkerHelper;
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-define(__m[503], __M([1,0,35,88,10,51,29,18,33,49,76]), function (require, exports, arrays, network, strings, collections, uri_1, event_1, severity_1, thread_1, markers_1) {
-    /*---------------------------------------------------------------------------------------------
-     *  Copyright (c) Microsoft Corporation. All rights reserved.
-     *  Licensed under the MIT License. See License.txt in the project root for license information.
-     *--------------------------------------------------------------------------------------------*/
-    'use strict';
-    var Key;
-    (function (Key) {
-        function fromValue(value) {
-            var regexp = /^(.*)→(.*)$/.exec(value);
-            return {
-                owner: regexp[1],
-                resource: uri_1.default.parse(regexp[2])
-            };
-        }
-        Key.fromValue = fromValue;
-        function valueOf(k) {
-            return k.owner + '→' + k.resource;
-        }
-        Key.valueOf = valueOf;
-        var _selectorPattern = '^({0})→({1})$';
-        function selector(owner, resource) {
-            return new RegExp(strings.format(_selectorPattern, owner ? strings.escapeRegExpCharacters(owner) : '.*', resource ? strings.escapeRegExpCharacters(resource.toString()) : '.*'));
-        }
-        Key.selector = selector;
-        function raw(owner, resource) {
-            return owner + '→' + resource;
-        }
-        Key.raw = raw;
-    })(Key || (Key = {}));
-    var MarkerService = (function () {
-        function MarkerService() {
-            this.serviceId = markers_1.IMarkerService;
-            this._data = Object.create(null);
-            this._stats = this._emptyStats();
-            this._onMarkerChanged = new event_1.Emitter();
-        }
-        MarkerService.prototype.getStatistics = function () {
-            return this._stats;
-        };
-        Object.defineProperty(MarkerService.prototype, "onMarkerChanged", {
-            // ---- IMarkerService ------------------------------------------
-            get: function () {
-                return this._onMarkerChanged ? this._onMarkerChanged.event : null;
-            },
-            enumerable: true,
-            configurable: true
-        });
-        MarkerService.prototype.changeOne = function (owner, resource, markers) {
-            if (this._doChangeOne(owner, resource, markers)) {
-                this._onMarkerChanged.fire([resource]);
-            }
-        };
-        MarkerService.prototype.remove = function (owner, resources) {
-            if (arrays.isFalsyOrEmpty(resources)) {
-                return;
-            }
-            var changedResources;
-            for (var _i = 0, resources_1 = resources; _i < resources_1.length; _i++) {
-                var resource = resources_1[_i];
-                if (this._doChangeOne(owner, resource, undefined)) {
-                    if (!changedResources) {
-                        changedResources = [];
-                    }
-                    changedResources.push(resource);
-                }
-            }
-            if (changedResources) {
-                this._onMarkerChanged.fire(changedResources);
-            }
-        };
-        MarkerService.prototype._doChangeOne = function (owner, resource, markers) {
-            var key = Key.raw(owner, resource), oldMarkers = this._data[key], hasOldMarkers = !arrays.isFalsyOrEmpty(oldMarkers), getsNewMarkers = !arrays.isFalsyOrEmpty(markers), oldStats = this._computeStats(oldMarkers), newStats = this._computeStats(markers);
-            if (!hasOldMarkers && !getsNewMarkers) {
-                return;
-            }
-            if (getsNewMarkers) {
-                this._data[key] = markers;
-            }
-            else if (hasOldMarkers) {
-                delete this._data[key];
-            }
-            if (this._isStatRelevant(resource)) {
-                this._updateStatsMinus(oldStats);
-                this._updateStatsPlus(newStats);
-            }
-            return true;
-        };
-        MarkerService.prototype.changeAll = function (owner, data) {
-            var _this = this;
-            var changedResources = Object.create(null);
-            // remove and record old markers
-            var oldStats = this._emptyStats();
-            this._forEach(owner, undefined, undefined, -1, function (e, r) {
-                var resource = Key.fromValue(e.key).resource;
-                if (_this._isStatRelevant(resource)) {
-                    _this._updateStatsPlus(oldStats, _this._computeStats(e.value));
-                }
-                changedResources[resource.toString()] = resource;
-                r();
-            });
-            this._updateStatsMinus(oldStats);
-            // add and record new markers
-            if (!arrays.isFalsyOrEmpty(data)) {
-                var newStats_1 = this._emptyStats();
-                data.forEach(function (d) {
-                    changedResources[d.resource.toString()] = d.resource;
-                    collections.lookupOrInsert(_this._data, Key.raw(owner, d.resource), []).push(d.marker);
-                    if (_this._isStatRelevant(d.resource)) {
-                        _this._updateStatsMarker(newStats_1, d.marker);
-                    }
-                });
-                this._updateStatsPlus(newStats_1);
-            }
-            this._onMarkerChanged.fire(collections.values(changedResources));
-        };
-        MarkerService.prototype.read = function (filter) {
-            var _this = this;
-            if (filter === void 0) { filter = Object.create(null); }
-            var ret = [];
-            this._forEach(filter.owner, filter.resource, filter.selector, filter.take, function (entry) { return _this._fromEntry(entry, ret); });
-            return ret;
-        };
-        MarkerService.prototype._isStatRelevant = function (resource) {
-            //TODO@Dirk this is a hack
-            return resource.scheme !== network.Schemas.inMemory;
-        };
-        MarkerService.prototype._forEach = function (owner, resource, regexp, take, callback) {
-            //TODO@Joh: be smart and use an index
-            var selector = regexp || Key.selector(owner, resource), took = 0;
-            collections.forEach(this._data, function (entry, remove) {
-                if (selector.test(entry.key)) {
-                    callback(entry, remove);
-                    if (take > 0 && took++ >= take) {
-                        return false;
-                    }
-                }
-            });
-        };
-        MarkerService.prototype._fromEntry = function (entry, bucket) {
-            var key = Key.fromValue(entry.key);
-            entry.value.forEach(function (data) {
-                // before reading, we sanitize the data
-                // skip entry if not sanitizable
-                var ok = MarkerService._sanitize(data);
-                if (!ok) {
-                    return;
-                }
-                bucket.push({
-                    owner: key.owner,
-                    resource: key.resource,
-                    code: data.code,
-                    message: data.message,
-                    source: data.source,
-                    severity: data.severity,
-                    startLineNumber: data.startLineNumber,
-                    startColumn: data.startColumn,
-                    endLineNumber: data.endLineNumber,
-                    endColumn: data.endColumn
-                });
-            });
-        };
-        MarkerService.prototype._computeStats = function (markers) {
-            var errors = 0, warnings = 0, infos = 0, unknwons = 0;
-            if (markers) {
-                for (var i = 0; i < markers.length; i++) {
-                    var marker = markers[i];
-                    if (marker.severity) {
-                        switch (marker.severity) {
-                            case severity_1.default.Error:
-                                errors++;
-                                break;
-                            case severity_1.default.Warning:
-                                warnings++;
-                                break;
-                            case severity_1.default.Info:
-                                infos++;
-                                break;
-                            default:
-                                unknwons++;
-                                break;
-                        }
-                    }
-                    else {
-                        unknwons++;
-                    }
-                }
-            }
-            return {
-                errors: errors,
-                warnings: warnings,
-                infos: infos,
-                unknwons: unknwons
-            };
-        };
-        MarkerService.prototype._emptyStats = function () {
-            return { errors: 0, warnings: 0, infos: 0, unknwons: 0 };
-        };
-        MarkerService.prototype._updateStatsPlus = function (toUpdate, toAdd) {
-            if (!toAdd) {
-                toAdd = toUpdate;
-                toUpdate = this._stats;
-            }
-            toUpdate.errors += toAdd.errors;
-            toUpdate.warnings += toAdd.warnings;
-            toUpdate.infos += toAdd.infos;
-            toUpdate.unknwons += toAdd.unknwons;
-        };
-        MarkerService.prototype._updateStatsMinus = function (toUpdate, toSubtract) {
-            if (!toSubtract) {
-                toSubtract = toUpdate;
-                toUpdate = this._stats;
-            }
-            toUpdate.errors -= toSubtract.errors;
-            toUpdate.warnings -= toSubtract.warnings;
-            toUpdate.infos -= toSubtract.infos;
-            toUpdate.unknwons -= toSubtract.unknwons;
-        };
-        MarkerService.prototype._updateStatsMarker = function (toUpdate, marker) {
-            switch (marker.severity) {
-                case severity_1.default.Error:
-                    toUpdate.errors++;
-                    break;
-                case severity_1.default.Warning:
-                    toUpdate.warnings++;
-                    break;
-                case severity_1.default.Info:
-                    toUpdate.infos++;
-                    break;
-                default:
-                    toUpdate.unknwons++;
-                    break;
-            }
-        };
-        MarkerService._sanitize = function (data) {
-            if (!data.message) {
-                return false;
-            }
-            data.code = data.code || null;
-            data.startLineNumber = data.startLineNumber > 0 ? data.startLineNumber : 1;
-            data.startColumn = data.startColumn > 0 ? data.startColumn : 1;
-            data.endLineNumber = data.endLineNumber >= data.startLineNumber ? data.endLineNumber : data.startLineNumber;
-            data.endColumn = data.endColumn > 0 ? data.endColumn : data.startColumn;
-            return true;
-        };
-        return MarkerService;
-    }());
-    exports.MarkerService = MarkerService;
-    var SecondaryMarkerService = (function (_super) {
-        __extends(SecondaryMarkerService, _super);
-        function SecondaryMarkerService(threadService) {
-            _super.call(this);
-            this._proxy = threadService.getRemotable(MainProcessMarkerService);
-        }
-        SecondaryMarkerService.prototype.changeOne = function (owner, resource, markers) {
-            _super.prototype.changeOne.call(this, owner, resource, markers);
-            this._proxy.changeOne(owner, resource, markers);
-        };
-        SecondaryMarkerService.prototype.changeAll = function (owner, data) {
-            _super.prototype.changeAll.call(this, owner, data);
-            this._proxy.changeAll(owner, data);
-        };
-        return SecondaryMarkerService;
-    }(MarkerService));
-    exports.SecondaryMarkerService = SecondaryMarkerService;
-    var MainProcessMarkerService = (function (_super) {
-        __extends(MainProcessMarkerService, _super);
-        function MainProcessMarkerService(threadService) {
-            _super.call(this);
-            threadService.registerRemotableInstance(MainProcessMarkerService, this);
-        }
-        MainProcessMarkerService.prototype.changeOne = function (owner, resource, markers) {
-            _super.prototype.changeOne.call(this, owner, resource, markers);
-        };
-        MainProcessMarkerService.prototype.changeAll = function (owner, data) {
-            _super.prototype.changeAll.call(this, owner, data);
-        };
-        MainProcessMarkerService = __decorate([
-            thread_1.Remotable.MainContext('MainProcessMarkerService'),
-            __param(0, thread_1.IThreadService)
-        ], MainProcessMarkerService);
-        return MainProcessMarkerService;
-    }(MarkerService));
-    exports.MainProcessMarkerService = MainProcessMarkerService;
-});
-
-
-
-
-
-
-
-
-
-
-define(__m[504], __M([1,0,8,2,34,49]), function (require, exports, errors_1, winjs_base_1, telemetry_1, thread_1) {
-    /*---------------------------------------------------------------------------------------------
-     *  Copyright (c) Microsoft Corporation. All rights reserved.
-     *  Licensed under the MIT License. See License.txt in the project root for license information.
-     *--------------------------------------------------------------------------------------------*/
-    'use strict';
-    /**
-     * Helper always instantiated in the main process to receive telemetry events from remote telemetry services
-     */
-    var RemoteTelemetryServiceHelper = (function () {
-        function RemoteTelemetryServiceHelper(telemetryService) {
-            this._telemetryService = telemetryService;
-        }
-        RemoteTelemetryServiceHelper.prototype.$publicLog = function (eventName, data) {
-            this._telemetryService.publicLog(eventName, data);
-        };
-        RemoteTelemetryServiceHelper.prototype.$getTelemetryInfo = function () {
-            return this._telemetryService.getTelemetryInfo();
-        };
-        RemoteTelemetryServiceHelper = __decorate([
-            thread_1.Remotable.MainContext('RemoteTelemetryServiceHelper'),
-            __param(0, telemetry_1.ITelemetryService)
-        ], RemoteTelemetryServiceHelper);
-        return RemoteTelemetryServiceHelper;
-    }());
-    exports.RemoteTelemetryServiceHelper = RemoteTelemetryServiceHelper;
-    var RemoteTelemetryService = (function () {
-        function RemoteTelemetryService(name, threadService) {
-            this._name = name;
-            this._proxy = threadService.getRemotable(RemoteTelemetryServiceHelper);
-        }
-        Object.defineProperty(RemoteTelemetryService.prototype, "isOptedIn", {
-            get: function () {
-                throw errors_1.notImplemented();
-            },
-            enumerable: true,
-            configurable: true
-        });
-        RemoteTelemetryService.prototype.getTelemetryInfo = function () {
-            return this._proxy.$getTelemetryInfo();
-        };
-        RemoteTelemetryService.prototype.publicLog = function (eventName, data) {
-            data = data || Object.create(null);
-            data[this._name] = true;
-            this._proxy.$publicLog(eventName, data);
-            return winjs_base_1.TPromise.as(null);
-        };
-        RemoteTelemetryService.prototype.timedPublicLog = function () {
-            throw errors_1.notImplemented();
-        };
-        RemoteTelemetryService.prototype.addTelemetryAppender = function () {
-            throw errors_1.notImplemented();
-        };
-        return RemoteTelemetryService;
-    }());
-    exports.RemoteTelemetryService = RemoteTelemetryService;
-});
-
-define(__m[174], __M([1,0,2,49]), function (require, exports, winjs_base_1, thread) {
-    /*---------------------------------------------------------------------------------------------
-     *  Copyright (c) Microsoft Corporation. All rights reserved.
-     *  Licensed under the MIT License. See License.txt in the project root for license information.
-     *--------------------------------------------------------------------------------------------*/
-    'use strict';
-    exports.THREAD_SERVICE_PROPERTY_NAME = '__$$__threadService';
-    function findMember(proto, target) {
-        for (var i in proto) {
-            if (proto[i] === target) {
-                return i;
-            }
-        }
-        throw new Error('Member not found in prototype');
-    }
-    function findThreadService(obj) {
-        var threadService = obj[exports.THREAD_SERVICE_PROPERTY_NAME];
-        if (!threadService) {
-            throw new Error('Objects that use thread attributes must be instantiated with the thread service');
-        }
-        return threadService;
-    }
-    function OneWorkerFn(type, target, conditionOrAffinity, affinity) {
-        if (affinity === void 0) { affinity = thread.ThreadAffinity.None; }
-        var methodName = findMember(type.prototype, target), condition;
-        if (typeof conditionOrAffinity === 'function') {
-            condition = conditionOrAffinity;
-        }
-        else if (typeof conditionOrAffinity !== 'undefined') {
-            affinity = conditionOrAffinity;
-        }
-        type.prototype[methodName] = function () {
-            var param = [];
-            for (var _i = 0; _i < arguments.length; _i++) {
-                param[_i - 0] = arguments[_i];
-            }
-            if (!condition) {
-                return findThreadService(this).OneWorker(this, methodName, target, param, affinity);
-            }
-            else {
-                var that_1 = this, promise = condition.call(that_1);
-                if (!winjs_base_1.TPromise.is(promise)) {
-                    promise = winjs_base_1.TPromise.as(promise);
-                }
-                return promise.then(function () {
-                    return findThreadService(that_1).OneWorker(that_1, methodName, target, param, affinity);
-                });
-            }
-        };
-    }
-    exports.OneWorkerAttr = OneWorkerFn;
-    function AllWorkersAttr(type, target) {
-        var methodName = findMember(type.prototype, target);
-        type.prototype[methodName] = function () {
-            var param = [];
-            for (var _i = 0; _i < arguments.length; _i++) {
-                param[_i - 0] = arguments[_i];
-            }
-            return findThreadService(this).AllWorkers(this, methodName, target, param);
-        };
-    }
-    exports.AllWorkersAttr = AllWorkersAttr;
-});
-
-define(__m[506], __M([1,0,2,49,174,68]), function (require, exports, winjs_base_1, thread_1, threadService_1, descriptors_1) {
-    /*---------------------------------------------------------------------------------------------
-     *  Copyright (c) Microsoft Corporation. All rights reserved.
-     *  Licensed under the MIT License. See License.txt in the project root for license information.
-     *--------------------------------------------------------------------------------------------*/
-    'use strict';
-    var AbstractThreadService = (function () {
-        function AbstractThreadService(isInMainThread) {
-            this.isInMainThread = isInMainThread;
-            this._boundObjects = {};
-            this._pendingObjects = [];
-            this._localObjMap = Object.create(null);
-            this._proxyObjMap = Object.create(null);
-        }
-        AbstractThreadService.prototype.setInstantiationService = function (service) {
-            this._instantiationService = service;
-        };
-        AbstractThreadService.prototype.createInstance = function () {
-            var params = [];
-            for (var _i = 0; _i < arguments.length; _i++) {
-                params[_i - 0] = arguments[_i];
-            }
-            return this._doCreateInstance(params);
-        };
-        AbstractThreadService.prototype._doCreateInstance = function (params) {
-            var _this = this;
-            var instanceOrPromise = this._instantiationService.createInstance.apply(this._instantiationService, params);
-            if (winjs_base_1.TPromise.is(instanceOrPromise)) {
-                var objInstantiated_1;
-                objInstantiated_1 = instanceOrPromise.then(function (instance) {
-                    if (instance.asyncCtor) {
-                        var initPromise = instance.asyncCtor();
-                        if (winjs_base_1.TPromise.is(initPromise)) {
-                            return initPromise.then(function () {
-                                return instance;
-                            });
-                        }
-                    }
-                    return instance;
-                });
-                this._pendingObjects.push(objInstantiated_1);
-                return objInstantiated_1.then(function (instance) {
-                    var r = _this._finishInstance(instance);
-                    for (var i = 0; i < _this._pendingObjects.length; i++) {
-                        if (_this._pendingObjects[i] === objInstantiated_1) {
-                            _this._pendingObjects.splice(i, 1);
-                            break;
-                        }
-                    }
-                    return r;
-                });
-            }
-            return this._finishInstance(instanceOrPromise);
-        };
-        AbstractThreadService.prototype._finishInstance = function (instance) {
-            instance[threadService_1.THREAD_SERVICE_PROPERTY_NAME] = this;
-            this._boundObjects[instance.getId()] = instance;
-            if (instance.creationDone) {
-                instance.creationDone();
-            }
-            return instance;
-        };
-        AbstractThreadService.prototype.handle = function (rpcId, methodName, args) {
-            if (!this._localObjMap[rpcId]) {
-                throw new Error('Unknown actor ' + rpcId);
-            }
-            var actor = this._localObjMap[rpcId];
-            var method = actor[methodName];
-            if (typeof method !== 'function') {
-                throw new Error('Unknown method ' + methodName + ' on actor ' + rpcId);
-            }
-            return method.apply(actor, args);
-        };
-        AbstractThreadService.prototype._getOrCreateProxyInstance = function (remoteCom, id, descriptor) {
-            if (this._proxyObjMap[id]) {
-                return this._proxyObjMap[id];
-            }
-            var result = createProxyFromCtor(remoteCom, id, descriptor.ctor);
-            this._proxyObjMap[id] = result;
-            return result;
-        };
-        AbstractThreadService.prototype._registerLocalInstance = function (id, obj) {
-            this._localObjMap[id] = obj;
-        };
-        AbstractThreadService.prototype._getOrCreateLocalInstance = function (id, descriptor) {
-            if (this._localObjMap[id]) {
-                return this._localObjMap[id];
-            }
-            var result = this._instantiationService.createInstance(descriptor);
-            this._registerLocalInstance(id, result);
-            return result;
-        };
-        AbstractThreadService.prototype.getRemotable = function (ctor) {
-            var id = thread_1.Remotable.getId(ctor);
-            if (!id) {
-                throw new Error('Unknown Remotable: <<' + id + '>>');
-            }
-            var desc = descriptors_1.createSyncDescriptor(ctor);
-            if (thread_1.Remotable.Registry.MainContext[id]) {
-                return this._registerAndInstantiateMainProcessActor(id, desc);
-            }
-            if (thread_1.Remotable.Registry.ExtHostContext[id]) {
-                return this._registerAndInstantiateExtHostActor(id, desc);
-            }
-            if (thread_1.Remotable.Registry.WorkerContext[id]) {
-                return this._registerAndInstantiateWorkerActor(id, desc, thread_1.Remotable.Registry.WorkerContext[id].affinity);
-            }
-            throw new Error('Unknown Remotable: <<' + id + '>>');
-        };
-        AbstractThreadService.prototype.registerRemotableInstance = function (ctor, instance) {
-            var id = thread_1.Remotable.getId(ctor);
-            if (!id) {
-                throw new Error('Unknown Remotable: <<' + id + '>>');
-            }
-            if (thread_1.Remotable.Registry.MainContext[id]) {
-                return this._registerMainProcessActor(id, instance);
-            }
-            if (thread_1.Remotable.Registry.ExtHostContext[id]) {
-                return this._registerExtHostActor(id, instance);
-            }
-            if (thread_1.Remotable.Registry.WorkerContext[id]) {
-                return this._registerWorkerActor(id, instance);
-            }
-            throw new Error('Unknown Remotable: <<' + id + '>>');
-        };
-        return AbstractThreadService;
-    }());
-    exports.AbstractThreadService = AbstractThreadService;
-    function createProxyFromCtor(remote, id, ctor) {
-        var result = {
-            $__IS_REMOTE_OBJ: true
-        };
-        for (var prop in ctor.prototype) {
-            if (typeof ctor.prototype[prop] === 'function') {
-                result[prop] = createMethodProxy(remote, id, prop);
-            }
-        }
-        return result;
-    }
-    function createMethodProxy(remote, proxyId, path) {
-        return function () {
-            var myArgs = [];
-            for (var _i = 0; _i < arguments.length; _i++) {
-                myArgs[_i - 0] = arguments[_i];
-            }
-            return remote.callOnRemote(proxyId, path, myArgs);
-        };
-    }
-});
-
-
-
-
-
-
-define(__m[507], __M([1,0,2,202,506,122,17,49,148]), function (require, exports, winjs_base_1, Worker, abstractThreadService, Env, Platform, thread_1, defaultWorkerFactory_1) {
-    /*---------------------------------------------------------------------------------------------
-     *  Copyright (c) Microsoft Corporation. All rights reserved.
-     *  Licensed under the MIT License. See License.txt in the project root for license information.
-     *--------------------------------------------------------------------------------------------*/
-    'use strict';
-    var MainThreadService = (function (_super) {
-        __extends(MainThreadService, _super);
-        function MainThreadService(contextService, workerModuleId, defaultWorkerCount) {
-            var _this = this;
-            _super.call(this, true);
-            this.serviceId = thread_1.IThreadService;
-            this._contextService = contextService;
-            this._workerModuleId = workerModuleId;
-            this._defaultWorkerCount = defaultWorkerCount;
-            this._workerFactory = new defaultWorkerFactory_1.DefaultWorkerFactory();
-            if (!this.isInMainThread) {
-                throw new Error('Incorrect Service usage: this service must be used only in the main thread');
-            }
-            this._workerPool = [];
-            this._affinityScrambler = {};
-            this._workersCreatedPromise = new winjs_base_1.TPromise(function (c, e, p) {
-                _this._triggerWorkersCreatedPromise = c;
-            }, function () {
-                // Not cancelable
-            });
-            // If nobody asks for workers to be created in 5s, the workers are created automatically
-            winjs_base_1.TPromise.timeout(MainThreadService.MAXIMUM_WORKER_CREATION_DELAY).then(function () { return _this.ensureWorkers(); });
-        }
-        MainThreadService.prototype.ensureWorkers = function () {
-            if (this._triggerWorkersCreatedPromise) {
-                // Workers not created yet
-                var createCount = Env.workersCount(this._defaultWorkerCount);
-                if (!Platform.hasWebWorkerSupport()) {
-                    // Create at most 1 compatibility worker
-                    createCount = Math.min(createCount, 1);
-                }
-                for (var i = 0; i < createCount; i++) {
-                    this._createWorker();
-                }
-                var complete = this._triggerWorkersCreatedPromise;
-                this._triggerWorkersCreatedPromise = null;
-                complete(null);
-            }
-        };
-        MainThreadService.prototype._afterWorkers = function () {
-            var _this = this;
-            var shouldCancelPromise = false;
-            return new winjs_base_1.TPromise(function (c, e, p) {
-                // hide the initialize promise inside this
-                // promise so that it won't be canceled by accident
-                _this._workersCreatedPromise.then(function () {
-                    if (!shouldCancelPromise) {
-                        c(null);
-                    }
-                }, e, p);
-            }, function () {
-                // mark that this promise is canceled
-                shouldCancelPromise = true;
-            });
-        };
-        MainThreadService.prototype._createWorker = function () {
-            this._workerPool.push(this._doCreateWorker());
-        };
-        MainThreadService.prototype._shortName = function (major, minor) {
-            return major.substring(major.length - 14) + '.' + minor.substr(0, 14);
-        };
-        MainThreadService.prototype._doCreateWorker = function () {
-            var _this = this;
-            var worker = new Worker.WorkerClient(this._workerFactory, this._workerModuleId, function (msg) {
-                if (msg.type === 'threadService') {
-                    return _this._shortName(msg.payload[0], msg.payload[1]);
-                }
-                return msg.type;
-            });
-            worker.getRemoteCom().setManyHandler(this);
-            worker.onModuleLoaded = worker.request('initialize', {
-                contextService: {
-                    workspace: this._contextService.getWorkspace(),
-                    configuration: this._contextService.getConfiguration(),
-                    options: this._contextService.getOptions()
-                }
-            });
-            return worker;
-        };
-        MainThreadService.prototype._getWorkerIndex = function (obj, affinity) {
-            if (affinity === thread_1.ThreadAffinity.None) {
-                var winners = [0], winnersQueueSize = this._workerPool[0].getQueueSize();
-                for (var i = 1; i < this._workerPool.length; i++) {
-                    var queueSize = this._workerPool[i].getQueueSize();
-                    if (queueSize < winnersQueueSize) {
-                        winnersQueueSize = queueSize;
-                        winners = [i];
-                    }
-                    else if (queueSize === winnersQueueSize) {
-                        winners.push(i);
-                    }
-                }
-                return winners[Math.floor(Math.random() * winners.length)];
-            }
-            var scramble = 0;
-            if (this._affinityScrambler.hasOwnProperty(obj.getId())) {
-                scramble = this._affinityScrambler[obj.getId()];
-            }
-            else {
-                scramble = Math.floor(Math.random() * this._workerPool.length);
-                this._affinityScrambler[obj.getId()] = scramble;
-            }
-            return (scramble + affinity) % this._workerPool.length;
-        };
-        MainThreadService.prototype.OneWorker = function (obj, methodName, target, params, affinity) {
-            var _this = this;
-            return this._afterWorkers().then(function () {
-                if (_this._workerPool.length === 0) {
-                    throw new Error('Cannot fulfill request...');
-                }
-                var workerIdx = _this._getWorkerIndex(obj, affinity);
-                return _this._remoteCall(_this._workerPool[workerIdx], obj, methodName, params);
-            });
-        };
-        MainThreadService.prototype.AllWorkers = function (obj, methodName, target, params) {
-            var _this = this;
-            return this._afterWorkers().then(function () {
-                return winjs_base_1.TPromise.join(_this._workerPool.map(function (w) {
-                    return _this._remoteCall(w, obj, methodName, params);
-                }));
-            });
-        };
-        MainThreadService.prototype._remoteCall = function (worker, obj, methodName, params) {
-            var id = obj.getId();
-            if (!id) {
-                throw new Error('Synchronizable Objects must have an identifier');
-            }
-            return worker.request('threadService', [id, methodName, params]);
-        };
-        MainThreadService.prototype._registerAndInstantiateMainProcessActor = function (id, descriptor) {
-            return this._getOrCreateLocalInstance(id, descriptor);
-        };
-        MainThreadService.prototype._registerMainProcessActor = function (id, actor) {
-            this._registerLocalInstance(id, actor);
-        };
-        MainThreadService.prototype._registerAndInstantiateExtHostActor = function (id, descriptor) {
-            throw new Error('Not supported in this runtime context: Cannot communicate to non-existant Extension Host!');
-        };
-        MainThreadService.prototype._registerExtHostActor = function (id, actor) {
-            throw new Error('Not supported in this runtime context!');
-        };
-        MainThreadService.prototype._registerAndInstantiateWorkerActor = function (id, descriptor, whichWorker) {
-            var helper = this._createWorkerProxyHelper(whichWorker);
-            return this._getOrCreateProxyInstance(helper, id, descriptor);
-        };
-        MainThreadService.prototype._registerWorkerActor = function (id, actor) {
-            throw new Error('Not supported in this runtime context!');
-        };
-        MainThreadService.prototype._createWorkerProxyHelper = function (whichWorker) {
-            var _this = this;
-            return {
-                callOnRemote: function (proxyId, path, args) {
-                    return _this._callOnWorker(whichWorker, proxyId, path, args);
-                }
-            };
-        };
-        MainThreadService.prototype._callOnWorker = function (whichWorker, proxyId, path, args) {
-            var _this = this;
-            if (whichWorker === thread_1.ThreadAffinity.None) {
-                return winjs_base_1.TPromise.as(null);
-            }
-            return this._afterWorkers().then(function () {
-                if (whichWorker === thread_1.ThreadAffinity.All) {
-                    var promises = _this._workerPool.map(function (w) { return w.getRemoteCom(); }).map(function (rCom) { return rCom.callOnRemote(proxyId, path, args); });
-                    return winjs_base_1.TPromise.join(promises);
-                }
-                var workerIdx = whichWorker % _this._workerPool.length;
-                var worker = _this._workerPool[workerIdx];
-                return worker.getRemoteCom().callOnRemote(proxyId, path, args);
-            });
-        };
-        MainThreadService.MAXIMUM_WORKER_CREATION_DELAY = 500; // 500ms
-        return MainThreadService;
-    }(abstractThreadService.AbstractThreadService));
-    exports.MainThreadService = MainThreadService;
-});
-
-define(__m[75], __M([1,0,15]), function (require, exports, instantiation_1) {
+define(__m[61], __M([0,1,15]), function (require, exports, instantiation_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -78783,8 +80265,166 @@ define(__m[75], __M([1,0,15]), function (require, exports, instantiation_1) {
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
-define(__m[509], __M([1,0,56,14,178,124,51,18,63,3,37,29,31,81,100,158,75,34,49,174,7,16,154,111,112,129,172,41,153,128,40,83]), function (require, exports) {
+define(__m[503], __M([0,1,47,14,134,104,48,16,60,3,38,29,33,85,115,61,36,7,17,158,114,117,140,131,40,157,138,34,72,113]), function (require, exports) {
     'use strict';
+});
+
+
+
+
+
+
+
+
+
+
+define(__m[504], __M([0,1,2,7,113,155,118,61,34,45]), function (require, exports, winjs_base_1, editorCommon_1, compatWorkerService_1, defaultWorkerFactory_1, workerClient_1, workspace_1, modelService_1, modesRegistry_1) {
+    /*---------------------------------------------------------------------------------------------
+     *  Copyright (c) Microsoft Corporation. All rights reserved.
+     *  Licensed under the MIT License. See License.txt in the project root for license information.
+     *--------------------------------------------------------------------------------------------*/
+    'use strict';
+    var MainThreadCompatWorkerService = (function () {
+        function MainThreadCompatWorkerService(contextService, modelService) {
+            var _this = this;
+            this.serviceId = compatWorkerService_1.ICompatWorkerService;
+            this.isInMainThread = true;
+            this._contextService = contextService;
+            this._workerFactory = new defaultWorkerFactory_1.DefaultWorkerFactory(true);
+            this._worker = null;
+            this._workerCreatedPromise = new winjs_base_1.TPromise(function (c, e, p) {
+                _this._triggerWorkersCreatedPromise = c;
+            }, function () {
+                // Not cancelable
+            });
+            this._modelListeners = Object.create(null);
+            var isInterestingModel = function (model) {
+                if (model.isTooLargeForHavingARichMode()) {
+                    return false;
+                }
+                var modeId = model.getModeId();
+                var compatModes = modesRegistry_1.ModesRegistry.getCompatModes();
+                for (var i = 0; i < compatModes.length; i++) {
+                    if (compatModes[i].id === modeId) {
+                        return true;
+                    }
+                }
+                return false;
+            };
+            var onModelAdded = function (model) {
+                if (!isInterestingModel(model)) {
+                    return;
+                }
+                _this._modelListeners[model.uri.toString()] = model.addBulkListener(function (events) {
+                    var contentChangedEvents = (events
+                        .filter(function (e) { return e.getType() === editorCommon_1.EventType.ModelRawContentChanged; })
+                        .map(function (e) { return e.getData(); }));
+                    if (contentChangedEvents.length === 0) {
+                        return;
+                    }
+                    _this._call('$', 'acceptModelEvents', [model.uri, { contentChanged: contentChangedEvents }]);
+                });
+                _this._call('$', 'acceptNewModel', [{
+                        url: model.uri,
+                        versionId: model.getVersionId(),
+                        value: model.toRawText(),
+                        modeId: model.getMode().getId()
+                    }]);
+            };
+            var onModelRemoved = function (model) {
+                if (_this._modelListeners[model.uri.toString()]) {
+                    _this._modelListeners[model.uri.toString()].dispose();
+                    delete _this._modelListeners[model.uri.toString()];
+                    _this._call('$', 'acceptDidDisposeModel', [model.uri]);
+                }
+            };
+            modelService.onModelAdded(onModelAdded);
+            modelService.onModelRemoved(onModelRemoved);
+            modelService.onModelModeChanged(function (event) {
+                onModelRemoved(event.model);
+                onModelAdded(event.model);
+            });
+        }
+        MainThreadCompatWorkerService.prototype.registerCompatMode = function (compatMode) {
+            this._call('$', 'instantiateCompatMode', [compatMode.getId()]);
+        };
+        MainThreadCompatWorkerService.prototype.CompatWorker = function (obj, methodName, target, param) {
+            return this._call(obj.getId(), methodName, param);
+        };
+        MainThreadCompatWorkerService.prototype._ensureWorkers = function () {
+            if (this._triggerWorkersCreatedPromise) {
+                // Workers not created yet
+                this._createWorker();
+                var complete = this._triggerWorkersCreatedPromise;
+                this._triggerWorkersCreatedPromise = null;
+                complete(null);
+            }
+        };
+        MainThreadCompatWorkerService.prototype._afterWorkers = function () {
+            var _this = this;
+            this._ensureWorkers();
+            var shouldCancelPromise = false;
+            return new winjs_base_1.TPromise(function (c, e, p) {
+                // hide the initialize promise inside this
+                // promise so that it won't be canceled by accident
+                _this._workerCreatedPromise.then(function () {
+                    if (!shouldCancelPromise) {
+                        c(null);
+                    }
+                }, e, p);
+            }, function () {
+                // mark that this promise is canceled
+                shouldCancelPromise = true;
+            });
+        };
+        MainThreadCompatWorkerService.prototype._createWorker = function (isRetry) {
+            var _this = this;
+            if (isRetry === void 0) { isRetry = false; }
+            this._worker = new workerClient_1.WorkerClient(this._workerFactory, 'vs/editor/common/worker/editorWorkerServer');
+            this._worker.onModuleLoaded = this._worker.request('initialize', {
+                contextService: {
+                    workspace: this._contextService.getWorkspace(),
+                    configuration: this._contextService.getConfiguration(),
+                    options: this._contextService.getOptions()
+                },
+                modesRegistryData: {
+                    compatModes: modesRegistry_1.ModesRegistry.getCompatModes(),
+                    languages: modesRegistry_1.ModesRegistry.getLanguages()
+                }
+            }).then(function () {
+                modesRegistry_1.ModesRegistry.onDidAddCompatModes(function (m) { return _this._call('$', 'acceptCompatModes', [m]); });
+                modesRegistry_1.ModesRegistry.onDidAddLanguages(function (m) { return _this._call('$', 'acceptLanguages', [m]); });
+            }, function (err) {
+                _this._worker.dispose();
+                _this._worker = null;
+                if (isRetry) {
+                    console.warn('Creating the web worker already failed twice. Giving up!');
+                }
+                else {
+                    _this._createWorker(true);
+                }
+            });
+        };
+        MainThreadCompatWorkerService.prototype._call = function (rpcId, methodName, args) {
+            var _this = this;
+            return this._afterWorkers().then(function (_) {
+                if (_this._worker === null) {
+                    throw new Error('Cannot fulfill request...');
+                }
+                return _this._worker.request('request', {
+                    target: rpcId,
+                    methodName: methodName,
+                    args: args
+                });
+            });
+        };
+        MainThreadCompatWorkerService = __decorate([
+            __param(0, workspace_1.IWorkspaceContextService),
+            __param(1, modelService_1.IModelService)
+        ], MainThreadCompatWorkerService);
+        return MainThreadCompatWorkerService;
+    }());
+    exports.MainThreadCompatWorkerService = MainThreadCompatWorkerService;
 });
 
 
@@ -78801,7 +80441,7 @@ define(__m[509], __M([1,0,56,14,178,124,51,18,63,3,37,29,31,81,100,158,75,34,49,
 
 
 
-define(__m[176], __M([1,0,349,51,8,140,18,3,88,10,2,36,11,104,246,248,249,65,115,45,72,75,57,6,7,169,171,91,93,237]), function (require, exports, nls, collections, errors_1, labels_1, event_1, lifecycle_1, network_1, strings, winjs_base_1, builder_1, dom, sash_1, countBadge_1, fileLabel_1, leftRightWidget_1, treeDefaults_1, treeImpl_1, editor_1, serviceCollection_1, workspace_1, defaultConfig_1, range_1, editorCommon, model_1, embeddedCodeEditorWidget_1, peekViewWidget_1, referencesModel_1) {
+define(__m[178], __M([0,1,354,48,8,142,16,3,78,10,2,35,11,123,248,250,251,75,106,43,67,61,55,4,7,125,175,95,96,238]), function (require, exports, nls, collections, errors_1, labels_1, event_1, lifecycle_1, network_1, strings, winjs_base_1, builder_1, dom, sash_1, countBadge_1, fileLabel_1, leftRightWidget_1, treeDefaults_1, treeImpl_1, editor_1, serviceCollection_1, workspace_1, defaultConfig_1, range_1, editorCommon, model_1, embeddedCodeEditorWidget_1, peekViewWidget_1, referencesModel_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -79261,7 +80901,7 @@ define(__m[176], __M([1,0,349,51,8,140,18,3,88,10,2,36,11,104,246,248,249,65,115
                 };
                 _this._preview = _this._instantiationService.createInstance(embeddedCodeEditorWidget_1.EmbeddedCodeEditorWidget, div.getHTMLElement(), options, _this.editor);
                 _this._previewContainer = div.hide();
-                _this._previewNotAvailableMessage = new model_1.Model(nls.localize(3, null), model_1.Model.DEFAULT_CREATION_OPTIONS, null);
+                _this._previewNotAvailableMessage = model_1.Model.createFromString(nls.localize(3, null));
             });
             // sash
             this._sash = new VSash(containerElement, this.layoutData.ratio || .8);
@@ -79433,7 +81073,7 @@ define(__m[176], __M([1,0,349,51,8,140,18,3,88,10,2,36,11,104,246,248,249,65,115
 
 
 
-define(__m[177], __M([1,0,348,8,3,33,45,15,21,44,34,69,75,159,30,91,176]), function (require, exports, nls, errors_1, lifecycle_1, severity_1, editor_1, instantiation_1, keybindingService_1, message_1, telemetry_1, configuration_1, workspace_1, storage_1, editorBrowserExtensions_1, peekViewWidget_1, referencesWidget_1) {
+define(__m[179], __M([0,1,353,8,3,32,43,15,19,42,36,57,61,163,30,95,178]), function (require, exports, nls, errors_1, lifecycle_1, severity_1, editor_1, instantiation_1, keybindingService_1, message_1, telemetry_1, configuration_1, workspace_1, storage_1, editorBrowserExtensions_1, peekViewWidget_1, referencesWidget_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -79645,7 +81285,7 @@ define(__m[177], __M([1,0,348,8,3,33,45,15,21,44,34,69,75,159,30,91,176]), funct
 
 
 
-define(__m[512], __M([1,0,327,14,8,13,17,33,10,2,27,45,44,6,19,25,7,12,16,131,30,453,177,93,3,91,15,215]), function (require, exports, nls, async_1, errors_1, keyCodes_1, platform, severity_1, strings, winjs_base_1, browser, editor_1, message_1, range_1, editorAction_1, editorActionEnablement_1, editorCommon, editorCommonExtensions_1, modes_1, textToHtmlTokenizer_1, editorBrowserExtensions_1, goToDeclaration_1, referencesController_1, referencesModel_1, lifecycle_1, peekViewWidget_1, instantiation_1) {
+define(__m[507], __M([0,1,332,14,8,92,12,18,32,10,2,28,43,42,4,20,25,7,13,17,30,456,179,96,3,95,15,215]), function (require, exports, nls, async_1, errors_1, htmlContent_1, keyCodes_1, platform, severity_1, strings, winjs_base_1, browser, editor_1, message_1, range_1, editorAction_1, editorActionEnablement_1, editorCommon, editorCommonExtensions_1, modes_1, editorBrowserExtensions_1, goToDeclaration_1, referencesController_1, referencesModel_1, lifecycle_1, peekViewWidget_1, instantiation_1) {
     'use strict';
     var DefinitionActionConfig = (function () {
         function DefinitionActionConfig(condition, openToSide, openInPeek, filterCurrent) {
@@ -79917,14 +81557,18 @@ define(__m[512], __M([1,0,327,14,8,13,17,33,10,2,27,45,44,6,19,25,7,12,16,131,30
             if (!model) {
                 return;
             }
-            var htmlMessage = {
-                tagName: 'div',
-                className: 'goto-definition-link-hover',
-                style: "tab-size: " + model.getOptions().tabSize
-            };
+            var htmlMessage = void 0;
+            ;
             if (text && text.trim().length > 0) {
-                // not whitespace only
-                htmlMessage.children = [isCode ? textToHtmlTokenizer_1.tokenizeToHtmlContent(text, model.getMode()) : { tagName: 'span', text: text }];
+                if (isCode) {
+                    htmlMessage = {
+                        language: model.getMode().getId(),
+                        value: text
+                    };
+                }
+                else {
+                    htmlMessage = htmlContent_1.textToMarkedString(text);
+                }
             }
             var newDecorations = {
                 range: range,
@@ -80054,7 +81698,7 @@ define(__m[512], __M([1,0,327,14,8,13,17,33,10,2,27,45,44,6,19,25,7,12,16,131,30
 
 
 
-define(__m[513], __M([1,0,347,13,29,2,45,15,21,53,20,6,19,25,12,16,91,474,176,177,93]), function (require, exports, nls, keyCodes_1, uri_1, winjs_base_1, editor_1, instantiation_1, keybindingService_1, keybindingsRegistry_1, position_1, range_1, editorAction_1, editorActionEnablement_1, editorCommonExtensions_1, modes_1, peekViewWidget_1, referenceSearch_1, referencesWidget_1, referencesController_1, referencesModel_1) {
+define(__m[508], __M([0,1,352,12,29,2,43,15,19,51,21,4,20,25,13,17,95,477,178,179,96]), function (require, exports, nls, keyCodes_1, uri_1, winjs_base_1, editor_1, instantiation_1, keybindingService_1, keybindingsRegistry_1, position_1, range_1, editorAction_1, editorActionEnablement_1, editorCommonExtensions_1, modes_1, peekViewWidget_1, referenceSearch_1, referencesWidget_1, referencesController_1, referencesModel_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -80186,7 +81830,7 @@ define(__m[513], __M([1,0,347,13,29,2,45,15,21,53,20,6,19,25,12,16,91,474,176,17
     });
 });
 
-define(__m[514], __M([1,0,29,37,75]), function (require, exports, uri_1, paths, workspace_1) {
+define(__m[509], __M([0,1,29,38,61]), function (require, exports, uri_1, paths, workspace_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -80236,7 +81880,7 @@ define(__m[514], __M([1,0,29,37,75]), function (require, exports, uri_1, paths, 
     exports.BaseWorkspaceContextService = BaseWorkspaceContextService;
 });
 
-define(__m[110], __M([1,0,122,29,388,490,391,15,138,72,503,159,34,507,514,130,501,502,379,121]), function (require, exports, flags, uri_1, contextMenuService_1, contextViewService_1, eventService_1, instantiation_1, instantiationService_1, serviceCollection_1, markerService_1, storage_1, telemetry_1, mainThreadService_1, baseWorkspaceContextService_1, editorWorkerServiceImpl_1, modeServiceImpl_1, modelServiceImpl_1, codeEditorServiceImpl_1, simpleServices_1) {
+define(__m[108], __M([0,1,29,57,388,492,82,391,84,141,67,405,73,42,115,163,36,509,61,54,52,133,72,431,34,444,379,120,79,402,113,504]), function (require, exports, uri_1, configuration_1, contextMenuService_1, contextViewService_1, event_1, eventService_1, extensions_1, instantiationService_1, serviceCollection_1, markerService_1, markers_1, message_1, request_1, storage_1, telemetry_1, baseWorkspaceContextService_1, workspace_1, codeEditorService_1, editorWorkerService_1, editorWorkerServiceImpl_1, modeService_1, modeServiceImpl_1, modelService_1, modelServiceImpl_1, codeEditorServiceImpl_1, simpleServices_1, actions_1, menuService_1, compatWorkerService_1, compatWorkerServiceMain_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -80293,41 +81937,49 @@ define(__m[110], __M([1,0,122,29,388,490,391,15,138,72,503,159,34,507,514,130,50
             return staticServices;
         }
         services = services || {};
-        var contextService = services.contextService;
-        if (!contextService) {
-            contextService = new baseWorkspaceContextService_1.BaseWorkspaceContextService({
-                resource: uri_1.default.from({ scheme: 'inmemory', authority: 'model', path: '/' }),
-                id: null,
-                name: null,
-                uid: null,
-                mtime: null
-            }, {});
-        }
-        var telemetryService = services.telemetryService;
-        if (!telemetryService) {
-            telemetryService = telemetry_1.NullTelemetryService;
-        }
+        var serviceCollection = new serviceCollection_1.ServiceCollection();
+        var instantiationService = new instantiationService_1.InstantiationService(serviceCollection, true);
+        var contextService = services.contextService || new baseWorkspaceContextService_1.BaseWorkspaceContextService({
+            resource: uri_1.default.from({ scheme: 'inmemory', authority: 'model', path: '/' }),
+            id: null,
+            name: null,
+            uid: null,
+            mtime: null
+        }, {});
+        serviceCollection.set(workspace_1.IWorkspaceContextService, contextService);
+        var telemetryService = services.telemetryService || telemetry_1.NullTelemetryService;
+        serviceCollection.set(telemetry_1.ITelemetryService, telemetryService);
         var eventService = services.eventService || new eventService_1.EventService();
+        serviceCollection.set(event_1.IEventService, eventService);
         var configurationService = services.configurationService || new simpleServices_1.SimpleConfigurationService(contextService, eventService);
-        // warn the user that standaloneEdiktorTelemetryEndpint is absolete
-        if (flags.standaloneEditorTelemetryEndpoint) {
-            console.warn('standaloneEditorTelemetryEndpoint is obsolete');
-        }
-        var threadService = services.threadService || new mainThreadService_1.MainThreadService(contextService, 'vs/editor/common/worker/editorWorkerServer', 1);
+        serviceCollection.set(configuration_1.IConfigurationService, configurationService);
         var messageService = services.messageService || new simpleServices_1.SimpleMessageService();
+        serviceCollection.set(message_1.IMessageService, messageService);
         var extensionService = services.extensionService || new simpleServices_1.SimpleExtensionService();
-        var markerService = services.markerService || new markerService_1.MainProcessMarkerService(threadService);
+        serviceCollection.set(extensions_1.IExtensionService, extensionService);
+        var markerService = services.markerService || new markerService_1.MarkerService();
+        serviceCollection.set(markers_1.IMarkerService, markerService);
         var requestService = services.requestService || new simpleServices_1.SimpleEditorRequestService(contextService, telemetryService);
-        var modeService = services.modeService || new modeServiceImpl_1.MainThreadModeServiceImpl(threadService, extensionService, configurationService);
-        var modelService = services.modelService || new modelServiceImpl_1.ModelServiceImpl(threadService, markerService, modeService, configurationService, messageService);
+        serviceCollection.set(request_1.IRequestService, requestService);
+        var modeService = services.modeService || new modeServiceImpl_1.MainThreadModeServiceImpl(instantiationService, extensionService, configurationService);
+        serviceCollection.set(modeService_1.IModeService, modeService);
+        var modelService = services.modelService || new modelServiceImpl_1.ModelServiceImpl(markerService, configurationService, messageService);
+        serviceCollection.set(modelService_1.IModelService, modelService);
+        var compatWorkerService = services.compatWorkerService || new compatWorkerServiceMain_1.MainThreadCompatWorkerService(contextService, modelService);
+        serviceCollection.set(compatWorkerService_1.ICompatWorkerService, compatWorkerService);
         var editorWorkerService = services.editorWorkerService || new editorWorkerServiceImpl_1.EditorWorkerServiceImpl(modelService);
+        serviceCollection.set(editorWorkerService_1.IEditorWorkerService, editorWorkerService);
         var codeEditorService = services.codeEditorService || new codeEditorServiceImpl_1.CodeEditorServiceImpl();
+        serviceCollection.set(codeEditorService_1.ICodeEditorService, codeEditorService);
+        var menuService = services.menuService || new menuService_1.MenuService(extensionService);
+        serviceCollection.set(actions_1.IMenuService, menuService);
         staticServices = {
             configurationService: configurationService,
             extensionService: extensionService,
+            compatWorkerService: compatWorkerService,
             modeService: modeService,
-            threadService: threadService,
             markerService: markerService,
+            menuService: menuService,
             contextService: contextService,
             telemetryService: telemetryService,
             requestService: requestService,
@@ -80337,21 +81989,8 @@ define(__m[110], __M([1,0,122,29,388,490,391,15,138,72,503,159,34,507,514,130,50
             editorWorkerService: editorWorkerService,
             eventService: eventService,
             storageService: services.storageService || storage_1.NullStorageService,
-            instantiationService: void 0
+            instantiationService: instantiationService
         };
-        var serviceCollection = new serviceCollection_1.ServiceCollection();
-        for (var legacyServiceId in staticServices) {
-            if (staticServices.hasOwnProperty(legacyServiceId)) {
-                var id = instantiation_1.createDecorator(legacyServiceId);
-                var element = staticServices[legacyServiceId];
-                serviceCollection.set(id, element);
-            }
-        }
-        var instantiationService = new instantiationService_1.InstantiationService(serviceCollection);
-        staticServices.instantiationService = instantiationService;
-        if (threadService instanceof mainThreadService_1.MainThreadService) {
-            threadService.setInstantiationService(instantiationService);
-        }
         return staticServices;
     }
     exports.getOrCreateStaticServices = getOrCreateStaticServices;
@@ -80375,7 +82014,7 @@ define(__m[110], __M([1,0,122,29,388,490,391,15,138,72,503,159,34,507,514,130,50
 
 
 
-define(__m[179], __M([1,0,3,70,15,157,21,504,34,7,62,64,121,110,90,170]), function (require, exports, lifecycle_1, contextView_1, instantiation_1, keybindingServiceImpl_1, keybindingService_1, remoteTelemetryService_1, telemetry_1, editorCommon_1, codeEditorService_1, editorWorkerService_1, simpleServices_1, standaloneServices_1, codeEditorWidget_1, diffEditorWidget_1) {
+define(__m[181], __M([0,1,3,70,15,161,19,36,7,54,52,120,108,94,174]), function (require, exports, lifecycle_1, contextView_1, instantiation_1, keybindingServiceImpl_1, keybindingService_1, telemetry_1, editorCommon_1, codeEditorService_1, editorWorkerService_1, simpleServices_1, standaloneServices_1, codeEditorWidget_1, diffEditorWidget_1) {
     'use strict';
     var StandaloneEditor = (function (_super) {
         __extends(StandaloneEditor, _super);
@@ -80538,9 +82177,7 @@ define(__m[179], __M([1,0,3,70,15,157,21,504,34,7,62,64,121,110,90,170]), functi
                     return;
                 }
                 modesRegistryInitialized = true;
-                var staticServices = standaloneServices_1.getOrCreateStaticServices();
-                // Instantiate thread actors
-                staticServices.threadService.getRemotable(remoteTelemetryService_1.RemoteTelemetryServiceHelper);
+                standaloneServices_1.getOrCreateStaticServices();
             },
             setupServices: function (services) {
                 if (setupServicesCalled) {
@@ -80563,7 +82200,7 @@ define(__m[179], __M([1,0,3,70,15,157,21,504,34,7,62,64,121,110,90,170]), functi
 
 
 
-define(__m[517], __M([1,0,7,23,14,179,42,110,15,72,138,141,121,130,165,297,435]), function (require, exports, editorCommon, editorBrowser_1, async_1, standaloneCodeEditor_1, scrollableElementOptions_1, standaloneServices_1, instantiation_1, serviceCollection_1, instantiationService_1, colorizer_1, simpleServices_1, editorWorkerServiceImpl_1, diffNavigator_1) {
+define(__m[512], __M([0,1,7,22,14,181,41,108,15,67,141,151,120,133,127,302,442]), function (require, exports, editorCommon, editorBrowser_1, async_1, standaloneCodeEditor_1, scrollableElementOptions_1, standaloneServices_1, instantiation_1, serviceCollection_1, instantiationService_1, colorizer_1, simpleServices_1, editorWorkerServiceImpl_1, diffNavigator_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -80909,7 +82546,7 @@ define(__m[517], __M([1,0,7,23,14,179,42,110,15,72,138,141,121,130,165,297,435])
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
-define(__m[518], __M([1,0,2,82,81,31,39,110,16,179,6,14,172,129,41]), function (require, exports, winjs_base_1, extensionsRegistry_1, jsonContributionRegistry_1, platform_1, modesRegistry_1, standaloneServices_1, modes, standaloneCodeEditor_1, range_1, async_1, monarchCompile_1, monarchLexer_1, languageConfigurationRegistry_1) {
+define(__m[513], __M([0,1,2,86,85,33,45,108,17,181,4,14,131,140,40]), function (require, exports, winjs_base_1, extensionsRegistry_1, jsonContributionRegistry_1, platform_1, modesRegistry_1, standaloneServices_1, modes, standaloneCodeEditor_1, range_1, async_1, monarchCompile_1, monarchLexer_1, languageConfigurationRegistry_1) {
     'use strict';
     /**
      * Register information about a new language.
@@ -81032,7 +82669,16 @@ define(__m[518], __M([1,0,2,82,81,31,39,110,16,179,6,14,172,129,41]), function (
      * Register a code action provider (used by e.g. quick fix).
      */
     function registerCodeActionProvider(languageId, provider) {
-        return modes.CodeActionProviderRegistry.register(languageId, provider);
+        return modes.CodeActionProviderRegistry.register(languageId, {
+            provideCodeActions: function (model, range, token) {
+                standaloneCodeEditor_1.startup.initStaticServicesIfNecessary();
+                var markerService = standaloneServices_1.ensureStaticPlatformServices(null).markerService;
+                var markers = markerService.read({ resource: model.uri }).filter(function (m) {
+                    return range_1.Range.areIntersectingOrTouching(m, range);
+                });
+                return provider.provideCodeActions(model, range, { markers: markers }, token);
+            }
+        });
     }
     exports.registerCodeActionProvider = registerCodeActionProvider;
     /**
@@ -81175,7 +82821,7 @@ define(__m[518], __M([1,0,2,82,81,31,39,110,16,179,6,14,172,129,41]), function (
                         var editRange = item.textEdit.range;
                         var isSingleLine = (editRange.startLineNumber === editRange.endLineNumber);
                         // invalid text edit
-                        if (!isSingleLine || editRange.startColumn !== position.lineNumber) {
+                        if (!isSingleLine || editRange.startLineNumber !== position.lineNumber) {
                             console.warn('INVALID text edit, must be single line and on the same line');
                             continue;
                         }
@@ -81255,7 +82901,7 @@ define(__m[518], __M([1,0,2,82,81,31,39,110,16,179,6,14,172,129,41]), function (
     exports.createMonacoLanguagesAPI = createMonacoLanguagesAPI;
 });
 
-define(__m[519], __M([1,0,15]), function (require, exports, instantiation_1) {
+define(__m[514], __M([0,1,15]), function (require, exports, instantiation_1) {
     /*---------------------------------------------------------------------------------------------
      *  Copyright (c) Microsoft Corporation. All rights reserved.
      *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -81282,7 +82928,7 @@ define(__m[519], __M([1,0,15]), function (require, exports, instantiation_1) {
 
 
 
-define(__m[520], __M([1,0,332,2,19,12,498,519,40,25]), function (require, exports, nls, winjs_base_1, editorAction_1, editorCommonExtensions_1, indentationCommands_1, quickOpenService_1, modelService_1, editorActionEnablement_1) {
+define(__m[198], __M([0,1,337,2,20,13,499,514,34,25]), function (require, exports, nls, winjs_base_1, editorAction_1, editorCommonExtensions_1, indentationCommands_1, quickOpenService_1, modelService_1, editorActionEnablement_1) {
     "use strict";
     var IndentationToSpacesAction = (function (_super) {
         __extends(IndentationToSpacesAction, _super);
@@ -81441,7 +83087,7 @@ define(__m[520], __M([1,0,332,2,19,12,498,519,40,25]), function (require, export
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
-define(__m[195], __M([1,0,90,170,486,442,444,445,446,447,165,449,452,512,465,456,223,457,407,458,459,460,471,463,467,513,476,478,477,89,510,484,167,487,241,488,480,450,520,509]), function (require, exports) {
+define(__m[420], __M([0,1,94,174,489,446,448,449,450,127,452,455,507,468,459,223,460,412,461,445,462,463,474,466,470,508,479,481,480,93,506,487,171,490,242,491,483,453,198,503]), function (require, exports) {
     'use strict';
 });
 
@@ -81449,7 +83095,7 @@ define(__m[195], __M([1,0,90,170,486,442,444,445,446,447,165,449,452,512,465,456
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
-define(__m[522], __M([1,0,287,517,518,57,195,473,468,469,429,413,428,430,431,489]), function (require, exports, standaloneBase_1, standaloneEditor_1, standaloneLanguages_1, defaultConfig_1) {
+define(__m[517], __M([0,1,169,512,513,55,420,476,471,472,433,417]), function (require, exports, standaloneBase_1, standaloneEditor_1, standaloneLanguages_1, defaultConfig_1) {
     'use strict';
     // Set defaults for standalone editor
     defaultConfig_1.DefaultConfig.editor.wrappingIndent = 'none';
@@ -81469,17 +83115,31 @@ define(__m[522], __M([1,0,287,517,518,57,195,473,468,469,429,413,428,430,431,489
 
 /*!-----------------------------------------------------------------------------
  * Copyright (c) Microsoft Corporation. All rights reserved.
- * monaco-typescript version: 0.2.1(3f5e823039387ed586dc242fc56ca73e01877abf)
+ * monaco-typescript version: 0.5.0(1ea9e2f88b719775dbe4715d1411bcd025dbdc43)
  * Released under the MIT license
  * https://github.com/Microsoft/monaco-typescript/blob/master/LICENSE.md
  *-----------------------------------------------------------------------------*/
 define("vs/language/typescript/src/monaco.contribution",["require","exports","vs/editor/edcore.main"],function(e,t){function n(){return{ModuleKind:s,JsxEmit:r,NewLineKind:c,ScriptTarget:p,ModuleResolutionKind:u,typescriptDefaults:l,javascriptDefaults:g}}function i(t){e(["vs/language/typescript/src/mode"],t)}var o=monaco.Emitter,a=function(){function e(e,t){this._onDidChange=new o,this._extraLibs=Object.create(null),this.setCompilerOptions(e),this.setDiagnosticsOptions(t)}return Object.defineProperty(e.prototype,"onDidChange",{get:function(){return this._onDidChange.event},enumerable:!0,configurable:!0}),Object.defineProperty(e.prototype,"extraLibs",{get:function(){return Object.freeze(this._extraLibs)},enumerable:!0,configurable:!0}),e.prototype.addExtraLib=function(e,t){var n=this;if("undefined"==typeof t&&(t="ts:extralib-"+Date.now()),this._extraLibs[t])throw new Error(t+" already a extra lib");return this._extraLibs[t]=e,this._onDidChange.fire(this),{dispose:function(){delete n._extraLibs[t]&&n._onDidChange.fire(n)}}},Object.defineProperty(e.prototype,"compilerOptions",{get:function(){return this._compilerOptions},enumerable:!0,configurable:!0}),e.prototype.setCompilerOptions=function(e){this._compilerOptions=e||Object.create(null),this._onDidChange.fire(this)},Object.defineProperty(e.prototype,"diagnosticsOptions",{get:function(){return this._diagnosticsOptions},enumerable:!0,configurable:!0}),e.prototype.setDiagnosticsOptions=function(e){this._diagnosticsOptions=e||Object.create(null),this._onDidChange.fire(this)},e}();t.LanguageServiceDefaultsImpl=a;var s;!function(e){e[e.None=0]="None",e[e.CommonJS=1]="CommonJS",e[e.AMD=2]="AMD",e[e.UMD=3]="UMD",e[e.System=4]="System",e[e.ES6=5]="ES6",e[e.ES2015=5]="ES2015"}(s||(s={}));var r;!function(e){e[e.None=0]="None",e[e.Preserve=1]="Preserve",e[e.React=2]="React"}(r||(r={}));var c;!function(e){e[e.CarriageReturnLineFeed=0]="CarriageReturnLineFeed",e[e.LineFeed=1]="LineFeed"}(c||(c={}));var p;!function(e){e[e.ES3=0]="ES3",e[e.ES5=1]="ES5",e[e.ES6=2]="ES6",e[e.ES2015=2]="ES2015",e[e.Latest=2]="Latest"}(p||(p={}));var u;!function(e){e[e.Classic=1]="Classic",e[e.NodeJs=2]="NodeJs"}(u||(u={}));var l=new a({allowNonTsExtensions:!0,target:p.Latest},{noSemanticValidation:!1,noSyntaxValidation:!1}),g=new a({allowNonTsExtensions:!0,allowJs:!0,target:p.Latest},{noSemanticValidation:!0,noSyntaxValidation:!1});monaco.languages.typescript=n(),monaco.languages.register({id:"typescript",extensions:[".ts"],aliases:["TypeScript","ts","typescript"],mimetypes:["text/typescript"]}),monaco.languages.onLanguage("typescript",function(){i(function(e){return e.setupTypeScript(l)})}),monaco.languages.register({id:"javascript",extensions:[".js",".es6"],firstLine:"^#!.*\\bnode",filenames:["jakefile"],aliases:["JavaScript","javascript","js"],mimetypes:["text/javascript"]}),monaco.languages.onLanguage("javascript",function(){i(function(e){return e.setupJavaScript(g)})})});
 /*!-----------------------------------------------------------------------------
  * Copyright (c) Microsoft Corporation. All rights reserved.
- * monaco-languages version: 0.2.0(14f3eddc6bfff195297dc8365d967c38d13d2761)
+ * monaco-css version: 1.1.1(a95094a5990b443cead16f31c374a3c8c2966bfe)
+ * Released under the MIT license
+ * https://github.com/Microsoft/monaco-css/blob/master/LICENSE.md
+ *-----------------------------------------------------------------------------*/
+!function(e){if("object"==typeof module&&"object"==typeof module.exports){var n=e(require,exports);void 0!==n&&(module.exports=n)}else"function"==typeof define&&define.amd&&define("vs/language/css/monaco.contribution",["require","exports","vs/editor/edcore.main"],e)}(function(e,n){function o(){return{cssDefaults:a,lessDefaults:g,scssDefaults:u}}function t(n){e(["vs/language/css/cssMode"],n)}var i=monaco.Emitter,r=function(){function e(e,n){this._onDidChange=new i,this._languageId=e,this.setDiagnosticsOptions(n)}return Object.defineProperty(e.prototype,"onDidChange",{get:function(){return this._onDidChange.event},enumerable:!0,configurable:!0}),Object.defineProperty(e.prototype,"languageId",{get:function(){return this._languageId},enumerable:!0,configurable:!0}),Object.defineProperty(e.prototype,"diagnosticsOptions",{get:function(){return this._diagnosticsOptions},enumerable:!0,configurable:!0}),e.prototype.setDiagnosticsOptions=function(e){this._diagnosticsOptions=e||Object.create(null),this._onDidChange.fire(this)},e}();n.LanguageServiceDefaultsImpl=r;var s={validate:!0,lint:{compatibleVendorPrefixes:"ignore",vendorPrefix:"warning",duplicateProperties:"warning",emptyRules:"warning",importStatement:"ignore",boxModel:"ignore",universalSelector:"ignore",zeroUnits:"ignore",fontFaceProperties:"warning",hexColorLength:"error",argumentsInColorFunction:"error",unknownProperties:"warning",ieHack:"ignore",unknownVendorSpecificProperties:"ignore",propertyIgnoredDueToDisplay:"warning",important:"ignore","float":"ignore",idSelector:"ignore"}},a=new r("css",s),u=new r("scss",s),g=new r("less",s);monaco.languages.css=o(),monaco.languages.onLanguage("less",function(){t(function(e){return e.setupMode(g)})}),monaco.languages.onLanguage("scss",function(){t(function(e){return e.setupMode(u)})}),monaco.languages.onLanguage("css",function(){t(function(e){return e.setupMode(a)})})});
+/*!-----------------------------------------------------------------------------
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * monaco-json version: 1.0.2(7e50cccbb2e8248ffbdbae54ca440f2714dbc945)
+ * Released under the MIT license
+ * https://github.com/Microsoft/monaco-json/blob/master/LICENSE.md
+ *-----------------------------------------------------------------------------*/
+!function(e){if("object"==typeof module&&"object"==typeof module.exports){var n=e(require,exports);void 0!==n&&(module.exports=n)}else"function"==typeof define&&define.amd&&define("vs/language/json/monaco.contribution",["require","exports","vs/editor/edcore.main"],e)}(function(e,n){function o(){return{jsonDefaults:r}}function t(n){e(["vs/language/json/jsonMode"],n)}var i=monaco.Emitter,s=function(){function e(e,n){this._onDidChange=new i,this._languageId=e,this.setDiagnosticsOptions(n)}return Object.defineProperty(e.prototype,"onDidChange",{get:function(){return this._onDidChange.event},enumerable:!0,configurable:!0}),Object.defineProperty(e.prototype,"languageId",{get:function(){return this._languageId},enumerable:!0,configurable:!0}),Object.defineProperty(e.prototype,"diagnosticsOptions",{get:function(){return this._diagnosticsOptions},enumerable:!0,configurable:!0}),e.prototype.setDiagnosticsOptions=function(e){this._diagnosticsOptions=e||Object.create(null),this._onDidChange.fire(this)},e}();n.LanguageServiceDefaultsImpl=s;var a={validate:!0,allowComments:!0,schemas:[]},r=new s("json",a);monaco.languages.json=o(),monaco.languages.register({id:"json",extensions:[".json",".bowerrc",".jshintrc",".jscsrc",".eslintrc",".babelrc"],aliases:["JSON","json"],mimetypes:["application/json"]}),monaco.languages.onLanguage("json",function(){t(function(e){return e.setupMode(r)})})});
+/*!-----------------------------------------------------------------------------
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * monaco-languages version: 0.3.1(584d8ebb961d96d42dd7ae89ff3803c825b8862d)
  * Released under the MIT license
  * https://github.com/Microsoft/monaco-languages/blob/master/LICENSE.md
  *-----------------------------------------------------------------------------*/
-define("vs/basic-languages/src/monaco.contribution",["require","exports","vs/editor/edcore.main"],function(e,s){function i(s){var i=n[s].module;return new o.Promise(function(a,n,l){e([i],function(e){o.languages.setMonarchTokensProvider(s,e.language),o.languages.setLanguageConfiguration(s,e.conf),a(void 0)},n)})}function a(e){var s=e.id;n[s]=e,o.languages.register(e),o.languages.onLanguage(s,function(){i(s)})}var o="undefined"==typeof monaco?self.monaco:monaco,n={};s.loadLanguage=i,a({id:"bat",extensions:[".bat",".cmd"],aliases:["Batch","bat"],module:"./bat"}),a({id:"coffeescript",extensions:[".coffee"],aliases:["CoffeeScript","coffeescript","coffee"],mimetypes:["text/x-coffeescript","text/coffeescript"],module:"./coffee"}),a({id:"c",extensions:[".c",".h"],aliases:["C","c"],module:"./cpp"}),a({id:"cpp",extensions:[".cpp",".cc",".cxx",".hpp",".hh",".hxx"],aliases:["C++","Cpp","cpp"],module:"./cpp"}),a({id:"csharp",extensions:[".cs",".csx"],aliases:["C#","csharp"],module:"./csharp"}),a({id:"dockerfile",extensions:[".dockerfile"],filenames:["Dockerfile"],aliases:["Dockerfile"],module:"./dockerfile"}),a({id:"fsharp",extensions:[".fs",".fsi",".ml",".mli",".fsx",".fsscript"],aliases:["F#","FSharp","fsharp"],module:"./fsharp"}),a({id:"go",extensions:[".go"],aliases:["Go"],module:"./go"}),a({id:"ini",extensions:[".ini",".properties",".gitconfig"],filenames:["config",".gitattributes",".gitconfig",".editorconfig"],aliases:["Ini","ini"],module:"./ini"}),a({id:"jade",extensions:[".jade",".pug"],aliases:["Jade","jade"],module:"./jade"}),a({id:"java",extensions:[".java",".jav"],aliases:["Java","java"],mimetypes:["text/x-java-source","text/x-java"],module:"./java"}),a({id:"lua",extensions:[".lua"],aliases:["Lua","lua"],module:"./lua"}),a({id:"objective-c",extensions:[".m"],aliases:["Objective-C"],module:"./objective-c"}),a({id:"powershell",extensions:[".ps1",".psm1",".psd1"],aliases:["PowerShell","powershell","ps","ps1"],module:"./powershell"}),a({id:"python",extensions:[".py",".rpy",".pyw",".cpy",".gyp",".gypi"],aliases:["Python","py"],firstLine:"^#!/.*\\bpython[0-9.-]*\\b",module:"./python"}),a({id:"r",extensions:[".r",".rhistory",".rprofile",".rt"],aliases:["R","r"],module:"./r"}),a({id:"ruby",extensions:[".rb",".rbx",".rjs",".gemspec",".pp"],filenames:["rakefile"],aliases:["Ruby","rb"],module:"./ruby"}),a({id:"swift",aliases:["Swift","swift"],extensions:[".swift"],mimetypes:["text/swift"],module:"./swift"}),a({id:"sql",extensions:[".sql"],aliases:["SQL"],module:"./sql"}),a({id:"vb",extensions:[".vb"],aliases:["Visual Basic","vb"],module:"./vb"}),a({id:"xml",extensions:[".xml",".dtd",".ascx",".csproj",".config",".wxi",".wxl",".wxs",".xaml",".svg",".svgz"],firstLine:"(\\<\\?xml.*)|(\\<svg)|(\\<\\!doctype\\s+svg)",aliases:["XML","xml"],mimetypes:["text/xml","application/xml","application/xaml+xml","application/xml-dtd"],module:"./xml"})});
-define("vs/editor/editor.main", ["vs/editor/edcore.main","vs/language/typescript/src/monaco.contribution","vs/basic-languages/src/monaco.contribution"], function() {});
+define("vs/basic-languages/src/monaco.contribution",["require","exports","vs/editor/edcore.main"],function(e,s){function i(s){var i=n[s].module;return new o.Promise(function(a,n,t){e([i],function(e){o.languages.setMonarchTokensProvider(s,e.language),o.languages.setLanguageConfiguration(s,e.conf),a(void 0)},n)})}function a(e){var s=e.id;n[s]=e,o.languages.register(e),o.languages.onLanguage(s,function(){i(s)})}var o="undefined"==typeof monaco?self.monaco:monaco,n={};s.loadLanguage=i,a({id:"bat",extensions:[".bat",".cmd"],aliases:["Batch","bat"],module:"./bat"}),a({id:"coffeescript",extensions:[".coffee"],aliases:["CoffeeScript","coffeescript","coffee"],mimetypes:["text/x-coffeescript","text/coffeescript"],module:"./coffee"}),a({id:"c",extensions:[".c",".h"],aliases:["C","c"],module:"./cpp"}),a({id:"cpp",extensions:[".cpp",".cc",".cxx",".hpp",".hh",".hxx"],aliases:["C++","Cpp","cpp"],module:"./cpp"}),a({id:"csharp",extensions:[".cs",".csx"],aliases:["C#","csharp"],module:"./csharp"}),a({id:"dockerfile",extensions:[".dockerfile"],filenames:["Dockerfile"],aliases:["Dockerfile"],module:"./dockerfile"}),a({id:"fsharp",extensions:[".fs",".fsi",".ml",".mli",".fsx",".fsscript"],aliases:["F#","FSharp","fsharp"],module:"./fsharp"}),a({id:"go",extensions:[".go"],aliases:["Go"],module:"./go"}),a({id:"ini",extensions:[".ini",".properties",".gitconfig"],filenames:["config",".gitattributes",".gitconfig",".editorconfig"],aliases:["Ini","ini"],module:"./ini"}),a({id:"jade",extensions:[".jade",".pug"],aliases:["Jade","jade"],module:"./jade"}),a({id:"java",extensions:[".java",".jav"],aliases:["Java","java"],mimetypes:["text/x-java-source","text/x-java"],module:"./java"}),a({id:"lua",extensions:[".lua"],aliases:["Lua","lua"],module:"./lua"}),a({id:"markdown",extensions:[".md",".markdown",".mdown",".mkdn",".mkd",".mdwn",".mdtxt",".mdtext"],aliases:["Markdown","markdown"],module:"./markdown"}),a({id:"objective-c",extensions:[".m"],aliases:["Objective-C"],module:"./objective-c"}),a({id:"powershell",extensions:[".ps1",".psm1",".psd1"],aliases:["PowerShell","powershell","ps","ps1"],module:"./powershell"}),a({id:"python",extensions:[".py",".rpy",".pyw",".cpy",".gyp",".gypi"],aliases:["Python","py"],firstLine:"^#!/.*\\bpython[0-9.-]*\\b",module:"./python"}),a({id:"r",extensions:[".r",".rhistory",".rprofile",".rt"],aliases:["R","r"],module:"./r"}),a({id:"ruby",extensions:[".rb",".rbx",".rjs",".gemspec",".pp"],filenames:["rakefile"],aliases:["Ruby","rb"],module:"./ruby"}),a({id:"swift",aliases:["Swift","swift"],extensions:[".swift"],mimetypes:["text/swift"],module:"./swift"}),a({id:"sql",extensions:[".sql"],aliases:["SQL"],module:"./sql"}),a({id:"vb",extensions:[".vb"],aliases:["Visual Basic","vb"],module:"./vb"}),a({id:"xml",extensions:[".xml",".dtd",".ascx",".csproj",".config",".wxi",".wxl",".wxs",".xaml",".svg",".svgz"],firstLine:"(\\<\\?xml.*)|(\\<svg)|(\\<\\!doctype\\s+svg)",aliases:["XML","xml"],mimetypes:["text/xml","application/xml","application/xaml+xml","application/xml-dtd"],module:"./xml"}),a({id:"less",extensions:[".less"],aliases:["Less","less"],mimetypes:["text/x-less","text/less"],module:"./less"}),a({id:"scss",extensions:[".scss"],aliases:["Sass","sass","scss"],mimetypes:["text/x-scss","text/scss"],module:"./scss"}),a({id:"css",extensions:[".css"],aliases:["CSS","css"],mimetypes:["text/css"],module:"./css"})});
+define("vs/editor/editor.main", ["vs/editor/edcore.main","vs/language/typescript/src/monaco.contribution","vs/language/css/monaco.contribution","vs/language/json/monaco.contribution","vs/basic-languages/src/monaco.contribution"], function() {});
 //# sourceMappingURL=editor.main.js.map

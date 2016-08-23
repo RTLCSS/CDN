@@ -1,24 +1,11 @@
 /*!-----------------------------------------------------------
  * Copyright (c) Microsoft Corporation. All rights reserved.
- * Version: 0.4.2(1ebfb1b687c4345ac9c6da39051431a46c120a65)
+ * Version: 0.5.3(793ede49d53dba79d39e52205f16321278f5183c)
  * Released under the MIT license
  * https://github.com/Microsoft/vscode/blob/master/LICENSE.txt
  *-----------------------------------------------------------*/
 
 define("vs/languages/html/common/htmlWorker.nls.ko", {
-	"vs/base/common/keyCodes": [
-		"Windows",
-		"Ctrl",
-		"Shift",
-		"Alt",
-		"명령",
-		"Windows",
-		"Ctrl",
-		"Shift",
-		"Alt",
-		"명령",
-		"Windows",
-	],
 	"vs/languages/html/common/htmlTags": [
 		"html 요소는 HTML 문서의 루트를 나타냅니다.",
 		"head 요소는 문서의 메타데이터 컬렉션을 나타냅니다.",

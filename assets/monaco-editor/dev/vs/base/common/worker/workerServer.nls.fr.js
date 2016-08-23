@@ -1,6 +1,6 @@
 /*!-----------------------------------------------------------
  * Copyright (c) Microsoft Corporation. All rights reserved.
- * Version: 0.4.2(1ebfb1b687c4345ac9c6da39051431a46c120a65)
+ * Version: 0.5.3(793ede49d53dba79d39e52205f16321278f5183c)
  * Released under the MIT license
  * https://github.com/Microsoft/vscode/blob/master/LICENSE.txt
  *-----------------------------------------------------------*/
@@ -64,9 +64,6 @@ define("vs/base/common/worker/workerServer.nls.fr", {
 		"la propriété \'{0}\' peut être omise et doit être de type \'string[]\'",
 		"la propriété \'{0}\' peut être omise et doit être de type \'string[]\'",
 		"\'contributes.{0}\' non valide. Tableau attendu.",
-	],
-	"vs/editor/common/services/modelServiceImpl": [
-		"Mettez à jour vos paramètres : \'editor.detectIndentation\' remplace \'editor.tabSize\': \"auto\" ou \'editor.insertSpaces\': \"auto\"",
 	],
 	"vs/platform/configuration/common/configurationRegistry": [
 		"Ajoute des paramètres de configuration.",
@@ -141,9 +138,5 @@ define("vs/base/common/worker/workerServer.nls.fr", {
 		"Tableau de schémas dont au moins un doit correspondre.",
 		"Tableau de schémas, dont exactement un doit correspondre.",
 		"Schéma qui ne doit pas correspondre.",
-	],
-	"vs/platform/message/common/message": [
-		"Fermer",
-		"Annuler",
 	]
 });

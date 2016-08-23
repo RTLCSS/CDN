@@ -1,6 +1,6 @@
 /*!-----------------------------------------------------------
  * Copyright (c) Microsoft Corporation. All rights reserved.
- * Version: 0.4.2(1ebfb1b687c4345ac9c6da39051431a46c120a65)
+ * Version: 0.5.3(793ede49d53dba79d39e52205f16321278f5183c)
  * Released under the MIT license
  * https://github.com/Microsoft/vscode/blob/master/LICENSE.txt
  *-----------------------------------------------------------*/
@@ -46,7 +46,7 @@ define("vs/editor/editor.main.nls.zh-tw", {
 		"無法載入必要的檔案。請重新啟動該應用程式，然後再試一次。詳細資料: {0}",
 	],
 	"vs/base/common/json": [
-		"Invalid symbol",
+		"符號無效",
 		"數字格式無效",
 		"Property name expected",
 		"Value expected",
@@ -54,7 +54,7 @@ define("vs/editor/editor.main.nls.zh-tw", {
 		"Comma expected",
 		"Closing brace expected",
 		"Closing bracket expected",
-		"End of file expected",
+		"必須為檔案結尾",
 	],
 	"vs/base/common/keyCodes": [
 		"Windows",
@@ -304,6 +304,10 @@ define("vs/editor/editor.main.nls.zh-tw", {
 		"在此編輯器中按 Tab 鍵會將焦點移至下一個可設定焦點的元素。目前無法透過按鍵繫結關係觸發命令 {0}。",
 		"您可以按 Esc 鍵來解除此工具提示並返回編輯器。",
 	],
+	"vs/editor/contrib/carretOperations/common/carretOperations": [
+		"Move Carret Left",
+		"Move Carret Right",
+	],
 	"vs/editor/contrib/clipboard/browser/clipboard": [
 		"剪下",
 		"複製",
@@ -490,19 +494,19 @@ define("vs/editor/editor.main.nls.zh-tw", {
 		"顯示參考",
 	],
 	"vs/editor/contrib/referenceSearch/browser/referencesController": [
-		"Loading...",
+		"正在載入...",
 	],
 	"vs/editor/contrib/referenceSearch/browser/referencesWidget": [
 		"Failed to resolve file.",
-		"{0} references",
-		"{0} reference",
+		"{0} 個參考",
+		"{0} 個參考",
 		"no preview available",
-		"References",
-		"No results",
-		"References",
+		"參考",
+		"沒有結果",
+		"參考",
 	],
 	"vs/editor/contrib/rename/browser/rename": [
-		"Rename Symbol",
+		"重新命名符號",
 	],
 	"vs/editor/contrib/rename/browser/renameInputField": [
 		"為輸入重新命名。請鍵入新名稱，然後按 Enter 以認可。",
@@ -540,31 +544,6 @@ define("vs/editor/editor.main.nls.zh-tw", {
 	"vs/editor/contrib/zoneWidget/browser/peekViewWidget": [
 		"關閉",
 	],
-	"vs/languages/css/common/css.contribution": [
-		"CSS 組態",
-		"控制 CSS 驗證和問題嚴重性。",
-	],
-	"vs/languages/css/common/services/lintRules": [
-		"在使用廠商專屬的前置詞時，請確定也包括其他所有的廠商特定屬性。",
-		"在使用廠商專屬的前置詞時，也包括標準屬性。",
-		"請勿使用重複的樣式定義",
-		"請勿使用空白規則集",
-		"Import 陳述式不會平行載入",
-		"使用填補或框線時不要使用寬度或高度。",
-		"已知通用選取器 (*) 速度緩慢",
-		"零不需要任何單位",
-		"@font-face 規則必須定義 \'src\' 和 \'font-family\' 屬性",
-		"十六進位色彩必須由三個或六個十六進位數字組成",
-		"無效的參數數目",
-		"未知的屬性。",
-		"只有在支援 IE7 及更舊的版本時才需要 IE Hack",
-		"未知的廠商專屬屬性。",
-		"屬性因顯示而忽略。例如，若為 \'display: inline\'，則 width、height、margin-top、margin-bottom 以及 float 屬性就不會有任何作用。",
-		"避免使用 !important。這表示整個 CSS 的明確性皆失控，需要重構。",
-		"避免使用 \'float\'。浮動會使 CSS 脆弱，在版面配置的任一層面改變時容易中斷。",
-		"選取器不應包含 ID，因為這些規則與 HTML 結合過於緊密。",
-		"啟用或停用所有驗證",
-	],
 	"vs/languages/html/common/html.contribution": [
 		"HTML 設定",
 		"每行的字元數上限 (0 = 停用)。",
@@ -576,21 +555,8 @@ define("vs/editor/editor.main.nls.zh-tw", {
 		"以新行字元結尾。",
 		"前方應有額外新行字元的標記清單，須以逗號分隔。\'null\' 的預設值為 \"head, body, /html\"。",
 	],
-	"vs/languages/json/common/json.contribution": [
-		"JSON 組態",
-		"將結構描述與目前專案中的 JSON 檔案建立關聯",
-		"前往結構描述的 URL，或在目前目錄中前往結構描述的相對路徑",
-		"可含有 \'*\' 的檔案模式；在將 JSON 檔案解析為結構描述時可用來比對。",
-		"在將 JSON 檔案解析為結構描述時，用來比對的檔案模式陣列。",
-		"指定 URL 的結構描述定義。您只需要提供結構描述，以避免存取結構描述 URL。",
-	],
-	"vs/languages/less/common/less.contribution": [
-		"LESS 組態",
-		"控制 LESS 驗證和問題嚴重性。",
-	],
-	"vs/languages/sass/common/sass.contribution": [
-		"SASS 組態",
-		"控制 Sass 驗證和問題嚴重性。",
+	"vs/platform/actions/browser/menuItemActionItem": [
+		"{0} ({1})",
 	],
 	"vs/platform/configuration/common/configurationRegistry": [
 		"提供組態設定。",

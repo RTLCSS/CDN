@@ -1,6 +1,6 @@
 /*!-----------------------------------------------------------
  * Copyright (c) Microsoft Corporation. All rights reserved.
- * Version: 0.4.2(1ebfb1b687c4345ac9c6da39051431a46c120a65)
+ * Version: 0.5.3(793ede49d53dba79d39e52205f16321278f5183c)
  * Released under the MIT license
  * https://github.com/Microsoft/vscode/blob/master/LICENSE.txt
  *-----------------------------------------------------------*/
@@ -64,9 +64,6 @@ define("vs/base/common/worker/workerServer.nls.de", {
 		"Die Eigenschaft \"{0}\" kann ausgelassen werden. Sie muss vom Typ \"string[]\" sein.",
 		"Die Eigenschaft \"{0}\" kann ausgelassen werden. Sie muss vom Typ \"string[]\" sein.",
 		"Ungültige Angabe \"contributes.{0}\". Es wurde ein Array erwartet.",
-	],
-	"vs/editor/common/services/modelServiceImpl": [
-		"Bitte aktualisieren Sie Ihre Einstellungen: \"editor.detectIndentation\" ersetzt \"editor.tabSize\": \"auto\" oder \"editor.insertSpaces\": \"auto\"",
 	],
 	"vs/platform/configuration/common/configurationRegistry": [
 		"Trägt Konfigurationseigenschaften bei.",
@@ -141,9 +138,5 @@ define("vs/base/common/worker/workerServer.nls.de", {
 		"Ein Array von Schemas, von denen mindestens ein Schema übereinstimmen muss.",
 		"Ein Array von Schemas, von denen genau ein Schema übereinstimmen muss.",
 		"Ein Schema, das nicht übereinstimmen darf.",
-	],
-	"vs/platform/message/common/message": [
-		"Schließen",
-		"Abbrechen",
 	]
 });

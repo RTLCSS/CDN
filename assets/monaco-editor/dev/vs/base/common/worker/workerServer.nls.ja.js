@@ -1,6 +1,6 @@
 /*!-----------------------------------------------------------
  * Copyright (c) Microsoft Corporation. All rights reserved.
- * Version: 0.4.2(1ebfb1b687c4345ac9c6da39051431a46c120a65)
+ * Version: 0.5.3(793ede49d53dba79d39e52205f16321278f5183c)
  * Released under the MIT license
  * https://github.com/Microsoft/vscode/blob/master/LICENSE.txt
  *-----------------------------------------------------------*/
@@ -64,9 +64,6 @@ define("vs/base/common/worker/workerServer.nls.ja", {
 		"プロパティ `{0}` を省略するか、型 `string[]` にする必要があります",
 		"プロパティ `{0}` を省略するか、型 `string[]` にする必要があります",
 		"正しくない `contributes.{0}`。配列が必要です。",
-	],
-	"vs/editor/common/services/modelServiceImpl": [
-		"設定を更新してください: `editor.detectIndentation` は `editor.tabSize`: \"auto\" または `editor.insertSpaces`: \"auto\" を置き換えます",
 	],
 	"vs/platform/configuration/common/configurationRegistry": [
 		"構成の設定を提供します。",
@@ -141,9 +138,5 @@ define("vs/base/common/worker/workerServer.nls.ja", {
 		"スキーマの配列 (この場合、少なくとも 1 つが一致する必要があります)。",
 		"スキーマの配列 (スキーマのうち 1 つは完全一致する必要があります)。",
 		"一致してはならないスキーマ。",
-	],
-	"vs/platform/message/common/message": [
-		"閉じる",
-		"キャンセル",
 	]
 });

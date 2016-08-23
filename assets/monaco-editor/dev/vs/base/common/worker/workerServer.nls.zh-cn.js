@@ -1,6 +1,6 @@
 /*!-----------------------------------------------------------
  * Copyright (c) Microsoft Corporation. All rights reserved.
- * Version: 0.4.2(1ebfb1b687c4345ac9c6da39051431a46c120a65)
+ * Version: 0.5.3(793ede49d53dba79d39e52205f16321278f5183c)
  * Released under the MIT license
  * https://github.com/Microsoft/vscode/blob/master/LICENSE.txt
  *-----------------------------------------------------------*/
@@ -64,9 +64,6 @@ define("vs/base/common/worker/workerServer.nls.zh-cn", {
 		"属性“{0}”可以省略，其类型必须是 \"string[]\"",
 		"属性“{0}”可以省略，其类型必须是 \"string[]\"",
 		"无效的“contributes.{0}”。应为数组。",
-	],
-	"vs/editor/common/services/modelServiceImpl": [
-		"请更新设置: \"editor.detectIndentation\" 替换 \"editor.tabSize\": \"auto\" 或 \"editor.insertSpaces\": \"auto\"",
 	],
 	"vs/platform/configuration/common/configurationRegistry": [
 		"用于配置字符串。",
@@ -141,9 +138,5 @@ define("vs/base/common/worker/workerServer.nls.zh-cn", {
 		"架构的数组，必须至少有一个匹配。",
 		"架构的数组，正好有一个必须匹配。",
 		"必须不能匹配的架构。",
-	],
-	"vs/platform/message/common/message": [
-		"关闭",
-		"取消",
 	]
 });

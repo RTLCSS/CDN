@@ -1,6 +1,6 @@
 /*!-----------------------------------------------------------
  * Copyright (c) Microsoft Corporation. All rights reserved.
- * Version: 0.4.2(1ebfb1b687c4345ac9c6da39051431a46c120a65)
+ * Version: 0.5.3(793ede49d53dba79d39e52205f16321278f5183c)
  * Released under the MIT license
  * https://github.com/Microsoft/vscode/blob/master/LICENSE.txt
  *-----------------------------------------------------------*/
@@ -46,7 +46,7 @@ define("vs/editor/editor.main.nls.es", {
 		"No se pudo cargar un archivo requerido. Reinicie la aplicación para intentarlo de nuevo. Detalles: {0}",
 	],
 	"vs/base/common/json": [
-		"Invalid symbol",
+		"Símbolo no válido",
 		"Invalid number format",
 		"Property name expected",
 		"Value expected",
@@ -54,7 +54,7 @@ define("vs/editor/editor.main.nls.es", {
 		"Comma expected",
 		"Closing brace expected",
 		"Closing bracket expected",
-		"End of file expected",
+		"Se esperaba un fin de archivo",
 	],
 	"vs/base/common/keyCodes": [
 		"Windows",
@@ -304,6 +304,10 @@ define("vs/editor/editor.main.nls.es", {
 		"Al presionar TAB en este editor, el foco se mueve al siguiente elemento activable. El comando {0} no se puede desencadenar actualmente mediante un enlace de teclado.",
 		"Para descartar esta información sobre herramientas y volver al editor, presione Esc.",
 	],
+	"vs/editor/contrib/carretOperations/common/carretOperations": [
+		"Move Carret Left",
+		"Move Carret Right",
+	],
 	"vs/editor/contrib/clipboard/browser/clipboard": [
 		"Cortar",
 		"Copiar",
@@ -502,7 +506,7 @@ define("vs/editor/editor.main.nls.es", {
 		"References",
 	],
 	"vs/editor/contrib/rename/browser/rename": [
-		"Rename Symbol",
+		"Cambiar el nombre del símbolo",
 	],
 	"vs/editor/contrib/rename/browser/renameInputField": [
 		"Cambie el nombre de la entrada. Escriba el nuevo nombre y presione Entrar para confirmar.",
@@ -540,31 +544,6 @@ define("vs/editor/editor.main.nls.es", {
 	"vs/editor/contrib/zoneWidget/browser/peekViewWidget": [
 		"Cerrar",
 	],
-	"vs/languages/css/common/css.contribution": [
-		"Configuración de CSS",
-		"Controla la gravedad de los problemas y la validación de CSS.",
-	],
-	"vs/languages/css/common/services/lintRules": [
-		"Cuando use un prefijo específico del proveedor, compruebe que también haya incluido el resto de propiedades específicas del proveedor.",
-		"Cuando use un prefijo específico del proveedor, incluya también la propiedad estándar.",
-		"No use definiciones de estilo duplicadas.",
-		"No use conjuntos de reglas vacíos.",
-		"Las instrucciones Import no se cargan en paralelo.",
-		"No use ancho o alto con el relleno o los bordes.",
-		"Se sabe que el selector universal (*) es lento.",
-		"No se necesita una unidad para cero.",
-		"La regla @font-face debe definir las propiedades \'src\' y \'font-family\'.",
-		"Los colores hexadecimales deben estar formados por tres o seis números hexadecimales.",
-		"Número de parámetros no válido",
-		"Propiedad desconocida.",
-		"Las modificaciones de IE solo son necesarias cuando admiten IE7 y anteriores",
-		"Propiedad específica del proveedor desconocida.",
-		"La propiedad se ignora a causa de la pantalla. Por ejemplo, con \'display: inline\', el ancho, el alto, el margen superior e inferior y las propiedades de float no tienen efecto.",
-		"Le recomendamos no usar !important. Esto indica que la especificidad de todo el CSS está fuera de control y que debe refactorizarse.",
-		"Le recomendamos no usar \'float\'. Los floats producen CSS frágiles, fáciles de corromper si cambia cualquier aspecto del diseño.",
-		"Los selectores no deben contener identificadores porque estas reglas están estrechamente ligadas a HTML.",
-		"Habilita o deshabilita todas las validaciones.",
-	],
 	"vs/languages/html/common/html.contribution": [
 		"Configuración HTML",
 		"Cantidad máxima de caracteres por línea (0 = deshabilitar).",
@@ -576,21 +555,8 @@ define("vs/editor/editor.main.nls.es", {
 		"Finalizar con una nueva línea.",
 		"Lista de etiquetas, separadas por comas, que deben tener una nueva línea adicional delante. \"null\" tiene como valores predeterminados \"head, body, /html\".",
 	],
-	"vs/languages/json/common/json.contribution": [
-		"Configuración JSON",
-		"Asociar esquemas a archivos JSON en el proyecto actual",
-		"Una URL para un esquema o una ruta similar a un esquema en el directorio actual",
-		"Un patrón de archivos que puede contener \'*\' para encontrar coincidencias al resolver archivos JSON para esquemas.",
-		"Una matriz de patrones de archivos para encontrar coincidencias al resolver archivos JSON para esquemas.",
-		"La definición de esquema de la URL dada. El esquema solo debe proporcionarse para evitar el acceso a la URL del esquema.",
-	],
-	"vs/languages/less/common/less.contribution": [
-		"Configuración de LESS",
-		"Controla la gravedad de los problemas y la validación de LESS.",
-	],
-	"vs/languages/sass/common/sass.contribution": [
-		"Configuración de SASS",
-		"Controla la gravedad de los problemas y la validación de SasS.",
+	"vs/platform/actions/browser/menuItemActionItem": [
+		"{0} ({1})",
 	],
 	"vs/platform/configuration/common/configurationRegistry": [
 		"Aporta opciones de configuración.",

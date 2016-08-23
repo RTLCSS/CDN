@@ -1,6 +1,6 @@
 /*!-----------------------------------------------------------
  * Copyright (c) Microsoft Corporation. All rights reserved.
- * Version: 0.4.2(1ebfb1b687c4345ac9c6da39051431a46c120a65)
+ * Version: 0.5.3(793ede49d53dba79d39e52205f16321278f5183c)
  * Released under the MIT license
  * https://github.com/Microsoft/vscode/blob/master/LICENSE.txt
  *-----------------------------------------------------------*/
@@ -64,9 +64,6 @@ define("vs/base/common/worker/workerServer.nls.ru", {
 		"свойство \"{0}\" может быть опущено и должно иметь тип string[]",
 		"свойство \"{0}\" может быть опущено и должно иметь тип string[]",
 		"Недопустимое значение \"contributes.{0}\". Требуется массив.",
-	],
-	"vs/editor/common/services/modelServiceImpl": [
-		"Измените параметры: editor.detectIndentation заменяет editor.tabSize: auto или editor.insertSpaces: auto",
 	],
 	"vs/platform/configuration/common/configurationRegistry": [
 		"Добавляет параметры конфигурации.",
@@ -141,9 +138,5 @@ define("vs/base/common/worker/workerServer.nls.ru", {
 		"Массив схем, хотя бы одна из которых должна соответствовать.",
 		"Массив схем, из которых должна соответствовать только одна.",
 		"Схема, которая не должна соответствовать.",
-	],
-	"vs/platform/message/common/message": [
-		"Закрыть",
-		"Отмена",
 	]
 });

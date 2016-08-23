@@ -1,6 +1,6 @@
 /*!-----------------------------------------------------------
  * Copyright (c) Microsoft Corporation. All rights reserved.
- * Version: 0.4.2(1ebfb1b687c4345ac9c6da39051431a46c120a65)
+ * Version: 0.5.3(793ede49d53dba79d39e52205f16321278f5183c)
  * Released under the MIT license
  * https://github.com/Microsoft/vscode/blob/master/LICENSE.txt
  *-----------------------------------------------------------*/
@@ -64,9 +64,6 @@ define("vs/base/common/worker/workerServer.nls.ko", {
 		"`{0}` 속성은 생략 가능하며 `string[]` 형식이어야 합니다.",
 		"`{0}` 속성은 생략 가능하며 `string[]` 형식이어야 합니다.",
 		"잘못된 `contributes.{0}`입니다. 배열이 필요합니다.",
-	],
-	"vs/editor/common/services/modelServiceImpl": [
-		"설정 업데이트 필요: `editor.detectIndentation`은 `editor.tabSize`를 바꿈: \"auto\" 또는 `editor.insertSpaces`: \"auto\"",
 	],
 	"vs/platform/configuration/common/configurationRegistry": [
 		"구성 설정을 적용합니다.",
@@ -141,9 +138,5 @@ define("vs/base/common/worker/workerServer.nls.ko", {
 		"최소한 하나의 스키마가 일치해야 하는 스키마 배열입니다.",
 		"스키마 배열로, 이러한 스키마 중 하나가 정확하게 일치해야 합니다.",
 		"일치하지 않아야 하는 스키마입니다.",
-	],
-	"vs/platform/message/common/message": [
-		"닫기",
-		"취소",
 	]
 });
